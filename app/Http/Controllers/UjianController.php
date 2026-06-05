@@ -25,7 +25,7 @@ class UjianController extends Controller
                 'jawab_sesi5_q' . $i
             ]);
         }
-        for ($i = 1; $i <= 10; $i++) {
+        for ($i = 1; $i <= 25; $i++) {
             session()->forget('jawab_sesi6_q' . $i);
         }
 
@@ -36,12 +36,24 @@ class UjianController extends Controller
     {
         $request->validate([
             'nama' => 'required|string|max:150',
-            'posisi' => 'required|string|in:Admin penjualan (SA),ACCOUNTING (A),ACCOUNT RECEIVABLE [AR],ACCOUNT PAYABLE [AP]',
+            'posisi' => 'required|string',
         ]);
+
+        $posisiVal = $request->posisi;
+        if ($posisiVal === 'Lainnya') {
+            $request->validate([
+                'posisi_lainnya' => 'required|string|max:150',
+            ]);
+            $posisiVal = $request->posisi_lainnya;
+        } else {
+            $request->validate([
+                'posisi' => 'required|string|in:Admin penjualan (SA),ACCOUNTING (A),ACCOUNT RECEIVABLE [AR],ACCOUNT PAYABLE [AP]',
+            ]);
+        }
 
         session([
             'nama' => $request->nama,
-            'posisi' => $request->posisi,
+            'posisi' => $posisiVal,
             'total_pelanggaran' => 0
         ]);
 
@@ -56,6 +68,14 @@ class UjianController extends Controller
 
         if ($sesi < 1 || $sesi > 5) {
             return redirect()->route('ujian.index');
+        }
+
+        if ($sesi == 5) {
+            $posisi = session('posisi');
+            $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
+            if (!in_array($posisi, $mainPositions)) {
+                return redirect()->route('ujian.simpan');
+            }
         }
 
         return view('ujian.petunjuk', compact('sesi'));
@@ -141,8 +161,11 @@ class UjianController extends Controller
                 return view('ujian.sesi4', compact('soalSesi4'));
 
             case 5:
-                // Sesi 5 - Dynamic Essay questions by selected position
                 $posisi = session('posisi');
+                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
+                if (!in_array($posisi, $mainPositions)) {
+                    return redirect()->route('ujian.simpan');
+                }
                 $soalSesi5 = $this->getSoalSesi5($posisi);
                 return view('ujian.sesi5', compact('soalSesi5', 'posisi'));
 
@@ -157,7 +180,7 @@ class UjianController extends Controller
             return redirect()->route('ujian.index');
         }
 
-        // Add tab switch violations (cheat check)
+        // Add violations
         $pelanggaran = (int)$request->input('pelanggaran_sesi', 0);
         session(['total_pelanggaran' => session('total_pelanggaran', 0) + $pelanggaran]);
 
@@ -192,10 +215,17 @@ class UjianController extends Controller
                 for ($i = 1; $i <= 20; $i++) {
                     session(['jawab_sesi5_q' . $i => $request->input('jawab_sesi5_q' . $i, '')]);
                 }
+                
+                $posisi = session('posisi');
+                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
+                if (!in_array($posisi, $mainPositions)) {
+                    return redirect()->route('ujian.simpan');
+                }
+                
                 return redirect()->route('ujian.petunjuk', ['sesi' => 5]);
 
             case 5:
-                for ($i = 1; $i <= 10; $i++) {
+                for ($i = 1; $i <= 25; $i++) {
                     session(['jawab_sesi6_q' . $i => $request->input('jawab_sesi6_q' . $i, '')]);
                 }
                 return redirect()->route('ujian.simpan');
@@ -252,7 +282,7 @@ class UjianController extends Controller
 
             // Save Sesi 5 (Essay) answers
             $jawabSesi6 = ['id_peserta' => $idPeserta];
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 25; $i++) {
                 $jawabSesi6['q' . $i] = session('jawab_sesi6_q' . $i) ?: null;
             }
             JawabanSesi6::create($jawabSesi6);
@@ -272,7 +302,7 @@ class UjianController extends Controller
                     'jawab_sesi5_q' . $i
                 ]);
             }
-            for ($i = 1; $i <= 10; $i++) {
+            for ($i = 1; $i <= 25; $i++) {
                 session()->forget('jawab_sesi6_q' . $i);
             }
 
@@ -303,10 +333,46 @@ class UjianController extends Controller
                         5 => "Jelaskan perbedaan antara utang usaha (account payable) dan accrued expense. Bagaimana dampaknya jika salah klasifikasi?"
                     ],
                     'bagian_b' => [
-                        1 => "<strong>Studi Kasus 1 — Invoice Datang Setelah Tutup Buku</strong><br>Pada tanggal 28 Desember, perusahaan menerima barang dari vendor senilai Rp 900.000.000. Barang sudah diterima dan digunakan. Invoice baru diterima tanggal 10 Januari tahun berikutnya. Saat closing 31 Desember, belum ada pencatatan atas transaksi tersebut.<br><br>Pertanyaan:<br>• Apa isu akuntansi dalam kasus ini?<br>• Apa dampaknya terhadap laporan keuangan jika tidak dicatat?<br>• Jurnal apa yang harus dibuat pada 31 Desember?<br>• Apa prosedur kontrol yang seharusnya dilakukan untuk mencegah hal ini terlewat?",
-                        2 => "<strong>Studi Kasus 2 — Pembayaran Ganda ke Vendor</strong><br>Perusahaan secara tidak sengaja membayar satu invoice sebesar Rp 350.000.000 sebanyak dua kali. Kesalahan baru diketahui satu bulan kemudian.<br><br>Pertanyaan:<br>• Apa dampaknya terhadap laporan keuangan?<br>• Langkah investigasi yang harus dilakukan?<br>• Bagaimana perlakuan akuntansinya?<br>• Apa kontrol internal yang perlu diperkuat?",
-                        3 => "<strong>Studi Kasus 3 — Selisih antara PO, GRN, dan Invoice</strong><br>Purchase Order menunjukkan harga Rp 120.000 per unit untuk 5.000 unit. GRN mencatat penerimaan 5.000 unit. Namun invoice vendor mencantumkan harga Rp 135.000 per unit.<br><br>Pertanyaan:<br>• Apa risiko jika invoice langsung diproses dan dibayar?<br>• Apa langkah yang harus dilakukan AP?<br>• Apakah boleh tetap mencatat utang sebesar nilai invoice? Jelaskan alasannya.<br>• Bagaimana dampaknya terhadap laporan laba rugi?",
-                        4 => "<strong>Studi Kasus 4 — Utang Lama Tidak Diklaim Vendor</strong><br>Terdapat saldo utang usaha Rp 780.000.000 yang sudah berumur lebih dari 2 tahun. Vendor tidak pernah menagih kembali dan tidak ada komunikasi lanjutan.<br><br>Pertanyaan:<br>• Apa analisa Anda terhadap saldo ini?<br>• Apakah utang boleh dihapus? Dalam kondisi apa?<br>• Apa risiko salah saji jika tetap dibiarkan?<br>• Apa langkah yang harus dilakukan sebelum mengambil keputusan?"
+                        1 => [
+                            'judul' => "Studi Kasus 1 — Invoice Datang Setelah Tutup Buku",
+                            'deskripsi' => "Pada tanggal 28 Desember, perusahaan menerima barang dari vendor senilai Rp 900.000.000. Barang sudah diterima dan digunakan. Invoice baru diterima tanggal 10 Januari tahun berikutnya. Saat closing 31 Desember, belum ada pencatatan atas transaksi tersebut.",
+                            'pertanyaan' => [
+                                1 => "Apa isu akuntansi dalam kasus ini?",
+                                2 => "Apa dampaknya terhadap laporan keuangan jika tidak dicatat?",
+                                3 => "Jurnal apa yang harus dibuat pada 31 Desember?",
+                                4 => "Apa prosedur kontrol yang seharusnya dilakukan untuk mencegah hal ini terlewat?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "Studi Kasus 2 — Pembayaran Ganda ke Vendor",
+                            'deskripsi' => "Perusahaan secara tidak sengaja membayar satu invoice sebesar Rp 350.000.000 sebanyak dua kali. Kesalahan baru diketahui satu bulan kemudian.",
+                            'pertanyaan' => [
+                                1 => "Apa dampaknya terhadap laporan keuangan?",
+                                2 => "Langkah investigasi yang harus dilakukan?",
+                                3 => "Bagaimana perlakuan akuntansinya?",
+                                4 => "Apa kontrol internal yang perlu diperkuat?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "Studi Kasus 3 — Selisih antara PO, GRN, dan Invoice",
+                            'deskripsi' => "Purchase Order menunjukkan harga Rp 120.000 per unit untuk 5.000 unit. GRN mencatat penerimaan 5.000 unit. Namun invoice vendor mencantumkan harga Rp 135.000 per unit.",
+                            'pertanyaan' => [
+                                1 => "Apa risiko jika invoice langsung diproses dan dibayar?",
+                                2 => "Apa langkah yang harus dilakukan AP?",
+                                3 => "Apakah boleh tetap mencatat utang sebesar nilai invoice? Jelaskan alasannya.",
+                                4 => "Bagaimana dampaknya terhadap laporan laba rugi?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "Studi Kasus 4 — Utang Lama Tidak Diklaim Vendor",
+                            'deskripsi' => "Terdapat saldo utang usaha Rp 780.000.000 yang sudah berumur lebih dari 2 tahun. Vendor tidak pernah menagih kembali dan tidak ada komunikasi lanjutan.",
+                            'pertanyaan' => [
+                                1 => "Apa analisa Anda terhadap saldo ini?",
+                                2 => "Apakah utang boleh dihapus? Dalam kondisi apa?",
+                                3 => "Apa risiko salah saji jika tetap dibiarkan?",
+                                4 => "Apa langkah yang harus dilakukan sebelum mengambil keputusan?"
+                            ]
+                        ]
                     ]
                 ];
 
@@ -317,13 +383,49 @@ class UjianController extends Controller
                         2 => "Jelaskan apa yang dimaksud dengan aging schedule piutang. Berapa lama aging piutang di tentukan? Apa yang terjadi ketikang aging piutang melebihi waktu yang ditentukan?",
                         3 => "Mengapa aging penting bagi manajemen dan apa dampaknya terhadap pencadangan piutang tak tertagih?",
                         4 => "Apa yang dimaksud dengan cut-off revenue? Mengapa cut-off sangat krusial dalam proses AR dan audit?",
-                        5 => "Jelaskan perbedaan antara write-off piutang dan pencadangan piutang. Apakah write-off mempengaruhi laba pada saat dilakukan? Jelaskan."
+                        5 => "Jelaskan perbedaan antara write-off piutang and pencadangan piutang. Apakah write-off mempengaruhi laba pada saat dilakukan? Jelaskan."
                     ],
                     'bagian_b' => [
-                        1 => "<strong>Studi Kasus 1 — Aging Piutang Memburuk</strong><br>Per 31 Desember, total piutang perusahaan Rp 12.000.000.000. Hasil aging menunjukkan:<br>• 0–30 hari: 55%<br>• 31–60 hari: 20%<br>• 61–90 hari: 10%<br>• 90 hari: 15%<br>Tahun sebelumnya, piutang >90 hari hanya 5%.<br><br>Pertanyaan:<br>• Apa analisa Anda terhadap kondisi ini?<br>• Risiko apa yang muncul terhadap laporan keuangan?<br>• Apakah perlu penyesuaian allowance? Jelaskan logikanya.<br>• Tindakan apa yang harus dilakukan dari sisi AR & internal control?",
-                        2 => "<strong>Studi Kasus 2 — Selisih Konfirmasi Piutang Saat Audit</strong><br>Saat audit eksternal, salah satu customer besar mengonfirmasi saldo Rp 2.150.000.000. Namun saldo di buku perusahaan tercatat Rp 2.450.000.000. Selisih Rp 300.000.000 belum dapat dijelaskan.<br><br>Pertanyaan:<br>• Kemungkinan penyebab selisih tersebut?<br>• Langkah investigasi yang Anda lakukan secara sistematis?<br>• Jika ternyata ada salah pencatatan invoice, bagaimana jurnal koreksinya?<br>• Apa dampaknya jika tidak ditemukan sebelum laporan audit terbit?",
-                        3 => "<strong>Studi Kasus 3 — Penjualan Dicatat, Customer Komplain Barang Rusak</strong><br>Divisi sales mencatat penjualan Rp 850.000.000 pada tanggal 28 Juni. Pada 3 Juli, customer mengajukan komplain karena 40% barang rusak dan meminta retur. AR belum melakukan penyesuaian hingga tutup buku Juni.<br><br>Pertanyaan:<br>• Apakah ini termasuk isu cut-off atau estimasi? Jelaskan.<br>• Apa dampaknya terhadap revenue dan piutang per 30 Juni?<br>• Jurnal penyesuaian apa yang seharusnya dibuat?<br>• Bagaimana koordinasi yang tepat antara AR, Sales, dan Warehouse?",
-                        4 => "<strong>Studi Kasus 4 — Piutang Lama Tidak Tertagih 2 Tahun</strong><br>Terdapat saldo piutang Rp 1.200.000.000 dari customer lama sejak 2 tahun lalu. Belum pernah dilakukan write-off karena masih “diharapkan bayar”. Allowance yang tersedia hanya Rp 150.000.000.<br><br>Pertanyaan:<br>• Apakah ini melanggar prinsip akuntansi tertentu? Jelaskan.<br>• Apa risiko salah saji pada laporan keuangan?<br>• Apa adjustment yang seharusnya dilakukan?<br>• Apakah ini termasuk prior period error jika material? Jelaskan analisis Anda."
+                        1 => [
+                            'judul' => "Studi Kasus 1 — Aging Piutang Memburuk",
+                            'deskripsi' => "Per 31 Desember, total piutang perusahaan Rp 12.000.000.000. Hasil aging menunjukkan:<br>• 0–30 hari: 55%<br>• 31–60 hari: 20%<br>• 61–90 hari: 10%<br>• 90 hari: 15%<br>Tahun sebelumnya, piutang >90 hari hanya 5%.",
+                            'pertanyaan' => [
+                                1 => "Apa analisa Anda terhadap kondisi ini?",
+                                2 => "Risiko apa yang muncul terhadap laporan keuangan?",
+                                3 => "Apakah perlu penyesuaian allowance? Jelaskan logikanya.",
+                                4 => "Tindakan apa yang harus dilakukan dari sisi AR & internal control?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "Studi Kasus 2 — Selisih Konfirmasi Piutang Saat Audit",
+                            'deskripsi' => "Saat audit eksternal, salah satu customer besar mengonfirmasi saldo Rp 2.150.000.000. Namun saldo di buku perusahaan tercatat Rp 2.450.000.000. Selisih Rp 300.000.000 belum dapat dijelaskan.",
+                            'pertanyaan' => [
+                                1 => "Kemungkinan penyebab selisih tersebut?",
+                                2 => "Langkah investigasi yang Anda lakukan secara sistematis?",
+                                3 => "Jika ternyata ada salah pencatatan invoice, bagaimana jurnal koreksinya?",
+                                4 => "Apa dampaknya jika tidak ditemukan sebelum laporan audit terbit?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "Studi Kasus 3 — Penjualan Dicatat, Customer Komplain Barang Rusak",
+                            'deskripsi' => "Divisi sales mencatat penjualan Rp 850.000.000 pada tanggal 28 Juni. Pada 3 Juli, customer mengajukan komplain karena 40% barang rusak dan meminta retur. AR belum melakukan penyesuaian hingga tutup buku Juni.",
+                            'pertanyaan' => [
+                                1 => "Apakah ini termasuk isu cut-off atau estimasi? Jelaskan.",
+                                2 => "Apa dampaknya terhadap revenue dan piutang per 30 Juni?",
+                                3 => "Jurnal penyesuaian apa yang seharusnya dibuat?",
+                                4 => "Bagaimana koordinasi yang tepat antara AR, Sales, dan Warehouse?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "Studi Kasus 4 — Piutang Lama Tidak Tertagih 2 Tahun",
+                            'deskripsi' => "Terdapat saldo piutang Rp 1.200.000.000 dari customer lama sejak 2 tahun lalu. Belum pernah dilakukan write-off karena masih “diharapkan bayar”. Allowance yang tersedia hanya Rp 150.000.000.",
+                            'pertanyaan' => [
+                                1 => "Apakah ini melanggar prinsip akuntansi tertentu? Jelaskan.",
+                                2 => "Apa risiko salah saji pada laporan keuangan?",
+                                3 => "Apa adjustment yang seharusnya dilakukan?",
+                                4 => "Apakah ini termasuk prior period error jika material? Jelaskan analisis Anda."
+                            ]
+                        ]
                     ]
                 ];
 
@@ -337,10 +439,42 @@ class UjianController extends Controller
                         5 => "Apa fungsi dari akun accrual dan prepaid (biaya dibayar dimuka)? Jelaskan cara pencatatannya."
                     ],
                     'bagian_b' => [
-                        1 => "<strong>Studi Kasus 1 — Selisih pada Rekonsiliasi Bank</strong><br>Pada saat rekonsiliasi bank bulan berjalan, terdapat selisih Rp 7.500.000 antara saldo buku perusahaan dan laporan bank.<br><br>Pertanyaan:<br>• Kemungkinan penyebab selisih tersebut?<br>• Langkah yang Anda lakukan untuk menemukan sumber kesalahan?<br>• Apa dampaknya jika selisih ini tidak ditemukan hingga akhir bulan?",
-                        2 => "<strong>Studi Kasus 2 — Kesalahan Pencatatan Aset Tetap</strong><br>Sebuah mesin dicatat sebagai inventaris kantor, padahal nilainya Rp 280 juta dan usia ekonomis 8 tahun.<br><br>Pertanyaan:<br>• Identifikasi kesalahan pencatatan.<br>• Apa dampaknya pada laporan keuangan?<br>• Apa penyesuaian (adjustment) yang harus dilakukan?",
-                        3 => "<strong>Studi Kasus 3 — Penjualan Sudah Dicatat, Barang Belum Dikirim</strong><br>Di bulan Maret, divisi sales mencatat penjualan, namun barang baru dikirim di bulan April.<br><br>Pertanyaan:<br>• Apa kesalahan ini disebut dalam akuntansi?<br>• Bagaimana Anda memperbaikinya?<br>• Apa efeknya terhadap laporan laba rugi dan neraca?",
-                        4 => "<strong>Studi Kasus 4 — Terjadi Perbedaan Stok Saat Stock Opname</strong><br>Hasil stock opname menunjukkan selisih negatif 3% dibanding catatan sistem. Warehouse mengatakan barang tidak hilang, hanya “tidak tercatat”.<br><br>Pertanyaan:<br>• Kemungkinan penyebab selisih ini dari sisi accounting?<br>• Bagaimana prosedur investigasinya?<br>• Apakah perlu dibuat jurnal penyesuaian? Jelaskan alasannya."
+                        1 => [
+                            'judul' => "Studi Kasus 1 — Selisih pada Rekonsiliasi Bank",
+                            'deskripsi' => "Pada saat rekonsiliasi bank bulan berjalan, terdapat selisih Rp 7.500.000 antara saldo buku perusahaan dan laporan bank.",
+                            'pertanyaan' => [
+                                1 => "Kemungkinan penyebab selisih tersebut?",
+                                2 => "Langkah yang Anda lakukan untuk menemukan sumber kesalahan?",
+                                3 => "Apa dampaknya jika selisih ini tidak ditemukan hingga akhir bulan?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "Studi Kasus 2 — Kesalahan Pencatatan Aset Tetap",
+                            'deskripsi' => "Sebuah mesin dicatat sebagai inventaris kantor, padahal nilainya Rp 280 juta dan usia ekonomis 8 tahun.",
+                            'pertanyaan' => [
+                                1 => "Identifikasi kesalahan pencatatan.",
+                                2 => "Apa dampaknya pada laporan keuangan?",
+                                3 => "Apa penyesuaian (adjustment) yang harus dilakukan?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "Studi Kasus 3 — Penjualan Sudah Dicatat, Barang Belum Dikirim",
+                            'deskripsi' => "Di bulan Maret, divisi sales mencatat penjualan, namun barang baru dikirim di bulan April.",
+                            'pertanyaan' => [
+                                1 => "Apa kesalahan ini disebut dalam akuntansi?",
+                                2 => "Bagaimana Anda memperbaikinya?",
+                                3 => "Apa efeknya terhadap laporan laba rugi dan neraca?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "Studi Kasus 4 — Terjadi Perbedaan Stok Saat Stock Opname",
+                            'deskripsi' => "Hasil stock opname menunjukkan selisih negatif 3% dibanding catatan sistem. Warehouse mengatakan barang tidak hilang, hanya “tidak tercatat”.",
+                            'pertanyaan' => [
+                                1 => "Kemungkinan penyebab selisih ini dari sisi accounting?",
+                                2 => "Bagaimana prosedur investigasinya?",
+                                3 => "Apakah perlu dibuat jurnal penyesuaian? Jelaskan alasannya."
+                            ]
+                        ]
                     ]
                 ];
 
@@ -354,16 +488,57 @@ class UjianController extends Controller
                         5 => "Apa yang dimaksud dengan retur penjualan? Bagaimana proses administrasi yang harus dilakukan ketika terjadi retur?"
                     ],
                     'bagian_b' => [
-                        1 => "<strong>Studi Kasus 1 — Order Sudah Dicatat, Barang Belum Dikirim</strong><br>Divisi sales menerima order dari customer senilai Rp 450.000.000 pada tanggal 29 Mei. Sales admin langsung membuat invoice pada hari yang sama. Namun barang baru dikirim tanggal 3 Juni.<br><br>Pertanyaan:<br>• Apa kesalahan dalam proses ini?<br>• Apa dampaknya terhadap administrasi penjualan dan laporan?<br>• Apa yang seharusnya dilakukan oleh admin penjualan?",
-                        2 => "<strong>Studi Kasus 2 — Selisih Data antara SO dan DO</strong><br>Sales Order mencatat pesanan 1.000 unit. Namun Delivery Order hanya mencatat pengiriman 920 unit. Invoice sudah dibuat berdasarkan 1.000 unit.<br><br>Pertanyaan:<br>• Apa potensi masalah dalam kasus ini?<br>• Apa langkah yang harus dilakukan oleh admin penjualan?<br>• Apa dampaknya jika tidak segera diperbaiki?",
-                        3 => "<strong>Studi Kasus 3 — Customer Komplain Barang Rusak</strong><br>Customer menerima barang senilai Rp 300.000.000. Setelah diterima, customer mengajukan komplain karena 25% barang rusak dan meminta retur. Namun admin belum memproses dokumen retur hingga akhir bulan.<br><br>Pertanyaan:<br>• Apa kesalahan dalam proses administrasi ini?<br>• Apa dampaknya terhadap penagihan ke customer?<br>• Dokumen apa saja yang harus dibuat untuk menangani kasus ini?",
-                        4 => "<strong>Studi Kasus 4 — Invoice Belum Dibayar Melebihi Jatuh Tempo</strong><br>Terdapat invoice customer sebesar Rp 620.000.000 yang sudah lewat jatuh tempo 45 hari. Tidak ada follow-up dari admin penjualan.<br><br>Pertanyaan:<br>• Apa risiko dari kondisi ini?<br>• Apa tindakan yang seharusnya dilakukan oleh admin penjualan?<br>• Bagaimana peran admin dalam membantu proses penagihan (collection)?",
-                        5 => "<strong>Studi Kasus 5 — Data Penjualan Tidak Sinkron dengan Gudang</strong><br>Data penjualan menunjukkan barang sudah terjual 2.000 unit. Namun data gudang menunjukkan pengeluaran hanya 1.850 unit.<br><br>Pertanyaan:<br>• Apa kemungkinan penyebab selisih ini?<br>• Bagaimana langkah investigasi yang harus dilakukan?<br>• Apa peran admin penjualan dalam memastikan data akurat?"
+                        1 => [
+                            'judul' => "Studi Kasus 1 — Order Sudah Dicatat, Barang Belum Dikirim",
+                            'deskripsi' => "Divisi sales menerima order dari customer senilai Rp 450.000.000 pada tanggal 29 Mei. Sales admin langsung membuat invoice pada hari yang sama. Namun barang baru dikirim tanggal 3 Juni.",
+                            'pertanyaan' => [
+                                1 => "Apa kesalahan dalam proses ini?",
+                                2 => "Apa dampaknya terhadap administrasi penjualan dan laporan?",
+                                3 => "Apa yang seharusnya dilakukan oleh admin penjualan?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "Studi Kasus 2 — Selisih Data antara SO dan DO",
+                            'deskripsi' => "Sales Order mencatat pesanan 1.000 unit. Namun Delivery Order hanya mencatat pengiriman 920 unit. Invoice sudah dibuat berdasarkan 1.000 unit.",
+                            'pertanyaan' => [
+                                1 => "Apa potensi masalah dalam kasus ini?",
+                                2 => "Apa langkah yang harus dilakukan oleh admin penjualan?",
+                                3 => "Apa dampaknya jika tidak segera diperbaiki?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "Studi Kasus 3 — Customer Komplain Barang Rusak",
+                            'deskripsi' => "Customer menerima barang senilai Rp 300.000.000. Setelah diterima, customer mengajukan komplain karena 25% barang rusak dan meminta retur. Namun admin belum memproses dokumen retur hingga akhir bulan.",
+                            'pertanyaan' => [
+                                1 => "Apa kesalahan dalam proses administrasi ini?",
+                                2 => "Apa dampaknya terhadap penagihan ke customer?",
+                                3 => "Dokumen apa saja yang harus dibuat untuk menangani kasus ini?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "Studi Kasus 4 — Invoice Belum Dibayar Melebihi Jatuh Tempo",
+                            'deskripsi' => "Terdapat invoice customer sebesar Rp 620.000.000 yang sudah lewat jatuh tempo 45 hari. Tidak ada follow-up dari admin penjualan.",
+                            'pertanyaan' => [
+                                1 => "Apa risiko dari kondisi ini?",
+                                2 => "Apa tindakan yang seharusnya dilakukan oleh admin penjualan?",
+                                3 => "Bagaimana peran admin dalam membantu proses penagihan (collection)?"
+                            ]
+                        ],
+                        5 => [
+                            'judul' => "Studi Kasus 5 — Data Penjualan Tidak Sinkron dengan Gudang",
+                            'deskripsi' => "Data penjualan menunjukkan barang sudah terjual 2.000 unit. Namun data gudang menunjukkan pengeluaran hanya 1.850 unit.",
+                            'pertanyaan' => [
+                                1 => "Apa kemungkinan penyebab selisih ini?",
+                                2 => "Bagaimana langkah investigasi yang harus dilakukan?",
+                                3 => "Apa peran admin penjualan dalam memastikan data akurat?"
+                            ]
+                        ]
                     ]
                 ];
 
             default:
-                return [];
+                // Fallback for custom positions (Lainnya)
+                return $this->getSoalSesi5('ACCOUNTING (A)');
         }
     }
 }

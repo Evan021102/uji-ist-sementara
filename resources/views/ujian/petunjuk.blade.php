@@ -36,10 +36,14 @@
 @endsection
 
 @section('content')
+@php
+    $posisi = session('posisi');
+    $isCustomPosisi = !in_array($posisi, ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]']);
+@endphp
 <div class="petunjuk-container">
     <h2 class="text-center fw-bold mb-4" style="color: #2b3452;">
         Petunjuk Pengerjaan Sesi {{ $sesi }}
-        @if($sesi == 4) (Terakhir) @endif
+        @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) (Terakhir) @endif
     </h2>
 
     <div class="warning-box">
@@ -90,7 +94,12 @@
                 Perhatikan pola gambar pada setiap soal. Pilihlah satu gambar (A, B, C, D, atau E) yang merupakan kelanjutan logis atau bagian yang hilang dari pola tersebut.<br><br>
                 <strong>Contoh Cara Pengerjaan:</strong><br>
                 <img src="{{ asset('gambar/visual_reasoning/cth.jpg') }}" alt="Contoh Soal Logika Gambar" class="gambar-contoh">
-                
+                @if($isCustomPosisi)
+                    <br>Karena ini merupakan sesi terakhir untuk posisi Anda, ketika waktu habis atau ketika Anda menekan tombol Selesai, seluruh jawaban akan disimpan secara permanen ke dalam sistem database.
+                @endif
+            @elseif($sesi == 5)
+                Sesi ini adalah Tes Esai &amp; Studi Kasus khusus untuk Posisi Pekerjaan yang Anda pilih. 
+                Terdapat beberapa pertanyaan teori dan beberapa studi kasus dengan sub-pertanyaan yang harus Anda selesaikan.<br><br>
                 Karena ini merupakan sesi terakhir, ketika waktu habis atau ketika Anda menekan tombol Selesai, seluruh jawaban akan disimpan secara permanen ke dalam sistem database.
             @endif
         </p>
@@ -104,7 +113,7 @@
     </div>
 
     <a href="{{ route('ujian.sesi', ['sesi' => $sesi]) }}" class="btn start-btn text-center text-decoration-none d-block" id="btnMulai">
-        Mulai Pengerjaan Sesi {{ $sesi }} @if($sesi == 4) (Terakhir) @endif
+        Mulai Pengerjaan Sesi {{ $sesi }} @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) (Terakhir) @endif
     </a>
 </div>
 @endsection

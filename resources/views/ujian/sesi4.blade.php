@@ -11,6 +11,10 @@
 @endsection
 
 @section('content')
+@php
+    $posisi = session('posisi');
+    $isCustomPosisi = !in_array($posisi, ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]']);
+@endphp
 <div class="main-wrapper">
     <div class="hero">
         <h1>Ujian Psikologi Online</h1>
@@ -43,7 +47,11 @@
                     <li>Total soal: 20</li>
                     <li>Durasi: 7 menit</li>
                     <li>Pilih satu jawaban (A-E)</li>
-                    <li>Menekan 'Selesai' akan menyimpan jawaban</li>
+                    @if($isCustomPosisi)
+                        <li>Menekan 'Selesai' akan menyimpan seluruh jawaban</li>
+                    @else
+                        <li>Jawaban tersimpan otomatis</li>
+                    @endif
                 </ul>
             </div>
         </div>
@@ -75,9 +83,15 @@
                 </div>
                 @endforeach
 
-                <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, var(--danger), #b91c1c);">
-                    Selesai & Simpan Seluruh Jawaban →
-                </button>
+                @if($isCustomPosisi)
+                    <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, var(--danger), #b91c1c);">
+                        Selesai & Simpan Seluruh Jawaban →
+                    </button>
+                @else
+                    <button type="submit" class="submit-btn">
+                        Lanjut ke Sesi Terakhir →
+                    </button>
+                @endif
             </form>
         </div>
     </div>
@@ -119,7 +133,11 @@
             }
             if (totalWaktu < 0) {
                 clearInterval(timerInterval);
-                alert('Waktu habis! Jawaban Anda akan langsung disimpan secara otomatis.');
+                @if($isCustomPosisi)
+                    alert('Waktu habis! Seluruh jawaban Anda akan langsung disimpan secara otomatis.');
+                @else
+                    alert('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.');
+                @endif
                 document.getElementById('formUjian').submit();
             }
             totalWaktu--;

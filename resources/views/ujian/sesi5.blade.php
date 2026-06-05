@@ -5,15 +5,44 @@
 @section('styles')
 <style>
     @php
-        $totalQuestions = count($soalSesi5['bagian_a']) + count($soalSesi5['bagian_b']);
+        $totalQuestions = count($soalSesi5['bagian_a']);
+        foreach ($soalSesi5['bagian_b'] as $case) {
+            $totalQuestions += count($case['pertanyaan']);
+        }
     @endphp
     @for($i = 1; $i <= $totalQuestions; $i++)
-    .question-card:nth-of-type({{ $i }}) { animation-delay: {{ $i * 0.05 }}s; }
+    .question-card:nth-of-type({{ $i }}) { animation-delay: {{ $i * 0.03 }}s; }
     @endfor
     
     .essay-input:focus {
         border-color: var(--primary) !important;
         box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.15) !important;
+    }
+    .case-container {
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    }
+    .case-title {
+        font-size: 17px;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #cbd5e1;
+        padding-bottom: 8px;
+    }
+    .case-desc {
+        font-size: 15px;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
     }
 </style>
 @endsection
@@ -50,7 +79,7 @@
                 <ul>
                     <li>Total soal: {{ $totalQuestions }}</li>
                     <li>Durasi: 45 menit</li>
-                    <li>Ketik jawaban secara lengkap</li>
+                    <li>Ketik jawaban secara terpisah</li>
                     <li>Waktu habis otomatis menyimpan</li>
                 </ul>
             </div>
@@ -84,20 +113,27 @@
 
                 <!-- BAGIAN B -->
                 <h4 class="fw-bold mb-4 mt-5 text-primary" style="font-size: 18px;">B. Studi Kasus / Soal Analisis</h4>
-                @foreach($soalSesi5['bagian_b'] as $num => $qText)
-                <div class="question-card">
-                    <div class="question-number">{{ $qCount }}</div>
-                    <p class="question-text" style="font-size: 15px; color: #334155; line-height: 1.7;">
-                        {!! $qText !!}
-                    </p>
-                    <textarea class="form-control essay-input" 
-                              name="jawab_sesi6_q{{ $qCount }}" 
-                              rows="6" 
-                              placeholder="Ketik analisis dan jawaban Anda di sini..." 
-                              style="border-radius: 14px; border: 1px solid var(--border); outline: none; font-size: 15px; padding: 15px; resize: vertical; width: 100%;" 
-                              required></textarea>
+                @foreach($soalSesi5['bagian_b'] as $caseIdx => $case)
+                <div class="case-container">
+                    <div class="case-title">{{ $case['judul'] }}</div>
+                    <div class="case-desc">{!! $case['deskripsi'] !!}</div>
+                    
+                    @foreach($case['pertanyaan'] as $subIdx => $subText)
+                    <div class="question-card" style="margin-bottom: 20px; box-shadow: none; border-color: #cbd5e1;">
+                        <div class="question-number" style="background: linear-gradient(135deg, var(--secondary), var(--primary));">{{ $qCount }}</div>
+                        <p class="question-text" style="font-size: 15px; font-weight: 500; color: #334155; line-height: 1.6;">
+                            {!! $subText !!}
+                        </p>
+                        <textarea class="form-control essay-input" 
+                                  name="jawab_sesi6_q{{ $qCount }}" 
+                                  rows="4" 
+                                  placeholder="Ketik analisis Anda untuk pertanyaan ini..." 
+                                  style="border-radius: 14px; border: 1px solid #cbd5e1; outline: none; font-size: 15px; padding: 15px; resize: vertical; width: 100%;" 
+                                  required></textarea>
+                    </div>
+                    @php $qCount++; @endphp
+                    @endforeach
                 </div>
-                @php $qCount++; @endphp
                 @endforeach
 
                 <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">

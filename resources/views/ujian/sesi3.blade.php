@@ -81,7 +81,7 @@
                 @endforeach
 
                 <button type="submit" class="submit-btn">
-                    Lanjut ke Sesi Terakhir →
+                    Lanjut ke Sesi 4 →
                 </button>
             </form>
         </div>

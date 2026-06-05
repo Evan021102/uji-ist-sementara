@@ -21,6 +21,9 @@
             <th style="background-color: #f2dede;">N. Norma Sesi 2</th>
             <th style="background-color: #f2dede;">O. Norma Sesi 3</th>
             <th style="background-color: #f2dede;">P. Norma Sesi 4</th>
+            @for ($i = 1; $i <= 25; $i++)
+            <th style="background-color: #e8daef;">Sesi 5 - Soal {{ $i }}</th>
+            @endfor
         </tr>
     </thead>
     <tbody>
@@ -30,6 +33,7 @@
             $ans_s3 = $p->jawabanSesi3;
             $ans_s4 = $p->jawabanSesi4;
             $ans_s5 = $p->jawabanSesi5;
+            $ans_s6 = $p->jawabanSesi6;
 
             $rw2 = 0; $rw3 = 0; $rw4 = 0; $rw5 = 0;
 
@@ -77,6 +81,10 @@
             <td>{{ $desc3 }}</td>
             <td>{{ $desc4 }}</td>
             <td>{{ $desc5 }}</td>
+            @for ($i = 1; $i <= 25; $i++)
+            @php $q = 'q' . $i; @endphp
+            <td>{{ $ans_s6 && isset($ans_s6->$q) ? $ans_s6->$q : '' }}</td>
+            @endfor
         </tr>
         @endforeach
     </tbody>

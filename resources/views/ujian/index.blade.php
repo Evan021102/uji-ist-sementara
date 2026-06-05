@@ -11,12 +11,13 @@
         padding: 16px;
     }
     .card-login {
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(14px);
+        border-radius: 24px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
         width: 100%;
         max-width: 450px;
-        padding: 32px 24px;
+        padding: 35px 28px;
         animation: fadeInUp 0.4s ease-out;
     }
     @keyframes fadeInUp {
@@ -35,12 +36,12 @@
         margin: 0 auto 16px;
         box-shadow: 0 5px 15px rgba(13, 110, 253, 0.15);
     }
-    .form-floating input {
+    .form-floating input, .form-floating select {
         border-radius: 12px;
         border: 1px solid #dee2e6;
-        font-size: 16px;
+        font-size: 15px;
     }
-    .form-floating input:focus {
+    .form-floating input:focus, .form-floating select:focus {
         border-color: #0d6efd;
         box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
     }
@@ -52,6 +53,12 @@
         letter-spacing: 0.5px;
         transition: all 0.3s ease;
         min-height: 48px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border: none;
+    }
+    .btn-mulai:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
     }
     .btn-mulai:active {
         transform: scale(0.98);
@@ -78,21 +85,37 @@
     <h3 class="text-center fw-bold mb-1" style="color: #2b3452; font-size: 1.25rem;">Portal Psikotes</h3>
     <p class="text-center text-muted mb-4" style="font-size: 14px;">Silakan masukkan data diri Anda</p>
 
+    @if ($errors->any())
+        <div class="alert alert-danger mb-3" style="border-radius: 12px; font-size: 14px;">
+            <ul class="mb-0 ps-3">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form action="{{ route('ujian.start') }}" method="POST" autocomplete="off">
         @csrf
         <div class="form-floating mb-3">
             <select class="form-select" id="posisi" name="posisi" required style="border-radius: 12px; height: 58px; padding-top: 15px; font-size: 14px;">
-                <option value="" disabled selected>Pilih Posisi Pekerjaan</option>
-                <option value="Admin penjualan (SA)">Admin penjualan (SA)</option>
-                <option value="ACCOUNTING (A)">ACCOUNTING (A)</option>
-                <option value="ACCOUNT RECEIVABLE [AR]">ACCOUNT RECEIVABLE [AR]</option>
-                <option value="ACCOUNT PAYABLE [AP]">ACCOUNT PAYABLE [AP]</option>
+                <option value="" disabled {{ old('posisi') === null ? 'selected' : '' }}>Pilih Posisi Pekerjaan</option>
+                <option value="Admin penjualan (SA)" {{ old('posisi') === 'Admin penjualan (SA)' ? 'selected' : '' }}>Admin penjualan (SA)</option>
+                <option value="ACCOUNTING (A)" {{ old('posisi') === 'ACCOUNTING (A)' ? 'selected' : '' }}>ACCOUNTING (A)</option>
+                <option value="ACCOUNT RECEIVABLE [AR]" {{ old('posisi') === 'ACCOUNT RECEIVABLE [AR]' ? 'selected' : '' }}>ACCOUNT RECEIVABLE [AR]</option>
+                <option value="ACCOUNT PAYABLE [AP]" {{ old('posisi') === 'ACCOUNT PAYABLE [AP]' ? 'selected' : '' }}>ACCOUNT PAYABLE [AP]</option>
+                <option value="Lainnya" {{ old('posisi') === 'Lainnya' ? 'selected' : '' }}>Lainnya (Tulis Manual)</option>
             </select>
             <label for="posisi" style="padding-top: 10px;">Posisi</label>
         </div>
         
+        <div class="form-floating mb-3 hidden" id="posisi_lainnya_container">
+            <input type="text" class="form-control" id="posisi_lainnya" name="posisi_lainnya" placeholder="Tulis Posisi Pekerjaan Anda" value="{{ old('posisi_lainnya') }}">
+            <label for="posisi_lainnya">Tulis Posisi Pekerjaan</label>
+        </div>
+        
         <div class="form-floating mb-4">
-            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" required autocomplete="name">
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" required autocomplete="name" value="{{ old('nama') }}">
             <label for="nama">Nama Lengkap</label>
         </div>
 
@@ -107,4 +130,34 @@
         </div>
     </form>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    const posisiSelect = document.getElementById('posisi');
+    const container = document.getElementById('posisi_lainnya_container');
+    const input = document.getElementById('posisi_lainnya');
+
+    function togglePosisiLainnya() {
+        if (posisiSelect.value === 'Lainnya') {
+            container.classList.remove('hidden');
+            input.setAttribute('required', 'required');
+        } else {
+            container.classList.add('hidden');
+            input.removeAttribute('required');
+        }
+    }
+
+    posisiSelect.addEventListener('change', function() {
+        togglePosisiLainnya();
+        if (this.value === 'Lainnya') {
+            input.focus();
+        } else {
+            input.value = '';
+        }
+    });
+
+    // Run on initial load to handle old selected option
+    togglePosisiLainnya();
+</script>
 @endsection

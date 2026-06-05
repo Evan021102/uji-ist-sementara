@@ -69,7 +69,8 @@ class DashboardController extends Controller
         $kategori = DB::table('norma_ist_kategori')->get();
 
         // Fetch candidates
-        $peserta = PesertaUji::whereBetween('waktu_mulai', [$tgl_awal, $tgl_akhir])
+        $peserta = PesertaUji::with(['jawabanSesi2', 'jawabanSesi3', 'jawabanSesi4', 'jawabanSesi5', 'jawabanSesi6'])
+            ->whereBetween('waktu_mulai', [$tgl_awal, $tgl_akhir])
             ->orderBy('waktu_mulai', 'asc')
             ->get();
 
