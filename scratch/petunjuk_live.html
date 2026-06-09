@@ -8,16 +8,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Psikotes">
     
-    <title>@yield('title', 'Portal Ujian Psikologi')</title>
+    <title>Petunjuk Sesi 1</title>
     
     <!-- PWA Manifest -->
-    <link rel="manifest" href="{{ asset('manifest.json') }}">
-    <link rel="apple-touch-icon" href="{{ asset('assets/icon-192.png') }}">
+    <link rel="manifest" href="https://test.gosyenpolinator.com/manifest.json">
+    <link rel="apple-touch-icon" href="https://test.gosyenpolinator.com/assets/icon-192.png">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,7 +33,6 @@
             min-height: 100vh; color: var(--dark); padding: 30px;
             overscroll-behavior-y: contain;
             -ms-overflow-style: none; scrollbar-width: none;
-            touch-action: manipulation;
         }
         body::-webkit-scrollbar { width: 0; height: 0; }
         
@@ -237,10 +236,78 @@
             .sidebar, .content { padding: 18px; border-radius: 20px; }
         }
     </style>
-    @yield('styles')
+    <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .petunjuk-container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(14px);
+        border-radius: 24px;
+        padding: 35px 30px;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        animation: fadeInUp 0.4s ease-out;
+    }
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .gambar-contoh {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #856404;
+        border-radius: 8px;
+        margin: 15px 0;
+        display: block;
+    }
+</style>
 </head>
 <body>
-    @yield('content')
+    <div class="petunjuk-container">
+    <h2 class="text-center fw-bold mb-4" style="color: #2b3452;">
+        Petunjuk Pengerjaan Sesi 1
+            </h2>
+
+    <div class="warning-box">
+        <strong>Peraturan Ujian:</strong><br>
+        • Pastikan jaringan internet stabil.<br>
+        • Jangan memindahkan tab atau keluar aplikasi (anti-cheat aktif).<br>
+        • Tidak diperkenankan kembali ke halaman sebelumnya setelah memulai.<br>
+        • Kerjakan dengan jujur dan teliti.
+    </div>
+
+    <div class="info-card">
+        <h3>Petunjuk Subtes</h3>
+        <p>
+                            Ditentukan lima kata. Pada 4 dari 5 kata itu terdapat suatu kesamaan. 
+                Carilah satu kata yang tidak memiliki kesamaan dengan keempat kata yang lain.
+                <br><br>
+                <strong>Contoh :</strong><br>
+                A. MEJA &nbsp; B. KURSI &nbsp; C. BURUNG &nbsp; D. LEMARI &nbsp; E. TEMPAT TIDUR<br><br>
+                Meja, kursi, lemari, dan tempat tidur adalah perabot rumah, sedangkan "burung" bukan.<br> 
+                Jawaban yang benar adalah : BURUNG (pilih jawaban C)<br><br>
+                <strong>Contoh berikutnya:</strong><br>
+                A. DUDUK &nbsp; B. BERBARING &nbsp; C. BERDIRI &nbsp; D. BERJALAN &nbsp; E. BERJONGKOK<br><br>
+                Duduk, berbaring, berdiri, berjongkok = tidak bergerak. Berjalan = bergerak.<br>
+                Jawaban: BERJALAN (pilih D)
+                    </p>
+    </div>
+
+    <div class="agreement">
+        <input type="checkbox" id="cek-mengerti">
+        <label for="cek-mengerti" style="cursor: pointer;">
+            Saya telah membaca dan memahami seluruh petunjuk ujian sesi ini.
+        </label>
+    </div>
+
+    <a href="https://test.gosyenpolinator.com/ujian/sesi/1" class="btn start-btn text-center text-decoration-none d-block" id="btnMulai">
+        Mulai Pengerjaan Sesi 1     </a>
+</div>
 
     <!-- Anti-cheat Freeze Overlay -->
     <div id="freeze-overlay" class="hidden">
@@ -263,13 +330,13 @@
         <button id="close-toast" style="margin-left:5px;">✕</button>
     </div>
 
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Register Service Worker & Mobile tweaks -->
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register("{{ asset('sw.js') }}")
+                navigator.serviceWorker.register("https://test.gosyenpolinator.com/sw.js")
                     .then(reg => console.log('✅ SW registered:', reg.scope))
                     .catch(err => console.log('❌ SW failed:', err));
             });
@@ -300,6 +367,14 @@
             toast.style.display = 'none';
         });
 
+        // Anti double-tap zoom for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) e.preventDefault();
+            lastTouchEnd = now;
+        }, { passive: false });
+
         // Global Anti-cheat Freeze & Alarm Sound
         document.addEventListener('DOMContentLoaded', function() {
             const formUjian = document.getElementById('formUjian');
@@ -311,70 +386,39 @@
             let freezeTimer;
             let freezeLeft = 13;
 
-            function playWarningSound(type) {
+            function playAlarmSound() {
                 try {
                     const AudioContext = window.AudioContext || window.webkitAudioContext;
                     if (!AudioContext) return;
                     const ctx = new AudioContext();
-
-                    if (type === 'gentle') {
-                        // Play a brief double beep
-                        const osc = ctx.createOscillator();
-                        const gainNode = ctx.createGain();
-                        osc.type = 'sine';
-                        osc.frequency.setValueAtTime(800, ctx.currentTime);
-                        osc.connect(gainNode);
-                        gainNode.connect(ctx.destination);
-                        gainNode.gain.setValueAtTime(0.2, ctx.currentTime);
-                        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-                        osc.start();
-                        osc.stop(ctx.currentTime + 0.3);
-
-                        // Second beep after 150ms
-                        setTimeout(() => {
-                            try {
-                                const osc2 = ctx.createOscillator();
-                                const gainNode2 = ctx.createGain();
-                                osc2.type = 'sine';
-                                osc2.frequency.setValueAtTime(800, ctx.currentTime);
-                                osc2.connect(gainNode2);
-                                gainNode2.connect(ctx.destination);
-                                gainNode2.gain.setValueAtTime(0.2, ctx.currentTime);
-                                gainNode2.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-                                osc2.start();
-                                osc2.stop(ctx.currentTime + 0.3);
-                            } catch(e) {}
-                        }, 150);
-                    } else if (type === 'siren') {
-                        // Play full alarm siren
-                        const osc1 = ctx.createOscillator();
-                        const osc2 = ctx.createOscillator();
-                        const gainNode = ctx.createGain();
-                        const modulationGain = ctx.createGain();
-                        
-                        osc1.type = 'sawtooth';
-                        osc1.frequency.setValueAtTime(600, ctx.currentTime);
-                        
-                        osc2.type = 'sine';
-                        osc2.frequency.setValueAtTime(4, ctx.currentTime);
-                        
-                        modulationGain.gain.setValueAtTime(200, ctx.currentTime);
-                        
-                        osc2.connect(modulationGain);
-                        modulationGain.connect(osc1.frequency);
-                        
-                        osc1.connect(gainNode);
-                        gainNode.connect(ctx.destination);
-                        
-                        gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
-                        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 4);
-                        
-                        osc1.start();
-                        osc2.start();
-                        
-                        osc1.stop(ctx.currentTime + 4);
-                        osc2.stop(ctx.currentTime + 4);
-                    }
+                    
+                    const osc1 = ctx.createOscillator();
+                    const osc2 = ctx.createOscillator();
+                    const gainNode = ctx.createGain();
+                    const modulationGain = ctx.createGain();
+                    
+                    osc1.type = 'sawtooth';
+                    osc1.frequency.setValueAtTime(600, ctx.currentTime);
+                    
+                    osc2.type = 'sine';
+                    osc2.frequency.setValueAtTime(4, ctx.currentTime);
+                    
+                    modulationGain.gain.setValueAtTime(200, ctx.currentTime);
+                    
+                    osc2.connect(modulationGain);
+                    modulationGain.connect(osc1.frequency);
+                    
+                    osc1.connect(gainNode);
+                    gainNode.connect(ctx.destination);
+                    
+                    gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 4);
+                    
+                    osc1.start();
+                    osc2.start();
+                    
+                    osc1.stop(ctx.currentTime + 4);
+                    osc2.stop(ctx.currentTime + 4);
                 } catch(e) {
                     console.error("Audio Context Error: ", e);
                 }
@@ -382,92 +426,22 @@
 
             function triggerFreeze() {
                 if (isFrozen) return;
-
+                isFrozen = true;
+                
                 // Increment violations input
                 const pelanggaranInput = document.getElementById('pelanggaran_sesi');
-                let violationCount = 1;
                 if (pelanggaranInput) {
                     let val = parseInt(pelanggaranInput.value) || 0;
-                    val = val + 1;
-                    pelanggaranInput.value = val;
-                    violationCount = val;
-                }
-
-                isFrozen = true;
-
-                // Configure severity based on violation count
-                let freezeDuration = 10;
-                let soundType = 'siren';
-                const card = overlay.querySelector('.freeze-card');
-                const title = overlay.querySelector('h2');
-                const desc = overlay.querySelector('p');
-                const iconContainer = overlay.querySelector('.siren-icon');
-
-                if (violationCount === 1) {
-                    freezeDuration = 3;
-                    soundType = 'none';
-                    if (card) {
-                        card.style.borderColor = '#f59e0b'; // warning yellow
-                        card.style.background = 'rgba(245, 158, 11, 0.12)';
-                        card.style.boxShadow = '0 20px 50px rgba(245, 158, 11, 0.2)';
-                    }
-                    if (title) {
-                        title.innerText = 'PERINGATAN: PINDAH TAB!';
-                        title.style.color = '#f59e0b';
-                    }
-                    if (desc) {
-                        desc.innerText = 'Sistem mendeteksi Anda meninggalkan halaman ujian. Harap fokus pada soal ujian Anda. Pindah tab kembali akan dikenakan waktu pembekuan layar.';
-                    }
-                    if (iconContainer) {
-                        iconContainer.style.color = '#f59e0b';
-                    }
-                } else if (violationCount === 2) {
-                    freezeDuration = 6;
-                    soundType = 'gentle';
-                    if (card) {
-                        card.style.borderColor = '#ef4444'; // red
-                        card.style.background = 'rgba(239, 68, 68, 0.12)';
-                        card.style.boxShadow = '0 20px 50px rgba(239, 68, 68, 0.2)';
-                    }
-                    if (title) {
-                        title.innerText = 'PERINGATAN KEDUA: TERKUNCI!';
-                        title.style.color = '#ef4444';
-                    }
-                    if (desc) {
-                        desc.innerText = 'Sistem mendeteksi Anda meninggalkan halaman ujian lagi. Layar dikunci selama 6 detik sebagai peringatan.';
-                    }
-                    if (iconContainer) {
-                        iconContainer.style.color = '#ef4444';
-                    }
-                } else {
-                    freezeDuration = 10;
-                    soundType = 'siren';
-                    if (card) {
-                        card.style.borderColor = '#ef4444'; // red
-                        card.style.background = 'rgba(239, 68, 68, 0.12)';
-                        card.style.boxShadow = '0 20px 50px rgba(239, 68, 68, 0.2)';
-                    }
-                    if (title) {
-                        title.innerText = 'PERINGATAN KERAS: TERKUNCI!';
-                        title.style.color = '#ef4444';
-                    }
-                    if (desc) {
-                        desc.innerText = 'Anda terus meninggalkan halaman ujian! Layar dikunci selama 10 detik sebagai hukuman.';
-                    }
-                    if (iconContainer) {
-                        iconContainer.style.color = '#ef4444';
-                    }
+                    pelanggaranInput.value = val + 1;
                 }
 
                 // Show overlay
                 overlay.classList.remove('hidden');
-                freezeLeft = freezeDuration;
+                freezeLeft = 13;
                 counter.innerText = freezeLeft;
 
-                // Play warning sound if any
-                if (soundType !== 'none') {
-                    playWarningSound(soundType);
-                }
+                // Play alarm sound
+                playAlarmSound();
 
                 // Freeze countdown interval
                 clearInterval(freezeTimer);
@@ -487,35 +461,19 @@
                     triggerFreeze();
                 }
             });
-
-            // Prevent false positive cheat detections on mobile and inputs
-            const pageLoadedTime = Date.now();
             window.addEventListener('blur', function() {
-                // Ignore blur if page loaded less than 3 seconds ago to prevent load false-positives
-                if (Date.now() - pageLoadedTime < 3000) {
-                    return;
-                }
-
-                // Ignore blur on mobile devices where window focus events are highly unstable
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (isMobile) {
-                    return;
-                }
-
-                // Ignore blur if the focused element is a form input (avoid blocking keyboard or autofill)
-                const activeEl = document.activeElement;
-                if (activeEl && (
-                    activeEl.tagName === 'INPUT' || 
-                    activeEl.tagName === 'TEXTAREA' || 
-                    activeEl.tagName === 'SELECT'
-                )) {
-                    return;
-                }
-
                 triggerFreeze();
             });
         });
     </script>
-    @yield('scripts')
+    <script>
+    document.getElementById('btnMulai').addEventListener('click', function(e) {
+        const cek = document.getElementById('cek-mengerti');
+        if (!cek.checked) {
+            e.preventDefault();
+            alert('Harap centang persetujuan terlebih dahulu sebelum memulai ujian.');
+        }
+    });
+</script>
 </body>
 </html>
