@@ -184,6 +184,20 @@ class UjianController extends Controller
         $pelanggaran = (int)$request->input('pelanggaran_sesi', 0);
         session(['total_pelanggaran' => session('total_pelanggaran', 0) + $pelanggaran]);
 
+        // Immediate submission with 0 score upon 3 violations
+        if (session('total_pelanggaran') >= 3) {
+            for ($i = 1; $i <= 20; $i++) {
+                session(['jawab_sesi2_q' . $i => '']);
+                session(['jawab_sesi3_q' . $i => '']);
+                session(['jawab_sesi4_q' . $i => '']);
+                session(['jawab_sesi5_q' . $i => '']);
+            }
+            for ($i = 1; $i <= 25; $i++) {
+                session(['jawab_sesi6_q' . $i => '']);
+            }
+            return redirect()->route('ujian.simpan');
+        }
+
         switch ($sesi) {
             case 1:
                 $soalAcak = session('soal_sesi2', []);

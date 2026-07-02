@@ -250,8 +250,9 @@
                 </svg>
             </div>
             <h2 class="fw-bold mb-3" style="color: #ef4444;">TERDETEKSI PINDAH TAB!</h2>
-            <p class="mb-4" style="font-size: 15px; line-height: 1.6; color: #cbd5e1;">Sistem mendeteksi Anda meninggalkan halaman ujian. Layar dikunci selama 13 detik sebagai peringatan. Waktu ujian tetap berjalan!</p>
-            <h3 class="fw-bold" style="color: #06b6d4; margin: 0;">Kembali Aktif Dalam: <span id="freeze-countdown">13</span> s</h3>
+            <p class="mb-4" style="font-size: 15px; line-height: 1.6; color: #cbd5e1;">Sistem mendeteksi Anda meninggalkan halaman ujian. Layar dikunci selama 30 detik sebagai peringatan. Waktu ujian tetap berjalan!</p>
+            <h3 class="fw-bold" style="color: #06b6d4; margin: 0;">Kembali Aktif Dalam: <span id="freeze-countdown">30</span> s</h3>
+            <p id="freeze-warning-text" class="fw-bold mt-4 mb-0" style="color: #fca5a5; font-size: 13px; padding: 12px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px;"></p>
         </div>
     </div>
 
@@ -318,11 +319,40 @@
             let freezeTimer;
             let freezeLeft = 13;
 
+            let globalAudioCtx = null;
+            function initAudio() {
+                if (!globalAudioCtx) {
+                    const AudioContext = window.AudioContext || window.webkitAudioContext;
+                    if (AudioContext) {
+                        globalAudioCtx = new AudioContext();
+                        
+                        // iOS Safari requires playing a sound during user interaction to unlock AudioContext
+                        const osc = globalAudioCtx.createOscillator();
+                        const gain = globalAudioCtx.createGain();
+                        gain.gain.value = 0;
+                        osc.connect(gain);
+                        gain.connect(globalAudioCtx.destination);
+                        osc.start(0);
+                        osc.stop(globalAudioCtx.currentTime + 0.1);
+                    }
+                }
+                if (globalAudioCtx && globalAudioCtx.state === 'suspended') {
+                    globalAudioCtx.resume();
+                }
+            }
+            document.addEventListener('click', initAudio, { once: true });
+            document.addEventListener('touchstart', initAudio, { once: true });
+
             function playAlarmSound() {
                 try {
-                    const AudioContext = window.AudioContext || window.webkitAudioContext;
-                    if (!AudioContext) return;
-                    const ctx = new AudioContext();
+                    if (!globalAudioCtx) {
+                        initAudio();
+                    }
+                    const ctx = globalAudioCtx;
+                    if (!ctx) return;
+                    if (ctx.state === 'suspended') {
+                        ctx.resume();
+                    }
                     
                     const osc1 = ctx.createOscillator();
                     const osc2 = ctx.createOscillator();
@@ -356,24 +386,80 @@
                 }
             }
 
+            let flashInterval;
+            function applyPenaltyEffects() {
+                if (!document.hidden) {
+                    // Bunyikan alarm dan getar
+                    playAlarmSound();
+                    
+                    if (navigator.vibrate) {
+                        // Getar untuk Android (iOS Safari tidak support API ini)
+                        navigator.vibrate([1000, 500, 1000, 500, 1000]);
+                    }
+
+                    // Visual Strobe Alarm (Sangat efektif untuk iOS yang di-silent / tidak support haptic)
+                    clearInterval(flashInterval);
+                    let isRed = false;
+                    const overlayEl = document.getElementById('freeze-overlay');
+                    flashInterval = setInterval(() => {
+                        overlayEl.style.backgroundColor = isRed ? 'rgba(15, 23, 42, 0.96)' : 'rgba(220, 38, 38, 0.95)';
+                        isRed = !isRed;
+                    }, 150);
+                    
+                    // Stop strobing after 4 seconds (sama dengan durasi audio alarm)
+                    setTimeout(() => {
+                        clearInterval(flashInterval);
+                        if (overlayEl) overlayEl.style.backgroundColor = '';
+                    }, 4000);
+                }
+            }
+
             function triggerFreeze() {
                 if (isFrozen) return;
                 isFrozen = true;
                 
                 // Increment violations input
                 const pelanggaranInput = document.getElementById('pelanggaran_sesi');
+                let currentSessionViolations = 0;
                 if (pelanggaranInput) {
-                    let val = parseInt(pelanggaranInput.value) || 0;
-                    pelanggaranInput.value = val + 1;
+                    currentSessionViolations = parseInt(pelanggaranInput.value) || 0;
+                    currentSessionViolations += 1;
+                    pelanggaranInput.value = currentSessionViolations;
+                }
+
+                // Check total violations across all sessions
+                let previousViolations = {{ session('total_pelanggaran', 0) }};
+                let totalViolations = previousViolations + currentSessionViolations;
+
+                // Reset test if total violations reaches 3
+                if (totalViolations >= 3) {
+                    alert('Anda telah melakukan pelanggaran keluar tab sebanyak 3 kali. Ujian Anda dibatalkan dan akan langsung dikumpulkan dengan nilai 0.');
+                    const formUjian = document.getElementById('formUjian');
+                    if (formUjian) {
+                        formUjian.submit();
+                    } else {
+                        window.location.href = "{{ route('ujian.simpan') }}";
+                    }
+                    return;
                 }
 
                 // Show overlay
                 overlay.classList.remove('hidden');
-                freezeLeft = 13;
+                freezeLeft = 30;
                 counter.innerText = freezeLeft;
+                
+                // Update warning text based on remaining attempts
+                let remainingAttempts = 3 - totalViolations;
+                let warningText = document.getElementById('freeze-warning-text');
+                if (warningText) {
+                    if (remainingAttempts > 0) {
+                        warningText.innerText = `Peringatan Keras! Jika Anda keluar dari tab ujian ${remainingAttempts} kali lagi, ujian akan otomatis dihentikan dan disubmit dengan nilai 0.`;
+                    } else {
+                        warningText.innerText = `Batas pelanggaran telah tercapai. Ujian sedang diproses...`;
+                    }
+                }
 
-                // Play alarm sound
-                playAlarmSound();
+                applyPenaltyEffects();
 
                 // Freeze countdown interval
                 clearInterval(freezeTimer);
@@ -384,6 +470,8 @@
                         clearInterval(freezeTimer);
                         overlay.classList.add('hidden');
                         isFrozen = false;
+                        clearInterval(flashInterval);
+                        overlay.style.backgroundColor = '';
                     }
                 }, 1000);
             }
@@ -391,6 +479,11 @@
             document.addEventListener('visibilitychange', function() {
                 if (document.hidden) {
                     triggerFreeze();
+                } else {
+                    if (isFrozen) {
+                        // Trigger kembali efek suara & visual saat user kembali ke tab ini
+                        applyPenaltyEffects();
+                    }
                 }
             });
             window.addEventListener('blur', function() {
