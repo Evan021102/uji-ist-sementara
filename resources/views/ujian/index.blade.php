@@ -104,6 +104,7 @@
                 <option value="ACCOUNTING (A)" {{ old('posisi') === 'ACCOUNTING (A)' ? 'selected' : '' }}>ACCOUNTING (A)</option>
                 <option value="ACCOUNT RECEIVABLE [AR]" {{ old('posisi') === 'ACCOUNT RECEIVABLE [AR]' ? 'selected' : '' }}>ACCOUNT RECEIVABLE [AR]</option>
                 <option value="ACCOUNT PAYABLE [AP]" {{ old('posisi') === 'ACCOUNT PAYABLE [AP]' ? 'selected' : '' }}>ACCOUNT PAYABLE [AP]</option>
+                <option value="PIC Audit Team" {{ old('posisi') === 'PIC Audit Team' ? 'selected' : '' }}>PIC Audit Team</option>
                 <option value="Lainnya" {{ old('posisi') === 'Lainnya' ? 'selected' : '' }}>Lainnya (Tulis Manual)</option>
             </select>
             <label for="posisi" style="padding-top: 10px;">Posisi</label>

@@ -47,7 +47,7 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                'posisi' => 'required|string|in:Admin penjualan (SA),ACCOUNTING (A),ACCOUNT RECEIVABLE [AR],ACCOUNT PAYABLE [AP]',
+                'posisi' => 'required|string|in:Admin penjualan (SA),ACCOUNTING (A),ACCOUNT RECEIVABLE [AR],ACCOUNT PAYABLE [AP],PIC Audit Team',
             ]);
         }
 
@@ -72,7 +72,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
+            $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'PIC Audit Team'];
             if (!in_array($posisi, $mainPositions)) {
                 return redirect()->route('ujian.simpan');
             }
@@ -162,7 +162,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
+                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'PIC Audit Team'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -217,7 +217,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
+                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'PIC Audit Team'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -531,6 +531,58 @@ class UjianController extends Controller
                                 1 => "Apa kemungkinan penyebab selisih ini?",
                                 2 => "Bagaimana langkah investigasi yang harus dilakukan?",
                                 3 => "Apa peran admin penjualan dalam memastikan data akurat?"
+                            ]
+                        ]
+                    ]
+                ];
+
+            case 'PIC Audit Team':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "Studi Kasus 1: Aspek Jurnal Akuntansi (Kesalahan Klasifikasi Beban vs Aset di Akhir Tahun)",
+                            'deskripsi' => "Saat memeriksa keuangan perusahaan di akhir tahun, tim audit menemukan keanehan. Tim Akuntansi perusahaan memindahkan biaya sebesar Rp 1,8 Miliar dari akun Beban Pemasaran & Operasional ke akun Aset Tetap. Setelah diperiksa, uang itu ternyata dipakai untuk iklan digital dan servis rutin gedung. Seharusnya, uang itu dicatat sebagai beban tahun ini, bukan aset. Tim akuntansi sengaja mengubahnya agar keuntungan (laba) perusahaan di laporan keuangan terlihat tetap tinggi.",
+                            'pertanyaan' => [
+                                1 => "Manajemen mengklaim iklan digital Rp 1,8 Miliar ini punya \"manfaat masa depan\" sehingga sah jadi Aset. Analisis mengapa klaim ini salah serta sebutkan 3 dokumen kunci dan jelaskan bagaimana dokumen tersebut membuktikan transaksi ini wajib masuk Beban.",
+                                2 => "Bagaimana cara Anda menilai apakah ini murni salah ketik/tidak tahu (human error) atau sengaja curang (fraud)? Apa yang akan Anda lakukan jika Manajer Keuangan meminta audit ini diabaikan saja?",
+                                3 => "Tindakan memindahkan beban menjadi aset ini tidak hanya berdampak pada akuntansi komersial, tetapi juga akuntansi fiskal (pajak). Bagaimana dampak kecurangan ini terhadap SPT Tahunan PPh Badan perusahaan? Apa sanksi hukum pajak yang mengintai perusahaan jika hal ini terdeteksi oleh fiskus (DJP)?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "Studi Kasus 2: Ekstrapolasi Sampling Statistik & Keterbatasan Waktu",
+                            'deskripsi' => "Perusahaan Anda memiliki 5 Gudang Regional dengan total populasi persediaan 50.000 SKU senilai Rp 100 Miliar. Batas Materialitas yang ditetapkan Komite Audit adalah Rp 2 Miliar. Tim Anda yang beranggotakan 3 orang hanya diberi waktu 3 hari kerja untuk menyelesaikan audit persediaan ini. Di gudang Regional A yang dijadikan sampel acak awal, tim Anda menemukan selisih fisik kurang sebesar 8% dari total nilai buku gudang tersebut.",
+                            'pertanyaan' => [
+                                1 => "Berdasarkan temuan di Gudang A, lakukan analisis risiko menggunakan konsep ekstrapolasi statistik. Jika tren penyimpangan 8% ini diasumsikan terjadi di 4 gudang lainnya, hitung potensi total salah saji persediaan perusahaan dan analisis apakah nilai tersebut melampaui batas materialitas.",
+                                2 => "Mengingat waktu sisa 2 hari dan tidak mungkin melakukan SO menyeluruh (100%) di 4 gudang sisa, tentukan strategi sampling yang paling taktis (Stratified Sampling atau Monetary Unit Sampling) agar opini audit Anda tetap akurat dan akuntabel secara hukum.",
+                                3 => "Jika hasil hitungan total selisih tersebut terbukti melampaui batas Rp 2 Miliar, bagaimana cara Anda menuliskan temuan ini di dalam laporan audit secara objektif? Langkah apa yang Anda ambil untuk melindungi tim Anda jika manajemen menolak hasil hitungan statistik tersebut dengan alasan waktu audit yang terlalu sempit?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "Studi Kasus 3: Kelalaian Tim Audit saat Stock Opname di PT Klien",
+                            'deskripsi' => "Anda membawa tim audit ke PT Klien untuk Stock Opname (SO) dan rekonsiliasi sistem Accurate. Setelah selesai, data berantakan karena kelalaian tim junior Anda: mereka lupa memastikan operasional gudang sudah dibekukan (freeze), sehingga barang tetap keluar-masuk saat dihitung. Selain itu, mereka salah input satuan barang (Pcs vs Box) di Accurate. Sementara itu, besok pagi adalah jadwal Closing Meeting dengan Direksi Klien.",
+                            'pertanyaan' => [
+                                1 => "Bagaimana kelalaian tim Anda ini merusak keandalan seluruh laporan audit? Bagaimana cara Anda menilai apakah data yang berantakan ini masih bisa diperbaiki atau sudah tidak valid sama sekali?",
+                                2 => "Mengingat Closing Meeting dijadwalkan besok pagi, keputusan taktis apa yang Anda ambil? Apakah melakukan hitung ulang, melakukan penarikan data mundur (back-tracing), atau menunda rapat? Jelaskan resikonya!",
+                                3 => "Bagaimana cara Anda menjelaskan kesalahan prosedur tim Anda ini kepada Direksi Klien secara profesional tanpa menyalahkan bawahan? Langkah kontrol apa yang akan Anda terapkan ke tim Anda ke depan agar kesalahan fatal ini tidak terulang?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "Studi Kasus 4: Perubahan Metode Akuntansi Persediaan Sepihak",
+                            'deskripsi' => "Saat mencocokkan data fisik hasil SO dengan laporan keuangan interim, tim audit menemukan bahwa Divisi Akuntansi secara diam-diam mengubah metode penilaian persediaan dari FIFO (First In, First Out) menjadi Metode Harga Patokan Tetap (Standard Cost) di tengah tahun berjalan, tanpa adanya catatan kaki di laporan keuangan. Perubahan ini membuat nilai persediaan akhir di neraca terlihat lebih tinggi Rp 4,2 Miliar, sehingga laba perusahaan sebelum pajak melonjak drastis menjelang audit eksternal.",
+                            'pertanyaan' => [
+                                1 => "Hitung dan analisis dampak dari manipulasi metode persediaan ini terhadap Harga Pokok Penjualan (HPP) dan laporan laba rugi perusahaan. Mengapa tindakan Divisi Akuntansi ini melanggar asas konsistensi dalam standar akuntansi?",
+                                2 => "Kepala Akuntansi bersikeras tidak mau mengubah kembali datanya dengan alasan sistem ERP sudah terkunci secara permanen untuk tutup tahun. Solusi taktis dan rekomendasi jurnal penyesuaian apa yang akan Anda cantumkan di Laporan Hasil Audit untuk memaksa manajemen melakukan koreksi?",
+                                3 => "Tim audit Anda melewatkan temuan ini pada audit triwulan sebelumnya karena kurang teliti memeriksa log system perubahan kebijakan akuntansi. Bagaimana Anda mengevaluasi kelalaian tim Anda secara konstruktif agar kompetensi analisis laporan keuangan mereka meningkat di proyek berikutnya?"
+                            ]
+                        ],
+                        5 => [
+                            'judul' => "Studi Kasus 5: Aspek Kelalaian Tim Audit (Kesalahan Jurnal Penyesuaian Audit)",
+                            'deskripsi' => "Dalam proses finalisasi audit akhir tahun PT X, tim auditor eksternal menemukan bahwa perusahaan belum mencatat beban upah buruh pabrik yang masih harus dibayar untuk minggu terakhir bulan Desember sebesar Rp 2,5 Miliar. Ketua Tim Audit (Audit Senior) kemudian menginstruksikan anggotanya (Audit Junior) untuk membuat draft Jurnal Penyesuaian Audit (Audit Adjustment) yang akan diserahkan kepada klien agar laporan keuangan mereka dikoreksi. Namun, karena kelelahan mengejar deadline, Audit Junior tersebut melakukan kesalahan fatal dalam menyusun logika jurnal. Ia membuat draft jurnal sebagai berikut:<br>(Debit) Beban Gaji & Upah: Rp 2,5 Miliar<br>(Kredit) Kas dan Setara Kas: Rp 2,5 Miliar<br>Draft jurnal ini langsung dimasukkan ke dalam Kertas Kerja Pemeriksaan (KKP) utama tanpa diperiksa kembali (review) oleh Audit Senior, dan draft laporan keuangan hasil audit langsung diserahkan kepada pihak manajemen perusahaan.",
+                            'pertanyaan' => [
+                                1 => "Berdasarkan standar akuntansi berbasis akrual, analisis mengapa draft jurnal yang dibuat oleh tim audit tersebut salah secara prinsip. Tunjukkan apa dampak (efek domino) dari kesalahan pengkreditan akun Kas tersebut terhadap Laporan Arus Kas dan Neraca (Laporan Posisi Keuangan) perusahaan pada tahun berjalan.",
+                                2 => "Mengapa kesalahan seorang junior bisa lolos hingga masuk ke draft laporan final? Jelaskan konsep review bertingkat dalam standar audit yang dilanggar oleh Tim Audit ini dan apa rekomendasi Anda agar KAP (Kantor Akuntan Publik) tidak mengulang kelalaian serupa.",
+                                3 => "Jika pihak manajemen perusahaan (klien) yang justru pertama kali menemukan kesalahan tim audit ini, bagaimana dampaknya terhadap reputasi KAP? Apa tindakan profesional yang harus dilakukan oleh Audit Partner untuk meredam situasi ini tanpa kehilangan kredibilitas?"
                             ]
                         ]
                     ]

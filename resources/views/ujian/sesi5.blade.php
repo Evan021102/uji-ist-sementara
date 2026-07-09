@@ -5,9 +5,9 @@
 @section('styles')
 <style>
     @php
-        $totalQuestions = count($soalSesi5['bagian_a']);
-        foreach ($soalSesi5['bagian_b'] as $case) {
-            $totalQuestions += count($case['pertanyaan']);
+        $totalQuestions = count($soalSesi5['bagian_a'] ?? []);
+        foreach ($soalSesi5['bagian_b'] ?? [] as $case) {
+            $totalQuestions += count($case['pertanyaan'] ?? []);
         }
     @endphp
     @for($i = 1; $i <= $totalQuestions; $i++)
@@ -94,6 +94,7 @@
                 @php $qCount = 1; @endphp
 
                 <!-- BAGIAN A -->
+                @if(isset($soalSesi5['bagian_a']) && count($soalSesi5['bagian_a']) > 0)
                 <h4 class="fw-bold mb-4 mt-2 text-primary" style="font-size: 18px;">A. Pengetahuan Dasar & Pemahaman Konsep</h4>
                 @foreach($soalSesi5['bagian_a'] as $num => $qText)
                 <div class="question-card">
@@ -110,8 +111,10 @@
                 </div>
                 @php $qCount++; @endphp
                 @endforeach
+                @endif
 
                 <!-- BAGIAN B -->
+                @if(isset($soalSesi5['bagian_b']) && count($soalSesi5['bagian_b']) > 0)
                 <h4 class="fw-bold mb-4 mt-5 text-primary" style="font-size: 18px;">B. Studi Kasus / Soal Analisis</h4>
                 @foreach($soalSesi5['bagian_b'] as $caseIdx => $case)
                 <div class="case-container">
@@ -135,6 +138,7 @@
                     @endforeach
                 </div>
                 @endforeach
+                @endif
 
                 <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
                     Selesai & Simpan Seluruh Jawaban →
