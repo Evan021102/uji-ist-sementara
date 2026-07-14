@@ -13,7 +13,8 @@
 @section('content')
 @php
     $posisi = session('posisi');
-    $isCustomPosisi = !in_array($posisi, ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]']);
+    $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+    $isCustomPosisi = !in_array($posisi, $mainPositions);
 @endphp
 <div class="main-wrapper">
     <div class="hero">

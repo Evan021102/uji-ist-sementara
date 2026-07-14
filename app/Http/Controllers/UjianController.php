@@ -72,7 +72,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'PIC Audit Team'];
+            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
             if (!in_array($posisi, $mainPositions)) {
                 return redirect()->route('ujian.simpan');
             }
@@ -162,7 +162,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'PIC Audit Team'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -217,7 +217,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'PIC Audit Team'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -323,7 +323,7 @@ class UjianController extends Controller
     private function getSoalSesi5($posisi)
     {
         switch ($posisi) {
-            case 'ACCOUNT PAYABLE [AP]':
+            case 'ACCOUNT PAYABLE (AP)':
                 return [
                     'bagian_a' => [
                         1 => "Apa perbedaan pencatatan pembelian tunai dan pembelian kredit dari sisi akuntansi? Jelaskan alur proses transaksi pembelian kredit hingga menjadi pembayaran kas dan muncul dalam laporan keuangan.",
@@ -376,7 +376,7 @@ class UjianController extends Controller
                     ]
                 ];
 
-            case 'ACCOUNT RECEIVABLE [AR]':
+            case 'ACCOUNT RECEIVABLE (AR)':
                 return [
                     'bagian_a' => [
                         1 => "Apa perbedaan antara penjualan kredit dan penjualan tunai dari sisi pencatatan akuntansi? Jelaskan alur proses transaksi penjualan kredit hingga menjadi penerimaan kas dan muncul dalam laporan keuangan.",
