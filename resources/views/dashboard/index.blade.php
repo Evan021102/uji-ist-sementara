@@ -6,7 +6,8 @@
     <title>Dashboard {{ ucfirst($role) }}</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="https://gosyenpolinator.com/images/gosyen_logo.png">
     <style>
         body {
             font-family: 'Poppins', sans-serif;

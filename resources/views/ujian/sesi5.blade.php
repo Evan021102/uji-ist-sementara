@@ -3,6 +3,7 @@
 @section('title', 'Sesi 5 - Tes Esai & Studi Kasus')
 
 @section('styles')
+<link rel="icon" href="https://gosyenpolinator.com/images/gosyen_logo.png">
 <style>
     @php
         $totalQuestions = count($soalSesi5['bagian_a']);
@@ -87,13 +88,14 @@
 
         <!-- CONTENT / FORM -->
         <div class="content">
-            <form id="formUjian" action="{{ route('ujian.submit', ['sesi' => 5]) }}" method="POST">
+                        <form id="formUjian" action="{{ route('ujian.submit', ['sesi' => 5]) }}" method="POST">
                 @csrf
                 <input type="hidden" name="pelanggaran_sesi" id="pelanggaran_sesi" value="0">
 
                 @php $qCount = 1; @endphp
 
-                <!-- BAGIAN A -->
+                <!-- BAGIAN A (Dihilangkan, hanya muncul jika ada data) -->
+                @if(count($soalSesi5['bagian_a']) > 0)
                 <h4 class="fw-bold mb-4 mt-2 text-primary" style="font-size: 18px;">A. Pengetahuan Dasar & Pemahaman Konsep</h4>
                 @foreach($soalSesi5['bagian_a'] as $num => $qText)
                 <div class="question-card">
@@ -110,9 +112,12 @@
                 </div>
                 @php $qCount++; @endphp
                 @endforeach
+                @endif
 
-                <!-- BAGIAN B -->
-                <h4 class="fw-bold mb-4 mt-5 text-primary" style="font-size: 18px;">B. Studi Kasus / Soal Analisis</h4>
+                <!-- BAGIAN B (STUDI KASUS) -->
+                <h4 class="fw-bold mb-4 mt-4 text-primary" style="font-size: 18px;">
+                    {{ count($soalSesi5['bagian_a']) > 0 ? 'B. Studi Kasus / Soal Analisis' : 'Studi Kasus / Soal Analisis' }}
+                </h4>
                 @foreach($soalSesi5['bagian_b'] as $caseIdx => $case)
                 <div class="case-container">
                     <div class="case-title">{{ $case['judul'] }}</div>

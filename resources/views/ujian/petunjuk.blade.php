@@ -3,6 +3,7 @@
 @section('title', 'Petunjuk Sesi ' . $sesi)
 
 @section('styles')
+<link rel="icon" href="https://gosyenpolinator.com/images/gosyen_logo.png">
 <style>
     body {
         display: flex;
@@ -32,13 +33,21 @@
         margin: 15px 0;
         display: block;
     }
+     .sanksi-list {
+        padding-left: 30px;
+        margin: 5px 0 5px 0;
+    }
+    .sanksi-list li {
+        list-style-type: none;
+        margin-bottom: 2px;
+    }
 </style>
 @endsection
 
 @section('content')
 @php
     $posisi = session('posisi');
-    $isCustomPosisi = !in_array($posisi, ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]']);
+    $isCustomPosisi = !in_array($posisi, ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]', 'QUALITY CONTROL (QC)','Supervisor Sales (SPVS)']);
 @endphp
 <div class="petunjuk-container">
     <h2 class="text-center fw-bold mb-4" style="color: #2b3452;">
@@ -46,13 +55,16 @@
         @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) (Terakhir) @endif
     </h2>
 
-    <div class="warning-box">
-        <strong>Peraturan Ujian:</strong><br>
-        • Pastikan jaringan internet stabil.<br>
-        • Jangan memindahkan tab atau keluar aplikasi (anti-cheat aktif).<br>
-        • Tidak diperkenankan kembali ke halaman sebelumnya setelah memulai.<br>
-        • Kerjakan dengan jujur dan teliti.
-    </div>
+<div class="alert alert-danger">
+    <strong>Peraturan Ujian:</strong><br>
+    - Jangan memindahkan tab atau keluar aplikasi (Sistem anti-cheat aktif). Sistem akan mendeteksi setiap perpindahan tab/jendela dengan sanksi bertahap:
+    <ul class="sanksi-list">
+        <li>- <strong>Pelanggaran 1 & 2: Akan muncul peringatan dan layar ujian akan membeku (freeze) sementara.</strong></li>
+        <li>- <strong>Pelanggaran 3: Peserta otomatis didiskualifikasi dan akan langsung dikeluarkan dari web ujian.</strong></li>
+    </ul>
+    - Tidak diperkenankan kembali ke halaman sebelumnya setelah memulai.<br>
+    - Kerjakan dengan jujur dan teliti.
+</div>
 
     <div class="info-card">
         <h3>Petunjuk Subtes</h3>

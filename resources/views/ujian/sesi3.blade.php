@@ -3,6 +3,7 @@
 @section('title', 'Sesi 3 - Tes Deret Angka')
 
 @section('styles')
+<link rel="icon" href="https://gosyenpolinator.com/images/gosyen_logo.png">
 <style>
     @for($i = 1; $i <= 20; $i++)
     .question-card:nth-of-type({{ $i }}) { animation-delay: {{ $i * 0.05 }}s; }

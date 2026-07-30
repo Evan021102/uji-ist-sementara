@@ -3,6 +3,7 @@
 @section('title', 'Sesi 4 - Tes Logika Gambar')
 
 @section('styles')
+<link rel="icon" href="https://gosyenpolinator.com/images/gosyen_logo.png">
 <style>
     @for($i = 1; $i <= 20; $i++)
     .question-card:nth-of-type({{ $i }}) { animation-delay: {{ $i * 0.05 }}s; }
@@ -13,7 +14,38 @@
 @section('content')
 @php
     $posisi = session('posisi');
-    $isCustomPosisi = !in_array($posisi, ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]']);
+    $isCustomPosisi = !in_array($posisi, [
+        'ACCOUNT PAYABLE (AP)',
+        'ACCOUNT RECEIVABLE (AR)',
+        'ACCOUNTING (A)',
+        'ADMIN GUDANG (AG)',
+        'Admin penjualan (SA)',
+        'ADMIN PPIC (APP)',
+        'ADMIN QC (AQC)',
+        'ADMIN SCM (ASCM)',
+        'General Affair (GA)',
+        'HRD Payroll (HRP)',
+        'HRD Recruitment (HRR)',
+        'Job Planner (JPL)',
+        'Kas kecil (KAS)',
+        'Kepala Gudang (KG)',
+        'Logistik (LGT)',
+        'MARKETING (M)',
+        'PIC Audit Team',
+        'QUALITY CONTROL ANALIS (QCA)',
+        'Sales (SLS)',
+        'Sales Distribusi (SAD)',
+        'Sales marketing (SMK)',
+        'SCM-FG (SFG)',
+        'Staff Import (SIM)',
+        'Staff legal (SLG)',
+        'Staff purchasing (SPU)',
+        'Staff Sales Executive (SSE)',
+        'Staff sekretaris (SS)',
+        'Supervisor Sales (SPVS)',
+        'Utility (UTL)'
+        
+    ]);
 @endphp
 <div class="main-wrapper">
     <div class="hero">

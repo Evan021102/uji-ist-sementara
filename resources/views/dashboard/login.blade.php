@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Dashboard Ujian</title>
+        <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" href="{{ asset('images/GosyenLogo-removebg-preview.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/GosyenLogo-removebg-preview.png') }}">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+        <!-- Favicon & Icons -->
+    <link rel="icon" href="https://gosyenpolinator.com/images/gosyen_logo.png">
     <style>
         body {
             font-family: 'Poppins', sans-serif;

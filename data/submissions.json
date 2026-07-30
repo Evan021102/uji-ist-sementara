@@ -1,0 +1,534 @@
+[
+    {
+        "id": "sc_1782355565295_25093j8t0",
+        "name": "Avvento Randy Jordanio",
+        "major": "Akuntansi dan Keuangan Lembaga",
+        "testDate": "25\/6\/2026, 09.46.05",
+        "answers": {
+            "1": {
+                "subA": "Kurangnya ketelitian ",
+                "subB": "Mencari dan memperbaikinya lebih teliti",
+                "subC": "Perusahaan akan merugi"
+            },
+            "2": {
+                "subA": ".",
+                "subB": ".",
+                "subC": "."
+            },
+            "3": {
+                "subA": "Miss communication",
+                "subB": "Mempercepat pengiriman atau mengubah pencatatan penjualan ke bulan April",
+                "subC": "Laporan laba rugi bisa saja menunjukan hasil rugi, dan neraca menjadi tidak balance"
+            },
+            "4": {
+                "subA": "Pencatatan kurang satu angka",
+                "subB": "Mendatangi bagian stock opname dan melakukan pencarian",
+                "subC": "Tidak, karena barang tidak hilang hanya tidak tercatat"
+            }
+        }
+    },
+    {
+        "id": "sc_1782355308429_dcc226xrm",
+        "name": "Jovanno Rivannuel Kristanto ",
+        "major": "X AKL 1",
+        "testDate": "25\/6\/2026, 09.41.48",
+        "answers": {
+            "1": {
+                "subA": "kurang ketelitian ",
+                "subB": "mengulang pencatatan ",
+                "subC": "pencatatan tidak sama"
+            },
+            "2": {
+                "subA": "salah mencatat ",
+                "subB": "pencatatan akan berbeda ",
+                "subC": "teliti dalam mencatat "
+            },
+            "3": {
+                "subA": "salah dalam mencatat dan mendata",
+                "subB": "mendata ulang ",
+                "subC": "tidak sama dengan data "
+            },
+            "4": {
+                "subA": "tidak tercatat sepenuhnya ",
+                "subB": "teliti dalam mencatat mendata",
+                "subC": "perlu , karena menyesuaikan data"
+            }
+        }
+    },
+    {
+        "id": "sc_1782355168154_kw6lgsk05",
+        "name": "Norbert Nathanael Atisatya",
+        "major": "Akuntansi",
+        "testDate": "25\/6\/2026, 09.39.28",
+        "answers": {
+            "1": {
+                "subA": "kurang teliti pada saat melakukan rekonsiliasi bank bulan berjalan yang menyebabkan selisih antara saldo buku perusahaan dan laporan bank. ",
+                "subB": "melihat kembali laporan bank dan saldo buku perusahaan lalu saya hitung kembali dengan teliti. ",
+                "subC": "keuangannya jadi tidak balance dan yang melihat keuangan tersebut jadi bingung. "
+            },
+            "2": {
+                "subA": "kesalahan pencatatannya sebagai aset tetap bukan inventaris kantor. ",
+                "subB": "pencatatannya jadi aneh karena mesinnya masuk inventaris kantor",
+                "subC": "memindahkan ke aset tetap"
+            },
+            "3": {
+                "subA": "pengirimannya yang seharusnya dibulan maret malah dikirim bulan April",
+                "subB": "dengan memindahkan pencatatan penjualan tersebut ke bulan april. Lalu menghapus pencatatan di bulan Maret tersebut. ",
+                "subC": "pencatatannya jadi tidak balance"
+            },
+            "4": {
+                "subA": "tidak adanya pencatatan terhadap barang",
+                "subB": "langsung ke warehouse nya dan melakukan investigasi",
+                "subC": "perlu karena barangnya tidak tercatat maka harus melakukan jurnal penyesuaian"
+            }
+        }
+    },
+    {
+        "id": "sc_1782355035970_epsg0hgkz",
+        "name": "Maretha Putri Aurelya Lubis ",
+        "major": "Manajemen perkantoran dan lembaga bisnis ",
+        "testDate": "25\/6\/2026, 09.37.15",
+        "answers": {
+            "1": {
+                "subA": "karena pada saat rekonsiliasi bank bln berjalan, antara saldo buku perusahaan dan laporan bank",
+                "subB": "mencari tahu sumber nya dari bank bulan berjalan ",
+                "subC": "jika tdk ditemukan selisihnya akan bangkrut atau rugi"
+            },
+            "2": {
+                "subA": "kesalahan dimesin dicatat sebagai investaris kantor ",
+                "subB": "akan  rugi atau tdk sesuai hitungan",
+                "subC": "harus berhati hati"
+            },
+            "3": {
+                "subA": "disebut karna tidak sesuai perkiraan ",
+                "subB": "akan memperkirakan dgn matang agar datang sesuai yg ditentukan",
+                "subC": "akan rugi "
+            },
+            "4": {
+                "subA": "akan terjadi kesalahan",
+                "subB": "-",
+                "subC": "perlu karena biar sesuai dgn yg diperhitungkan dan tdk ada kekeliruan "
+            }
+        }
+    },
+    {
+        "id": "sc_1782355029813_qtijf8xip",
+        "name": "Kinanti Meisa Indirayani",
+        "major": "Manajemen Perkantoran dan Lembaga Bisnis",
+        "testDate": "25\/6\/2026, 09.37.09",
+        "answers": {
+            "1": {
+                "subA": "Kemungkinan salah pencatatan atau mengerekap saldo",
+                "subB": "Mencari solusi, dan mencari kesalahannya ada dimana ",
+                "subC": "Akan rugi dan terjadi kesalah pahaman terhadap kantor dan bank"
+            },
+            "2": {
+                "subA": "Kesalahan mesin pencatat kantor",
+                "subB": "Akan salah terus menerus jika tidak di perbaiki, dan akan terjadi kelebihan kekurangan",
+                "subC": "Harus mengecek mesin terlebuh dahulu agar tidak terjadi kesalahan lagi"
+            },
+            "3": {
+                "subA": "kesalahan mencatat tanggal pengiriman",
+                "subB": "meminta konfirmasi kepada divisi, dan meminta maaf untuk tidak teledor",
+                "subC": "akan terjadi kerugian "
+            },
+            "4": {
+                "subA": "Dari catatan sistem ",
+                "subB": "-",
+                "subC": "perlu untuk bukti kepada kantor"
+            }
+        }
+    },
+    {
+        "id": "sc_1782355010455_9sy0yqim6",
+        "name": "Tegar Maulana ",
+        "major": "Akuntansi ",
+        "testDate": "25\/6\/2026, 09.36.50",
+        "answers": {
+            "1": {
+                "subA": "Karna waktu yang sama antara saldo buku dan laporan bank",
+                "subB": "Mengecek kembali penghitungan saldo buku perusahaan ",
+                "subC": "Perusahaan akan rugi Rp 7.500.000"
+            },
+            "2": {
+                "subA": "Saat menghitung nilainya 280JT, seharusnya bukan segitu nominalnya ",
+                "subB": "Berkurangnya uang perusahaan ",
+                "subC": "Di pahami lebih teliti"
+            },
+            "3": {
+                "subA": "Iya",
+                "subB": "Kita ganti 2x lipat",
+                "subC": "Tidak balance dan merugikan perusahaan "
+            },
+            "4": {
+                "subA": "Iya,Karna adanya salah pencatatan dalam accounting",
+                "subB": "Harus lebih teliti dalam menangani pekerjaan ",
+                "subC": "Perlu, agar lebih cermat menanganinya"
+            }
+        }
+    },
+    {
+        "id": "sc_1782354950704_sexkpvhyr",
+        "name": "Vicky Adi Saputra ",
+        "major": "Akuntansi",
+        "testDate": "25\/6\/2026, 09.35.50",
+        "answers": {
+            "1": {
+                "subA": "salah mencatat dalam buku perusahaan",
+                "subB": "Mengecek ulang antara buku perusahaan dan laporan bank",
+                "subC": "Laporan bank tidak balance"
+            },
+            "2": {
+                "subA": "mesin dicatat sebagai investaris kantor",
+                "subB": "akan terjadi tidak sesuai antara pencatat dan laporan keuangan",
+                "subC": "menganalisis kembali dan memperbaiki"
+            },
+            "3": {
+                "subA": "kesalahan dalam pencatatan ",
+                "subB": "mencatat kembali penjualan dan barang akan segera dikirimkan",
+                "subC": "laporan laba rugi dan neraca akan tidak balance"
+            },
+            "4": {
+                "subA": "hasil stock opname selisih negatif 3% dibanding catatan sistem",
+                "subB": "-",
+                "subC": "perlu"
+            }
+        }
+    },
+    {
+        "id": "sc_1782354944716_qok7srvw1",
+        "name": "Octaviano haryono ",
+        "major": "Akuntansi ",
+        "testDate": "25\/6\/2026, 09.35.44",
+        "answers": {
+            "1": {
+                "subA": "Ada salah pencatatan saat rekonsiliasi",
+                "subB": "mencari apakah ada kesalahan saat mencatat rekonsiliasi",
+                "subC": "selisih akan semakin besar dan tidak akan berkurang "
+            },
+            "2": {
+                "subA": "sebuah mesin di catat sebagai inventaris kantor, namun mesin salah mencatat",
+                "subB": " laporan keuangan akan salah isi",
+                "subC": "mencatat dengan lebih hati hati dan harus sangat teliti "
+            },
+            "3": {
+                "subA": "iya",
+                "subB": "Mengirim barang itu langsung",
+                "subC": "efeknya terhadap laporan laba rugi dan neraca adalah akan terjadi keterlambatan dalam mencatat laporan laba rugi dan neraca "
+            },
+            "4": {
+                "subA": "ada beberapa barang yang hilang atau tidak tercatat ",
+                "subB": "perlu lebih teliti lagi dalam menjalankan tugas",
+                "subC": "Perlu, agar tidak ada selisih stock opname"
+            }
+        }
+    },
+    {
+        "id": "sc_1782354946239_xmtbowi1s",
+        "name": "Josephine Adeline Prasetyo ",
+        "major": "akuntansi ",
+        "testDate": "25\/6\/2026, 09.35.46",
+        "answers": {
+            "1": {
+                "subA": "kesalahan menginput saldo ",
+                "subB": "mengecek kembali buku perusahaan dan laporan pada bank ",
+                "subC": "akan terjadi kerugian dan tidak balance pada transaksi "
+            },
+            "2": {
+                "subA": "kesalahan mencatat pembagian inventaris ",
+                "subB": "akan terjadi kesalahpahaman dan kejanggalan terhadap saldo yang di tentukan ",
+                "subC": "mengganti pencatatan "
+            },
+            "3": {
+                "subA": "kesalahan memilih pencatatan pada penjualan ",
+                "subB": "mengganti catatan penjualan ",
+                "subC": "tidak balance dan salah karena tidak sesuai tanggal yang di tentukan "
+            },
+            "4": {
+                "subA": "kesalahan menghitung selisih ",
+                "subB": "mengecek kembali selisih tersebut , sehingga dapat mengetahui benar salahnya ",
+                "subC": "perlu, agar lebih rinci mengetahui selisih pada negatif tersebut "
+            }
+        }
+    },
+    {
+        "id": "sc_1782354946302_ca3ine9vm",
+        "name": "Clarita Sofie Christiawan ",
+        "major": "Akuntansi ",
+        "testDate": "25\/6\/2026, 09.35.46",
+        "answers": {
+            "1": {
+                "subA": "adanya pencatatan yang terlewat sehingga terdapat selisih ",
+                "subB": "mengecek kembali laporan bank nya dari tanggal dan bulan secara urut ",
+                "subC": "perusahaan akan terkena kerugian pada laporan nya atau tidak balance "
+            },
+            "2": {
+                "subA": "nilai dan usia nya ",
+                "subB": "saldo dalam laporan keuangan akan menjadi tidak sesuai ",
+                "subC": "menentukan ulang mesin inventaris yang sesuai "
+            },
+            "3": {
+                "subA": "iya, karena dalam penjelasan itu tertulis bahwa penjualan sudah di catat sedangkan barang nya belum dikirim ",
+                "subB": "menayakan lagi kepada divisi sales apakah ada barang yang belum terkirim dan catatan penjualannya ",
+                "subC": "tidak balance, karena pada bulan dan tanggal nya tidaj sesuai "
+            },
+            "4": {
+                "subA": "pencatatan pada barang nya ",
+                "subB": "mengecek kembali barang nya dan menanyakan kepada pihak yang memegang tugas itu ",
+                "subC": "ya perlu, agar pada saat pengecekan barang itu sesuai dengan yang ada "
+            }
+        }
+    },
+    {
+        "id": "sc_1782354946082_7d909y906",
+        "name": "Alvinsa Marvilia Anggraini",
+        "major": "Akutansi",
+        "testDate": "25\/6\/2026, 09.35.46",
+        "answers": {
+            "1": {
+                "subA": "salah memasukan angka",
+                "subB": "ngengecek ulang ",
+                "subC": "kerugian "
+            },
+            "2": {
+                "subA": "tidak di beri berapa ribu nya ",
+                "subB": "tidak balence",
+                "subC": "membetulkan ulang"
+            },
+            "3": {
+                "subA": "keterlambatan",
+                "subB": "meminta maaf dam langsung mengirim sesuai pesanan",
+                "subC": "tidak balence"
+            },
+            "4": {
+                "subA": "jumlah barang",
+                "subB": "mengecek ulang data dari awal  atau membuat data yg baru",
+                "subC": "iyaa agar tau mana yg salah dan tidak ada yg di tutupin"
+            }
+        }
+    },
+    {
+        "id": "sc_1782354946126_d5qrs0w4a",
+        "name": "Chandra Adittya ",
+        "major": "Akuntansi ",
+        "testDate": "25\/6\/2026, 09.35.46",
+        "answers": {
+            "1": {
+                "subA": "terdapat jumlah saldo yang kurang atau lebih",
+                "subB": "meneliti ulang dan menjumlahkan dengan sesuai ",
+                "subC": "dampaknya adalah menjadi tidak balance"
+            },
+            "2": {
+                "subA": "kesalahan pencatatan terjadi pada nama asetnya",
+                "subB": "dampaknya akan membuat laporan keuangan menjadi tidak stabil",
+                "subC": "mengubah nama aset sesuai data yang pasti"
+            },
+            "3": {
+                "subA": "di sebut kurang teliti",
+                "subB": "divisi sales harus meneliti ulang pencatatan penjualan serta jadwal pasti pengiriman nya",
+                "subC": "efeknya akan membuat laporan menjadi tidak sesuai pada bulan tersebut "
+            },
+            "4": {
+                "subA": "penyebabnya karena warehouse mungkin lupa mencatat",
+                "subB": "dicek kembali lalu di sesuaikan dengan jumlah barang yang belum tercatat",
+                "subC": "tidak perlu, karena cukup di data ulang barang yang belum tercatat dan sesuaikan dengan jumlah barang yang ada."
+            }
+        }
+    },
+    {
+        "id": "sc_1782354944608_e6oajjp5q",
+        "name": "Jacqlien Alexandra ",
+        "major": "Akuntansi keuangan lembaga ",
+        "testDate": "25\/6\/2026, 09.35.44",
+        "answers": {
+            "1": {
+                "subA": "salah hitung atau salah memasukkan data (salah memasukkan nominal uang)",
+                "subB": "mengecek ulang semua data, dan melakukan perbandingan atau persamaan melalui transaksi sebelumnya ",
+                "subC": "perusahaan akan rugi "
+            },
+            "2": {
+                "subA": "salah memasukkan data ",
+                "subB": "laporan keuangan jadi tidak tuntas jika ada yang rugi ",
+                "subC": "mengecek ulang semua data dan melakukan persamaan dari data data sebelumnya"
+            },
+            "3": {
+                "subA": "ya bisa, bisa jadi pelanggan akan membatalkan pesanan krn mengirim nya lama dan perusahaan tidak jadi dapat uang",
+                "subB": "setelah pencatatan pembelian dan pelanggan membayar maka langsung siap kan barang dan cus mengirim, jika barang limit stok maka akan ada keterangan po (misal 3 bulan atau 2bulan)",
+                "subC": "tidak jadi laba malah jadi rugi, jika pelanggan memesan lalu tidak dikirim kirim kan pelanggan mungkin bisa membatalkan. untuk neraca setelah penyesuaian nanti mungkin bakal ada kesalahan pencatatan"
+            },
+            "4": {
+                "subA": "ya mungkin",
+                "subB": "mencatat ulang dan mengecek semua data stok",
+                "subC": "ya perlu dong, agar nanti kalau melakukan pengecekan ulang atau menyesuaikan dengan data yang ada biar sesuai dan tidak salah antara mencatat atau memasukkan data"
+            }
+        }
+    },
+    {
+        "id": "sc_1782354875905_e2benbj89",
+        "name": "Nathanael Christian Setiono",
+        "major": "Akuntansi & Keuangan Lembaga",
+        "testDate": "25\/6\/2026, 09.34.35",
+        "answers": {
+            "1": {
+                "subA": "Terdapat kesalahan hitung atau ada suatu data yang terlewat saat proses input dari laooran bank ke saldo buku perusahaan.",
+                "subB": "Mengecek kembali secara mendalam dari berbagai transaksi yang ada di laporan bank dan saldo buku perusahaan (disesuaikan\/pengecekan ulang).",
+                "subC": "Maka pada saat laporan akhir bulan\/proses pencatatan akhir bulan, selisih tersebut akan sangat mempengaruhi saldo perusahaan dan menimbulkan ketidakseimbangan antar data (kesalahan beruntun)."
+            },
+            "2": {
+                "subA": "Pencatatat mesin bernilai Rp 280 Juta yang dicatat sebagai inventaris kantor.",
+                "subB": "Akan tercatat sebagai aset peralatan kantor dengan nilai Rp 280 juta sehingga terkena adjustment berupa depresiasi nilai peralatan.",
+                "subC": "Depresiasi nilai peralatan"
+            },
+            "3": {
+                "subA": "Mencatat penjualan di bulan Maret sedangkan barang akan dikirim bulan April.",
+                "subB": "Memindahkan pencatatan penjualan ke bulan April.",
+                "subC": "Jika dicatat pada bulan Maret, maka penjualan tersebut akan masuk kedalam laporan Laba\/Rugi bulan Maret."
+            },
+            "4": {
+                "subA": "Barang yang tidak terdaftar didalam data sistem.",
+                "subB": "Menyelidiki\/mencari tahu apa barang tersebut, lalu menambahkan barang tersebut kedalam data\/membuat data baru bagi barang yang data nya belum terdaftar supaya dapat terbaca oleh sistem.",
+                "subC": "Perlu untuk antisipasi"
+            }
+        }
+    },
+    {
+        "id": "sc_1782354852769_eqve9zyzg",
+        "name": "Matthew Febian Yildiray",
+        "major": "MPLB \"Menejemen perkantoran layanan bisnis\"",
+        "testDate": "25\/6\/2026, 09.34.12",
+        "answers": {
+            "1": {
+                "subA": "Terjadinya kesalah saat menghitung dan  pengerjaan excell pada ",
+                "subB": "Tentunya dengan menghitung ulang data data buku saldo perusahaan dan juga bank ",
+                "subC": "Maka akan terjadi kesalah dikemudian hari yaitu data laporan antara buku saldo perusahaan dan laporan bank"
+            },
+            "2": {
+                "subA": "Kesalahan nya ada pada penulisan bahwa masuk  inventaris kantor karna seharusnya tidak masuk ke  inventaris kantor namun dalam inventaris aset tetap kantor ",
+                "subB": "Akan terjadi kesalahan untuk pendataan aset aset kantor seperti dari harga dan usia ganti barang nya",
+                "subC": "Tentunya dengan mamasukan mesin itu sebagai aset tetap kantor"
+            },
+            "3": {
+                "subA": "Catatan jadi tidak terstruktur atau urut lengkap",
+                "subB": "Tentunya dengen memperbaiki pengiriman nya barang keluar nya harus sesuai dengan tanggal dibelinya andaikan saja saya membeli sebuah monitor pada bula maret makan datang pun harus tetap di catatan bulan saya membeli yaitu maret atau pada saat saya berhasil menjualnya",
+                "subC": "Tentunya akan membuat kesalh pada penghitungan laba dan ruginya nantinya ketika disuruuh mengetik berapa laba dan ruginya"
+            },
+            "4": {
+                "subA": "Ada kemungkinan accounting lupa mencatat stock barang yang ada di gudang",
+                "subB": "Prosedur investigasi nya tentunya dengan cara kita bisa bicara dengan orang yang mengurus berada di bekerja di gudang untuk mencatat ulang stock nya dan mengecek journal barang yang datang an keluar",
+                "subC": "Tentu perlu sebagai acuan accounting untuk mencatat nya kemudian harinya supaya tidak terjadi kesalah lagi kelalaian untuk lupa menulis mencatat stock barang"
+            }
+        }
+    },
+    {
+        "id": "sc_1782200558505_tdr4x263r",
+        "name": "Lydia",
+        "major": "Psi",
+        "testDate": "23\/6\/2026, 14.42.38",
+        "answers": {
+            "1": {
+                "subA": "tidak tahu",
+                "subB": "jawab sendiri saja ",
+                "subC": "tombok wae lahh gpp"
+            },
+            "2": {
+                "subA": "suruh teliti",
+                "subB": "ada nya kesalahan",
+                "subC": "susruh buat ulang"
+            },
+            "3": {
+                "subA": "mboh",
+                "subB": "suruh ai",
+                "subC": "rak ngerti ogh"
+            },
+            "4": {
+                "subA": "rak ngerti",
+                "subB": "suruh ai , sekarang ai pinter ik",
+                "subC": "perlu , biar ceto"
+            }
+        }
+    },
+    {
+        "id": "1781686549553",
+        "name": "aiueoi",
+        "age": "55",
+        "gender": "Laki-laki",
+        "position": "manusia silver",
+        "testDate": "2022-12-13",
+        "rawScores": {
+            "most": {
+                "D": 2,
+                "I": 2,
+                "S": 2,
+                "C": 15
+            },
+            "least": {
+                "D": 11,
+                "I": 5,
+                "S": 8,
+                "C": 0
+            },
+            "change": {
+                "D": -9,
+                "I": -3,
+                "S": -6,
+                "C": 15
+            }
+        }
+    },
+    {
+        "id": "1781686310849",
+        "name": "na",
+        "age": "22",
+        "gender": "Laki-laki",
+        "position": "na",
+        "testDate": "2026-06-17",
+        "rawScores": {
+            "most": {
+                "D": 7,
+                "I": 9,
+                "S": 4,
+                "C": 0
+            },
+            "least": {
+                "D": 3,
+                "I": 4,
+                "S": 5,
+                "C": 8
+            },
+            "change": {
+                "D": 4,
+                "I": 5,
+                "S": -1,
+                "C": -8
+            }
+        }
+    },
+    {
+        "id": "1781686120219",
+        "name": "Jo",
+        "age": "21",
+        "gender": "Laki-laki",
+        "position": "Io",
+        "testDate": "2026-06-17",
+        "rawScores": {
+            "most": {
+                "D": 8,
+                "I": 3,
+                "S": 3,
+                "C": 4
+            },
+            "least": {
+                "D": 5,
+                "I": 3,
+                "S": 8,
+                "C": 4
+            },
+            "change": {
+                "D": 3,
+                "I": 0,
+                "S": -5,
+                "C": 0
+            }
+        }
+    }
+]

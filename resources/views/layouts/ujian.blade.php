@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,7 +33,6 @@
             min-height: 100vh; color: var(--dark); padding: 30px;
             overscroll-behavior-y: contain;
             -ms-overflow-style: none; scrollbar-width: none;
-            touch-action: manipulation;
         }
         body::-webkit-scrollbar { width: 0; height: 0; }
         
@@ -251,8 +250,9 @@
                 </svg>
             </div>
             <h2 class="fw-bold mb-3" style="color: #ef4444;">TERDETEKSI PINDAH TAB!</h2>
-            <p class="mb-4" style="font-size: 15px; line-height: 1.6; color: #cbd5e1;">Sistem mendeteksi Anda meninggalkan halaman ujian. Layar dikunci selama 13 detik sebagai peringatan. Waktu ujian tetap berjalan!</p>
-            <h3 class="fw-bold" style="color: #06b6d4; margin: 0;">Kembali Aktif Dalam: <span id="freeze-countdown">13</span> s</h3>
+            <p class="mb-4" style="font-size: 15px; line-height: 1.6; color: #cbd5e1;">Sistem mendeteksi Anda meninggalkan halaman ujian. Layar dikunci selama 30 detik sebagai peringatan. Waktu ujian tetap berjalan!</p>
+            <h3 class="fw-bold" style="color: #06b6d4; margin: 0;">Kembali Aktif Dalam: <span id="freeze-countdown">30</span> s</h3>
+            <p id="freeze-warning-text" class="fw-bold mt-4 mb-0" style="color: #fca5a5; font-size: 13px; padding: 12px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px;"></p>
         </div>
     </div>
 
@@ -263,7 +263,7 @@
         <button id="close-toast" style="margin-left:5px;">✕</button>
     </div>
 
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Register Service Worker & Mobile tweaks -->
     <script>
@@ -300,6 +300,14 @@
             toast.style.display = 'none';
         });
 
+        // Anti double-tap zoom for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (e) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) e.preventDefault();
+            lastTouchEnd = now;
+        }, { passive: false });
+
         // Global Anti-cheat Freeze & Alarm Sound
         document.addEventListener('DOMContentLoaded', function() {
             const formUjian = document.getElementById('formUjian');
@@ -311,163 +319,147 @@
             let freezeTimer;
             let freezeLeft = 13;
 
-            function playWarningSound(type) {
-                try {
+            let globalAudioCtx = null;
+            function initAudio() {
+                if (!globalAudioCtx) {
                     const AudioContext = window.AudioContext || window.webkitAudioContext;
-                    if (!AudioContext) return;
-                    const ctx = new AudioContext();
-
-                    if (type === 'gentle') {
-                        // Play a brief double beep
-                        const osc = ctx.createOscillator();
-                        const gainNode = ctx.createGain();
-                        osc.type = 'sine';
-                        osc.frequency.setValueAtTime(800, ctx.currentTime);
-                        osc.connect(gainNode);
-                        gainNode.connect(ctx.destination);
-                        gainNode.gain.setValueAtTime(0.2, ctx.currentTime);
-                        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-                        osc.start();
-                        osc.stop(ctx.currentTime + 0.3);
-
-                        // Second beep after 150ms
-                        setTimeout(() => {
-                            try {
-                                const osc2 = ctx.createOscillator();
-                                const gainNode2 = ctx.createGain();
-                                osc2.type = 'sine';
-                                osc2.frequency.setValueAtTime(800, ctx.currentTime);
-                                osc2.connect(gainNode2);
-                                gainNode2.connect(ctx.destination);
-                                gainNode2.gain.setValueAtTime(0.2, ctx.currentTime);
-                                gainNode2.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-                                osc2.start();
-                                osc2.stop(ctx.currentTime + 0.3);
-                            } catch(e) {}
-                        }, 150);
-                    } else if (type === 'siren') {
-                        // Play full alarm siren
-                        const osc1 = ctx.createOscillator();
-                        const osc2 = ctx.createOscillator();
-                        const gainNode = ctx.createGain();
-                        const modulationGain = ctx.createGain();
+                    if (AudioContext) {
+                        globalAudioCtx = new AudioContext();
                         
-                        osc1.type = 'sawtooth';
-                        osc1.frequency.setValueAtTime(600, ctx.currentTime);
-                        
-                        osc2.type = 'sine';
-                        osc2.frequency.setValueAtTime(4, ctx.currentTime);
-                        
-                        modulationGain.gain.setValueAtTime(200, ctx.currentTime);
-                        
-                        osc2.connect(modulationGain);
-                        modulationGain.connect(osc1.frequency);
-                        
-                        osc1.connect(gainNode);
-                        gainNode.connect(ctx.destination);
-                        
-                        gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
-                        gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 4);
-                        
-                        osc1.start();
-                        osc2.start();
-                        
-                        osc1.stop(ctx.currentTime + 4);
-                        osc2.stop(ctx.currentTime + 4);
+                        // iOS Safari requires playing a sound during user interaction to unlock AudioContext
+                        const osc = globalAudioCtx.createOscillator();
+                        const gain = globalAudioCtx.createGain();
+                        gain.gain.value = 0;
+                        osc.connect(gain);
+                        gain.connect(globalAudioCtx.destination);
+                        osc.start(0);
+                        osc.stop(globalAudioCtx.currentTime + 0.1);
                     }
+                }
+                if (globalAudioCtx && globalAudioCtx.state === 'suspended') {
+                    globalAudioCtx.resume();
+                }
+            }
+            document.addEventListener('click', initAudio, { once: true });
+            document.addEventListener('touchstart', initAudio, { once: true });
+
+            function playAlarmSound() {
+                try {
+                    if (!globalAudioCtx) {
+                        initAudio();
+                    }
+                    const ctx = globalAudioCtx;
+                    if (!ctx) return;
+                    if (ctx.state === 'suspended') {
+                        ctx.resume();
+                    }
+                    
+                    const osc1 = ctx.createOscillator();
+                    const osc2 = ctx.createOscillator();
+                    const gainNode = ctx.createGain();
+                    const modulationGain = ctx.createGain();
+                    
+                    osc1.type = 'sawtooth';
+                    osc1.frequency.setValueAtTime(600, ctx.currentTime);
+                    
+                    osc2.type = 'sine';
+                    osc2.frequency.setValueAtTime(4, ctx.currentTime);
+                    
+                    modulationGain.gain.setValueAtTime(200, ctx.currentTime);
+                    
+                    osc2.connect(modulationGain);
+                    modulationGain.connect(osc1.frequency);
+                    
+                    osc1.connect(gainNode);
+                    gainNode.connect(ctx.destination);
+                    
+                    gainNode.gain.setValueAtTime(0.3, ctx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 4);
+                    
+                    osc1.start();
+                    osc2.start();
+                    
+                    osc1.stop(ctx.currentTime + 4);
+                    osc2.stop(ctx.currentTime + 4);
                 } catch(e) {
                     console.error("Audio Context Error: ", e);
                 }
             }
 
+            let flashInterval;
+            function applyPenaltyEffects() {
+                if (!document.hidden) {
+                    // Bunyikan alarm dan getar
+                    playAlarmSound();
+                    
+                    if (navigator.vibrate) {
+                        // Getar untuk Android (iOS Safari tidak support API ini)
+                        navigator.vibrate([1000, 500, 1000, 500, 1000]);
+                    }
+
+                    // Visual Strobe Alarm (Sangat efektif untuk iOS yang di-silent / tidak support haptic)
+                    clearInterval(flashInterval);
+                    let isRed = false;
+                    const overlayEl = document.getElementById('freeze-overlay');
+                    flashInterval = setInterval(() => {
+                        overlayEl.style.backgroundColor = isRed ? 'rgba(15, 23, 42, 0.96)' : 'rgba(220, 38, 38, 0.95)';
+                        isRed = !isRed;
+                    }, 150);
+                    
+                    // Stop strobing after 4 seconds (sama dengan durasi audio alarm)
+                    setTimeout(() => {
+                        clearInterval(flashInterval);
+                        if (overlayEl) overlayEl.style.backgroundColor = '';
+                    }, 4000);
+                }
+            }
+
             function triggerFreeze() {
                 if (isFrozen) return;
-
+                isFrozen = true;
+                
                 // Increment violations input
                 const pelanggaranInput = document.getElementById('pelanggaran_sesi');
-                let violationCount = 1;
+                let currentSessionViolations = 0;
                 if (pelanggaranInput) {
-                    let val = parseInt(pelanggaranInput.value) || 0;
-                    val = val + 1;
-                    pelanggaranInput.value = val;
-                    violationCount = val;
+                    currentSessionViolations = parseInt(pelanggaranInput.value) || 0;
+                    currentSessionViolations += 1;
+                    pelanggaranInput.value = currentSessionViolations;
                 }
 
-                isFrozen = true;
+                // Check total violations across all sessions
+                let previousViolations = {{ session('total_pelanggaran', 0) }};
+                let totalViolations = previousViolations + currentSessionViolations;
 
-                // Configure severity based on violation count
-                let freezeDuration = 10;
-                let soundType = 'siren';
-                const card = overlay.querySelector('.freeze-card');
-                const title = overlay.querySelector('h2');
-                const desc = overlay.querySelector('p');
-                const iconContainer = overlay.querySelector('.siren-icon');
-
-                if (violationCount === 1) {
-                    freezeDuration = 3;
-                    soundType = 'none';
-                    if (card) {
-                        card.style.borderColor = '#f59e0b'; // warning yellow
-                        card.style.background = 'rgba(245, 158, 11, 0.12)';
-                        card.style.boxShadow = '0 20px 50px rgba(245, 158, 11, 0.2)';
+                // Reset test if total violations reaches 3
+                if (totalViolations >= 3) {
+                    alert('Anda telah melakukan pelanggaran keluar tab sebanyak 3 kali. Ujian Anda dibatalkan dan akan langsung dikumpulkan dengan nilai 0.');
+                    const formUjian = document.getElementById('formUjian');
+                    if (formUjian) {
+                        formUjian.submit();
+                    } else {
+                        window.location.href = "{{ route('ujian.simpan') }}";
                     }
-                    if (title) {
-                        title.innerText = 'PERINGATAN: PINDAH TAB!';
-                        title.style.color = '#f59e0b';
-                    }
-                    if (desc) {
-                        desc.innerText = 'Sistem mendeteksi Anda meninggalkan halaman ujian. Harap fokus pada soal ujian Anda. Pindah tab kembali akan dikenakan waktu pembekuan layar.';
-                    }
-                    if (iconContainer) {
-                        iconContainer.style.color = '#f59e0b';
-                    }
-                } else if (violationCount === 2) {
-                    freezeDuration = 6;
-                    soundType = 'gentle';
-                    if (card) {
-                        card.style.borderColor = '#ef4444'; // red
-                        card.style.background = 'rgba(239, 68, 68, 0.12)';
-                        card.style.boxShadow = '0 20px 50px rgba(239, 68, 68, 0.2)';
-                    }
-                    if (title) {
-                        title.innerText = 'PERINGATAN KEDUA: TERKUNCI!';
-                        title.style.color = '#ef4444';
-                    }
-                    if (desc) {
-                        desc.innerText = 'Sistem mendeteksi Anda meninggalkan halaman ujian lagi. Layar dikunci selama 6 detik sebagai peringatan.';
-                    }
-                    if (iconContainer) {
-                        iconContainer.style.color = '#ef4444';
-                    }
-                } else {
-                    freezeDuration = 10;
-                    soundType = 'siren';
-                    if (card) {
-                        card.style.borderColor = '#ef4444'; // red
-                        card.style.background = 'rgba(239, 68, 68, 0.12)';
-                        card.style.boxShadow = '0 20px 50px rgba(239, 68, 68, 0.2)';
-                    }
-                    if (title) {
-                        title.innerText = 'PERINGATAN KERAS: TERKUNCI!';
-                        title.style.color = '#ef4444';
-                    }
-                    if (desc) {
-                        desc.innerText = 'Anda terus meninggalkan halaman ujian! Layar dikunci selama 10 detik sebagai hukuman.';
-                    }
-                    if (iconContainer) {
-                        iconContainer.style.color = '#ef4444';
-                    }
+                    return;
                 }
 
                 // Show overlay
                 overlay.classList.remove('hidden');
-                freezeLeft = freezeDuration;
+                freezeLeft = 30;
                 counter.innerText = freezeLeft;
-
-                // Play warning sound if any
-                if (soundType !== 'none') {
-                    playWarningSound(soundType);
+                
+                // Update warning text based on remaining attempts
+                let remainingAttempts = 3 - totalViolations;
+                let warningText = document.getElementById('freeze-warning-text');
+                if (warningText) {
+                    if (remainingAttempts > 0) {
+                        warningText.innerText = `Peringatan Keras! Jika Anda keluar dari tab ujian ${remainingAttempts} kali lagi, ujian akan otomatis dihentikan dan disubmit dengan nilai 0.`;
+                    } else {
+                        warningText.innerText = `Batas pelanggaran telah tercapai. Ujian sedang diproses...`;
+                    }
                 }
+
+                applyPenaltyEffects();
 
                 // Freeze countdown interval
                 clearInterval(freezeTimer);
@@ -478,40 +470,43 @@
                         clearInterval(freezeTimer);
                         overlay.classList.add('hidden');
                         isFrozen = false;
+                        clearInterval(flashInterval);
+                        overlay.style.backgroundColor = '';
                     }
                 }, 1000);
             }
 
+            // --- Screen Wake Lock API ---
+            // Mencegah layar hp mati otomatis (sleep) yang bisa memicu pelanggaran palsu
+            let wakeLock = null;
+            async function requestWakeLock() {
+                try {
+                    if ('wakeLock' in navigator) {
+                        wakeLock = await navigator.wakeLock.request('screen');
+                    }
+                } catch (err) {
+                    console.log('Wake Lock error:', err);
+                }
+            }
+            // Minta wake lock saat pengguna berinteraksi pertama kali (bersamaan dengan initAudio)
+            document.addEventListener('click', requestWakeLock, { once: true });
+            document.addEventListener('touchstart', requestWakeLock, { once: true });
+
             document.addEventListener('visibilitychange', function() {
                 if (document.hidden) {
                     triggerFreeze();
+                } else {
+                    // Browser otomatis melepas wake lock saat tab disembunyikan, jadi kita minta lagi saat tab aktif
+                    if (wakeLock !== null) {
+                        requestWakeLock();
+                    }
+                    if (isFrozen) {
+                        // Trigger kembali efek suara & visual saat user kembali ke tab ini
+                        applyPenaltyEffects();
+                    }
                 }
             });
-
-            // Prevent false positive cheat detections on mobile and inputs
-            const pageLoadedTime = Date.now();
             window.addEventListener('blur', function() {
-                // Ignore blur if page loaded less than 3 seconds ago to prevent load false-positives
-                if (Date.now() - pageLoadedTime < 3000) {
-                    return;
-                }
-
-                // Ignore blur on mobile devices where window focus events are highly unstable
-                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-                if (isMobile) {
-                    return;
-                }
-
-                // Ignore blur if the focused element is a form input (avoid blocking keyboard or autofill)
-                const activeEl = document.activeElement;
-                if (activeEl && (
-                    activeEl.tagName === 'INPUT' || 
-                    activeEl.tagName === 'TEXTAREA' || 
-                    activeEl.tagName === 'SELECT'
-                )) {
-                    return;
-                }
-
                 triggerFreeze();
             });
         });
