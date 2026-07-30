@@ -11,6 +11,9 @@ use App\Http\Controllers\DashboardController;
 |--------------------------------------------------------------------------
 */
 
+// Localization Route
+Route::get('/lang/{locale}', [\App\Http\Controllers\LanguageController::class, 'switchLanguage'])->name('lang.switch');
+
 // Candidate Exam Routes
 Route::get('/', [UjianController::class, 'index'])->name('ujian.index');
 Route::post('/ujian/start', [UjianController::class, 'start'])->name('ujian.start');

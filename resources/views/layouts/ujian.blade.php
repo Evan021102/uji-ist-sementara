@@ -235,10 +235,42 @@
             .hero h1 { font-size: 28px; }
             .sidebar, .content { padding: 18px; border-radius: 20px; }
         }
+        
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            backdrop-filter: blur(5px);
+            display: flex;
+            gap: 5px;
+        }
+        .language-switcher a {
+            text-decoration: none;
+            color: #4b5563;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .language-switcher a.active {
+            background: var(--primary);
+            color: white;
+        }
     </style>
     @yield('styles')
 </head>
 <body>
+    <div class="language-switcher">
+        <a href="{{ route('lang.switch', 'id') }}" class="{{ App::getLocale() == 'id' ? 'active' : '' }}">ID</a>
+        <a href="{{ route('lang.switch', 'en') }}" class="{{ App::getLocale() == 'en' ? 'active' : '' }}">EN</a>
+    </div>
+
     @yield('content')
 
     <!-- Anti-cheat Freeze Overlay -->
@@ -249,17 +281,17 @@
                   <path d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </svg>
             </div>
-            <h2 class="fw-bold mb-3" style="color: #ef4444;">TERDETEKSI PINDAH TAB!</h2>
-            <p class="mb-4" style="font-size: 15px; line-height: 1.6; color: #cbd5e1;">Sistem mendeteksi Anda meninggalkan halaman ujian. Layar dikunci selama 30 detik sebagai peringatan. Waktu ujian tetap berjalan!</p>
-            <h3 class="fw-bold" style="color: #06b6d4; margin: 0;">Kembali Aktif Dalam: <span id="freeze-countdown">30</span> s</h3>
+            <h2 class="fw-bold mb-3" style="color: #ef4444;">{{ __('Peringatan!') }}</h2>
+            <p class="mb-4" style="font-size: 15px; line-height: 1.6; color: #cbd5e1;">{{ __('Anda terdeteksi melakukan kecurangan! (Berpindah Tab / Window)') }}<br>{{ __('Mohon kembali ke halaman ujian. Ujian Anda akan dibekukan sementara.') }}</p>
+            <h3 class="fw-bold" style="color: #06b6d4; margin: 0;">{{ __('Layar akan terbuka kembali dalam') }}: <span id="freeze-countdown">30</span> {{ __('detik') }}</h3>
             <p id="freeze-warning-text" class="fw-bold mt-4 mb-0" style="color: #fca5a5; font-size: 13px; padding: 12px; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px;"></p>
         </div>
     </div>
 
     <!-- Toast untuk install PWA -->
     <div id="pwa-toast">
-        📱 Instal aplikasi untuk pengalaman ujian lebih baik
-        <button id="install-btn">Instal</button>
+        📱 {{ __('Instal aplikasi untuk pengalaman ujian lebih baik') }}
+        <button id="install-btn">{{ __('Instal') }}</button>
         <button id="close-toast" style="margin-left:5px;">✕</button>
     </div>
 
@@ -433,7 +465,7 @@
 
                 // Reset test if total violations reaches 3
                 if (totalViolations >= 3) {
-                    alert('Anda telah melakukan pelanggaran keluar tab sebanyak 3 kali. Ujian Anda dibatalkan dan akan langsung dikumpulkan dengan nilai 0.');
+                    alert("{{ __('Anda telah melakukan pelanggaran keluar tab sebanyak 3 kali. Ujian Anda dibatalkan dan akan langsung dikumpulkan dengan nilai 0.') }}");
                     const formUjian = document.getElementById('formUjian');
                     if (formUjian) {
                         formUjian.submit();
@@ -451,11 +483,20 @@
                 // Update warning text based on remaining attempts
                 let remainingAttempts = 3 - totalViolations;
                 let warningText = document.getElementById('freeze-warning-text');
+                const isEn = {{ App::getLocale() === 'en' ? 'true' : 'false' }};
                 if (warningText) {
                     if (remainingAttempts > 0) {
-                        warningText.innerText = `Peringatan Keras! Jika Anda keluar dari tab ujian ${remainingAttempts} kali lagi, ujian akan otomatis dihentikan dan disubmit dengan nilai 0.`;
+                        if (isEn) {
+                            warningText.innerText = `Strict Warning! If you leave the exam tab ${remainingAttempts} more time(s), the exam will be automatically stopped and submitted with a score of 0.`;
+                        } else {
+                            warningText.innerText = `Peringatan Keras! Jika Anda keluar dari tab ujian ${remainingAttempts} kali lagi, ujian akan otomatis dihentikan dan disubmit dengan nilai 0.`;
+                        }
                     } else {
-                        warningText.innerText = `Batas pelanggaran telah tercapai. Ujian sedang diproses...`;
+                        if (isEn) {
+                            warningText.innerText = `Violation limit reached. Processing exam submission...`;
+                        } else {
+                            warningText.innerText = `Batas pelanggaran telah tercapai. Ujian sedang diproses...`;
+                        }
                     }
                 }
 

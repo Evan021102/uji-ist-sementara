@@ -51,8 +51,8 @@
 @section('content')
 <div class="main-wrapper">
     <div class="hero">
-        <h1>Ujian Kompetensi Posisi</h1>
-        <p>Sesi 5 - Tes Esai & Soal Analisis ({{ $posisi }})</p>
+        <h1>{{ __('Ujian Kompetensi Posisi') }}</h1>
+        <p>{{ __('Sesi 5 - Tes Esai & Soal Analisis') }} ({{ $posisi }})</p>
     </div>
 
     <div class="layout">
@@ -60,15 +60,15 @@
         <div class="sidebar">
             <div class="logo-box">
                 <img src="https://gosyenpolinator.com/images/gosyen_logo.png" alt="Logo">
-                <div class="badge-custom">Sesi 5 Aktif</div>
+                <div class="badge-custom">{{ __('Sesi 5 Aktif') }}</div>
             </div>
             <div class="timer-box" id="timerBox">
-                <p>Sisa Waktu</p>
+                <p>{{ __('Sisa Waktu') }}</p>
                 <h2 id="countdown">45:00</h2>
             </div>
             <div class="progress-wrapper">
                 <div class="progress-header">
-                    <span>Progress</span>
+                    <span>{{ __('Kemajuan') }}</span>
                     <span id="progressText">0/{{ $totalQuestions }}</span>
                 </div>
                 <div class="progress-track">
@@ -76,19 +76,19 @@
                 </div>
             </div>
             <div class="info-card" style="margin-top:20px;">
-                <h3>Informasi Tes</h3>
+                <h3>{{ __('Informasi Tes') }}</h3>
                 <ul>
-                    <li>Total soal: {{ $totalQuestions }}</li>
-                    <li>Durasi: 45 menit</li>
-                    <li>Ketik jawaban secara terpisah</li>
-                    <li>Waktu habis otomatis menyimpan</li>
+                    <li>{{ __('Total soal:') }} {{ $totalQuestions }}</li>
+                    <li>{{ __('Durasi: 45 menit') }}</li>
+                    <li>{{ __('Ketik jawaban secara terpisah') }}</li>
+                    <li>{{ __('Waktu habis otomatis menyimpan') }}</li>
                 </ul>
             </div>
         </div>
 
         <!-- CONTENT / FORM -->
         <div class="content">
-                        <form id="formUjian" action="{{ route('ujian.submit', ['sesi' => 5]) }}" method="POST">
+            <form id="formUjian" action="{{ route('ujian.submit', ['sesi' => 5]) }}" method="POST">
                 @csrf
                 <input type="hidden" name="pelanggaran_sesi" id="pelanggaran_sesi" value="0">
 
@@ -96,53 +96,53 @@
 
                 <!-- BAGIAN A (Dihilangkan, hanya muncul jika ada data) -->
                 @if(count($soalSesi5['bagian_a']) > 0)
-                <h4 class="fw-bold mb-4 mt-2 text-primary" style="font-size: 18px;">A. Pengetahuan Dasar & Pemahaman Konsep</h4>
+                <h4 class="fw-bold mb-4 mt-2 text-primary" style="font-size: 18px;">{{ __('A. Pengetahuan Dasar & Pemahaman Konsep') }}</h4>
                 @foreach($soalSesi5['bagian_a'] as $num => $qText)
                 <div class="question-card">
                     <div class="question-number">{{ $qCount }}</div>
-                    <p class="question-text" style="font-size: 16px; font-weight: 500; color: #1e293b; line-height: 1.6;">
-                        {!! $qText !!}
+                    <p class="question-text" style="font-size: 16px; font-weight: 600; color: #1e293b; line-height: 1.6;">
+                        {{ __($qText) }}
                     </p>
-                    <textarea class="form-control essay-input" 
-                              name="jawab_sesi6_q{{ $qCount }}" 
+                    <textarea name="jawab_sesi6_q{{ $qCount }}" 
+                              class="form-control essay-input" 
                               rows="4" 
-                              placeholder="Ketik jawaban Anda di sini..." 
-                              style="border-radius: 14px; border: 1px solid var(--border); outline: none; font-size: 15px; padding: 15px; resize: vertical; width: 100%;" 
-                              required></textarea>
+                              placeholder="{{ __('Ketik jawaban Anda di sini secara jelas dan detail...') }}" 
+                              style="border-radius: 14px; border: 2px solid #cbd5e1; padding: 15px; font-size: 15px; width: 100%; transition: all 0.3s ease;"></textarea>
                 </div>
                 @php $qCount++; @endphp
                 @endforeach
                 @endif
 
-                <!-- BAGIAN B (STUDI KASUS) -->
-                <h4 class="fw-bold mb-4 mt-4 text-primary" style="font-size: 18px;">
-                    {{ count($soalSesi5['bagian_a']) > 0 ? 'B. Studi Kasus / Soal Analisis' : 'Studi Kasus / Soal Analisis' }}
-                </h4>
+                <!-- BAGIAN B (Studi Kasus & Problem Solving) -->
+                @if(count($soalSesi5['bagian_b']) > 0)
+                <h4 class="fw-bold mb-4 mt-4 text-primary" style="font-size: 18px;">{{ __('B. Studi Kasus & Analisis Masalah') }}</h4>
                 @foreach($soalSesi5['bagian_b'] as $caseIdx => $case)
                 <div class="case-container">
-                    <div class="case-title">{{ $case['judul'] }}</div>
-                    <div class="case-desc">{!! $case['deskripsi'] !!}</div>
-                    
-                    @foreach($case['pertanyaan'] as $subIdx => $subText)
-                    <div class="question-card" style="margin-bottom: 20px; box-shadow: none; border-color: #cbd5e1;">
-                        <div class="question-number" style="background: linear-gradient(135deg, var(--secondary), var(--primary));">{{ $qCount }}</div>
-                        <p class="question-text" style="font-size: 15px; font-weight: 500; color: #334155; line-height: 1.6;">
-                            {!! $subText !!}
+                    <div class="case-title">📌 {{ __('Studi Kasus') }} {{ $caseIdx + 1 }}: {{ __($case['judul']) }}</div>
+                    <div class="case-desc">
+                        {!! nl2br(e(__($case['deskripsi']))) !!}
+                    </div>
+
+                    @foreach($case['pertanyaan'] as $subNum => $subQText)
+                    <div class="question-card" style="background: white; border: 1px solid #cbd5e1; margin-bottom: 20px;">
+                        <div class="question-number">{{ $qCount }}</div>
+                        <p class="question-text" style="font-size: 15px; font-weight: 600; color: #334155; line-height: 1.6;">
+                            {{ __($subQText) }}
                         </p>
-                        <textarea class="form-control essay-input" 
-                                  name="jawab_sesi6_q{{ $qCount }}" 
+                        <textarea name="jawab_sesi6_q{{ $qCount }}" 
+                                  class="form-control essay-input" 
                                   rows="4" 
-                                  placeholder="Ketik analisis Anda untuk pertanyaan ini..." 
-                                  style="border-radius: 14px; border: 1px solid #cbd5e1; outline: none; font-size: 15px; padding: 15px; resize: vertical; width: 100%;" 
-                                  required></textarea>
+                                  placeholder="{{ __('Ketik analisis & solusi Anda di sini...') }}" 
+                                  style="border-radius: 14px; border: 2px solid #cbd5e1; padding: 15px; font-size: 15px; width: 100%; transition: all 0.3s ease;"></textarea>
                     </div>
                     @php $qCount++; @endphp
                     @endforeach
                 </div>
                 @endforeach
+                @endif
 
-                <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, var(--primary), var(--secondary));">
-                    Selesai & Simpan Seluruh Jawaban →
+                <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, #10b981, #059669);">
+                    {{ __('Selesai & Kirim Jawaban') }} &check;
                 </button>
             </form>
         </div>
@@ -185,7 +185,7 @@
             }
             if (totalWaktu < 0) {
                 clearInterval(timerInterval);
-                alert('Waktu ujian Sesi 5 habis! Seluruh jawaban Anda akan disimpan otomatis.');
+                alert("{{ __('Waktu ujian Sesi 5 habis! Seluruh jawaban Anda akan disimpan otomatis.') }}");
                 document.getElementById('formUjian').submit();
             }
             totalWaktu--;

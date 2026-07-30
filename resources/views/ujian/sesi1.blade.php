@@ -14,8 +14,8 @@
 @section('content')
 <div class="main-wrapper">
     <div class="hero">
-        <h1>Ujian Psikologi Online</h1>
-        <p>Sesi 1 - Tes Pilihan Kata (WA)</p>
+        <h1>{{ __('Ujian Psikologi Online') }}</h1>
+        <p>{{ __('Sesi 1 - Tes Pilihan Kata (WA)') }}</p>
     </div>
 
     <div class="layout">
@@ -23,15 +23,15 @@
         <div class="sidebar">
             <div class="logo-box">
                 <img src="https://gosyenpolinator.com/images/gosyen_logo.png" alt="Logo">
-                <div class="badge-custom">Sesi 1 Aktif</div>
+                <div class="badge-custom">{{ __('Sesi 1 Aktif') }}</div>
             </div>
             <div class="timer-box" id="timerBox">
-                <p>Sisa Waktu</p>
+                <p>{{ __('Sisa Waktu') }}</p>
                 <h2 id="countdown">06:00</h2>
             </div>
             <div class="progress-wrapper">
                 <div class="progress-header">
-                    <span>Progress</span>
+                    <span>{{ __('Kemajuan') }}</span>
                     <span id="progressText">0/20</span>
                 </div>
                 <div class="progress-track">
@@ -39,12 +39,12 @@
                 </div>
             </div>
             <div class="info-card" style="margin-top:20px;">
-                <h3>Informasi Tes</h3>
+                <h3>{{ __('Informasi Tes') }}</h3>
                 <ul>
-                    <li>Total soal: 20</li>
-                    <li>Durasi: 6 menit</li>
-                    <li>Pilih satu jawaban</li>
-                    <li>Jawaban tersimpan otomatis</li>
+                    <li>{{ __('Total soal: 20') }}</li>
+                    <li>{{ __('Durasi: 6 menit') }}</li>
+                    <li>{{ __('Pilih satu jawaban') }}</li>
+                    <li>{{ __('Jawaban tersimpan otomatis') }}</li>
                 </ul>
             </div>
         </div>
@@ -60,7 +60,7 @@
                 <div class="question-card">
                     <div class="question-number">{{ $no }}</div>
                     <p class="question-text">
-                        Pilih satu kata yang <strong>tidak memiliki kesamaan</strong> dengan keempat kata lainnya:
+                        {{ __('Pilih satu kata yang tidak memiliki kesamaan dengan keempat kata lainnya:') }}
                     </p>
                     @foreach($s['opsi'] as $label_tampil => $data)
                     <div class="option">
@@ -70,7 +70,7 @@
                                value="{{ $data['asli'] }}">
                         <label for="q{{ $no }}_{{ $label_tampil }}">
                             <span class="option-badge">{{ $label_tampil }}</span>
-                            {{ $data['teks'] }}
+                            {{ __($data['teks']) }}
                         </label>
                     </div>
                     @endforeach
@@ -78,7 +78,7 @@
                 @endforeach
 
                 <button type="submit" class="submit-btn">
-                    Lanjut ke Sesi 2 →
+                    {{ __('Lanjut ke Sesi 2') }} &rarr;
                 </button>
             </form>
         </div>
@@ -121,7 +121,7 @@
             }
             if (totalWaktu < 0) {
                 clearInterval(timerInterval);
-                alert('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.');
+                alert("{{ __('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.') }}");
                 document.getElementById('formUjian').submit();
             }
             totalWaktu--;

@@ -51,68 +51,64 @@
 @endphp
 <div class="petunjuk-container">
     <h2 class="text-center fw-bold mb-4" style="color: #2b3452;">
-        Petunjuk Pengerjaan Sesi {{ $sesi }}
-        @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) (Terakhir) @endif
+        {{ __('Petunjuk Pengerjaan Sesi') }} {{ $sesi }}
+        @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) ({{ __('Terakhir') }}) @endif
     </h2>
 
 <div class="alert alert-danger">
-    <strong>Peraturan Ujian:</strong><br>
-    - Jangan memindahkan tab atau keluar aplikasi (Sistem anti-cheat aktif). Sistem akan mendeteksi setiap perpindahan tab/jendela dengan sanksi bertahap:
+    <strong>{{ __('Peraturan Ujian:') }}</strong><br>
+    - {{ __('Jangan memindahkan tab atau keluar aplikasi (Sistem anti-cheat aktif). Sistem akan mendeteksi setiap perpindahan tab/jendela dengan sanksi bertahap:') }}
     <ul class="sanksi-list">
-        <li>- <strong>Pelanggaran 1 & 2: Akan muncul peringatan dan layar ujian akan membeku (freeze) sementara.</strong></li>
-        <li>- <strong>Pelanggaran 3: Peserta otomatis didiskualifikasi dan akan langsung dikeluarkan dari web ujian.</strong></li>
+        <li>- <strong>{{ __('Pelanggaran 1 & 2: Akan muncul peringatan dan layar ujian akan membeku (freeze) sementara.') }}</strong></li>
+        <li>- <strong>{{ __('Pelanggaran 3: Peserta otomatis didiskualifikasi dan akan langsung dikeluarkan dari web ujian.') }}</strong></li>
     </ul>
-    - Tidak diperkenankan kembali ke halaman sebelumnya setelah memulai.<br>
-    - Kerjakan dengan jujur dan teliti.
+    - {{ __('Tidak diperkenankan kembali ke halaman sebelumnya setelah memulai.') }}<br>
+    - {{ __('Kerjakan dengan jujur dan teliti.') }}
 </div>
 
     <div class="info-card">
-        <h3>Petunjuk Subtes</h3>
-        <p>
+        <h3>{{ __('Petunjuk Subtes') }}</h3>
             @if($sesi == 1)
-                Ditentukan lima kata. Pada 4 dari 5 kata itu terdapat suatu kesamaan. 
-                Carilah satu kata yang tidak memiliki kesamaan dengan keempat kata yang lain.
+                {{ __('Ditentukan lima kata. Pada 4 dari 5 kata itu terdapat suatu kesamaan. Carilah satu kata yang tidak memiliki kesamaan dengan keempat kata yang lain.') }}
                 <br><br>
-                <strong>Contoh :</strong><br>
-                A. MEJA &nbsp; B. KURSI &nbsp; C. BURUNG &nbsp; D. LEMARI &nbsp; E. TEMPAT TIDUR<br><br>
-                Meja, kursi, lemari, dan tempat tidur adalah perabot rumah, sedangkan "burung" bukan.<br> 
-                Jawaban yang benar adalah : BURUNG (pilih jawaban C)<br><br>
-                <strong>Contoh berikutnya:</strong><br>
-                A. DUDUK &nbsp; B. BERBARING &nbsp; C. BERDIRI &nbsp; D. BERJALAN &nbsp; E. BERJONGKOK<br><br>
-                Duduk, berbaring, berdiri, berjongkok = tidak bergerak. Berjalan = bergerak.<br>
-                Jawaban: BERJALAN (pilih D)
+                <strong>{{ __('Contoh :') }}</strong><br>
+                A. {{ __('MEJA') }} &nbsp; B. {{ __('KURSI') }} &nbsp; C. {{ __('BURUNG') }} &nbsp; D. {{ __('LEMARI') }} &nbsp; E. {{ __('TEMPAT TIDUR') }}<br><br>
+                {{ __('Meja, kursi, lemari, dan tempat tidur adalah perabot rumah, sedangkan "burung" bukan.') }}<br> 
+                {{ __('Jawaban yang benar adalah : BURUNG (pilih jawaban C)') }}<br><br>
+                <strong>{{ __('Contoh berikutnya:') }}</strong><br>
+                A. {{ __('DUDUK') }} &nbsp; B. {{ __('BERBARING') }} &nbsp; C. {{ __('BERDIRI') }} &nbsp; D. {{ __('BERJALAN') }} &nbsp; E. {{ __('BERJONGKOK') }}<br><br>
+                {{ __('Duduk, berbaring, berdiri, berjongkok = tidak bergerak. Berjalan = bergerak.') }}<br>
+                {{ __('Jawaban: BERJALAN (pilih D)') }}
             @elseif($sesi == 2)
-                Ditentukan tiga kata. Antara kata pertama dan kata kedua terdapat suatu hubungan tertentu. 
-                Antara kata ketiga dan salah satu kata di antara kelima kata pilihan, harus pula terdapat hubungan yang sama. Carilah kata itu.<br><br>
-                <strong>Contoh :</strong><br>
-                HUTAN : POHON = TEMBOK : ...<br>
-                A. BATU BATA &nbsp; B. RUMAH &nbsp; C. SEMEN &nbsp; D. PUTIH &nbsp; E. DINDING<br><br>
-                Hubungan antara hutan dan pohon adalah bahwa hutan terdiri atas pohon-pohon, maka hubungan antara tembok dan salah satu kata pilihan adalah bahwa tembok terdiri atas batu bata.<br>
-                Jawaban yang benar adalah : BATU BATA (pilih jawaban A)<br><br>
-                <strong>Contoh berikutnya :</strong><br>
-                GELAP : TERANG = BASAH : ...<br>
-                A. HUJAN&nbsp; B. HARI&nbsp; C. LEMBAB &nbsp; D. ANGIN &nbsp; E. KERING<br><br>
-                Gelap adalah lawan kata dari terang, maka untuk basah lawan katanya adalah kering.<br>
-                Jawaban yang benar adalah : KERING (pilih jawaban E)
+                {{ __('Ditentukan tiga kata. Antara kata pertama dan kata kedua terdapat suatu hubungan tertentu. Antara kata ketiga dan salah satu kata di antara kelima kata pilihan, harus pula terdapat hubungan yang sama. Carilah kata itu.') }}<br><br>
+                <strong>{{ __('Contoh :') }}</strong><br>
+                {{ __('HUTAN') }} : {{ __('POHON') }} = {{ __('TEMBOK') }} : ...<br>
+                A. {{ __('BATU BATA') }} &nbsp; B. {{ __('RUMAH') }} &nbsp; C. {{ __('SEMEN') }} &nbsp; D. {{ __('PUTIH') }} &nbsp; E. {{ __('DINDING') }}<br><br>
+                {{ __('Hubungan antara hutan dan pohon adalah bahwa hutan terdiri atas pohon-pohon, maka hubungan antara tembok dan salah satu kata pilihan adalah bahwa tembok terdiri atas batu bata.') }}<br>
+                {{ __('Jawaban yang benar adalah : BATU BATA (pilih jawaban A)') }}<br><br>
+                <strong>{{ __('Contoh berikutnya :') }}</strong><br>
+                {{ __('GELAP') }} : {{ __('TERANG') }} = {{ __('BASAH') }} : ...<br>
+                A. {{ __('HUJAN') }}&nbsp; B. {{ __('HARI') }}&nbsp; C. {{ __('LEMBAB') }} &nbsp; D. {{ __('ANGIN') }} &nbsp; E. {{ __('KERING') }}<br><br>
+                {{ __('Gelap adalah lawan kata dari terang, maka untuk basah lawan katanya adalah kering.') }}<br>
+                {{ __('Jawaban yang benar adalah : KERING (pilih jawaban E)') }}
             @elseif($sesi == 3)
-                Setiap soal menyajikan deret angka yang disusun menurut aturan tertentu dan dapat dilanjutkan berdasarkan aturan itu. Carilah angka berikutnya pada deret tersebut dan ketiklah jawaban Anda pada kotak yang disediakan.<br><br>
-                <strong>Contoh :</strong><br>
+                {{ __('Setiap soal menyajikan deret angka yang disusun menurut aturan tertentu dan dapat dilanjutkan berdasarkan aturan itu. Carilah angka berikutnya pada deret tersebut dan ketiklah jawaban Anda pada kotak yang disediakan.') }}<br><br>
+                <strong>{{ __('Contoh :') }}</strong><br>
                 2, 4, 6, 8, 10, 12, 14?<br>
-                Pada deret ini angka berikutnya didapat jika ditambah dengan 2. Maka jawaban adalah : 16<br><br>
-                <strong>Contoh berikutnya :</strong><br>
+                {{ __('Pada deret ini angka berikutnya didapat jika ditambah dengan 2. Maka jawaban adalah : 16') }}<br><br>
+                <strong>{{ __('Contoh berikutnya :') }}</strong><br>
                 9, 7, 10, 8, 11, 9, 12? <br>
-                Pada deret ini polanya berganti-ganti dikurangi 2 kemudian ditambah 3. Jawaban contoh ini adalah : 10
+                {{ __('Pada deret ini polanya berganti-ganti dikurangi 2 kemudian ditambah 3. Jawaban contoh ini adalah : 10') }}
             @elseif($sesi == 4)
-                Perhatikan pola gambar pada setiap soal. Pilihlah satu gambar (A, B, C, D, atau E) yang merupakan kelanjutan logis atau bagian yang hilang dari pola tersebut.<br><br>
-                <strong>Contoh Cara Pengerjaan:</strong><br>
-                <img src="{{ asset('gambar/visual_reasoning/cth.jpg') }}" alt="Contoh Soal Logika Gambar" class="gambar-contoh">
+                {{ __('Perhatikan pola gambar pada setiap soal. Pilihlah satu gambar (A, B, C, D, atau E) yang merupakan kelanjutan logis atau bagian yang hilang dari pola tersebut.') }}<br><br>
+                <strong>{{ __('Contoh Cara Pengerjaan:') }}</strong><br>
+                <img src="{{ asset('gambar/visual_reasoning/cth.jpg') }}" alt="{{ __('Contoh Soal Logika Gambar') }}" class="gambar-contoh">
                 @if($isCustomPosisi)
-                    <br>Karena ini merupakan sesi terakhir untuk posisi Anda, ketika waktu habis atau ketika Anda menekan tombol Selesai, seluruh jawaban akan disimpan secara permanen ke dalam sistem database.
+                    <br>{{ __('Karena ini merupakan sesi terakhir untuk posisi Anda, ketika waktu habis atau ketika Anda menekan tombol Selesai, seluruh jawaban akan disimpan secara permanen ke dalam sistem database.') }}
                 @endif
             @elseif($sesi == 5)
-                Sesi ini adalah Tes Esai &amp; Studi Kasus khusus untuk Posisi Pekerjaan yang Anda pilih. 
-                Terdapat beberapa pertanyaan teori dan beberapa studi kasus dengan sub-pertanyaan yang harus Anda selesaikan.<br><br>
-                Karena ini merupakan sesi terakhir, ketika waktu habis atau ketika Anda menekan tombol Selesai, seluruh jawaban akan disimpan secara permanen ke dalam sistem database.
+                {{ __('Sesi ini adalah Tes Esai & Studi Kasus khusus untuk Posisi Pekerjaan yang Anda pilih. Terdapat beberapa pertanyaan teori dan beberapa studi kasus dengan sub-pertanyaan yang harus Anda selesaikan.') }}<br><br>
+                {{ __('Karena ini merupakan sesi terakhir, ketika waktu habis atau ketika Anda menekan tombol Selesai, seluruh jawaban akan disimpan secara permanen ke dalam sistem database.') }}
             @endif
         </p>
     </div>
@@ -120,12 +116,12 @@
     <div class="agreement">
         <input type="checkbox" id="cek-mengerti">
         <label for="cek-mengerti" style="cursor: pointer;">
-            Saya telah membaca dan memahami seluruh petunjuk ujian sesi ini.
+            {{ __('Saya telah membaca dan memahami seluruh petunjuk ujian sesi ini.') }}
         </label>
     </div>
 
     <a href="{{ route('ujian.sesi', ['sesi' => $sesi]) }}" class="btn start-btn text-center text-decoration-none d-block" id="btnMulai">
-        Mulai Pengerjaan Sesi {{ $sesi }} @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) (Terakhir) @endif
+        {{ __('Mulai Pengerjaan Sesi') }} {{ $sesi }} @if(($sesi == 4 && $isCustomPosisi) || ($sesi == 5 && !$isCustomPosisi)) ({{ __('Terakhir') }}) @endif
     </a>
 </div>
 @endsection
@@ -136,7 +132,7 @@
         const cek = document.getElementById('cek-mengerti');
         if (!cek.checked) {
             e.preventDefault();
-            alert('Harap centang persetujuan terlebih dahulu sebelum memulai ujian.');
+            alert("{{ __('Harap centang persetujuan terlebih dahulu sebelum memulai ujian.') }}");
         }
     });
 </script>

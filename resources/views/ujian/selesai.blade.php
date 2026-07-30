@@ -1,6 +1,6 @@
 @extends('layouts.ujian')
 
-@section('title', $status_sukses ? 'Ujian Selesai' : 'Terjadi Kesalahan')
+@section('title', $status_sukses ? __('Ujian Selesai') : __('Terjadi Kesalahan'))
 
 @section('styles')
 <style>
@@ -97,10 +97,10 @@
             </svg>
         </div>
         
-        <h1>Ujian Selesai!</h1>
-        <p>Terima kasih, <strong>{{ $nama }}</strong>.<br>Seluruh jawaban Anda telah berhasil disimpan secara permanen ke dalam database.</p>
+        <h1>{{ __('Ujian Selesai!') }}</h1>
+        <p>{{ __('Terima kasih, :nama. Seluruh jawaban Anda telah berhasil disimpan secara permanen ke dalam database.', ['nama' => $nama]) }}</p>
         
-        <a href="{{ route('ujian.index') }}" class="btn-home">Kembali ke Halaman Awal</a>
+        <a href="{{ route('ujian.index') }}" class="btn-home">{{ __('Kembali ke Halaman Awal') }}</a>
         
     @else
         <div class="icon-box icon-error">
@@ -109,16 +109,16 @@
             </svg>
         </div>
         
-        <h1>Terjadi Kesalahan</h1>
-        <p>Sistem gagal menyimpan jawaban Anda. Harap segera lapor kepada pengawas ujian.</p>
+        <h1>{{ __('Terjadi Kesalahan') }}</h1>
+        <p>{{ __('Sistem gagal menyimpan jawaban Anda. Harap segera lapor kepada pengawas ujian.') }}</p>
         
         @if(isset($error_msg))
         <div class="error-detail">
-            <strong>Detail Error:</strong><br>{{ $error_msg }}
+            <strong>{{ __('Detail Error:') }}</strong><br>{{ $error_msg }}
         </div>
         @endif
         
-        <a href="{{ route('ujian.index') }}" class="btn-home" style="background-color: #6c757d; box-shadow: none;">Kembali ke Halaman Awal</a>
+        <a href="{{ route('ujian.index') }}" class="btn-home" style="background-color: #6c757d; box-shadow: none;">{{ __('Kembali ke Halaman Awal') }}</a>
     @endif
 </div>
 @endsection

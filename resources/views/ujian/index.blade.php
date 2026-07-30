@@ -115,8 +115,8 @@
         </svg>
     </div>
     
-    <h3 class="text-center fw-bold mb-1" style="color: #2b3452; font-size: 1.25rem;">Portal Psikotes</h3>
-    <p class="text-center text-muted mb-4" style="font-size: 14px;">Silakan masukkan data diri Anda</p>
+    <h3 class="text-center fw-bold mb-1" style="color: #2b3452; font-size: 1.25rem;">{{ __('Portal Ujian Kompetensi') }}</h3>
+    <p class="text-center text-muted mb-4" style="font-size: 14px;">{{ __('Silakan lengkapi data diri Anda sebelum memulai ujian.') }}</p>
 
     @if ($errors->any())
         <div class="alert alert-danger mb-3" style="border-radius: 12px; font-size: 14px;">
@@ -132,12 +132,12 @@
         @csrf
         <div class="dropdown mb-3">
             <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" id="posisiDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 12px; height: 58px; font-size: 15px; border: 1px solid #dee2e6; color: #212529; background: white; padding: 0 16px; font-weight: 400; box-shadow: none;">
-                <span id="posisiSelectedText">Pilih Posisi Pekerjaan</span>
+                <span id="posisiSelectedText">{{ __('-- Pilih Posisi --') }}</span>
             </button>
             
             <ul class="dropdown-menu w-100" aria-labelledby="posisiDropdown" style="max-height: 260px; overflow-y: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #dee2e6; padding-top: 0;">
                 <li class="p-2 sticky-top bg-white" style="border-bottom: 1px solid #dee2e6; z-index: 2;">
-                    <input type="text" id="searchPosisi" class="form-control form-control-sm" placeholder="Cari posisi pekerjaan..." autocomplete="off" style="border-radius: 8px;">
+                    <input type="text" id="searchPosisi" class="form-control form-control-sm" placeholder="{{ __('Cari posisi pekerjaan...') }}" autocomplete="off" style="border-radius: 8px;">
                 </li>
                 
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ACCOUNT PAYABLE (AP)">ACCOUNT PAYABLE (AP)</button></li>
@@ -169,7 +169,7 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff sekretaris (SS)">Staff Sekretaris (SS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Supervisor Sales (SPVS)">Supervisor Sales (SPVS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Utility (UTL)">Utility (UTL)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item fw-bold text-primary" type="button" data-value="Lainnya">Lainnya (Tulis Manual)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item fw-bold text-primary" type="button" data-value="Lainnya">{{ __('Lainnya (Sebutkan)') }}</button></li>
             </ul>
             <input type="hidden" name="posisi" id="posisi" value="{{ old('posisi') }}" required>
         </div>
@@ -181,23 +181,23 @@
         @endif
         
         <div class="form-floating mb-3 hidden" id="posisi_lainnya_container">
-            <input type="text" class="form-control" id="posisi_lainnya" name="posisi_lainnya" placeholder="Tulis Posisi Pekerjaan Anda" value="{{ old('posisi_lainnya') }}">
-            <label for="posisi_lainnya">Tulis Posisi Pekerjaan</label>
+            <input type="text" class="form-control" id="posisi_lainnya" name="posisi_lainnya" placeholder="{{ __('Masukkan posisi lainnya') }}" value="{{ old('posisi_lainnya') }}">
+            <label for="posisi_lainnya">{{ __('Masukkan posisi lainnya') }}</label>
         </div>
         
         <div class="form-floating mb-4">
-            <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Lengkap" required autocomplete="name" value="{{ old('nama') }}">
-            <label for="nama">Nama Lengkap</label>
+            <input type="text" class="form-control" id="nama" name="nama" placeholder="{{ __('Nama Lengkap') }}" required autocomplete="name" value="{{ old('nama') }}">
+            <label for="nama">{{ __('Nama Lengkap') }}</label>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-mulai w-100">Mulai Ujian &rarr;</button>
+        <button type="submit" class="btn btn-primary btn-mulai w-100">{{ __('Mulai Ujian') }} &rarr;</button>
         
         <div class="form-text-custom">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16" style="margin-bottom: 2px;">
               <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
               <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
             </svg>
-            Pastikan koneksi internet stabil. Jangan tutup aplikasi saat ujian berlangsung.
+            {{ __('Pastikan koneksi internet stabil. Jangan tutup aplikasi saat ujian berlangsung.') }}
         </div>
     </form>
 </div>

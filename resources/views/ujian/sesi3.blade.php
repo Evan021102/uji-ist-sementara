@@ -19,8 +19,8 @@
 @section('content')
 <div class="main-wrapper">
     <div class="hero">
-        <h1>Ujian Psikologi Online</h1>
-        <p>Sesi 3 - Tes Deret Angka (ZR)</p>
+        <h1>{{ __('Ujian Psikologi Online') }}</h1>
+        <p>{{ __('Sesi 3 - Tes Deret Angka (ZR)') }}</p>
     </div>
 
     <div class="layout">
@@ -28,15 +28,15 @@
         <div class="sidebar">
             <div class="logo-box">
                 <img src="https://gosyenpolinator.com/images/gosyen_logo.png" alt="Logo">
-                <div class="badge-custom">Sesi 3 Active</div>
+                <div class="badge-custom">{{ __('Sesi 3 Aktif') }}</div>
             </div>
             <div class="timer-box" id="timerBox">
-                <p>Sisa Waktu</p>
+                <p>{{ __('Sisa Waktu') }}</p>
                 <h2 id="countdown">10:00</h2>
             </div>
             <div class="progress-wrapper">
                 <div class="progress-header">
-                    <span>Progress</span>
+                    <span>{{ __('Kemajuan') }}</span>
                     <span id="progressText">0/20</span>
                 </div>
                 <div class="progress-track">
@@ -44,12 +44,12 @@
                 </div>
             </div>
             <div class="info-card" style="margin-top:20px;">
-                <h3>Informasi Tes</h3>
+                <h3>{{ __('Informasi Tes') }}</h3>
                 <ul>
-                    <li>Total soal: 20</li>
-                    <li>Durasi: 10 menit</li>
-                    <li>Ketik jawaban berupa angka</li>
-                    <li>Jawaban tersimpan otomatis</li>
+                    <li>{{ __('Total soal: 20') }}</li>
+                    <li>{{ __('Durasi: 10 menit') }}</li>
+                    <li>{{ __('Ketik jawaban berupa angka') }}</li>
+                    <li>{{ __('Jawaban tersimpan otomatis') }}</li>
                 </ul>
             </div>
         </div>
@@ -82,7 +82,7 @@
                 @endforeach
 
                 <button type="submit" class="submit-btn">
-                    Lanjut ke Sesi 4 →
+                    {{ __('Lanjut ke Sesi 4') }} &rarr;
                 </button>
             </form>
         </div>
@@ -126,7 +126,7 @@
             }
             if (totalWaktu < 0) {
                 clearInterval(timerInterval);
-                alert('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.');
+                alert("{{ __('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.') }}");
                 document.getElementById('formUjian').submit();
             }
             totalWaktu--;

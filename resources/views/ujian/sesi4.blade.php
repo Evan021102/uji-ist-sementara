@@ -49,8 +49,8 @@
 @endphp
 <div class="main-wrapper">
     <div class="hero">
-        <h1>Ujian Psikologi Online</h1>
-        <p>Sesi 4 - Tes Logika Gambar (FA)</p>
+        <h1>{{ __('Ujian Psikologi Online') }}</h1>
+        <p>{{ __('Sesi 4 - Tes Logika Gambar (FA)') }}</p>
     </div>
 
     <div class="layout">
@@ -58,15 +58,15 @@
         <div class="sidebar">
             <div class="logo-box">
                 <img src="https://gosyenpolinator.com/images/gosyen_logo.png" alt="Logo">
-                <div class="badge-custom">Sesi 4 Aktif</div>
+                <div class="badge-custom">{{ __('Sesi 4 Aktif') }}</div>
             </div>
             <div class="timer-box" id="timerBox">
-                <p>Sisa Waktu</p>
+                <p>{{ __('Sisa Waktu') }}</p>
                 <h2 id="countdown">07:00</h2>
             </div>
             <div class="progress-wrapper">
                 <div class="progress-header">
-                    <span>Progress</span>
+                    <span>{{ __('Kemajuan') }}</span>
                     <span id="progressText">0/20</span>
                 </div>
                 <div class="progress-track">
@@ -74,15 +74,15 @@
                 </div>
             </div>
             <div class="info-card" style="margin-top:20px;">
-                <h3>Informasi Tes</h3>
+                <h3>{{ __('Informasi Tes') }}</h3>
                 <ul>
-                    <li>Total soal: 20</li>
-                    <li>Durasi: 7 menit</li>
-                    <li>Pilih satu jawaban (A-E)</li>
+                    <li>{{ __('Total soal: 20') }}</li>
+                    <li>{{ __('Durasi: 7 menit') }}</li>
+                    <li>{{ __('Pilih satu jawaban (A-E)') }}</li>
                     @if($isCustomPosisi)
-                        <li>Menekan 'Selesai' akan menyimpan seluruh jawaban</li>
+                        <li>{{ __('Menekan Selesai akan menyimpan seluruh jawaban') }}</li>
                     @else
-                        <li>Jawaban tersimpan otomatis</li>
+                        <li>{{ __('Jawaban tersimpan otomatis') }}</li>
                     @endif
                 </ul>
             </div>
@@ -98,16 +98,18 @@
                 <div class="question-card">
                     <div class="question-number">{{ $nomor }}</div>
                     <p class="question-text">
-                        Perhatikan gambar di bawah ini dan tentukan pola lanjutannya:
+                        {{ __('Pilihlah salah satu opsi (A, B, C, D, atau E) yang merupakan jawaban paling tepat:') }}
                     </p>
-                    <img src="{{ asset($path_gambar) }}" alt="Soal Logika Gambar {{ $nomor }}" class="gambar-soal" style="max-width: 100%; height: auto; border: 1px solid var(--border); border-radius: 14px; margin-bottom: 20px; display: block;" loading="lazy">
-                    
-                    <div class="opsi-container" style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        @foreach(['A', 'B', 'C', 'D', 'E'] as $huruf)
-                        <div class="option" style="flex-grow: 1; text-align: center; margin-bottom: 0;">
-                            <input type="radio" id="q{{ $nomor }}_{{ $huruf }}" name="jawab_sesi5_q{{ $nomor }}" value="{{ $huruf }}">
-                            <label for="q{{ $nomor }}_{{ $huruf }}" style="justify-content: center; padding: 12px 10px; border-radius: 12px; gap: 0;">
-                                <span class="option-badge" style="margin-right: 0;">{{ $huruf }}</span>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <img src="{{ asset($path_gambar) }}" alt="{{ __('Soal') }} {{ $nomor }}" style="max-width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--border);">
+                    </div>
+
+                    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                        @foreach(['A', 'B', 'C', 'D', 'E'] as $opsi)
+                        <div class="option" style="margin-bottom: 0;">
+                            <input type="radio" id="q{{ $nomor }}_{{ $opsi }}" name="jawab_sesi5_q{{ $nomor }}" value="{{ $opsi }}">
+                            <label for="q{{ $nomor }}_{{ $opsi }}" style="padding: 10px 20px;">
+                                <span class="option-badge" style="margin-right: 0;">{{ $opsi }}</span>
                             </label>
                         </div>
                         @endforeach
@@ -115,14 +117,6 @@
                 </div>
                 @endforeach
 
-                @if($isCustomPosisi)
-                    <button type="submit" class="submit-btn" style="background: linear-gradient(135deg, var(--danger), #b91c1c);">
-                        Selesai & Simpan Seluruh Jawaban →
-                    </button>
-                @else
-                    <button type="submit" class="submit-btn">
-                        Lanjut ke Sesi Terakhir →
-                    </button>
                 @endif
             </form>
         </div>
@@ -166,9 +160,9 @@
             if (totalWaktu < 0) {
                 clearInterval(timerInterval);
                 @if($isCustomPosisi)
-                    alert('Waktu habis! Seluruh jawaban Anda akan langsung disimpan secara otomatis.');
+                    alert("{{ __('Waktu habis! Seluruh jawaban Anda akan langsung disimpan secara otomatis.') }}");
                 @else
-                    alert('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.');
+                    alert("{{ __('Waktu habis! Jawaban Anda di sesi ini akan dikirim secara otomatis.') }}");
                 @endif
                 document.getElementById('formUjian').submit();
             }
