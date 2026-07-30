@@ -166,7 +166,7 @@ class UjianController extends Controller
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
-                $soalSesi5 = $this->getSoalSesi5($posisi);
+                $soalSesi5 = $this->translateSesi5Array($this->getSoalSesi5($posisi), $posisi);
                 return view('ujian.sesi5', compact('soalSesi5', 'posisi'));
 
             default:
@@ -2273,8 +2273,6 @@ class UjianController extends Controller
                         ]
                     ]
                 ];
-    
-
             default:
                 // Fallback default untuk semua posisi (termasuk 26 posisi baru)
                 // Jika belum ada studi kasusnya, dikembalikan array kosong agar tidak error.
@@ -2283,5 +2281,22 @@ class UjianController extends Controller
                     'bagian_b' => []
                 ];
         }
+    }
+
+    private function translateSesi5Array($data, $posisi)
+    {
+        if (app()->getLocale() !== 'en') {
+            return $data;
+        }
+
+        $jsonPath = base_path('lang/en_sesi5.json');
+        if (file_exists($jsonPath)) {
+            $enData = json_decode(file_get_contents($jsonPath), true);
+            if (isset($enData[$posisi])) {
+                return $enData[$posisi];
+            }
+        }
+
+        return $data;
     }
 }

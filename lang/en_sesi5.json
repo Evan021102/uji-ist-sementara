@@ -1,0 +1,1443 @@
+{
+    "ACCOUNT PAYABLE (AP)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Documentary Discrepancies (Invoice vs. Goods Received)",
+                "deskripsi": "A vendor sends an invoice for 100 laptop units.<br>\r\n• However, when you check the Travel Document/Proof of Goods Receipt from the warehouse, it turns out that the warehouse only received 90 laptop units (10 units were defective and returned).<br>\r\n• Vendors insist on being paid for the full 100 units according to the invoice they printed.",
+                "pertanyaan": {
+                    "1": "Why are AP staff strictly prohibited from processing payments just by looking at an invoice from the vendor without checking the receipt documents from the warehouse?",
+                    "2": "What actions should you take to mediate data differences between your company's Vendor and Warehouse parties?",
+                    "3": "Write a 1 sentence tactical reply to the vendor explaining why you will only transfer money for 90 units, without offending them."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Vendor Threat & Cash Flow Crisis",
+                "deskripsi": "The raw material vendor was furious because his bill had been paid 2 weeks late.They threatened to stop delivery of goods tomorrow morning.<br>\r\n• Your Financial Manager instructed you to withhold all payments because the company's cash is empty and new money will come in next week.",
+                "pertanyaan": {
+                    "1": "If you are afraid of being scolded and then ignore calls from vendors (ghosting), what is the worst impact on your company's factory operations tomorrow morning?",
+                    "2": "You are caught between the boss's instructions (empty cash) and the vendor's threats.How do you act professionally on the phone when faced with the vendor's anger?",
+                    "3": "Write 1 negotiation sentence to calm the vendor, convincing them that the money will definitely be paid next week so that tomorrow's delivery of goods will not be stopped."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — The Dangers of Double Billing",
+                "deskripsi": "You receive an AC service bill invoice worth IDR 10,000,000.When you are about to enter it into the system, you feel familiar and find that the bill with the PO (Purchase Order) number and the exact same amount was paid last month.<br>\r\n• The vendor argues it's just a \"misprint from their system\" and insists you pay it anyway.",
+                "pertanyaan": {
+                    "1": "What are the fatal losses for the company and your career if you are careless in making double transfers (double payments) for the same job?",
+                    "2": "Mention 2 pieces of evidence of documents/data that you must capture or show to the vendor to prove that the bill was paid in full last month.",
+                    "3": "Create 1 simple SOP (Checking Rule) at the AP's work desk so that cases of missed double payments never occur."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Tax Cut (PPh) Protest",
+                "deskripsi": "A freelance consultant sent a service bill of IDR 10,000,000.<br>\r\n• As an AP, the rules require you to deduct Income Tax (PPh 21), so that the money transferred to the account is less than 10 million.<br>\r\n• The consultant protested loudly: \"I don't want to know about taxes, basically 10 million has to go into my account!\"",
+                "pertanyaan": {
+                    "1": "Why is the company (through AP staff) obliged to deduct the tax directly, instead of letting the consultant take care of the tax himself?",
+                    "2": "Write 1 sentence of simple explanation (layman's language) to the consultant so that he understands that the deduction is an absolute rule from the State, not because the company is stingy!",
+                    "3": "If a boss from another division tells you: \"That's it, just pay the full 10 million, we'll just hide the tax so he doesn't get angry.\"What is your emphatic response as an AP person?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Unsigned Emergency Payments",
+                "deskripsi": "The director is abroad and cannot be contacted.Suddenly, the Marketing Manager comes to the AP's desk and urges you to immediately transfer the DP (Down Payment) for the building rental of IDR 50,000,000 for the event tomorrow morning.<br>\r\n• There is no official document (PO) or signature of the Director's approval.<br>\r\n• The manager said: \"Just transfer now, if there is a problem, I will put the responsibility on it!\"",
+                "pertanyaan": {
+                    "1": "In terms of financial audit, why can't the Marketing Manager's \"I'm the one doing it\" excuse protect you if problems occur in the future?",
+                    "2": "What is the worst risk if AP gets into the habit of transferring tens of millions using only words or verbal orders without written documents?",
+                    "3": "You are prohibited from transferring without approval, but tomorrow's event must still go ahead.Propose 1 way out/alternative solution so that the Marketing Manager can still legally pay the down payment for the building today."
+                }
+            }
+        }
+    },
+    "ACCOUNT RECEIVABLE (AR)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Dealing with Client Ghosting (Running Away from the Bill)",
+                "deskripsi": "A large client has not paid a bill that is 30 days past due.<br>\r\n• When you don't pick up your phone and don't reply to your email (ghosting).<br>\r\n• The Sales team at the office tells you: \"Just wait, don't charge too hard, he's an important client, then he'll get angry and run away to a competitor.\"",
+                "pertanyaan": {
+                    "1": "Why does obeying the words of the Sales team to \"just wait\" endanger our company's cash flow?",
+                    "2": "Since this client likes ghosting, what 1 firm but professional action would you take besides constantly calling/WhatsApping?",
+                    "3": "Write a draft of a short message to the client urging payment, without sounding like a threat from a debt collector."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Credit Limit Conflict (AR vs Sales Team)",
+                "deskripsi": "A client has reached the maximum debt limit (Credit Limit) and is still in arrears on last month's payment.<br>\r\n• Suddenly, the Sales Manager forces you to unblock the system today so that the client's new order can be sent.<br>\r\n• The Sales Manager promises: \"Just open the system, I guarantee you the old bill will be transferred tomorrow!\"",
+                "pertanyaan": {
+                    "1": "In terms of financial audit, why should the Sales Manager's verbal guarantee \"will definitely be paid tomorrow\" not be used as a basis for unblocking the system?",
+                    "2": "If you are determined to obey the Sales Manager and the client turns out to be in default/bankrupt, who will the auditor/company blame most: you (AR) or the Sales Manager?Explain why.",
+                    "3": "Write 1 sentence in a firm reply to the Sales Manager to reject his request, but provide 1 solution condition if the item must be sent today."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Partial Payment Deductions",
+                "deskripsi": "The client transferred the bill, but the amount was less than 20% of the total invoice.<br>\r\n• When confirmed, the client reasoned: \"Yesterday there was a slightly defective item, so I just cut the payment myself by 20% as compensation.\"<br>\r\n• In fact, the client has never reported to your office about the defective item before.",
+                "pertanyaan": {
+                    "1": "Why does the client's action of unilaterally deducting payments violate the receivables administration (AR) rules?",
+                    "2": "Which internal department should you contact first to validate the truth of what the client said about the defective item?",
+                    "3": "Write 1 sentence explaining to the client that they still have to pay the remaining 20% ​​today, and explain the correct procedure if there is a return/defective item."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — The Mystery of Unidentified Transfers",
+                "deskripsi": "There is money coming into the company account amounting to IDR 25,000,000.<br>\r\n• However, in the bank statement there is no sender's name, no transfer information, and no Invoice number.<br>\r\n• At the same time, there are 3 different clients whose nominal debts are similar in that figure.",
+                "pertanyaan": {
+                    "1": "What's the danger if you just guess and immediately enter the payment to reduce client A's debt (the client who has been in the longest in arrears)?",
+                    "2": "Instead of asking all clients one by one, mention 2 ways/supporting data that you can check to confirm who the original sender of the money is!",
+                    "3": "Create 1 simple rule/SOP that must be conveyed by the Sales team to all clients so that this \"anonymous transfer\" problem does not happen again."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Fake Transfer Evidence (Fast Fraud Mode)",
+                "deskripsi": "A new client sent a photo/screenshot of proof of m-Banking transfer via WhatsApp in the afternoon.<br>\r\n• He urges you to immediately issue a Travel Document so that the goods can be picked up by the courier right away.<br>\r\n• However, when you check the company's Internet Banking statement, the money hasn't arrived at all.<br>\r\n• The client reasons: \"It's a different bank, it's normal for it to take a long time to arrive. Just send the goods first, I've already sent proof of the transfer!\"",
+                "pertanyaan": {
+                    "1": "As an AR, why will screenshots of proof of transfer from clients never be considered as valid proof of payment?",
+                    "2": "Faced with the demands of an angry client asking for goods to be sent quickly, what is your absolute decision that afternoon: Send the goods OR Hold the goods?",
+                    "3": "Write a standard 1-sentence reply to the client explaining the company's goods release rules, without directly accusing the client of the transfer receipt being fake."
+                }
+            }
+        }
+    },
+    "ACCOUNTING (A)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Errors in Recording Past Profits",
+                "deskripsi": "In PT Alpha's 2026 bookkeeping report, there is an addition of \"Initial Retained Profit\" of IDR 800,000,000.<br>\r\n• This addition arose because the accounting department just realized there was an error in calculating the depreciation costs for assets (such as machines/buildings) in the previous two years (2024 and 2025).<br>\r\n• As a result of improvements that increase profits, the company must also calculate the effect of a tax deduction of IDR 176,000,000.",
+                "pertanyaan": {
+                    "1": "Because these improvements (corrections) from the past result in an increase in the current earnings balance, what kind of calculation errors did the accounting team actually make in the 2024 and 2025 asset cost reports?",
+                    "2": "Why can't the repair figure of IDR 800,000,000 not just be recorded as \"Other Income\" in the 2026 profit and loss report, but must be included directly in Retained Earnings?",
+                    "3": "When you prepare your company's wealth report (Balance Sheet) at the end of 2026, you are also required to display a comparison table with the 2025 figures. What adjustments should you make to the asset value records and tax payable records in the 2025 column so that the report makes sense?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Internal Transactions of Parent and Subsidiaries",
+                "deskripsi": "At the end of the year, when preparing combined (consolidated) financial statements between the Parent and Subsidiaries, accountants must \"clear\" the records of buying and selling transactions between themselves.<br>\r\n• The write-off (elimination) journal made is: Deleting Sales Revenue of Rp. 1,000,000,000 (Debit), reducing the Cost of Goods Sold/COGS of Rp. 800,000,000 (Credit), and deducting the Inventory value of Rp. 200,000,000 (Credit).",
+                "pertanyaan": {
+                    "1": "What is the initial capital and selling price between these companies?Then, why does the inventory value have to be cut by IDR 200,000,000 at the end of the year?",
+                    "2": "If the Subsidiary sells to the Parent, why does this deduction of IDR 200,000,000 reduce the profit share for minority shareholders?",
+                    "3": "If the remaining goods are finally sold to outside parties next year, how do you recognize this delayed profit in next year's report?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Deferred Taxes on Asset Revaluation",
+                "deskripsi": "Year End Adjustment Journal (Revaluation of Fixed Assets - Revaluation Model):<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 600px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Account Name</th><th>Debit</th><th>Credit</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Fixed Assets - Buildings</td><td>Rp 10,000,000,000</td><td>-</td></tr>\r\n<tr><td>Deferred Tax Liabilities (DTL)</td><td>-</td><td>Rp 2,200,000,000</td></tr>\r\n<tr><td>Asset Revaluation Surplus (OCI)</td><td>-</td><td>Rp 7,800,000,000</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Why does the increase in the value of this building force the company to record a future tax debt (Rp. 2.2 billion), even though the building has not been sold and there is no original invoice from the tax office?",
+                    "2": "What is the direct impact of the emergence of deferred tax debt and a surplus of IDR 7.8 billion on the company's debt ratio (DER) and capital gains ratio (ROE)?",
+                    "3": "In subsequent years when this building begins to be depreciated at a new, higher value, how do you pay off the Deferred Tax Liability account in the books in installments or delete it?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Lease Modification (PSAK 73 / IFRS 16)",
+                "deskripsi": "Adjusting Journal on Rental Contract Modification Date:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 600px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Account Name</th><th>Debit</th><th>Credit</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Rent Liabilities</td><td>Rp 5,000,000,000</td><td>-</td></tr>\r\n<tr><td>Useright Assets</td><td>-</td><td>Rp 4,200,000,000</td></tr>\r\n<tr><td>Profit from Lease Modification</td><td>-</td><td>Rp 800,000,000</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Seeing that the figures for Rental Payables and Right to Use Assets are both decreasing, what real events are actually happening in the field?Is the rental period extended, or is there a reduction in the size of the space rented?",
+                    "2": "The profit of IDR 800 million goes into the profit and loss statement.How do I record this non-cash profit in the Cash Flow Statement (Indirect Method) so that the cash is not miscalculated?",
+                    "3": "To calculate the remaining balance of the new Lease Payable, the company must use which interest rate: the old interest rate at the start of the contract, or the latest loan interest rate when the contract changes?Give reasons."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Transfer of Investment Profits (OCI Reclassification)",
+                "deskripsi": "End of Year Journal related to Bond Securities Investment:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 600px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Account Name</th><th>Debit</th><th>Credit</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Other Comprehensive Income (OCI) - Unrealized Gain</td><td>Rp 3,000,000,000</td><td>-</td></tr>\r\n<tr><td>Profit from Investment Sales (Profit and Loss)</td><td>-</td><td>Rp 3,000,000,000</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Based on the type of profit transfer above, which investment category does the bond being sold fall into?Give reasons.",
+                    "2": "Why does this transfer journal not change the total value of Capital (Equity) in the balance sheet at the end of the year, even though the company has just added a profit of IDR 3 billion in the Profit and Loss Report?",
+                    "3": "OCI accounts are often called \"parking lots\" of unlicensed (not yet sold) profits.What loopholes or tricks can management exploit from this \"profit parking\" system to manipulate shareholder perceptions so that annual Net Profit always looks good?"
+                }
+            }
+        }
+    },
+    "ADMIN GUDANG (AG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Dispute on Goods Receipt & Validation of Waybill (SJ)",
+                "deskripsi": "A truck from the Supplier arrives at the loading dock (unloading area).You unpack the goods and do a physical check (quality and quantity).The following are the results of a comparison between the Purchase Order (PO) document from your system, the Supplier's default Travel Document (SJ), and the actual physical that you calculated:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Name of Item</th><th>Qty in PO (Our System)</th><th>Qty in SJ (Driver's Carry)</th><th>Actual Physical Qty (Calculated)</th><th>Condition Description</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Item A</td><td>500 pcs</td><td>500 pcs</td><td>490 pcs</td><td>10 pcs less (not on the truck)</td></tr>\r\n<tr><td>Goods B</td><td>200 pcs</td><td>250 pcs</td><td>250 pcs</td><td>SJ and physical 50 pcs more than PO</td></tr>\r\n<tr><td>Goods C</td><td>100 pcs</td><td>100 pcs</td><td>100 pcs</td><td>20 pcs physically wet/packaged damaged</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "What kind of official corrective notes or scribbles should you write on the driver's original Waybill for Goods A, B and C before you sign?",
+                    "2": "For excess Item B, what quantity will you enter into the warehouse computer system (200 or 250 pcs)?What is the fatal risk to factory finances if you just accept excess goods without informing the Purchasing department?",
+                    "3": "If the supplier forces the factory to accept and pay for excess Goods B, what kind of fast communication flow should you do with the Purchasing and Legal departments to make an official Goods Rejection Letter, without making trucks queue for too long?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Difference in Stock Count (Stock Opname) & Unit Error",
+                "deskripsi": "At the end of the month, you do a Stock Take (physical count).You find extreme differences in Canned Drink products.(Note: 1 Carton = 24 Cans).<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Item Code</th><th>Basic Unit in the System</th><th>System Balance (On Hand)</th><th>Physical Warehouse Count Results</th><th>Difference</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>MNM-01</td><td>Cans (Pcs)</td><td>2,400 Cans</td><td>100 Cartons</td><td>???</td></tr>\r\n<tr><td>MNM-02</td><td>Carton (Box)</td><td>50 Cartons</td><td>1,200 Cans</td><td>???</td></tr>\r\n<tr><td>MNM-03</td><td>Cans (Pcs)</td><td>500 Cans</td><td>18 Cartons + 6 Cans</td><td>Minus 62 Cans</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Calculate the original difference (less/more/fit) for codes MNM-01 and MNM-02.Why do warehouse staff often record incorrectly between \"Cartons\" and \"Cans\" when goods come in and out, and how can they prevent this physically in the picking area?",
+                    "2": "In the case of MNM-03 where 62 cans were lost, it turns out your computer system allowed the stock to go into minus.What are the dangers if the minus stock feature is left active for the factory's automated goods ordering system?",
+                    "3": "How can you clearly differentiate whether the loss of 62 cans of MNM-03 was caused by the wrong item being taken, a wrong report being recorded, or because it was stolen?Mention 1 specific piece of evidence to differentiate them, and determine which case must be reported to the Security Guard."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — FIFO System Failure and Messy Rack Layout",
+                "deskripsi": "Your warehouse must use a FIFO (First In, First Out) system, meaning that the goods that are first in must be the first to go out.The computer has told the officer to take the Old Batch goods (expiry next month).<br>\r\n• However, the field staff instead took the New Batch (expiry next year).<br>\r\n• The reason is that the Old Batch goods are stuck on the back shelf and are blocked by a pile of New Batch goods that just arrived yesterday.<br>\r\n• Officers are lazy to dismantle the pile, so the Old Batch goods end up rotting/expired in the warehouse.",
+                "pertanyaan": {
+                    "1": "What fatal mistake did the officer make when placing newly arrived goods, so that the old batch of goods became obstructed and difficult for the packing team to pick up?",
+                    "2": "In terms of work safety and convenience, which position is better for placing heavy and large New Batch items: on the bottom floor at the front of the shelf, or at the top of the back?Give your logical reasons so that workers are not lazy to unload goods.",
+                    "3": "To dispose of and destroy goods that have already expired from the warehouse computer system, what official documents must be prepared by the warehouse team and must be signed by the Warehouse Manager together with the Finance Manager before the goods are transported out of the factory?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Broken Goods During Loading and Sudden Changes to the Waybill",
+                "deskripsi": "You are loading 100 units of hanging lights into a truck for VIP customers.<br>\r\n• When the goods were lifted, 2 lamp units accidentally fell and broke, while the stock in the warehouse had completely run out.<br>\r\n• The truck must leave immediately because time is running out, so it can only carry 98 complete lamps.",
+                "pertanyaan": {
+                    "1": "The physical goods are only 98 units, but the Road Document (SJ) says 100 units.What emergency measures should you take on the SJ paper so that the factory is not accused of cheating?",
+                    "2": "If the price of 1 lamp is IDR 1,000,000 and the factory is fined 5% of the total order (100 units) due to insufficient delivery, calculate the value of the fine!How can I explain this accident to the customer so that the fine can be waived?",
+                    "3": "In the warehouse computer system, the 2 broken lamps were still recorded as goods ready to be shipped.What is the flow or steps on the computer to cancel the delivery of the 2 units and change the status to damaged goods?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Return of Goods (Reverse Logistics) & Unofficial Documents",
+                "deskripsi": "A courier truck arrived at the warehouse to return 50 boxes of damaged goods from customers.<br>\r\n• The courier driver only handed you a piece of handwritten paper that said \"Goods Damaged, Request Replacement\" without an official return document number (RMA) and without any info on your warehouse computer.",
+                "pertanyaan": {
+                    "1": "The driver forces you to sign a receipt.What are the legal and financial dangers if you just sign before the goods are checked and without an official return number in the system?",
+                    "2": "If it turns out that the contents of the box were exchanged by customers for fake products to make a profit, how do you secure this evidence so that it doesn't get mixed up with good stock, and which division (Sales or Legal) should be contacted?",
+                    "3": "If the return turns out to be valid (factory defect), what is the flow in the system to process the two options: (A) Return the customer's money (Refund), or (B) Send new goods without doubling operational costs?"
+                }
+            }
+        }
+    },
+    "Admin penjualan (SA)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Falsifying Invoices for End of Year Targets",
+                "deskripsi": "Towards the end of the year (29 December), the Sales Manager forces you to issue an Invoice and Tax Invoice worth IDR 450,000,000 to Customer A so that the sales division's annual sales target is achieved.<br>\r\n• However, physically, the goods were not ready and were only sent by the warehouse along with the Travel Document (DO) on January 3 of the following year.",
+                "pertanyaan": {
+                    "1": "If the invoice is still recorded as a sale in December even though the goods have not been shipped, what bad impact will this have on the correctness of the company's financial statements and tax reporting at the end of the year?",
+                    "2": "The customer finally refused to pay because he felt he had not received the goods.If the financial examiner (auditor) discovers this target manipulation practice, what is the biggest loss for the company?",
+                    "3": "Since the billing data for December is already \"locked\" in the computer system and cannot simply be deleted, what correction documents must you make to officially cancel the bill?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Partial Delivery and Billing Errors",
+                "deskripsi": "The customer issues a Purchase Order (PO) for 1,000 units of goods.In the system, you create a Sales Order (SO) of 1,000 units.Due to low stock, the warehouse only sent 920 units (Delivery Order / DO).<br>\r\n• However, when processing the invoice, you directly pull the data from the SO and issue an Invoice for 1,000 units.The customer was angry and withheld all payment.",
+                "pertanyaan": {
+                    "1": "Why is printing invoices based on the initial order quantity (rather than the number of items actually shipped) a fatal mistake?What documents should be matched before a bill is printed?",
+                    "2": "Because the customer withholds all payments due to this document error, what negative impacts/financial losses will be felt directly by the company?",
+                    "3": "If the customer previously received a discount for purchasing 1,000 units, what corrective documents should you create now so that the customer is willing to pay for the 920 units, but does not lose his discount rights for the remaining 80 units later?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Returned Goods and Credit Limit Issues",
+                "deskripsi": "The customer returned defective goods worth IDR 75,000,000.<br>\r\n• The goods were received by the warehouse at the end of the month, but you postponed recording the return documents in the computer system until next month.<br>\r\n• As a result, when a customer wants to order new goods at the beginning of the month, the system rejects the order automatically because the customer is deemed to have \"Full Debt/Credit Limit\" (has not paid IDR 75,000,000).",
+                "pertanyaan": {
+                    "1": "Why can delaying recording returned goods documents in the computer system have fatal consequences and directly harm the company's sales targets for the following month?",
+                    "2": "According to the correct workflow, name 3 process sequences that should be completed immediately from the moment the physical goods from the customer arrive back at our warehouse door.",
+                    "3": "Because the customer is angry that his order was rejected and your return documents need time to be processed, what emergency action can you communicate to your superior (Financial Manager) so that the customer's new order can still be processed today?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Bills Stuck Due to Administrative Errors",
+                "deskripsi": "An invoice worth IDR 620,000,000 is 45 days past due.<br>\r\n• When billed by the Finance department, the customer refused to pay with the reason: \"We have never received the physical bill, and the order number (PO) written on the bill is wrong.\"<br>\r\n• After investigating, the Sales Admin typed the wrong number because he only received orders via WhatsApp without checking the official email.<br>\r\n• What's worse, the proof of receipt of goods (the delivery letter signed by the customer) was lost by the delivery courier.",
+                "pertanyaan": {
+                    "1": "Why does losing a receipt and mistyping an order number put a customer in such a strong position to refuse to pay?What are the consequences if the company is determined to take the customer to legal action?",
+                    "2": "As a Sales Admin, state what supporting documents must be attached with the main bill (Invoice), so that customers cannot look for reasons to reject the bill.",
+                    "3": "Even though the task of collecting money falls on Finance, what simple precautions should the Sales Admin take a few days after the goods are sent, so that the excuse \"the bill has not arrived\" never occurs?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Sales and Warehouse Data Differences",
+                "deskripsi": "In the end of month report, records in the Sales system show that 2,000 units of goods were sold and billed.<br>\r\n• However, records in the warehouse system show that only 1,850 units of goods actually left the warehouse doors.There is a mysterious difference of 150 units between sales data and physical warehouse data.",
+                "pertanyaan": {
+                    "1": "Apart from the possibility of the goods being physically lost, how can a Marketing promo program (for example the \"Buy 10 Get 1 Free\" promo) cause this number difference if the Sales Admin enters the promo code incorrectly in the computer system?",
+                    "2": "If it turns out that the 150 units were \"sold\" goods to another shop, why is printing the full bill of sale (Invoice) at this time a big mistake for the company's finances?When should the entrusted goods be recognized as sales?",
+                    "3": "What document checking steps (data matching) will you take with the Warehouse team to prove exactly where the 150 unit error lies?"
+                }
+            }
+        }
+    },
+    "ADMIN PPIC (APP)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Setting Production Schedule Priorities (Production Scheduling)",
+                "deskripsi": "On Monday morning, you receive 3 sales orders from the sales department, all of which are requested to be produced this week.However, the printing machine capacity in the factory is very limited.<br>\r\n• <strong>Order 1 (Customer A):</strong> Large quantity, small profit, delivery deadline is Thursday.(Old customers often tolerate being late).<br>\r\n• <strong>Order 2 (Customer B):</strong> Medium quantity, big profit, delivery deadline Wednesday.(New VIP customers, if they are late the factory will be subject to contract fines).<br>\r\n• <strong>Order 3 (Customer C):</strong> Small quantity, medium profit, delivery deadline Friday.(The product is easy to make, raw materials are abundant).",
+                "pertanyaan": {
+                    "1": "As a PPIC Admin, what order number will you enter into the first order (highest priority) schedule for the machine to work on?Give a logical reason.",
+                    "2": "What are the operational risks on the production floor if you arrange the order of processing the three orders incorrectly regarding the readiness of the delivery team?",
+                    "3": "If on Tuesday a machine suddenly breaks down for 5 hours, what emergency steps should you take in the scheduling system to save the most critical orders?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Supplier Delivery Time Traps and Minimum Order Limits",
+                "deskripsi": "A sudden request (Urgent Order) from Sales to produce 500 units of Product Y which must be sent within 20 days.The following is the Item Master data for the constituent components of Product Y:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Components</th><th>Warehouse Available Stock</th><th>Requirements (Demand)</th><th>Purchase Supplier Delivery Time</th><th>Minimum Order Limit</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Component A</td><td>100 units</td><td>500 units</td><td>14 Days</td><td>500 units</td></tr>\r\n<tr><td>Component B</td><td>500 units</td><td>500 units</td><td>7 Days</td><td>1,000 units</td></tr>\r\n<tr><td>Component C</td><td>0 units</td><td>500 units</td><td>25 Days</td><td>100 units</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Based on the data above, which component is the primary bottleneck causing this 20-day order to be at risk of delivery failure?Give your mathematical reason!",
+                    "2": "For Component A, the factory only lacks 400 units, but must purchase 500 units due to the Minimum Order Limit regulations.What financial losses must be borne if PPIC just agrees to purchase according to this Minimum Order Limit?",
+                    "3": "As a PPIC analyst, name 2 emergency steps you can take with the Purchasing team to overcome delays in Component C so that orders are still completed within 20 days."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Capacity Requirement Planning (CRP) Clash",
+                "deskripsi": "Main Production Schedule Plan for Packaging Machines in the 3rd week.The machine operates 1 shift (8 effective working hours) for 5 working days per week (Total time capacity: 40 hours / 2,400 minutes).<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Work Order Code</th><th>Output Target</th><th>Standard Machine Speed (Cycle Time)</th><th>Total Time Required</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>WO-001</td><td>1,000 cartons</td><td>2 minutes / carton</td><td>2,000 minutes</td></tr>\r\n<tr><td>WO-002</td><td>400 cartons</td><td>2 minutes / carton</td><td>800 minutes</td></tr>\r\n<tr class='table-secondary'><td><strong>Total Load (Load)</strong></td><td>-</td><td>-</td><td><strong>2,800 minutes</strong></td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Calculate how many hours of machine time capacity shortage (deficit) will occur in that week if all orders are forced in?",
+                    "2": "If PPIC is determined to enter these two orders into the computer system and promises to complete them by Friday, what operational chaos will occur on the factory floor and delivery department?",
+                    "3": "Provide 2 realistic operational solutions to the Production Manager so that the shortage of machine working hours can be resolved and both orders are still completed on time."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Dead Stock and Shelf Life Analysis",
+                "deskripsi": "Inventory Age Report for several chemical raw materials in the Room Temperature Storage Warehouse.Today is July 1, 2026.<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Material Code</th><th>Stock Quantity</th><th>Incoming Date (Goods Receipt)</th><th>Expiration Date (Expiry Date)</th><th>Frequency of Use (Last 6 Months)</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Mat-P</td><td>2,000 kg</td><td>10 Jan 2026</td><td>10 Dec 2026</td><td>Frequently (Every week)</td></tr>\r\n<tr><td>Mat-Q</td><td>800 kg</td><td>15 Aug 2025</td><td>15 Aug 2026</td><td>Very Rare (Slow Moving)</td></tr>\r\n<tr><td>Mat-R</td><td>500 kg</td><td>02 Feb 2026</td><td>02 Jul 2026</td><td>Often</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Of the three chemicals above, which material is in the most emergency condition and must be used immediately or saved today?Give your reasons based on the remaining shelf life of the item.",
+                    "2": "Material Q has been piling up for almost a year and is about to expire even though it is rarely used.What mistakes did the planning department make when purchasing this item in the first place?",
+                    "3": "Why is using the FIFO (First In = First Out) rule dangerous for goods that may expire?How does the FEFO (First Expiry = First Out) system work on warehouse computers?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Impact of Defective Goods (Reject Rate) on Shipment Shortages",
+                "deskripsi": "Production Completion Report for VVIP customer products.The customer orders exactly 5,000 units.The MRP parameters in the previous system were set with an expected damage rate (Scrap/Reject Rate) of 2%.<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Production Parameters</th><th>Actual Data on the Factory Floor</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Withdrawn Raw Materials (Material Issued)</td><td>For 5,100 units (2% buffer has been added)</td></tr>\r\n<tr><td>Output of Good Goods (Good Receipt)</td><td>4,600 units</td></tr>\r\n<tr><td>Quality Defective Products (QC Reject)</td><td>500 units</td></tr>\r\n<tr><td>Machine/Material Status</td><td>Material out of stock, machine stopped</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Calculate the actual percentage of defective goods that occur in the field based on the data above.Why is the target of 5,000 units still failing to be achieved even though raw materials have been exceeded?",
+                    "2": "Because there are 400 units short, you must create a follow-up production order.What is the biggest challenge or obstacle for PPIC to be able to immediately produce these shortages on the same day?",
+                    "3": "So that the factory computer does not miscalculate raw material requirements again next month, what data or parameters should you change (recalibrate) in the computer system regarding this product?"
+                }
+            }
+        }
+    },
+    "ADMIN QC (AQC)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Typo Disaster in Test Result Data",
+                "deskripsi": "QC Analyst in the field submits report paper.On the paper it is written that the Pressure Drop (suction power) figure for the filter is 350 (Normal).However, because you were in a hurry, you typed it into the computer system to 530 (Reject/Defect).As a result, the system automatically locks the item.The Warehouse Team was angry because the goods had to be sent this afternoon but were delayed by the system.",
+                "pertanyaan": {
+                    "1": "Why are you strictly prohibited from directly editing/changing the number 530 back to 350 in the system secretly without reporting to your superior or field QC?",
+                    "2": "What impact will operational chaos have on the Warehouse and Sales team if goods that are actually \"Good\" are instead locked in \"Reject\" status in the system due to your typo?",
+                    "3": "Design 1 simple mandatory rule (Double Check SOP) on your desk before you press the Save/Submit button on the computer, so that this number typing error doesn't happen again."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Coercion to Falsify Documents (CoA)",
+                "deskripsi": "The expedition truck is already on and ready to go to the client's cigarette factory.The Warehouse Team asks you to immediately print the Quality Certificate (CoA).The problem is, the Batch number (Production Code) on the waybill is Batch A, while the lab test results data you hold is for Batch B. The warehouse person urges: \"That's it, just edit the Batch number on the CoA paper to become Batch A so the truck can run, the quality will be equally good!\"",
+                "pertanyaan": {
+                    "1": "What is the biggest legal and business risk to the company's good name if you comply with the request to falsify the Batch number on the official CoA document?",
+                    "2": "When pressured by other operational lines (Warehouse/Logistics) to change data illegally for smooth delivery, what is the official escalation procedure that you must carry out to the Management/QC Supervisor?What limitation parameters determine that you must absolutely refuse to print the CoA before there is written approval (Concession/Deviation Form)?",
+                    "3": "While holding back the CoA print, what data tracking steps do you immediately carry out on the computer to find out where the original data from Batch A has disappeared?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Physical vs System Hold State Missed",
+                "deskripsi": "At 10 am, field QC found filters whose glue was damaged and physically attached Red Stickers (HOLD) to the boxes.However, the paper reports pile up on your desk and you forget to click the Hold button on the computer system.As a result, the system still reads that the item has Release status (Good).Warehouse people who did not see the red sticker immediately loaded the goods onto the truck.",
+                "pertanyaan": {
+                    "1": "According to the Factory SOP, whose mistake was more fatal: the QC Admin who forgot to lock the system OR the Warehouse Person who didn't physically check the cardboard (there was a red sticker)?Give your reasons.",
+                    "2": "When you realize that there is a gap between the physical status and the system that causes the defective product to be loaded onto the truck, what quick administrative steps should you take in the ERP/WMS system to track the truck coordinates and digitally block the receipt documents on the client's side before the truck arrives at the destination location?",
+                    "3": "Create a fast communication flow between Field QC and QC Admin so that every time there is a physical Hold status, the item can be immediately locked in the system in less than 5 minutes."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Loss of \"Evidence\" (Retain Sample)",
+                "deskripsi": "The client (X Cigarette Factory) called and complained that the filter they received from production 3 months ago was very hard.The QC Manager tells you to look for a \"Retain Sample\" from that production date on the storage shelf for double checking.Unfortunately, the sample shelf is very messy and the samples from 3 months ago were lost or you forgot to put them away.",
+                "pertanyaan": {
+                    "1": "Why is the physical loss of the Retain Sample so detrimental to our factory's position when debating a compensation claim with the client?",
+                    "2": "Because the physical sample is missing, what archive documents (paper/digital) from 3 months ago can you pull out and show to the Manager as replacement evidence that at that time the test results were normal?",
+                    "3": "Design a labeling and storage system so that monthly Retain Samples are always neat and can be found in less than 3 minutes."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Missing Calibration & External Audit Schedules",
+                "deskripsi": "Tomorrow morning there will be an External Auditor (client's supervisor) coming to the factory.When you were tidying up your documents (SOP and Calibration) tonight, you just realized that the validity period of the Calibration Certificate for the main measuring instrument in the lab was \"Dead/Expired\" 2 weeks ago.You forgot to remind the Manager.",
+                "pertanyaan": {
+                    "1": "If the Auditor knows that the measuring instrument has been out of calibration for 2 weeks, what impact will the quality status of all cigarette filters produced and shipped during those 2 weeks have in the eyes of the law?",
+                    "2": "Why is negligence in the calibration schedule for this measuring instrument considered a major (very serious) finding that could invalidate the company's ISO certification?",
+                    "3": "Design a digital calendar system (alert/notification) on the QC Admin computer that can provide automatic warnings to the Quality Manager 30 days, 15 days, and 7 days before the tool calibration expires."
+                }
+            }
+        }
+    },
+    "ADMIN SCM (ASCM)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Import Supplier Low Price Trap",
+                "deskripsi": "You are tasked with selecting a supplier for packaging materials.The monthly requirement is 10,000 units.You get two offers with the following details:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Parameters</th><th>Vendor A (Local)</th><th>Vendor B (Imported - China)</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td><strong>Unit Price</strong></td><td>IDR 15,000 / unit</td><td>IDR 11,000 / unit</td></tr>\r\n<tr><td><strong>Incoterms</strong></td><td>Receive the Arrangement at Our Warehouse</td><td>Pick Up Yourself at China Port</td></tr>\r\n<tr><td><strong>Delivery Time</strong></td><td>5 Days</td><td>45 Days</td></tr>\r\n<tr><td><strong>Minimum Order</strong></td><td>10,000 units</td><td>50,000 units</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Vendor B looks IDR 4,000 cheaper.However, because the goods must be picked up by yourself at a foreign port, mention 3 additional hidden costs that we must bear until the goods arrive at the warehouse.",
+                    "2": "If we choose Vendor B, we are required to buy stock for 5 months at once.What are the bad effects on the factory's cash flow (Cash Flow) and the risk of storage in the warehouse?",
+                    "3": "Seeing the conditions of shipping costs and the fluctuating dollar exchange rate, give strong reasons why choosing Vendor A (Local) is actually safer for the factory."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Arranging How to Store Goods (Central vs Regional)",
+                "deskripsi": "You manage inventory of 4 product categories in electronics retail.Request and cost data are as follows:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>SKU Code</th><th>Monthly Demand Value (units)</th><th>Demand Coefficient of Variation (CV)</th><th>Contribution Margin per Unit</th><th>Shelf Cost per Unit/Month</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>SKU-A</td><td>5,000 units</td><td>0.2 (Very Stable)</td><td>Rp 50,000</td><td>Rp 2,000</td></tr>\r\n<tr><td>SKU-B</td><td>500 units</td><td>0.9 (Up-Down)</td><td>Rp 200,000</td><td>Rp 5,000</td></tr>\r\n<tr><td>SKU-C</td><td>10,000 units</td><td>0.3 (Quite Stable)</td><td>Rp 10,000</td><td>Rp 500</td></tr>\r\n<tr><td>SKU-D</td><td>200 units</td><td>1.5 (Rarely Sold/Seasonal)</td><td>Rp 50,000</td><td>Rp 10,000</td></tr>\r\n</tbody>\r\n</table><br>\r\n<strong>Strategic Target:</strong> Cut total inventory value by 30% but still maintain OTIF (On Time In Full) above 95%.",
+                "pertanyaan": {
+                    "1": "Which goods should be stored in regional warehouses (near consumers), and which goods should only be stored in the central warehouse to save costs?",
+                    "2": "If we want to send plain goods from the center and then package/brand them at a regional warehouse, which SKU is most suitable?Mention 2 requirements for a warehouse computer system so that this method is not chaotic.",
+                    "3": "Because stock has been cut by 30%, mention 3 indicators (KPI) that the SCM Admin must monitor every week so that the store does not run out of goods and consumers are not disappointed."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — The Effect of Swollen Orders on the Supply Chain",
+                "deskripsi": "Report on the movement of orders for Product Z due to weekend promotions at the retail store (end customer) level.<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Supply Chain Points</th><th>Sales Reality / Actual Demand</th><th>Number of Requests (Orders) Forwarded to Upper Parties</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td><strong>Shop Cashier Data (POS)</strong></td><td>Sold 150 units (up 50 units from usual)</td><td>Shop ordered 200 units to Distributor</td></tr>\r\n<tr><td><strong>Regional Distributor</strong></td><td>Received an order of 200 units from the Store</td><td>Distributor ordered 400 units to the Factory</td></tr>\r\n<tr><td><strong>Factory SCM Admin</strong></td><td>Received order for 400 units from Distributor</td><td>SCM order for production of 800 units to Manufacturing</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Why did the original sales increase of only 50 units at the store cashier balloon to a production order of 800 units at the factory?Explain the cause of this operational panic.",
+                    "2": "When the promo period ends and consumer purchases return to normal, what heavy burden or loss will be experienced by the distributor warehouse and factory warehouse as a result of having already produced those 800 units?",
+                    "3": "As an SCM Admin, what should you do so that the factory computer can directly see the original sales data at the store cashier directly, so that the factory is no longer \"lied to\" by inflated distributor orders?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Delivery Truck Jam and Full Warehouse",
+                "deskripsi": "Approaching Eid, goods shipments jumped 300%.The company uses external expedition services (truck vendors/3PL).Unfortunately, their trucks often arrive late at the warehouse.As a result, goods pile up and clog the warehouse loading dock area.",
+                "pertanyaan": {
+                    "1": "The warehouse door was crowded because the truck was late.What are the bad consequences for workers in the warehouse who want to pick up goods or arrange goods on shelves?",
+                    "2": "How to implement a Cross-Docking system (new goods from the factory are transferred directly to courier trucks without being stored on shelves) to break down this bottleneck?",
+                    "3": "Relying on a single expedition vendor can prove risky.As SCM Admin, what are your plans for managing truck vendors for next year's peak season so that this problem doesn't happen again?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Withdrawal of Damaged Goods from the Market (Reverse Logistics)",
+                "deskripsi": "BPOM ordered a product recall for one snack production code number (batch) because it was contaminated.As an SCM Admin, you must withdraw 10,000 boxes of products that have already been distributed to 50 agents throughout Indonesia to be returned to the central warehouse.",
+                "pertanyaan": {
+                    "1": "What is the first step you must enter into the computer so that the product with the contaminated code number (batch) is automatically locked and cannot be sold to consumers again?",
+                    "2": "When return trucks arrive at the central warehouse, how do you set up the quarantine area so that damaged goods don't accidentally get mixed up with good goods ready to be sold?",
+                    "3": "Withdrawing this item does not make money, instead it costs a lot of money.Mention the 3 main logistics cost components that the company must pay as a result of this national scale goods withdrawal process."
+                }
+            }
+        }
+    },
+    "General Affair (GA)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — ATK & Pantry Stock Control (Daily Inventory)",
+                "deskripsi": "Every month, the Office Stationery (ATK) and Pantry budget is always over-budgeted and stock runs out in the middle of the month.During this time, items were placed in open cupboards and were free for anyone to take.GA managers task you with stopping this waste and turning it into a financially trackable system.",
+                "pertanyaan": {
+                    "1": "Create a short flow (maximum 3 stages) regarding the new way for employees to request stationery from GA, so that outgoing goods are recorded neatly but don't make employees feel complicated.",
+                    "2": "What is the most logical and simple way to determine the \"Minimum Stock Limit\" on the shelf, so that you know when is the right time to order goods from a vendor before the stock is completely empty?",
+                    "3": "Many employees protested and considered GA to be \"stingy\" now.Write 1 sentence in a polite and tactical reply to explain that this new rule is purely about system neatness, not because it is stingy."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Scheduling Dilemma (AC Washing vs VVIP Meeting)",
+                "deskripsi": "The routine AC cleaning schedule for the meeting room falls today at 09.00.The problem is, this afternoon at 13.00 there was an impromptu meeting of the VVIP Director and Client in that room.Suddenly, the vendor technician informed them that they were 1.5 hours late (only arrived at 10.30).",
+                "pertanyaan": {
+                    "1": "Faced with a vendor who is 1.5 hours late, what is your quick decision: Cancel washing the AC today OR Force them to keep washing the AC?Give your operational reasons considering the VVIP meeting at 13.00.",
+                    "2": "Apart from asking for before and after photos of the job, what specific technical data/evidence should you ask for to avoid being lied to by vendors?",
+                    "3": "Create 1 \"Cleanliness SLA\" clause that binds vendors.What specific punishment (penalty) will you give if after washing the AC, they leave the meeting room carpet wet and dirty?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Vendor Management & Legal Compliance (Outsourcing)",
+                "deskripsi": "Employees complain that toilets are dirty and parking is unsafe.Cleaning Service and Security vendor services have decreased drastically.They still have 8 months left on their contract, and there is a 30% penalty for the company if GA terminates the contract unilaterally.",
+                "pertanyaan": {
+                    "1": "To ensure that employee complaints are valid and not subjective opinions, design 2 objective parameters for carrying out Incidental Audits (sudden inspections) of toilets and parking areas.",
+                    "2": "You plan to terminate the vendor's contract next month without having to pay the 30% penalty.What 2 operational/legal documents do you absolutely have to collect starting today as \"weapons/evidence\" of their negligence?",
+                    "3": "Propose a simple reporting system that involves daily employee participation, so that GA can monitor toilet cleanliness without having to patrol the field every hour."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — IT Asset Maintenance (Printer Malfunction Investigation)",
+                "deskripsi": "The large printer machine on the 2nd floor often breaks down (paper gets stuck), even though it was only serviced last week.You suspect that this is not the vendor's fault, but rather that employees on the 2nd floor often forcefully pull jammed paper and use waste paper that still has staples in it.",
+                "pertanyaan": {
+                    "1": "How do you tactically investigate and look for evidence for your suspicions, without appearing to directly accuse the people on the 2nd floor?",
+                    "2": "If the machine has to be taken to the vendor's workshop for 3 days, arrange a printing transfer protocol to the 1st floor machine so that confidential documents (such as HRD salary slips or finance bills) are not leaked and read by other employees.",
+                    "3": "Design 1 visual warning message (a small poster near the machine) to discourage the habit of stapling paper, without using harsh/lecturing no-words."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Execution Supervision (BAST) & K3 Assertiveness (HSE)",
+                "deskripsi": "The building vendor reported via WhatsApp that the repair of the leaking door hinges and pantry pipe was 100% complete.They urge you to immediately sign the Minutes of Handover (BAST) so that their workers' wages can be disbursed this afternoon.",
+                "pertanyaan": {
+                    "1": "What are the financial and professional risks for your own career if you immediately sign the BAST using only a photo report from the vendor, without carrying out a physical check in the field?",
+                    "2": "When physically checked, it turned out that the pantry pipe was still dripping slightly.Design a BAST rejection sentence that is diplomatic, but firmly forces the vendor to work overtime to complete it on the same day.",
+                    "3": "While working, the vendor technician insisted on not wanting to wear K3 equipment (such as safety belts/protective glasses) because he felt it was \"complicated\".Arrange 1 instant action in that second to force them to comply without having to make a fuss in the office."
+                }
+            }
+        }
+    },
+    "HRD Payroll (HRP)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Fatal Mistake (Salary Overpayment)",
+                "deskripsi": "You made a typo when processing your salary.As a result, an employee received an excess transfer of IDR 5,000,000 last month.When you confirmed today, the employee argued that the money had been used to pay personal debts.",
+                "pertanyaan": {
+                    "1": "In terms of employment regulations and empathy, why are you prohibited from deducting IDR 5,000,000 in full from your salary next month, and who are the 2 internal parties you are obliged to report first regarding this carelessness?",
+                    "2": "Write 1 sentence of a tactical offer to the employee to find a middle way to return the money without making his salary next month completely empty/minus!",
+                    "3": "Design a manual approval flow (Approval Workflow) before the salary transfer file is sent to the bank, so that unreasonable amounts can be detected by other parties!"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Overtime Claim Manipulation (Funds Leakage)",
+                "deskripsi": "The Warehouse division's overtime bill tripled.The overtime form has indeed been approved by the Warehouse Manager, but physically it doesn't make sense (some staff claim 60 hours of overtime/week).The warehouse manager is angry and tells you to just pay straight away because he already has his signature.",
+                "pertanyaan": {
+                    "1": "Apart from looking at the paper overtime form, mention 2 pieces of real data evidence from other departments that you would pull to prove that this overtime is fictitious!",
+                    "2": "Write 1 counter argument to the Warehouse Manager linking this overtime irregularity to potential financial losses and a company financial audit!",
+                    "3": "If the evidence of manipulation is strong, decide whether the overtime bill will be withheld or still disbursed, then create a rule for capping overtime hours so that the company budget doesn't break out of control!"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Tax Dilemma (Angry Employees Take Home Pay Down)",
+                "deskripsi": "Because the government's tax regulations have changed, this month's PPh 21 deduction is bigger.A senior employee comes to your desk angrily, accusing the Payroll team of secretly deducting his salary, and threatening to resign if his taxes are not covered by the company (Gross-up).",
+                "pertanyaan": {
+                    "1": "Why is responding to the employee's anger by telling him to \"Read the tax rules yourself on Google\" a fatal communication error for an HR person?",
+                    "2": "Write a short explanation (maximum 3 sentences) in layman's language confirming that the deduction money was purely deposited into the State treasury, accompanied by 1 physical document that you will show him on the table!",
+                    "3": "Propose 1 proactive step from the Payroll division next month so that mass panic about tax deductions can be prevented before pay slips are distributed!"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Salary Dispute for Sudden Resignation of Employees",
+                "deskripsi": "An employee resigned today without saying goodbye (even though the resignation rule is One Month Notice / 30 days in advance).He demanded that his salary for the last 15 working days be immediately transferred today and was afraid he would report it to the police/Manpower Department because the company was deemed to be \"withholding his salary rights.\"",
+                "pertanyaan": {
+                    "1": "As a Payroll, what is your strongest argument for daring to withhold your salary temporarily, and what 2 obligations/facilities must be ensured to be completed before the salary is released?",
+                    "2": "Write a short draft message (WhatsApp/Email) that firmly refuses to transfer his salary today, but includes absolute conditions that he must fulfill if he wants the money to be disbursed!",
+                    "3": "So that this case of an employee suddenly leaving doesn't cause any more trouble for the company, what special warning clause (penalty) must be added to the Employment Agreement sheet for new employees in the future?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Crisis Management (Bank System/Payroll Down on the D Day)",
+                "deskripsi": "Today is the 25th (Payday) at 14.00 noon.Suddenly, the central Internet Banking system experienced an error and could not be accessed for an unspecified time.Hundreds of employees were anxious and started spreading rumors that the company was bankrupt.",
+                "pertanyaan": {
+                    "1": "Your first action is to stop wild gossip.Write a 1 sentence official announcement (Broadcast) that is honest, reassuring, without promising a specific time when the banking system will return to normal.",
+                    "2": "If the bank only recovers the next day and an employee is fined for late mortgage payments due to a late salary, is the company obliged to reimburse the employee for the bank fine?Give reasons.",
+                    "3": "Develop an Emergency Plan (Contingency Plan) with the Finance team to disburse salaries on the same day, especially for lower level employees (such as Office Boy and Security) whose money has been used up for food."
+                }
+            }
+        }
+    },
+    "HRD Recruitment (HRR)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case 1 — Setting User Expectations (Unreasonable Criteria)",
+                "deskripsi": "The IT Manager (User) asks you to look for a Programmer with 8 years of experience and mastery of 5 difficult programming languages, but the salary budget is only equivalent to junior staff.<br>\r\n• A month passes, no candidates have applied.<br>\r\n• Users are angry and accuse the HRD department of slow work.",
+                "pertanyaan": {
+                    "1": "Write 1 assertive sentence along with evidence of real data (market conditions) that you will convey to users to break the accusation of \"slow HRD\" and at the same time make them aware that their criteria are unreasonable.",
+                    "2": "If the absolute salary budget cannot be increased, which option will you encourage Users to approve: Lowering experience requirements OR Providing non-financial benefits?Give 1 tactical reason.",
+                    "3": "Design 1 mandatory rule (SOP / Service Level Agreement) that must be agreed upon between HRD and Users before any vacancy is published, so that this incident does not happen again."
+                }
+            },
+            "2": {
+                "judul": "Case 2 — Champion Candidate Affected by Counter-Offer",
+                "deskripsi": "You found your dream candidate.He has signed the Offering Letter and is scheduled to enter on Monday.<br>\r\n• Suddenly on Friday, he withdrew because he was detained by his old company.<br>\r\n• Candidates are offered salary increases and surprise promotions at their old places.",
+                "pertanyaan": {
+                    "1": "Should our company also increase the salary offer?If not, write 1 psychological question on the phone to sway his decision to stay in the old place.",
+                    "2": "If he still doesn't join, write a draft of a tactical sentence to call and offer him the 2nd Place (Runner Up) candidate, even though last week you already sent him a rejection email!",
+                    "3": "What \"Commitment Locking\" tactics should you implement in the final stages of the Interview (before the salary offer) so that the risk of the candidate receiving a counter-offer from their old company can be prevented?"
+                }
+            },
+            "3": {
+                "judul": "Case 3 — Mass Ghosting Case (Empty First Day of Work)",
+                "deskripsi": "There are 3 Customer Service (CS) candidates who have passed the selection and agreed to enter the office at 8 this morning.<br>\r\n• At 9 am, not a single candidate showed up at the office.<br>\r\n• Calls are not picked up, and when WhatsApp is only read (ghosting).<br>\r\n• Users really need additional people today.",
+                "pertanyaan": {
+                    "1": "What is the most rational and non-defensive explanation that you would give to the User (CS Manager) that day regarding the 3 people who ran away?",
+                    "2": "The time lag between signing the contract and the first day of work is often an opportunity for candidates to run away/change their minds.Plan 1 simple Pre-Boarding activity during that break to bond them emotionally!",
+                    "3": "For positions with a high turnover rate such as CS, mention 1 strategy for building a \"Talent Pool (Reserve)\" system so that you can immediately call a replacement person within 1x24 hours!"
+                }
+            },
+            "4": {
+                "judul": "Case 4 — Reference Check Dilemma (Dark Past)",
+                "deskripsi": "You have a smart Financial Supervisor candidate and Users really like him.<br>\r\n• When you secretly call HR at his old company (Reference Check), you get a tip that this candidate used to embezzle office cash.<br>\r\n• The case was finally covered up by the old company internally.",
+                "pertanyaan": {
+                    "1": "Don't immediately believe in 1 source.Apart from looking for references from other parties, write 1 trick question (Behavioral Question) during the follow-up interview to provoke the candidate's honesty about the difference in money.",
+                    "2": "If the user snarks and says: \"Just accept it! He's smart, just leave his past alone,\" write down 1 rebuttal argument from HRD that focuses on fatal risks in the future!",
+                    "3": "If the President Director finally insists that the candidate is still accepted, what legal protective documents/administrative requirements must HRD add to the Employment Agreement in order to protect the company?"
+                }
+            },
+            "5": {
+                "judul": "Case 5 — Candidate Internal vs. External Conflict",
+                "deskripsi": "There is a vacancy for Branch Head.You have internal candidates (old employees, loyal for 5 years, but less aggressive).<br>\r\n• On the other hand, there are External candidates (outsiders, very aggressive, ambitious, but ask for high salaries).<br>\r\n• Users want to recruit outsiders, while the internal team starts to argue that their career path is not valued.",
+                "pertanyaan": {
+                    "1": "What real data (aside from absence and length of work) do you have to pull to objectively prove to the User whether the Internal Candidate is worthy of consideration or not?",
+                    "2": "If in the end an External Candidate (outsider) is recruited, how do HRD and Users convey the news of the rejection to the Internal Candidate without destroying their work motivation and then resigning?",
+                    "3": "If the outsider is still recruited but the salary request exceeds the standard (budget) of the Branch Head, what are your tactics for managing the salary components (for example: Basic Salary vs Incentive/Bonus ratio) so that the company's total fixed cost burden does not fall?"
+                }
+            }
+        }
+    },
+    "Job Planner (JPL)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Machine Schedule Push-Pull (Focus: PPIC Scheduling & Coordination)",
+                "deskripsi": "You have scheduled Preventive Maintenance (PM) for the Main Machine on Wednesday for 6 hours.<br>\r\n• On Tuesday afternoon, the PPIC team refused to turn off the machine because there was an urgent order that had to be sent on Thursday.<br>\r\n• The mechanic warns you: \"If you don't service the machine tomorrow, the next day the machine will definitely break down completely.\"",
+                "pertanyaan": {
+                    "1": "As a Job Planner who is in the middle, what data or technical facts must you show to PPIC so that they realize that delaying maintenance will actually destroy their own targets?",
+                    "2": "Design a middle ground scheme (schedule compromise) between the mechanic and PPIC so that urgent orders are still completed, but the machine still gets maintenance within a safe time limit.",
+                    "3": "Create a written agreement (SLA) between the Maintenance department and PPIC regarding the maximum limit for PM schedule delays, so that the schedule you create is not always sacrificed."
+                }
+            },
+            "2": {
+                "judul": "Case 2 — Spare Parts Emergency & Central Delay (Focus: Procurement & Logistics)",
+                "deskripsi": "The engine repair schedule is scheduled for Friday.You have made a Purchase Request (PR) since last week to the Purchasing team in Surabaya.<br>\r\n• This Thursday the goods have not arrived.<br>\r\n• When called, Purchasing Surabaya answered: \"The vendor is still looking for the goods, just wait.\"<br>\r\n• If the goods do not arrive tomorrow, the repair is canceled and the mechanic is unemployed.",
+                "pertanyaan": {
+                    "1": "What technical contingency steps will you take with local vendors to save the allocated mechanical work schedule?",
+                    "2": "If the goods finally arrive on Friday but the quantity is lacking (order 5, arrive 3), what will be the fatal impact on the Inventory Valuation data, Safety Stock calculations, and Reorder Point (ROP) automation in the system if you are forced to input a full Good Receipt Note (GRN)?",
+                    "3": "Based on this case of delay, how do you recalculate the Lead Time for procurement of these components to update the Max-Min Stock parameters in the warehouse so that a similar breakdown does not happen again in the future?"
+                }
+            },
+            "3": {
+                "judul": "Case 3 — End of Month Cut-Off Disaster (Focus: Dual System Management - Excel vs Accurate)",
+                "deskripsi": "Today is the monthly Cut-Off (book closing) schedule.You have to adjust the data.<br>\r\n• In your Excel manual notes, the remaining lubricating oil is 5 drums.<br>\r\n• However, when checked with the Accurate system, stock was recorded as only having 3 drums left.<br>\r\n• There is a difference of 2 drums lost between systems.",
+                "pertanyaan": {
+                    "1": "From the Audit Trail system side, mention 2 administrative gaps that most often cause stock variances for consumables (such as oil/grease) between the Accurate system and Excel records in the field.",
+                    "2": "What physical tracking actions and short-term document investigations should you undertake that very day before making a decision to adjust the numbers in the system?",
+                    "3": "If after a physical check it turns out that the remaining oil is indeed 3 drums (your Excel notes were wrong), what technical supporting documents must you attach to the Finance department so that the difference between the 2 drums is approved as an operational cost, not a loss due to negligence."
+                }
+            },
+            "4": {
+                "judul": "Case 4 — Machine Parts Cannibals (Focus: Asset Management & PR Administration)",
+                "deskripsi": "Machine B suddenly became seriously damaged (Breakdown).Mechanics need engine sensors ASAP.<br>\r\n• Because the stock in the warehouse was empty, the Chief Mechanic decided to remove the sensor from Machine C which was idle.<br>\r\n• The sensor is installed on Machine B so that factory activities continue.",
+                "pertanyaan": {
+                    "1": "To tidy up the administration after this cannibalistic incident, how do you create a new Purchase Request (PR): Do you order sensors for \"Engine B repair\" or \"Replace Engine C sensor\"?Give reasons.",
+                    "2": "Design an emergency intervention protocol or SOP that mechanics must fulfill before carrying out cannibalization, so that the history of machine damage and the structure of the Bill of Materials (BOM) for both machines in the Accurate system can still be tracked accurately.",
+                    "3": "What are the long-term risks to the depreciation value and reliability of Machine C if this covert cannibalization practice continues unchecked by a Job Planner?"
+                }
+            },
+            "5": {
+                "judul": "Case 5 — Supervision Gap After 11pm (Focus: Stock Control & Handover)",
+                "deskripsi": "Your working hours as a Job Planner are only until 11 pm.You leave the key to the spare parts cupboard with the Chief Mechanic (Supervisor) so that his team can still retrieve the goods if the machine breaks down at night.<br>\r\n• Three times you have found that the stock of goods in the morning is reduced, but no mechanic has reported it in the WhatsApp group.<br>\r\n• When asked, the Chief Mechanic reasoned: \"Wow, I went around the factory last night, I don't know which subordinate opened the cupboard and took the goods.\"",
+                "pertanyaan": {
+                    "1": "As an inventory authorization owner, why is this \"key lock\" system without strict regulations dangerous for your position during stock taking audits by Finance?How do you map out legal responsibility for these material differences?",
+                    "2": "Create a mechanism for handing over warehouse keys and strict stock verification at 23.00 before you go home, so that the night shift supervisor takes full responsibility for the movement of goods.",
+                    "3": "How do you design a physical layout scheme for an emergency warehouse (Night Shift Kitting Buffer) to separate critical components that can be picked up independently by night mechanics, without having to provide full access to the main locked warehouse area?"
+                }
+            }
+        }
+    },
+    "Kas kecil (KAS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Petty Cash Calculation Differences and Closed Book Issues",
+                "deskripsi": "You manage petty cash using the fixed balance method (funds are set at IDR 10,000,000).On October 31, when the October books are locked (closed), you count the contents of the safe and find the following data:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 500px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Components in the Safe</th><th>Nominal</th><th>Description</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Physical Cash</td><td>IDR 2,000,000</td><td>Payments of banknotes & coins</td></tr>\r\n<tr><td>Bon/Expenditure Note</td><td>Rp 7,000,000</td><td>Dated 25 - 30 October</td></tr>\r\n<tr><td>Cashbon Bond (IOU)</td><td>Rp 500,000</td><td>Employee A (No note yet)</td></tr>\r\n</tbody>\r\n</table>\r\n<br>Total Physical & Documents: Rp. 9,500,000 (There is a difference of less than Rp. 500,000)",
+                "pertanyaan": {
+                    "1": "In your opinion, what is the most logical operational reason why the money in the safe could be less than IDR 500,000?As a cash holder, what is the first action you will take to track it?",
+                    "2": "Because the October bookkeeping has already been locked while the Rp. 7,000,000 note has not yet been input into the computer, what bad effect will this have on the accuracy of the company's profit and loss report in October?",
+                    "3": "In November, you must refill petty cash so that the balance returns to IDR 10,000,000.How do you input the October notes into the system in November so that your bookkeeping remains neat and correct?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Examination of Expenditure Evidence and Indications of Fraud",
+                "deskripsi": "List of applications for Petty Cash reimbursement from the Marketing Division this week:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 500px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Date</th><th>Expenditure Description</th><th>Nominal</th><th>Supporting Evidence</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Saturday, Nov 14</td><td>Client Entertainment (Dinner)</td><td>Rp 1,900,000</td><td>EDC Receipt (Without menu details)</td></tr>\r\n<tr><td>Monday, Nov 16</td><td>Purchase Printer Ink (Shop A)</td><td>Rp 900,000</td><td>Handwritten Note</td></tr>\r\n<tr><td>Monday, Nov 16</td><td>HVS Paper Purchase (Shop A)</td><td>Rp 800,000</td><td>Handwritten Note</td></tr>\r\n</tbody>\r\n</table>\r\n<br>(SOP Note: Maximum limit for 1x petty cash transaction is IDR 1,000,000)",
+                "pertanyaan": {
+                    "1": "Based on the data above, find 2 irregularities or frauds that violate the company's maximum transaction limit rules.",
+                    "2": "Why is a purchase at Store A on November 16 considered circumventing the rules?What are the bad risks for you as a cashier if you pass the transaction?",
+                    "3": "Before you approve the November 14 dinner claim, what additional supporting evidence are you required to request from the employee to prove it was for office business, not personal?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Petty Cash Foreign Currencies (Dollars) and Exchange Differences",
+                "deskripsi": "You manage petty cash using US Dollars with a fixed balance of $500.Mutation records during December:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 500px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Date</th><th>Activity</th><th>Physical USD</th><th>System Rate (BI)</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Dec 1</td><td>Month Beginning Balance</td><td>$ 500</td><td>Rp 15,000 / USD</td></tr>\r\n<tr><td>Dec 15</td><td>Pay Taxi for Foreign Guests</td><td>($ 100)</td><td>Rp 15,300 / USD</td></tr>\r\n<tr><td>Dec 31</td><td>Final Balance (Not yet filled in)</td><td>$ 400</td><td>Rp 15,500 / USD</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "When you input a $100 taxi expense on December 15, why does the computer system require you to enter that day's rate (Rp. 15,300) and not the rate at the beginning of the month (Rp. 15,000)?",
+                    "2": "On December 31, the remaining physical cash in your drawer is $400.Based on bookkeeping logic, why should the Rupiah value of the remaining $400 be adjusted again according to the latest exchange rate at the end of the year (Rp. 15,500)?",
+                    "3": "As a result of the change in the exchange rate from December 1 to December 15 when paying for a taxi, did the company experience a real exchange gain/loss (Realized) or was it just a note on paper (Unrealized)?Give a brief reason."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Year Change Transitions and Reversal Journals",
+                "deskripsi": "Details of the Petty Cash Safe at the time of office closure on December 31 2025 (Fixed Funds IDR 5,000,000).The new refill will be made by the cashier on January 3, 2026.<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 550px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Contents of the Safe (31 Dec 2025)</th><th>Nominal</th><th>Status in the System</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Cash</td><td>Rp 1,500,000</td><td>-</td></tr>\r\n<tr><td>Gasoline & Toll Note</td><td>Rp 1,000,000</td><td>Not yet input</td></tr>\r\n<tr><td>Meeting Consumption Note</td><td>Rp 2,500,000</td><td>Not yet entered</td></tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "If you delay and only enter the IDR 3,500,000 note in the new year (January 3 2026), what will be the wrong effect on the company's Net Profit report in 2025?",
+                    "2": "To save the 2025 financial statements, what emergency recording steps should you take on the computer on December 31 for the Rp. 3,500,000 note?",
+                    "3": "Why does the emergency note on December 31 have to be \"reversed/cancelled\" in the system on January 1, 2026 before the real physical money is refilled on January 3?Explain the purpose to avoid double recording."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Employee Cash Issues in the Petty Cash Drawer",
+                "deskripsi": "During a surprise audit, two pieces of cash bonds (temporary loan) were found stored in the following petty cash box:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width: 600px;background: white;'>\r\n<thead class='table-light'>\r\n<tr><th>Employee Name</th><th>Nominal</th><th>Cashbond Date</th><th>Additional Information</th></tr>\r\n</head>\r\n<tbody>\r\n<tr><td>Mr Andi</td><td>Rp 1,000,000</td><td>October 10 (90 Days Ago)</td><td>Employees resigned in November</td></tr>\r\n<tr><td>Mrs Budi</td><td>Rp 4,500,000</td><td>2 January (Today)</td><td>Borrowed for DP from project vendor</td></tr>\r\n</tbody>\r\n</table>\r\n<br>(Maximum company Petty Cash limit: IDR 2,000,000)",
+                "pertanyaan": {
+                    "1": "Why does stacking cash in a drawer (in lieu of cash) make the cash balance on the financial statements unreal or false?",
+                    "2": "Mr Andi has left the office and his money is stuck.What administrative actions and bookkeeping records must you do so that the petty cash box can be replaced and returned to balance?",
+                    "3": "Mention 2 rules that were directly violated in Mrs. Budi's cash register.Why is using petty cash to pay project vendors considered damaging the office goods purchasing system?"
+                }
+            }
+        }
+    },
+    "Kepala Gudang (KG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 – Stock Opname Difference",
+                "deskripsi": "During the monthly stock taking, quite large stock differences were found in several materials.<br>\r\n• It is known that there are still transactions that have not been input into the system.<br>\r\n• Some materials were taken by the production department without official documents.<br>\r\n• The stock checking process is not carried out routinely, so system data is different from physical data and interferes with purchasing and production planning.",
+                "pertanyaan": {
+                    "1": "What is your first emergency action to 'secure' the data system so that more serious order or production errors do not occur during the investigation process?",
+                    "2": "How do you actually prove that this difference is purely due to 'admin negligence' or 'bad production habits of taking goods without permission' so that you don't take the wrong action?",
+                    "3": "What concrete procedures will you create so that the collection of goods must be recorded in the system immediately, and how will you force the production department to follow these rules?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 – Stock Data Mismatch and Production Stops",
+                "deskripsi": "The production process stopped because the main material ran out, even though the ERP system still showed available stock (on-hand).When checked, the warehouse was empty.<br>\r\n• Initial investigations found two main gaps: the existence of rejected goods that had not been processed out of the system.<br>\r\n• Frequent collection of materials for sudden needs that staff did not have time to input into the ERP system.<br>\r\n• Management demands in-depth evaluation so that data integrity between system and physics is back in sync.",
+                "pertanyaan": {
+                    "1": "How do you carry out an audit to dissect whether this non-conformity is caused by human error (delay in administrative input) or workflow failure (issue of goods without official documents), so that you can determine appropriate corrective steps?",
+                    "2": "When management demands stock certainty in the midst of chaos, what are the first tactical steps you take to provide accurate updated data to the Production and Purchasing teams without having to completely stop warehouse operations to carry out a complete stock take?",
+                    "3": "How do you design a system for separating goods status in ERP so that the system no longer displays goods that have been damaged or ordered as ready stock, to ensure that ERP data always reflects real physical conditions in real-time?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 – Warehouse Performance Declines",
+                "deskripsi": "In the last three months, warehouse performance has fallen.Searching for goods takes a long time, delivery is often late, and picking up the wrong goods is becoming more common.<br>\r\n• The condition is made worse by the large number of new staff who do not understand their duties.<br>\r\n• The workload is increasing, resulting in continuous overtime.<br>\r\n• The director asks you to improve your work methods so that the warehouse becomes effective again.",
+                "pertanyaan": {
+                    "1": "How can you use error tracking data to objectively prove whether the main problem is warehouse layout, staff competency gaps, or workflow inefficiencies?",
+                    "2": "What concrete steps can you implement within 30 days to re-layout or improve SOPs so that the warehouse is more agile without requiring additional budget?",
+                    "3": "What KPIs do you set to measure operational effectiveness so the Director can see the correlation between system improvements and reduced overtime costs?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 – Alleged Loss of Material",
+                "deskripsi": "During the last six months the company experienced material losses of quite large value.<br>\r\n• Audit results showed that some materials left the warehouse based only on verbal instructions.<br>\r\n• Vehicle inspections are not carried out consistently and supervision in the warehouse area is still weak.<br>\r\n• The Board of Directors asked the Warehouse Head to conduct an investigation and develop a better control system.",
+                "pertanyaan": {
+                    "1": "How do you verify audit results between system expenditure records and physical data to map loss patterns (what time, what material, who is on duty) without damaging team morale?",
+                    "2": "Between verbal instructions, weak exit controls, or incomplete documentation, which do you think is the main triggering factor and why is this control an absolute priority to improve?",
+                    "3": "How do you design a Double-Check flow or separation of duties in the first 30 days so that every gram of outgoing goods must have a physical/digital footprint that cannot be interfered with personally?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 – Conflict between Warehouse and Production",
+                "deskripsi": "The relationship between the warehouse and production began to deteriorate because there were frequent delays in material delivery.<br>\r\n• The production team assesses that the warehouse is working too slowly.<br>\r\n• The warehouse team reasoned that material requests were often sudden, picking documents were incomplete, and the number of available workers was limited.<br>\r\n• This condition affects production targets and gives rise to mutual blaming.",
+                "pertanyaan": {
+                    "1": "How do you use records (data) of delays and the number of sudden requests to make both teams aware that the problem is in the work system, not because of mutual hatred or blaming between people?",
+                    "2": "How do you create fair rules: on the one hand, production can guarantee delivery on time, but on the other hand, the warehouse is not overwhelmed by sudden and continuous demand?",
+                    "3": "How do you make a rule that goods cannot go out without official documents, but still have a way out if there is a truly emergency or urgent situation?"
+                }
+            }
+        }
+    },
+    "Logistik (LGT)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Warehouse Stock Differences",
+                "deskripsi": "When carrying out the monthly <strong>Stock Take</strong>, a difference in inventory was found as follows:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width:650px;background:white;'>\r\n<thead class='table-light'>\r\n<tr>\r\n<th>Item Name</th>\r\n<th>System Stock</th>\r\n<th>Physical Stock</th>\r\n</tr>\r\n</head>\r\n<tbody>\r\n<tr>\r\n<td>Product A</td>\r\n<td>1,250 pcs</td>\r\n<td>1,180 pcs</td>\r\n</tr>\r\n<tr>\r\n<td>Product B</td>\r\n<td>850 pcs</td>\r\n<td>860 pcs</td>\r\n</tr>\r\n<tr>\r\n<td>Product C</td>\r\n<td>500 pcs</td>\r\n<td>500 pcs</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\nThe warehouse team ensures that there is no theft or damage to goods.All transactions in and out of goods are carried out using the ERP system.",
+                "pertanyaan": {
+                    "1": "What are the possible causes for this stock discrepancy even though all transactions use the ERP system?",
+                    "2": "What steps will you take to systematically find the root cause of the stock differences?",
+                    "3": "If the results of the investigation show that there was a work process error, what SOPs need to be corrected so that a similar incident does not happen again?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Delay in Delivery of Goods",
+                "deskripsi": "The company received complaints from customers because the delivery of raw materials was late for <strong>5 days</strong>.As a result, the customer's production process stopped temporarily.<br><br>\r\n<strong>Investigation results:</strong>\r\n<ul>\r\n<li>The goods were packed on time.</li>\r\n<li>The new truck was available two days later.</li>\r\n<li>The shipping documents were only completed the day after the truck arrived.</li>\r\n<li>There was a queue for loading and unloading at the central warehouse.</li>\r\n</ul>",
+                "pertanyaan": {
+                    "1": "Based on this case, in which process does the biggest bottleneck occur?Explain your reasons.",
+                    "2": "If you were a Logistics Supervisor, what short-term and long-term corrective actions would be taken?",
+                    "3": "What KPIs need to be monitored so that delivery delays can be minimized?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Overstock and Slow Moving Inventory",
+                "deskripsi": "At the end of the quarter the following conditions were found:<br>\r\n<ul>\r\n<li>Inventory value increased <strong>35%</strong>.</li>\r\n<li>Customer demand fell <strong>20%</strong>.</li>\r\n<li>Warehouse capacity has been filled <strong>95%</strong>.</li>\r\n<li>Many items have not moved for more than <strong>180 days</strong>.</li>\r\n</ul>",
+                "pertanyaan": {
+                    "1": "What operational and financial risks can arise due to overstock and slow moving inventory conditions?",
+                    "2": "What steps will you take to reduce slow moving inventory without disrupting the company's operational needs?",
+                    "3": "What data needs to be analyzed before the company decides to purchase the next item?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Transportation Vendor Evaluation",
+                "deskripsi": "The company uses two expedition vendors with the following performance:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width:700px;background:white;'>\r\n<thead class='table-light'>\r\n<tr>\r\n<th>Vendor</th>\r\n<th>Timeliness</th>\r\n<th>Cost</th>\r\n<th>Damaged Goods</th>\r\n</tr>\r\n</head>\r\n<tbody>\r\n<tr>\r\n<td>Vendor A</td>\r\n<td>97%</td>\r\n<td>Rp. 18,000,000/month</td>\r\n<td>3 cases</td>\r\n</tr>\r\n<tr>\r\n<td>Vendor B</td>\r\n<td>89%</td>\r\n<td>Rp. 14,000,000/month</td>\r\n<td>1 case</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\nManagement asks for recommendations on vendors to retain for the following year's contract.",
+                "pertanyaan": {
+                    "1": "Which vendors would you recommend?Explain your reasoning based on the available data.",
+                    "2": "What additional information is still needed before making a final decision about the vendor?",
+                    "3": "How do you structure a vendor evaluation system so that the assessment is not only based on shipping costs?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Inventory Planning",
+                "deskripsi": "A product has the following data:<br>\r\n<table class='table table-bordered table-sm mt-2' style='max-width:650px;background:white;'>\r\n<tbody>\r\n<tr>\r\n<td><strong>Average Sales</strong></td>\r\n<td>150 units/day</td>\r\n</tr>\r\n<tr>\r\n<td><strong>Supplier Lead Time</strong></td>\r\n<td>8 days</td>\r\n</tr>\r\n<tr>\r\n<td><strong>Safety Stock</strong></td>\r\n<td>400 units</td>\r\n</tr>\r\n<tr>\r\n<td><strong>Current Stock</strong></td>\r\n<td>1,700 units</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+                "pertanyaan": {
+                    "1": "Calculate the <em>Reorder Point (ROP)</em> value based on this data.",
+                    "2": "With current stock of 1,700 units, does the company have to reorder?Explain your reasons.",
+                    "3": "If supplier lead time increases to 12 days, how will this impact inventory planning and what actions should the company take?"
+                }
+            }
+        }
+    },
+    "MARKETING (M)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — High Traffic, Low Purchases",
+                "deskripsi": "The company's website traffic increased 40%, but purchases did not increase.",
+                "pertanyaan": {
+                    "1": "What initial analysis did you do?",
+                    "2": "What data is checked?",
+                    "3": "What corrective steps do you propose in the first 30 days?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — New Product Doesn't Sell",
+                "deskripsi": "The new product has been promoted, but sales are low in the first 3 months.",
+                "pertanyaan": {
+                    "1": "Possible cause?",
+                    "2": "How to identify the problem?",
+                    "3": "Steps to increase market interest?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Lots of Leads, Sales Say They're Not Quality",
+                "deskripsi": "Marketing sends lots of leads, but Sales feels the quality of the leads is poor.",
+                "pertanyaan": {
+                    "1": "The possible root of the problem?",
+                    "2": "How to align the Marketing → Sales process?",
+                    "3": "What shared KPIs can be used?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Request for Additional Campaign Budget",
+                "deskripsi": "Marketing wants additional budget, but Finance refuses.",
+                "pertanyaan": {
+                    "1": "What data needs to be prepared before submitting a revision?",
+                    "2": "How to show that additional campaigns are ROI-worthy?",
+                    "3": "An alternative without additional budget?"
+                }
+            }
+        }
+    },
+    "PIC Audit Team": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case 1: Finding of Tax Withholding Errors During One Tax Year",
+                "deskripsi": "In the internal audit process, it was discovered that the company made errors withholding and collecting tax on several transactions during one tax year.<br>\r\n• Service transactions that should be subject to Income Tax Article 23 are not deducted.<br>\r\n• There are transactions that are deducted at the wrong rate and some are subject to the wrong type of tax.<br>\r\n• As a result, there are differences between transactions in financial reports, withholding receipts, and company tax reporting.<br>\r\n• Errors were not identified in the previous period's audit, thereby potentially giving rise to corrections and sanctions during inspection by the DGT.",
+                "pertanyaan": {
+                    "1": "Analyze the possible causes of tax withholding errors during one year.In your opinion, is this problem caused more by a weak understanding of taxation, weaknesses in internal control, or non-compliance with company procedures?Explain your reasons.",
+                    "2": "If you are accepted as the PIC Audit Team, what audit procedures will you carry out to identify all transactions that experience tax withholding errors and ensure the company's compliance with tax provisions?",
+                    "3": "If the audit results show that tax withholding errors have persisted for a full year, what recommendations would you convey to management regarding corrective steps, risk mitigation, and improving internal controls so that similar errors do not happen again?"
+                }
+            },
+            "2": {
+                "judul": "Case 2: Evaluation of SPI Accounting & Limited Audit Time",
+                "deskripsi": "The company has 5 Regional Offices which manage the Accounting process with total transactions of IDR 100 billion.The materiality limit set by the Audit Committee is IDR 2 billion.<br>\r\n• The Internal Audit Team consists of 3 auditors and only has 3 working days to evaluate the effectiveness of SPI Accounting.<br>\r\n• In testing in Regional A, it was found that 8% of the transactions tested had control weaknesses (no approval, late reconciliation, and journals without supporting documents).",
+                "pertanyaan": {
+                    "1": "If a level of control weakness of 8% is assumed to occur throughout the region, calculate the estimated value of the affected transactions and analyze whether the potential risk exceeds the materiality threshold of IDR 2 billion.",
+                    "2": "With only 2 days remaining for the audit, what sampling method would you choose to evaluate SPI Accounting?Explain the reasons and implementation strategy.",
+                    "3": "If the estimation results indicate a material risk but management rejects the results because the audit was carried out using sampling techniques and limited time, how will you prepare the audit report and what steps will you take to maintain objectivity, accountability and legal protection for the audit team?"
+                }
+            },
+            "3": {
+                "judul": "Case 3: Negligence of the Audit Team during Stock Taking at the Client PT",
+                "deskripsi": "You bring the audit team to the Client PT for Stock Opname (SO) and Accurate system reconciliation.Once done, the data is a mess due to your junior team's negligence:<br>\r\n• They forget to ensure that warehouse operations are frozen, so that goods still go in and out when they are counted.<br>\r\n• They entered the wrong unit of goods (Pcs vs Box) in Accurate.<br>\r\n• Meanwhile, tomorrow morning is the Closing Meeting schedule with the Client's Directors.",
+                "pertanyaan": {
+                    "1": "How does your team's negligence undermine the reliability of the entire audit report?How do you assess whether this messy data can still be corrected or is it completely invalid?",
+                    "2": "Considering the Closing Meeting is scheduled for tomorrow morning, what tactical decisions do you take?Do you recalculate, do back-tracing, or postpone the meeting?Explain the risks!",
+                    "3": "How do you explain your team's procedural errors to the Client's Directors professionally without blaming your subordinates?What control steps will you implement on your team in the future so that this fatal mistake does not happen again?"
+                }
+            },
+            "4": {
+                "judul": "Case 4: Difference in Goods Recording Date between Cortax and Accurate",
+                "deskripsi": "It was found that there was a difference in the date of receipt of goods between the Coretax and Accurate systems.In Accurate, goods are recorded as being received in one tax period, whereas in Coretax new transactions are recorded in the next tax period.<br>\r\n• This causes Input VAT to be credited in the wrong tax period (a discrepancy arises in tax data vs financial statements).<br>\r\n• This condition has occurred since the previous quarterly audit, but the audit team at that time did not reconcile data, did not check supporting documents, and did not review the system change log, thereby potentially leading to tax audit corrections.",
+                "pertanyaan": {
+                    "1": "Based on the case above, analyze the most likely cause of the difference in recording dates between Coretax and Accurate.In your opinion, are these problems caused more by system weaknesses, operational procedure errors, or weak internal controls?Explain your reasons.",
+                    "2": "If you are accepted as the PIC Audit Team, what audit procedures will you implement to ensure data compatibility between Coretax and Accurate so that differences in recording dates can be detected early?",
+                    "3": "If this finding is only discovered after the company has finished reporting the Periodic VAT SPT, how will you assess the level of audit risk, its impact on the company, and the priority actions that must be taken immediately by management?Explain your reasons."
+                }
+            },
+            "5": {
+                "judul": "Case 5: Aspects of Audit Team Negligence (Audit Adjusting Journal Error)",
+                "deskripsi": "In the process of finalizing PTSenior Audit instructs Junior Audit to draft an Audit Adjustment Journal.<br>\r\n• Because he was tired of chasing deadlines, Audit Junior compiled the journal logic incorrectly:<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;<i>(Debit) Salaries & Wages Expense: IDR 2.5 Billion</i><br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;<i>(Credit) Cash and Cash Equivalents: IDR 2.5 Billion</i><br>\r\n• This draft is immediately included in the main Audit Working Paper (KKP) without being reviewed by Senior Audit, and is immediately submitted to client management.",
+                "pertanyaan": {
+                    "1": "Based on accrual-based accounting standards, analyze why the journal draft made by the audit team is wrong in principle.Show what impact (domino effect) the error in crediting the Cash account had on the company's Cash Flow Statement and Balance Sheet (Statement of Financial Position) in the current year.",
+                    "2": "Why can a junior's mistake slip through to the final draft report?Explain the concept of multilevel review in audit standards that was violated by the Audit Team and what your recommendations are so that KAP (Public Accounting Firm) does not repeat similar negligence.",
+                    "3": "If the company management (client) was the first to discover the audit team's mistake, what would be the impact on the KAP's reputation?What professional actions should the Audit Partner take to defuse this situation without losing credibility?"
+                }
+            }
+        }
+    },
+    "QUALITY CONTROL ANALIS (QCA)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — 30 Minute Time Range Output (Circumference/Filter Length Deviates)",
+                "deskripsi": "You carry out routine checks on Machine A. At 10.00, the results of measuring the circumference and length of the filter are very good (normal).<br>\r\n• However, when the check was scheduled at 10.30, the filter size suddenly became smaller and had Out of Spec (OOS/Reject) status.<br>\r\n• The machine operator said: \"Just throw away the 10.30 filter, the 10.00 to 10.29 filter is definitely still a good size.\"",
+                "pertanyaan": {
+                    "1": "Why, according to Quality Control regulations, are you strictly prohibited from believing the operator's statement that \"production from 10.00 to 10.29 must be good\"?",
+                    "2": "What absolute decision must you make regarding all cigarette filters produced in baskets/cardboards from 10.00 to 10.30?",
+                    "3": "To determine exactly when the machine started producing the wrong size, what kind of search (investigation) actions would you perform on the stack of filters in that bucket?"
+                }
+            },
+            "2": {
+                "judul": "Case 2 — Discovery of Critical Visual Defect (Exposed Paper Glue)",
+                "deskripsi": "When taking 20 routine filter samples per 30 minutes, you find 2 rods that have an Open Seam defect (the glue on the paper wrapping the filter is open/not sticking).<br>\r\n• The machine operator gets angry when you ask for the machine to be turned off.<br>\r\n• He reasoned: \"That's only 2 broken rods out of thousands of filters that come out per minute! Just keep running the machine!\"",
+                "pertanyaan": {
+                    "1": "Why is finding “only 2 sticks” of filters with exposed glue in a small sample (20 sticks) a big red flag for the overall production of that watch?",
+                    "2": "Write 1 firm but professional sentence to force the operator to turn off the machine so that he repairs the glue line first.",
+                    "3": "Apart from holding production for the last 30 minutes, what specific instructions will you give the Sort (manual inspection) team to handle the problematic filter cartons?"
+                }
+            },
+            "3": {
+                "judul": "Case 3 — Pressure Drop Fluctuations (Unstable Suction Power)",
+                "deskripsi": "During the 30 minute check, you test the Pressure Drop (PD/filter density) using a measuring instrument.<br>\r\n• The results are very unstable: there are 5 very dense filters, 5 very light filters, and the rest are normal.<br>\r\n• Usually the test results are always uniform.",
+                "pertanyaan": {
+                    "1": "If the results in just one sample pull are very unstable (fluctuating), what 2 possible technical problems are occurring with the raw material (tow) or the running of the production machine?",
+                    "2": "Why would a filter with a Pressure Drop that goes up and down (not uniform) be so detrimental to cigarette consumers when they smoke it?",
+                    "3": "What specific data (from your test results) are you required to show to the Mechanic/Mechanical Technician so that they believe that the machine is unstable and needs immediate repair?"
+                }
+            },
+            "4": {
+                "judul": "Case 4 — Late Check Incident (Missed Machine Sampling)",
+                "deskripsi": "Because you were busy handling the rejected filter on Machine A, you were late for the sample collection schedule on Machine B.<br>\r\n• You just took a sample from Machine B at the 60th minute (1 cycle missed).<br>\r\n• Sample test results at the 60th minute showed a soft filter (lacking hardener/Triacetin).",
+                "pertanyaan": {
+                    "1": "What is the most fatal loss/risk for the factory due to your 30 minute delay in checking Machine B?",
+                    "2": "Because the status was \"conceded\" for 1 hour without checking, what status (Release, Hold, or Reject) would you immediately give to all filter boxes from Machine B for the last 1 hour?Give reasons.",
+                    "3": "Design a time management/communication procedure if you are alone looking after several machines, so that the schedule for taking samples every 30 minutes is no longer missed even if you are busy on one machine."
+                }
+            },
+            "5": {
+                "judul": "Case 5 — Dust vs Black Flaw Conflict (Dirt on Filter)",
+                "deskripsi": "During a routine 30 minute visual inspection, you notice black spots/spots on the white part of the filter rod.<br>\r\n• The machine operator rubbed it with his hands and said: \"This is just ordinary machine dust, rub it and it will disappear. Is it time to reject it?\"<br>\r\n• Visually the stain looks like a dry oil spot.",
+                "pertanyaan": {
+                    "1": "As a QC Analyst, why are you prohibited from tolerating dirty filters even though the dirt \"can be removed if scrubbed\"?",
+                    "2": "To prove to the operator that it is an oil spot defect, what simple physical test method do you perform on the filter in front of his eyes?",
+                    "3": "The machine had to be cleaned, but the operator refused because he was pursuing production targets.What is the reporting escalation flow (who is the boss you call) to execute a machine stop at that very minute?"
+                }
+            }
+        }
+    },
+    "Sales (SLS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Price Wars and Payment Terms (Focus: Presentations & Offers)",
+                "deskripsi": "You are presenting at a medium-scale cigarette factory.The owner is interested in ordering filters in large quantities.<br>\r\n• But he asks for a \"crazy\" discounted price that is close to your factory capital.<br>\r\n• The client also requested a relaxation of payment terms to 60 days credit (usually a maximum of 30 days).",
+                "pertanyaan": {
+                    "1": "What is the biggest financial risk for our factory if you as a Salesperson just accept a large volume order from a new client with a 60 day credit payment term?",
+                    "2": "Arrange a counter-offer tactic so that you can still get that large order, but the payment terms are much safer for our company's cash.",
+                    "3": "When is the right time for a Sales person to have the courage to say \"No\" (walk away) and let go of that big prospective client?Give 1 objective reason."
+                }
+            },
+            "2": {
+                "judul": "Case 2 — Sample Generation Time Conflict (Focus: Overseeing the Sampling & R&D Process)",
+                "deskripsi": "The client tested your filter sample and found it not quite right (the suction power was too dense).<br>\r\n• The client asks you to bring a new lighter sample within 3 days.<br>\r\n• Internally at the factory, the R&D/Production team said the trial machine schedule was full and new samples could be completed in 7 days at the earliest.",
+                "pertanyaan": {
+                    "1": "Why is the Sales habit of always agreeing to client requests (\"Ready, 3 days, sir!\") before checking the capacity of the internal R&D team a fatal mistake?",
+                    "2": "If a client threatens to move competitors because they don't want to wait 7 days, what technical compromise strategy can you offer to the internal R&D team or the client?",
+                    "3": "Design a communication flow agreement (SLA) between the Sales team and the R&D team so that in the future sample production schedule conflicts like this can be anticipated early."
+                }
+            },
+            "3": {
+                "judul": "Case 3 — Delivery Promise vs Factory Capacity (Focus: Order Management & PPIC)",
+                "deskripsi": "At the end of the month, you get an impromptu Purchase Order (PO) from a VIP client.<br>\r\n• To make the client happy, you immediately promise that the goods will be sent on Friday this week.<br>\r\n• PPIC rejected the order because the machine was producing another client's queue.<br>\r\n• The VIP client's goods can only be finished on Tuesday next week.",
+                "pertanyaan": {
+                    "1": "If you force PPIC to squeeze in this VIP client's order and sacrifice other clients' schedules, what domino effect will occur in the Good Finish Warehouse and the factory as a whole?",
+                    "2": "Since the error in the promise lies with you, what kind of Partial Delivery strategy will you propose to PPIC and the VIP client?How do you calculate minimum running stock?",
+                    "3": "Before receiving a physical PO sheet/PDF from a client, what 2 operational things should a Salesperson always ask the PPIC and Warehouse team?"
+                }
+            },
+            "4": {
+                "judul": "Case 4 — Facing an Angry Client Due to Defects (Focus: Complaint Handling & QC)",
+                "deskripsi": "A VIP client calls you furious.Their cigarette machines often jam because a lot of the glue on your factory-made filters comes off (open seam).<br>\r\n• The client claims that 20 boxes were damaged and demands 100% money back immediately.<br>\r\n• The factory's QC team investigated and found that only 2 boxes were defective, while the other 18 boxes were purely an error in the client's own cigarette machine settings.",
+                "pertanyaan": {
+                    "1": "When a client is angry on the phone, why is it strictly forbidden for a Salesperson to immediately say the words: \"Okay sir, we admit we were wrong and we will immediately compensate you\"?",
+                    "2": "The client insisted your factory was 100% at fault.Explain how you would communicate the QC findings (that only 2 boxes were damaged) to clients, without offending their feelings or making them feel accused of lying.",
+                    "3": "If it is finally agreed that the goods will be returned, why does Sales have to ensure that the physical filters withdrawn from the client's factory are actually your factory's Batch number (production code)?"
+                }
+            },
+            "5": {
+                "judul": "Case 5 — Personal Goals vs Long Term Relationships (Focus: Keeping Clients & Pursuing Goals)",
+                "deskripsi": "It's the 28th day (end of the month), and you're still 15% short of reaching your monthly sales target.<br>\r\n• There is one cigarette factory that you are very loyal to, but the stock of filters in their warehouse is actually still enough for the next month.<br>\r\n• If they want to order now, your target will definitely be achieved.",
+                "pertanyaan": {
+                    "1": "What are the long-term risks to the business relationship (trust) if you “force” or beg these loyal clients to buy things they don't need yet, just for your personal goals?",
+                    "2": "Design a tactical offer that is mutually beneficial (win-win solution), so that the client is tempted to issue a PO today even though the goods will only be sent/used next month.",
+                    "3": "If the client still refuses to order this month and your target ultimately fails to be achieved, what kind of data/defense report will you present to your Sales Manager?"
+                }
+            }
+        }
+    },
+    "Sales Distribusi (SAD)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Active Stores Start Dropping Orders",
+                "deskripsi": "You handle the building materials distribution area with an active store network.In the last <strong>2 months</strong>, 6 major stores in your area started reducing purchases.They're still buying, but the volume is down quite significantly.After evaluation, several causes were found:<br><br>\r\n<ul>\r\n<li>Competitors' prices are cheaper.</li>\r\n<li>The company's product turnover is considered slower.</li>\r\n<li>Sales visits are considered less routine.</li>\r\n</ul>\r\nIf this condition is left unchecked, it will be difficult to achieve monthly sales targets and the coverage area may weaken.",
+                "pertanyaan": {
+                    "1": "How do you analyze the causes of the decline in orders from these stores?",
+                    "2": "What steps will you take in the first week to restore sales in that area?",
+                    "3": "If company discounts are limited, how do you still encourage increased orders from customers?"
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Distributor Requests Longer Terms and Additional Programs",
+                "deskripsi": "One of the largest distributors in your area wants to increase purchases, but proposes several additional conditions as follows:<br>\r\n<ul>\r\n<li>Payment terms extended.</li>\r\n<li>Additional rebate program.</li>\r\n<li>Greater promotional support.</li>\r\n</ul>\r\nIf all requests are approved, the company's margins could decline.However, if all of them are rejected, the distributor has the potential to shift focus to competing products.These distributors also have a large influence on distribution to stores in the region.",
+                "pertanyaan": {
+                    "1": "How do you assess whether the distributor's request is still business-sound or is it too risky for the company?",
+                    "2": "How do you put together a proposal that remains attractive to distributors but still maintains company profits?",
+                    "3": "If management only partially agrees to a distributor's request, how do you communicate and negotiate it?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Stock Conflicts, Target Ups, and Store Complaints",
+                "deskripsi": "Entering the new quarter, the company raises its sales target for your area.But at the same time, some SKUs with the fastest turnover often experience stock outs in the warehouse.Stores started to complain because market demand was increasing but product supply was unstable.Some stores have even started to give display space to competitor products that have better stock availability.",
+                "pertanyaan": {
+                    "1": "What is your priority action in the first 3 days after learning about the disruption to stock availability?",
+                    "2": "How do you manage communication with stores so they maintain confidence in the company?",
+                    "3": "If stock is very limited, how do you prioritize product allocation to different customers?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Area Attacked by Competitors with More Aggressive Prices, Programs, and Sales Force",
+                "deskripsi": "Over the last <strong>4 months</strong>, competitors have entered your area aggressively by offering:<br>\r\n<ul>\r\n<li>Lower prices.</li>\r\n<li>Larger store incentive programs.</li>\r\n<li>Interesting display program.</li>\r\n<li>Higher frequency of sales visits.</li>\r\n</ul>\r\nSeveral large stores are starting to try competitors' products and small stores are starting to follow the trend.Management asks you to maintain market share without carrying out excessive price wars.",
+                "pertanyaan": {
+                    "1": "How do you systematically map competitor threats in an area before determining a strategy?",
+                    "2": "What field strategy will you use to maintain market share without relying completely on price discounts?",
+                    "3": "If after 2 months the strategy has not been successful, what evaluation needs to be done and what decisions might need to be made?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Area Restructuring: High Targets, Mounting Receivables, and Unhealthy Channels",
+                "deskripsi": "You are assigned to take over an area previously managed by other salespeople.Even though the sales value is large, the condition of the area is not healthy with the following problems:<br>\r\n<ul>\r\n<li>Many shops have allowances for excessive payments.</li>\r\n<li>Receivables from several customers are starting to pile up.</li>\r\n<li>There are indications of price conflicts between customers.</li>\r\n<li>Distributors complain that shops get prices too cheap.</li>\r\n<li>Competitors began to take advantage of this condition to attack the company's reputation.</li>\r\n</ul>\r\nYour task is to increase sales while improving distribution channels without causing turnover to drop drastically.",
+                "pertanyaan": {
+                    "1": "How do you carry out an initial diagnosis of the condition of this unhealthy area?",
+                    "2": "How do you balance the need to pursue sales targets with the need to maintain healthy distribution channels?",
+                    "3": "If asked to present a recovery plan to management, what success indicators would you use over the next 3 months?"
+                }
+            }
+        }
+    },
+    "Sales marketing (SMK)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Shift in Clove Cigarette Trend to Mild (Focus: Research & Market Intelligence)",
+                "deskripsi": "The results of your monitoring in the market show a decline in sales of regular hand-rolled kretek cigarettes (SKT).<br>\r\n• On the other hand, Mild and Slim cigarettes (small diameter) have exploded on the market.<br>\r\n• The cigarette filter factory where you have worked so far has 80% of its machines set to produce large size regular cigarette filters.",
+                "pertanyaan": {
+                    "1": "Based on the research findings, what business risks will your factory face in the next 6 months if you are slow to provide recommendations for changes in production direction to management?",
+                    "2": "What supporting data do you need to collect so that your factory directors are willing to fund the purchase/modification of the machine towards Mild size filters?",
+                    "3": "While waiting for the machine to be modified, what creative marketing strategy ideas can you devise to use up the remaining stock of regular filters piling up in the warehouse?"
+                }
+            },
+            "2": {
+                "judul": "Case 2 — Price War with “Price Slashing” Competitors (Focus: Competitor Analysis)",
+                "deskripsi": "The Sales Team complained in the field because they failed to win a contract with a Cigarette Factory in Malang.<br>\r\n• Competitor filter manufacturers offer products at prices 15% cheaper than your factory's standard prices.<br>\r\n• The Sales Team urges you to research these competitors to find out why they can sell so cheaply.",
+                "pertanyaan": {
+                    "1": "Technically cigarette filter manufacturing, analyze 2 possibilities why competitors can reduce prices up to 15% cheaper?",
+                    "2": "If after analysis it turns out that the quality of your competitors' filters is indeed below your factory's (easily soft), what kind of comparative data (technical comparison) will you make in the catalog as a \"weapon\" so that the Sales team can convince clients that our high prices are commensurate with the quality?",
+                    "3": "As a Sales Marketing Officer, why are you strictly prohibited from recommending the option \"Submit lower prices than competitors\" without conducting a profit margin analysis first?"
+                }
+            },
+            "3": {
+                "judul": "Case 3 — Opening the Gates of Stubborn Clients (Focus: Finding Leads & Cold Calls)",
+                "deskripsi": "You are assigned to look for leads for new cigarette factories in the Kudus area.<br>\r\n• You have successfully compiled a list of 10 small-medium scale cigarette factories.<br>\r\n• This local factory is very closed, has no website, and the gate is heavily guarded by a security guard who refuses to give the owner/Purchasing telephone number.",
+                "pertanyaan": {
+                    "1": "Facing strict security guards blocking (gatekeeping), what non-formal tactical strategies can you use in the field to get the name of the owner or contact person in the factory?",
+                    "2": "If you finally manage to get the owner's phone number, what kind of opening sentence (Cold Calling Script) will you say in the first 3 sentences so that the owner is interested and doesn't immediately hang up on you?",
+                    "3": "Of the 10 leads you collected, what objective parameters do you use to determine which leads should be prioritized for submission to the Sales team?"
+                }
+            },
+            "4": {
+                "judul": "Case 4 — Turning a Stiff Brochure Into a “Business Attractor” (Focus: Branding & Catalog)",
+                "deskripsi": "Your company will take part in the national Tobacco Industry Exhibition which will be attended by hundreds of cigarette factory directors.<br>\r\n• The design of your company's old Company Profile and product catalog is very stiff.<br>\r\n• Old brochures only contain the history of the factory and boring tables of filter diameter figures.",
+                "pertanyaan": {
+                    "1": "Why isn't showing a table of technical numbers enough to interest a new cigarette factory owner when reading your brochure at an exhibition?",
+                    "2": "Design 3 key information points that must be included on the front page of the new catalogue, focusing on the business benefits that clients gain from supplying filters from your factory.",
+                    "3": "How do you get around the limited physical catalog so that you can still display the entire portfolio of your factory's latest filter product variations without increasing brochure printing costs?(Propose 1 digital solution)."
+                }
+            },
+            "5": {
+                "judul": "Case 5 — Mission to Save Company Image after Defect Issue (Focus: Building Image/PR)",
+                "deskripsi": "Last month there was an incident where a batch of filters made by your factory experienced a strong chemical odor at one of the large cigarette factories.<br>\r\n• Even though the problem has been resolved internally, this issue is starting to spread to other cigarette factories.<br>\r\n• Your factory's quality image in the market is starting to be doubted.",
+                "pertanyaan": {
+                    "1": "Why is it that letting rumors/negative quality rumors spread in the market without any action from the Sales Marketing team can destroy your target of finding new leads?",
+                    "2": "What kind of marketing communications (Public Relations) steps can you design to restore market confidence?",
+                    "3": "When you make new image outreach visits to potential clients, how do you answer their trick questions if they bring up the issue of last month's product failure, without appearing to cover up your company's past mistakes?"
+                }
+            }
+        }
+    },
+    "SCM-FG (SFG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — FIFO Violation because it's \"Easier to Take\"",
+                "deskripsi": "A warehouse helper picks up a pallet of cigarette filters produced today to be sent immediately to the client because it is located right in front of the door (easier to pick up).<br>\r\n• The stock of the same type of filter left over from last week's production was left to settle in the back corner of the warehouse.",
+                "pertanyaan": {
+                    "1": "Cigarette filter rods are very sensitive.What are the dangers to filter quality (glue/moisture related) if old stock sits in the back of the warehouse for too long due to this FIFO violation?",
+                    "2": "Design 1 simple layout rule in the warehouse so that warehouse helpers are naturally forced to take old stock items first, without having to be supervised 24 hours a day.",
+                    "3": "If next week a client complains that the filter they received was moldy or too hard, what specific data/documents in the system would you examine to prove whether it was the result of a FIFO violation?"
+                }
+            },
+            "2": {
+                "judul": "Case 2 — Sudden Stock Difference (System vs Physical Data)",
+                "deskripsi": "The system says there are 100 boxes of \"Mild Filter\" stock.The Sales Team asked to send 100 boxes this afternoon because the expedition truck was waiting.<br>\r\n• However, when you physically checked, it turned out that 10 boxes were taped with red tape/retained by the QC team due to production defects.<br>\r\n• QC has not reported the hold status to the computer system.There are only 90 boxes ready to send in stock.",
+                "pertanyaan": {
+                    "1": "Would you recommend (A) Sending the 90 boxes ready first or (B) Holding the shipping truck until it has been remanufactured?Give logical reasons by weighing demurrage costs vs client factory downtime.",
+                    "2": "How do you coordinate quickly with the QC and Sales teams to request a Concession (conditional release permit) from the client, if it turns out that the 10 boxes only have (minor) outer packaging defects?",
+                    "3": "What internal audit SOPs must be improved between the QC and SCM-FG departments so that held stock data is updated automatically in Accurate?"
+                }
+            },
+            "3": {
+                "judul": "Case 3 — Full Warehouse Disaster and Cardboard Stack Limits",
+                "deskripsi": "Production is currently very high (overload) so the Finish Good Warehouse is totally full.<br>\r\n• The Production Shift Head urges you to stack filter boxes up to 8 levels to fit.<br>\r\n• In fact, the factory's SOP strictly prohibits stacking more than 5 levels so that the bottom cardboard is not dented/squashed.",
+                "pertanyaan": {
+                    "1": "If you are determined to stack 8 levels and the bottom cardboard becomes flat, what will be the physically fatal impact on the density/suction power of the cigarette filter rods inside?",
+                    "2": "Compare these two loss options: Renting an extra room/tent outside the warehouse OR Desperately stacking 8 levels.What quality factors differentiate which option is safer?",
+                    "3": "What kind of emergency room allocation strategy will you implement so that the volume of goods is accommodated without violating the 5 stack SOP limit?How do you guarantee that FIFO continues to work?"
+                }
+            },
+            "4": {
+                "judul": "Case 4 — Emergency Delivery in the Middle of Heavy Rain",
+                "deskripsi": "The client (Cigarette Factory X) called angrily because they had 1 hour left in filter stock.<br>\r\n• The truck from your factory has just arrived at the loading dock, but it's raining outside.<br>\r\n• The roof of your warehouse Loading Dock happens to be a little rough.",
+                "pertanyaan": {
+                    "1": "Why are cardboard cigarette filters so resistant to splashes of rainwater or high humidity during the loading process into trucks?",
+                    "2": "Between delaying loading until the rain stops (risk of the client getting angry because the machine stops) OR being reckless with loading right now (risk of wet goods), what is the middle ground emergency solution that you immediately implement at that very second?",
+                    "3": "Design 1 \"Fleet Check\" rule that must be adhered to before the filter box is put into the back of the expedition truck in the rainy season."
+                }
+            },
+            "5": {
+                "judul": "Case 5 — Interchanged Batch Number Dispute (DO Administration)",
+                "deskripsi": "You send 500 boxes of filters to the client's factory.<br>\r\n• When the truck arrived there, the client's warehouse refused to accept the goods because the Batch number printed on the cardboard was different from the Batch number written on the Delivery Order.<br>\r\n• Even though the item type is correct, they are both \"Regular Filter\".",
+                "pertanyaan": {
+                    "1": "Why is the client factory so rigid and absolutely rejecting goods with different batch numbers between letter and physical, even though the filter type is the same?",
+                    "2": "Your truck is still stuck at the client's factory.Instead of sending the truck home (waste of gas and time), what administrative tactics/systems can you employ from the SCM office to \"certify\" the item that day?",
+                    "3": "Make 1 Double Check procedure in the Loading Dock area between the Warehouse Admin and the Truck Driver before the truck door is sealed, so that the waybill and physical goods are never different again."
+                }
+            }
+        }
+    },
+    "Staff Import (SIM)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — HS Code Dispute & Affected by the Red Line (Correction Note)",
+                "deskripsi": "Imported raw material goods arrive at the port.When submitting the PIB, Customs and Excise sets the Red Route because they think your HS Code is wrong.Customs and Excise issues an SPTNP (Correction Note) which requires companies to pay much more expensive import duties.On the other hand, the company's cash flow is tight and port overnight costs continue to rise.",
+                "pertanyaan": {
+                    "1": "Compare the financial loss from paying the fine directly (Notul) versus filing an Appeal with Customs.What determining factors do you use to choose the best decision when the company's cash flow is tight?",
+                    "2": "Write a 1 sentence tactical message to overseas Suppliers to immediately request technical documents (such as Mill Test Certificate or Product Data Sheet) to support the validity of your HS Code.",
+                    "3": "Design 1 preventive step that you must take to the customs authority before goods are sent from your country of origin in the future, so that this HS Code dispute does not happen again."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Document Discrepancy (Form E Rejected)",
+                "deskripsi": "You import machines from China using Form E for the 0% Import Duty facility.Unfortunately, the goods weight figures (Weight) in Form E are different from the figures in the Bill of Lading (B/L) and Packing List due to a typo (typo) from the Supplier.Customs rejected the Form E and charged normal rates which were very expensive.",
+                "pertanyaan": {
+                    "1": "Revision of Form E to the Chinese authorities took 2 weeks.What cost data will you compare (calculate) logically to decide: wait for the revised documents to arrive OR be willing to pay the normal Import Duty rate today?",
+                    "2": "Write 1 sentence of professional warning to the Supplier to demand their responsibility/compensation for port fines arising from their careless typo.",
+                    "3": "Create 1 mandatory rule (SOP Drafting Document) between you and the Supplier before the original document is printed and sent via international courier so that this discrepancy does not happen again."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Freight Forwarder Hidden Cost Trap",
+                "deskripsi": "The company tried the new Freight Forwarder because the initial offer was very cheap.However, when the goods arrive at the local port, the Forwarder holds the Delivery Order (DO) and charges very unreasonable Local Charges.The factory needs the goods today for production.",
+                "pertanyaan": {
+                    "1": "The factory has stopped production today.Faced with the DO \"hostage\", what is your emergency decision today: Directly force payment for the road factory OR Withhold payment to argue the law?Give reasons.",
+                    "2": "Write a draft of a protest email to the Forwarder's management using their initial offer (quotation) as the basis of your weapon.",
+                    "3": "Mention 2 key suggestions that you will require when selecting price offers (quotations) from Forwarders in the future so that you no longer fall into the Local Charges trap."
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Licensing & Lartas Disaster (Prohibition of Restrictions)",
+                "deskripsi": "The Purchasing team just purchased a new type of chemical, paid for it, and the goods are on board.As Import Staff, you have just checked that the material is in the Lartas category which requires Import Approval (PI) and Surveyor's Report (LS) with a processing time of 1 month.The ship arrives in 5 days.",
+                "pertanyaan": {
+                    "1": "The ship arrived in 5 days and processing permits took 1 month.What emergency measures can you coordinate with the Shipping Line or Supplier to prevent goods from entering the Indonesian customs area in the first place?",
+                    "2": "Write a 1 sentence tactical report to the Purchasing Manager regarding the Lartas permit crisis, with a focus on solving the problem without seeming to blame the team.",
+                    "3": "Design 1 mandatory check flow (Latas Approval SOP) between the Purchasing and Import teams which must be completed before the Purchase Order (PO) letter is issued."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Demurrage & Detention Nightmare (Full Warehouse)",
+                "deskripsi": "Your 10 containers have successfully passed Customs (SPPB published).Suddenly the Warehouse Manager reported that the factory warehouse was completely full and would only be able to unload the 10 containers next week.Shipping Line only provides free time for returning containers (Free Time) for 5 days.",
+                "pertanyaan": {
+                    "1": "Compare these two loss options: Allowing 10 containers to stay overnight at the port (subject to Demurrage) OR Renting a truck and temporary warehouse outside the port.Based on cost-control logic, what factors differentiate which option is cheaper?",
+                    "2": "Write an urgent message to the Warehouse Manager so that they prioritize vacating the space today, using the shock effect of the threat of a fine (Detention/Demurrage).",
+                    "3": "Create a reporting procedure (ETA Communication SOP) from Import staff to the Warehouse Manager long before the ship docks, so that a sudden full warehouse crisis does not happen again in the future."
+                }
+            }
+        }
+    },
+    "Staff legal (SLG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Collaboration Contract Review (Conflict of Interest)",
+                "deskripsi": "The Marketing Team is in a hurry to sign a contract with the Influencer Agency today.When you read the draft, there are clauses: \"If a dispute arises, it will be resolved in the Singapore Court,\" and \"The agency is not responsible if the Influencer damages the good name of the brand.\"",
+                "pertanyaan": {
+                    "1": "What is the biggest financial and legal risk to our company if you turn a blind eye and agree to those \"Singapore Courts\" and \"Hands-off Agency\" clauses?",
+                    "2": "Write 1 revised sentence for the dispute resolution clause so that the legal process is much cheaper, faster and safer for our company.",
+                    "3": "The Marketing team is angry because you are seen as \"slowing down\" their work.Write 1 tactical sentence to explain that you are holding off on signing to save them a big deal."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Employment Law (Unilateral Layoff Dilemma)",
+                "deskripsi": "The HRD team wants to immediately fire (PHK) an employee today without severance pay because he was caught sleeping during working hours.HRD considers it a \"serious violation\".The employee refused and threatened to report it to the Manpower Office.",
+                "pertanyaan": {
+                    "1": "Based on the Employment Cluster Job Creation Law and related Government Regulations (PP 35/2021), why can't employees who are caught sleeping at their desks be immediately laid off unilaterally without severance pay that day?",
+                    "2": "If HRD insists on processing layoffs and employees report to the Manpower Office, what 2 administrative pieces of evidence must you ensure are in place so that the company wins at the mediation stage?",
+                    "3": "Propose 1 specific proposal to be included in the Company Regulations (PP) or Employment Agreement next year, so that cases of \"sleeping during working hours\" have a clear basis for sanctions withholding rights."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Dispute Resolution (Facing a Customer Subpoena)",
+                "deskripsi": "The company received a Somasi (Legal Warning Letter) from a customer who admitted he was poisoned after using the company's products.He demanded IDR 1 billion in compensation within 3 days, or he would make this case viral on social media and report it to the police.",
+                "pertanyaan": {
+                    "1": "From the options: \"Pay Immediately\", \"Just Ignore\", or \"Invite to Meet (Mediation)\", which is the safest legal step to respond to the subpoena, and what internal data should you confirm with the Production/QC team first?",
+                    "2": "Prepare a draft opening sentence for the subpoena response letter that shows the company's sympathy, WITHOUT being used as evidence of an admission of guilt in court.",
+                    "3": "If the company finally agrees to provide compensation for hospital costs through peaceful means, why is the \"Peace Agreement & Non-Disclosure Agreement (NDA)\" document required to be signed by the customer right then and there?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Compliance & Licensing (Illegal Operations)",
+                "deskripsi": "The Operations Manager opened a new branch in another city and has started selling.In fact, you check in the OSS (Business Licensing) system that the branch permit has not been processed yet.The manager reasoned: \"Just go first to reach the target, permission will follow.\"",
+                "pertanyaan": {
+                    "1": "If the branch is finally sealed by Satpol PP because it operates without a complete permit, who is legally most responsible and can be punished: the Operations Manager or the President Director?Give me the reasons!",
+                    "2": "Write 1 sentence of strict legal warning for the Operations Manager so that he immediately stops his operational activities today.",
+                    "3": "Create a short approval flow (Approval Workflow) so that in the future the opening of a new branch in any city cannot be executed before the Legal team gives the green light."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Risk Management (Signature Forgery by Target)",
+                "deskripsi": "You discover that the Sales Manager forged the President Director's signature on a multi-billion rupiah contract with a client.The reason: The director was abroad, and the client threatened to cancel if the contract was not signed that day.The contract is currently running and is profitable for the company.",
+                "pertanyaan": {
+                    "1": "Legally (Criminal/Civil), what crime did the Sales Manager commit, and what is the legal status of the billion-rupiah contract currently in the eyes of the law?",
+                    "2": "Without telling the client that the signature was fake all along (so as not to be invalidated), what legal tactics would you use to secretly \"validate\" the contract?",
+                    "3": "Propose a legal system/technology that is legally valid in Indonesia so that in the future the President Director can still sign important documents instantly even when he is abroad."
+                }
+            }
+        }
+    },
+    "Staff purchasing (SPU)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Surprise Request Dilemma (Rules vs Emergency)",
+                "deskripsi": "The Production Manager calls you angry because the factory machine is down.He needs spare parts to be purchased today.The problem is, the low-priced subscription supplier can only send it the day after tomorrow.There is another shop that has ready stock today, but the price is 30% more expensive and is not yet registered as an official company vendor.",
+                "pertanyaan": {
+                    "1": "Compare the financial loss from buying goods that are 30% more expensive versus the operational loss of waiting 2 days from a regular supplier.What logic/parameters do you use to choose the best decision?",
+                    "2": "Write a 1-sentence tactical reply to the Production Manager to agree to his request, but at the same time emphasize boundaries so that this impromptu habit does not happen again.",
+                    "3": "Even if you really need the item today, write a quick negotiation sentence to the expensive shop to negotiate the price or ask for easy payment."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — The Art of Selecting Vendors (Price vs Quality vs Pay Terms)",
+                "deskripsi": "You have to buy 500 employee uniforms and select 3 vendors:<br><ul><li><strong>Vendor A:</strong> The price is very cheap, but has a reputation for often delivering late.</li><li><strong>Vendor B:</strong> The price fits the budget, but asks for a Down Payment (DP) of 50% (even though the office rule is a maximum of 20%).</li><li><strong>Vendor C:</strong> Very good quality and fast, but the price exceeds the budget (overbudget).</li></ul>",
+                "pertanyaan": {
+                    "1": "Why does choosing Vendor A just because it is \"cheapest\" be a deadly trap for the Purchasing team's reputation?",
+                    "2": "Write 1 precise negotiation sentence to Vendor B so that they will reduce the down payment requirement to 20% without losing your order.",
+                    "3": "If you decide Vendor C is the safest choice, what is the strongest business argument you would present to the Finance Manager to get them to disburse additional funds?"
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Integrity & the Temptation of Gratification (Bribery)",
+                "deskripsi": "Towards the end of the year, a regular vendor secretly sends a parcel containing luxury food and the latest smartphone to your house as a \"Thank You\".So far, the prices and quality of these vendors have always been good and profitable for the company.",
+                "pertanyaan": {
+                    "1": "Even though the vendor has never harmed the company in business, why is accepting the smartphone still considered a serious violation that could result in dismissal?",
+                    "2": "Write 1 draft message (WhatsApp/Email) to politely refuse and return the gift, without damaging business relationships.",
+                    "3": "Apart from returning the goods, what internal administrative steps must you take that day to avoid slander in the future?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Reject Goods Conflict (Throwing Blame at Each Other)",
+                "deskripsi": "The company ordered 1,000 packaging boxes.When it arrived, it turned out that the 200 printed cardboard boxes were blurry.The vendor defended himself: \"The design files from your Marketing team were blurry from the start!\"Meanwhile, the internal Marketing team insists that their files are high resolution.",
+                "pertanyaan": {
+                    "1": "The factory also needs the boxes for tomorrow's delivery.What is your emergency decision regarding the 800 good boxes and the 200 damaged boxes this afternoon?",
+                    "2": "To stop blame-blaming, what specific physical/digital evidence will you request from the Vendor AND from the Marketing team?",
+                    "3": "Design 1 mandatory procedure (SOP Proofing) that must be agreed upon before the Vendor mass prints the next order, so that this case of different colors/blurry does not happen again."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Unilateral Price Increase (Contract Management)",
+                "deskripsi": "You have a 1 year contract agreement with a raw material supplier at a price of IDR 10,000/kg.It's only been 6 months, they suddenly sent an email that next week the price will increase by 20% because of the fuel increase.If you do not agree, supply will be stopped.If the supply stops, your plant shuts down.",
+                "pertanyaan": {
+                    "1": "Even if you panic that the factory will stop, why is immediately replying to an email with the words \"I agree to the new price\" a fatal mistake for a Purchasing person?",
+                    "2": "Write a 1 sentence diplomatic reply in response to the email, to \"buy time\" while preventing next week's delivery from being stopped.",
+                    "3": "While continuing to argue and negotiate hard with the supplier, what action is Plan B (Plan B) that must be secretly executed by the Purchasing team that very day?"
+                }
+            }
+        }
+    },
+    "Staff Sales Executive (SSE)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Price War (Client Asks for Crazy Discounts)",
+                "deskripsi": "The client is interested in your product, but demands a 30% discount due to comparison with competitors.Your office rule is that the maximum discount is only 10%.The client threatened: \"If I can't get 30%, I'll buy it somewhere else!\"",
+                "pertanyaan": {
+                    "1": "Why is giving up immediately and asking your boss for permission to agree to a 30% discount a sign of a weak sales mentality?",
+                    "2": "Write 1 sentence tactical reply to politely decline the 30% discount request, but still make the client feel appreciated.",
+                    "3": "Because the price cannot fall any further than 10%, mention 2 additional benefits (value/benefit) beyond the price that you will offer so that clients will still want to buy from you."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Client Disappears (Ghosting) After Being Sent Price",
+                "deskripsi": "Prospective clients are very enthusiastic during the first meeting.However, after you send a price quote (Proposal), it disappears.The phone is not picked up and WhatsApp is only read.",
+                "pertanyaan": {
+                    "1": "In terms of business logic, name 2 possible reasons why an initially enthusiastic client suddenly ghosts after seeing the price.",
+                    "2": "Why keep sending \"Hello sir, how is the proposal going?\"every day actually makes clients more distant?",
+                    "3": "Create a draft WhatsApp message that contains useful information (not just collecting promises) so that the client will reply to your message."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Crisis Management (Damaged Goods Complaints)",
+                "deskripsi": "You have successfully closed with a new client.But during the first delivery, the goods were late and the cardboard was dented due to the negligence of your office courier.The client calls you very angry and threatens to change supplier.",
+                "pertanyaan": {
+                    "1": "When a client is angry on the phone, why are you strictly prohibited from blaming your own courier/office logistics team in front of him?",
+                    "2": "What are the first 2 actions you immediately say or do on the phone to calm his emotions right away?",
+                    "3": "After the damaged item is replaced, what 1 extra service strategy do you use to turn this disappointed client into a loyal client?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Competitor Threats & Integrity",
+                "deskripsi": "Your big pharmacy client threatens to stop ordering.The reason was that the competitor's sales team dared to give a personal smartphone as a gift to the pharmacy manager.Your office strictly prohibits bribery/gratifications, but your products are proven to be of much higher quality and the guarantee is clear.",
+                "pertanyaan": {
+                    "1": "Why does giving personal gifts/bribes for smooth orders endanger your career and the company's good name in the future?",
+                    "2": "Write a 1 sentence pitch (sales) to make the client aware that the quality and guarantee of your medicine is much more important to the pharmacy than a personal Smartphone gift.",
+                    "3": "You cannot give him a personal gift.Propose 1 legitimate discount/promo program from your office that can benefit the pharmacy institution, as a weapon to compete with competitors."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Internal Conflict (One Team's Fight Over Clients)",
+                "deskripsi": "You have been prospecting (PDKT) a company for 2 months.Suddenly your fellow sales co-worker manages to close first with the company through his \"insider\" acquaintance.He claimed that the sales commission was his.",
+                "pertanyaan": {
+                    "1": "To prove to the Sales Manager that you were the first to prospect the client, what 2 proofs of work history must you show?",
+                    "2": "Why is yelling at and scolding your colleagues in the middle of the office a very detrimental action to yourself?",
+                    "3": "Write 1 professional sentence to the Sales Manager asking for justice, without using emotion or anger."
+                }
+            }
+        }
+    },
+    "Staff sekretaris (SS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Maintaining the Boss Image (Client Comes Early)",
+                "deskripsi": "VVIP clients arrive 45 minutes earlier than the scheduled meeting.The problem is, your boss is stuck in serious traffic jam and won't be able to arrive at the office for another hour.The client is already sitting in the waiting room and asks you, \"Is your boss in his office yet?\"",
+                "pertanyaan": {
+                    "1": "Why answer honestly that the boss is \"stuck in traffic\" is strictly prohibited, and write 1 diplomatic sentence to explain the boss's lateness without damaging his disciplined image!",
+                    "2": "The client begins to look at his watch frequently and appears restless.Mention 2 acts of excellent service (hospitality) or initiatives that you immediately provide so that he doesn't get bored of waiting for a long time!",
+                    "3": "Write a draft of a short message (WhatsApp) to the boss who is driving, so he knows the VVIP client has arrived but your message doesn't make him panic and speed on the road."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Maintaining Confidentiality & Office Ethics",
+                "deskripsi": "You are sorting out confidential printed documents regarding Merger & Acquisition (M&A) plans that could affect the company's share price.Suddenly, a Director from Another Division (whose position is equivalent to your Boss, but has no authority over this project) comes into your room.He looked at the title of the document and in an urgent/commanding tone said, \"Wow, there's M&A, right? Which company do we want to buy? Let me take a look.\"",
+                "pertanyaan": {
+                    "1": "As a high-level secret holder, what is the first physical action you should take with the document within 1 second of the Director approaching your desk?",
+                    "2": "Write 1 sentence of verbal rejection to a Director at the level of your Boss who is very polite but procedurally locks access.",
+                    "3": "Design a personal \"Clean Desk\" rule that you will implement starting tomorrow so that your boss's confidential documents are never accidentally snooped on by passersby."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Dealing with Difficult Guests (Gatekeeping)",
+                "deskripsi": "A former business partner came into the office in a fit of rage and was screaming in the lobby.He forced his way into your boss's room without an appointment (walk-in).Your boss is currently holding a Virtual Board Meeting with global shareholders and says: \"Lock the door, I must not be disturbed by anyone or anything!\"",
+                "pertanyaan": {
+                    "1": "Mention 2 non-verbal actions (body language/positioning) and 1 verbal action that you would use to prevent the person from breaking down the door to the Boss's room, without having to immediately call Security which could make things worse.",
+                    "2": "Write 1 negotiation sentence to calm the angry guest so that he will sit down first and not force his will to barge in.",
+                    "3": "In what kind of emergency situation (mention 1 absolute criteria/reason) would you dare to take the risk of disobeying your boss and still barging into his room to report?"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Meeting Preparation Crisis (Problem Solving Agility)",
+                "deskripsi": "You are in charge of preparing the board of directors' meeting room.Only 10 minutes before the meeting starts, the projector in the room suddenly turns off completely and the main presentation file on your boss's spare flash disk cannot be opened (corrupt).Your boss is on the road and will arrive just as the meeting starts.",
+                "pertanyaan": {
+                    "1": "Of the two problems (projector dead vs presentation file damaged), which one should you save/find a solution for in the first minute, and why?",
+                    "2": "If the projector is completely turned off and the director has entered the room, mention 1 quick technical alternative so that the meeting material can still be read by the participants, along with 1 sentence of welcome from you to politely buy time.",
+                    "3": "How do you contact your boss who is driving down the road to ask him to resend the presentation file without triggering his panic?"
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Written Communication (Translating a Boss's Message)",
+                "deskripsi": "Your boss reads cooperation offer proposals from other vendors.He really doesn't like it, then says verbally to you: \"Reply to the email now! Just refuse, saying their prices are unreasonable, expensive, and the company is not well-known. Don't waste my time!\"",
+                "pertanyaan": {
+                    "1": "Why is it strictly forbidden for a secretary to type an exact reply email using the harsh words (\"expensive/not famous\") as emotionally spoken by her boss?",
+                    "2": "Translate your boss's anger into a draft rejection email (maximum 3 sentences) whose language is very professional, diplomatic, but still gets the message across.",
+                    "3": "After you have typed the draft email neatly, will you immediately press the Send button or confirm it again with the boss who is emotional?Give reasons."
+                }
+            }
+        }
+    },
+    "Supervisor Sales (SPVS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case 1: Team Management and Sales Conflict",
+                "deskripsi": "Two salespeople on your team are in conflict because of their opposite personalities:<br>\r\n• <b>Budi (Senior, 10 years of work):</b> Very good at maintaining relationships with old customers face to face, but clueless and reluctant to use new sales reporting applications.The sales target is down 20%.<br>\r\n• <b>Rian (New):</b> Very good at social media and technology.His sales target reached 150%, but many of his new customers left after a few months because he was not good at maintaining relationships.<br>\r\nBudi accuses Rian of taking over his work area, while Rian considers Budi to be a burden on the team who is out of date.This conflict triggers factions between other team members, so that the work atmosphere becomes unconducive.",
+                "pertanyaan": {
+                    "1": "In terms of long-term business impact, which is more detrimental to the company, the reduction in Budi's target by 20% or the loss of new customers due to Rian's negligence?Explain your analysis along with the main reasons why your team started to split into two camps.",
+                    "2": "What is your strategy for dividing work areas or types of consumers fairly so that Budi's face-to-face method and Rian's online method can complement each other, not compete with each other?",
+                    "3": "What concrete steps will you take in the first 7 days to reconcile the office atmosphere, as well as make Budi and Rian aware that they want to change their respective weaknesses?"
+                }
+            },
+            "2": {
+                "judul": "Case 2: Integrity vs Sales Targets (Work Ethics)",
+                "deskripsi": "Your team is chasing a year-end target that is 10% less.Your sales mainstay, who contributes 30% of the team's total turnover, was caught stealing prospect data belonging to junior sales in order to cover his personal targets.<br>\r\n• The sales junior threatened to leave (resign) if this act of data theft was not severely punished.<br>\r\n• If you fire or severely punish this top sales person now, your team's targets will certainly fail to be achieved and your reputation in the eyes of management will suffer.",
+                "pertanyaan": {
+                    "1": "Which is more detrimental to your long-term leadership: putting up with a reliable sales cheat to secure the team's target this month, or punishing it at the risk of destroying your team's target?Explain your logical reasoning.",
+                    "2": "If you choose to uphold integrity by severely punishing top salespeople so that the team's targets are guaranteed to fail, how will you account for this to management?",
+                    "3": "What preventative steps will you implement in your customer data management system so that this case of inter-sales lead theft does not happen again in the future?"
+                }
+            },
+            "3": {
+                "judul": "Case 3: High Sales Turnover Rate",
+                "deskripsi": "In one semester (6 months), 4 of the 6 best sales team members in your area suddenly resign.As a result, many visiting routes were abandoned and regional turnover fell by 40%.<br>\r\n• Exit investigations (exit interviews) show that they feel frustrated because of the unfair distribution of work areas.<br>\r\n• There was preferential treatment (favouritism) from the previous supervisor towards certain sales regarding the distribution of the wet account portion.",
+                "pertanyaan": {
+                    "1": "Analyze the short-term psychological and operational impact on the remaining team as a result of this crisis.How would you assess the previous supervisor's leadership style based on this case?",
+                    "2": "What emergency procedures will you implement in the first 14 days as the new SPV to secure abandoned routes so that customers do not switch to competitors?",
+                    "3": "What internal policy recommendations will you formulate to improve the regional division structure and performance appraisal system to create fairness and reduce sales turnover?"
+                }
+            },
+            "4": {
+                "judul": "Case 4: Decreased Visit Effectiveness Due to Changes in Field Routes (Routing Shift)",
+                "deskripsi": "The company has just implemented a new daily visit route distribution system based on geographic area zoning.However, after 3 months, the data shows that the number of effective visits by the sales team dropped by 30%, and sales travel time became longer.<br>\r\n• The sales team protested because the new route created by the system in the office was deemed to be inconsistent with traffic conditions, shop opening and closing times, and the shopping habits of shop owners in the field.",
+                "pertanyaan": {
+                    "1": "In your opinion, why does the implementation of this new route system actually reduce productivity?Does the problem lie in the rigidity of the digital system or the sales team's weakness in adapting to changing work patterns?Explain.",
+                    "2": "As a new SPV, what field evaluation procedures will you carry out to remap the gap between the route in the system and the reality of the route in the field?",
+                    "3": "What kind of modification recommendations or policy adjustments would you convey to management so that sales travel time efficiency is achieved without sacrificing potential turnover on that route?"
+                }
+            },
+            "5": {
+                "judul": "Case 5: Shop Digs Holes to Cover Holes to Pursue Sales Targets",
+                "deskripsi": "Shop owners in your area are running out of cash because there are few customers.In order to pursue the monthly target bonus, your sales team makes a dangerous secret deal: they collect the store's old debt using an order receipt for new goods that was not actually purchased (only on paper).<br>\r\n• As a result, your monthly sales report to head office looks safe and reaches targets.<br>\r\n• However, in real terms, the deposit money coming into the office was completely blocked and the store's outstanding debt period swelled from 30 days to 110 days.<br>\r\n• Your branch office is now threatened with running out of operational capital.",
+                "pertanyaan": {
+                    "1": "Analyze this problem.In your opinion, why is the sales team determined to use this instant method?Is it because they only think about personal bonuses or because the office targets are unreasonable given market conditions?Explain your reasons.",
+                    "2": "As a new Supervisor, how do you comb through and sort out which shops must immediately stop sending goods because they are no longer healthy, and which shops can still be helped in installments?What benchmarks do you use?",
+                    "3": "What new recommendations or rules will you apply to the sales team so that they can no longer manipulate end-of-month receipts to chase bonuses?"
+                }
+            }
+        }
+    },
+    "Utility (UTL)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Case Study 1 — Overdue Routine Maintenance (Compressor and Generator)",
+                "deskripsi": "The factory is very busy because it is pursuing year-end targets.Mas Tito and his team focused on repairing the office AC that had been damaged all day.As a result, the routine schedule for checking compressor oil and cleaning the generator was missed for two weeks.Suddenly, the PLN electricity went out, and when the generator was turned on, the engine stalled and then completely stopped because the oil turned out to be dry and dirty.Factory production also stopped completely.",
+                "pertanyaan": {
+                    "1": "Why can a generator that lacks maintenance be damaged immediately when it is forced to turn on?In the future, which should you prioritize: repairing comfort facilities (office AC) or maintaining factory spare machines (generators)?",
+                    "2": "If your boss forces you to have your room AC repaired today even though it is a mandatory schedule to maintain the generator, what logical reasons (losses) will you give so that your boss understands that the generator is more important?",
+                    "3": "Create a simple schedule system idea so that vital machine maintenance is never missed, and superiors can immediately know if there is a schedule that is delayed."
+                }
+            },
+            "2": {
+                "judul": "Case Study 2 — Complaint of AC Leaking in Data Generator Server Room",
+                "deskripsi": "Administrative officials complained that the air conditioner in the main server room (where all important factory data was stored) was leaking and water was dripping near the electrical cables.At that time, Mas Tito was in the workshop doing welding (fabrication) to make a production table which also had to be finished that afternoon on the manager's orders.",
+                "pertanyaan": {
+                    "1": "Of the two tasks facing Mas Tito (repairing a leaking AC in the server room or completing the production table), which one has the greatest risk of danger if postponed?Explain the impact.",
+                    "2": "How would you judge a technician's actions if he chose to finish the table first before repairing the AC, citing \"the manager's orders must come first\"?",
+                    "3": "Write down the emergency steps (short SOP) that Mas Tito must take from the first minute he receives the report of a leaking AC in the server room to prevent an electrical short circuit."
+                }
+            },
+            "3": {
+                "judul": "Case Study 3 — Forklift Operator's Dilemma in Shift 2",
+                "deskripsi": "In Shift 2, the number of Utility personnel was only 1 person, namely Mas Tito himself.That night, no special forklift personnel came in.At the same time, there is a compressor that experiences a drop in electrical voltage and in the warehouse area there is a raw material truck that must be immediately unloaded using a forklift so as not to be fined in line.Mas Tito was confused about which one to do first.",
+                "pertanyaan": {
+                    "1": "If you choose to drive a forklift and leave the compressor running with a lack of electricity, what is the worst damage that can occur to the compressor and the impact on the production machine?",
+                    "2": "Driving a forklift requires an official permit (SIO).If you dare to drive without a permit to avoid truck fines, what are the legal risks for you and the company if an accident occurs?",
+                    "3": "Provide 1 solution to your boss so that this \"double duty\" problem doesn't happen again in the afternoon shift, without having to tell the factory to recruit new employees!"
+                }
+            },
+            "4": {
+                "judul": "Case Study 4 — Inter-Shift Handover Miscommunication",
+                "deskripsi": "Shift 1 technicians discovered that the filter in the production building's HVAC was very dirty and needed to be replaced.Because his working hours were over, he just left a message via WhatsApp to the Shift 2 technician, \"Sir, please check the HVAC.\"Shift 2 technician thought the HVAC only needed to be cleaned on the outside.The next morning, the production room became hot because the HVAC filter was completely blocked and the food products inside were damaged.",
+                "pertanyaan": {
+                    "1": "Why is it so dangerous to leave a message for a machine repair job via a short chat, and what important information is actually missing from the morning shift technician's message?",
+                    "2": "Who is most responsible for damaged products in the production room?Is it the Shift 1 technician, the Shift 2 technician, or the communications system?Explain your assessment.",
+                    "3": "Prepare a simple handover note format that must be filled in every shift change so that damage information is conveyed in detail and clearly."
+                }
+            },
+            "5": {
+                "judul": "Case Study 5 — Proposed Team Division (Civil vs Active Component)",
+                "deskripsi": "Factory management saw that the Utility team's performance was less effective.Sometimes there are cracked walls or peeling paint (building/civil duties) that have not been repaired for a long time because technicians are busy repairing generators and AC engines (active components).Mas Tito suggested that the Utility team be divided into two focuses: one focus on the physical building (like Mr. Abdul Manaf), and one focus on active machines.However, management hesitated due to cost constraints.",
+                "pertanyaan": {
+                    "1": "Why does juggling building and machining tasks often mess up repair schedules, and what are the dangers to machine durability?",
+                    "2": "How do you logically convince management that paying one additional staff member is much cheaper than risking billions of machines breaking down?",
+                    "3": "If you can't add employees at all, come up with an idea for dividing the schedule for the 3 existing staff so that machine and building matters remain balanced!"
+                }
+            }
+        }
+    }
+}
