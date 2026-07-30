@@ -31,5 +31,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 Route::post('/dashboard/pin', [DashboardController::class, 'updatePin'])->name('dashboard.pin');
 Route::get('/dashboard/export', [DashboardController::class, 'export'])->name('dashboard.export');
+Route::get('/dashboard/pdf/{id}', [DashboardController::class, 'generatePdf'])->name('dashboard.pdf');
 
 Route::get('/ujian/diskualifikasi', [App\Http\Controllers\UjianController::class, 'diskualifikasi'])->name('ujian.diskualifikasi');

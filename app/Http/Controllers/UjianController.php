@@ -16,7 +16,7 @@ class UjianController extends Controller
     public function index()
     {
         // Clear old sessions when starting fresh
-        session()->forget(['nama', 'posisi', 'total_pelanggaran', 'soal_sesi2']);
+        session()->forget(['nama', 'posisi', 'perusahaan', 'total_pelanggaran', 'soal_sesi2']);
         for ($i = 1; $i <= 20; $i++) {
             session()->forget([
                 'jawab_sesi2_q' . $i,
@@ -37,6 +37,7 @@ class UjianController extends Controller
         $request->validate([
             'nama' => 'required|string|max:150',
             'posisi' => 'required|string',
+            'perusahaan' => 'required|string',
         ]);
 
         $posisiVal = $request->posisi;
@@ -47,13 +48,22 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),Staff Import (SIM),Staff legal (SLG),Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
+                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Import (SIM),Staff legal (SLG),Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
             ]);
+        }
+
+        $perusahaanVal = $request->perusahaan;
+        if ($perusahaanVal === 'Lainnya') {
+            $request->validate([
+                'perusahaan_lainnya' => 'required|string|max:150',
+            ]);
+            $perusahaanVal = $request->perusahaan_lainnya;
         }
 
         session([
             'nama' => $request->nama,
             'posisi' => $posisiVal,
+            'perusahaan' => $perusahaanVal,
             'total_pelanggaran' => 0
         ]);
 
@@ -72,7 +82,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
             if (!in_array($posisi, $mainPositions)) {
                 return redirect()->route('ujian.simpan');
             }
@@ -162,7 +172,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Logistik (LGT)','MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Logistik (LGT)','MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -231,7 +241,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -261,6 +271,7 @@ class UjianController extends Controller
             $peserta = PesertaUji::create([
                 'nama' => session('nama'),
                 'posisi' => session('posisi'),
+                'perusahaan' => session('perusahaan', '-'),
                 'total_pelanggaran' => session('total_pelanggaran', 0),
             ]);
 
@@ -306,7 +317,7 @@ class UjianController extends Controller
             $nama = session('nama');
             // Flush session
             session()->forget([
-                'nama', 'posisi', 'total_pelanggaran', 'soal_sesi2'
+                'nama', 'posisi', 'perusahaan', 'total_pelanggaran', 'soal_sesi2'
             ]);
             for ($i = 1; $i <= 20; $i++) {
                 session()->forget([
@@ -2269,6 +2280,90 @@ class UjianController extends Controller
                                 1 => "Berdasarkan standar akuntansi berbasis akrual, analisis mengapa draft jurnal yang dibuat oleh tim audit tersebut salah secara prinsip. Tunjukkan apa dampak (efek domino) dari kesalahan pengkreditan akun Kas tersebut terhadap Laporan Arus Kas dan Neraca (Laporan Posisi Keuangan) perusahaan pada tahun berjalan.",
                                 2 => "Mengapa kesalahan seorang junior bisa lolos hingga masuk ke draft laporan final? Jelaskan konsep review bertingkat dalam standar audit yang dilanggar oleh Tim Audit ini dan apa rekomendasi Anda agar KAP (Kantor Akuntan Publik) tidak mengulang kelalaian serupa.",
                                 3 => "Jika pihak manajemen perusahaan (klien) yang justru pertama kali menemukan kesalahan tim audit ini, bagaimana dampaknya terhadap reputasi KAP? Apa tindakan profesional yang harus dilakukan oleh Audit Partner untuk meredam situasi ini tanpa kehilangan kredibilitas?"
+                            ]
+                        ]
+                    ]
+                ];
+            case 'DRIVER (DVR)':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "STUDI KASUS 1 — Barang Tidak Sesuai Saat Bongkar Muat",
+                            'deskripsi' => "Anda mengirim semen dan besi ke sebuah proyek pembangunan. Saat proses pembongkaran hampir selesai, mandor proyek mengatakan jumlah semen kurang 20 sak dibandingkan surat jalan.\nSetelah Anda memeriksa kembali bak truk, memang jumlah semen yang ada sesuai dengan yang diterima proyek. Namun Anda ingat saat proses muat di gudang sangat ramai dan dilakukan oleh beberapa orang sekaligus.\nSementara itu, mandor meminta Anda segera menandatangani berita acara kekurangan barang agar proyek bisa langsung mengajukan komplain.",
+                            'pertanyaan' => [
+                                1 => "Apa tindakan pertama yang akan Anda lakukan sebelum menandatangani dokumen tersebut?",
+                                2 => "Bagaimana cara Anda menjelaskan situasi ini kepada kepala gudang atau atasan Anda tanpa terlihat menyalahkan rekan kerja secara langsung?",
+                                3 => "Langkah apa yang bisa Anda lakukan di masa depan saat proses muat barang untuk mencegah hal ini terulang kembali?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "STUDI KASUS 2 — Kendala Cuaca dan Batas Waktu Pengiriman",
+                            'deskripsi' => "Anda bertugas mengirim keramik ke pelanggan VIP yang berjarak 4 jam perjalanan. Pelanggan meminta barang harus sampai maksimal pukul 14:00 karena tukang mereka akan pulang pukul 15:00.\nDi tengah jalan, hujan turun sangat lebat hingga menyebabkan jarak pandang sangat terbatas dan beberapa ruas jalan mulai tergenang air. Jika Anda memaksakan diri, ada risiko keramik pecah karena guncangan jalan yang rusak tertutup air, atau truk bisa mogok.",
+                            'pertanyaan' => [
+                                1 => "Keputusan apa yang akan Anda ambil saat itu juga? Terus jalan atau berhenti? Jelaskan alasan utamanya.",
+                                2 => "Kepada siapa Anda akan melapor pertama kali terkait kondisi ini, dan informasi apa saja yang akan Anda sampaikan?",
+                                3 => "Bagaimana cara Anda berkomunikasi dengan pelanggan jika dipastikan barang akan terlambat sampai?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "STUDI KASUS 3 — Pungli (Pungutan Liar) di Area Bongkar",
+                            'deskripsi' => "Anda tiba di lokasi gudang pelanggan di daerah yang terkenal rawan. Saat akan memarkirkan truk untuk bongkar muat, sekelompok pemuda setempat (ormas/preman) menahan truk Anda dan meminta \"uang keamanan\" sebesar Rp 100.000 agar Anda bisa masuk.\nUang jalan (operasional) yang Anda pegang pas-pasan, dan tidak ada anggaran khusus untuk pungli. Pelanggan juga tidak mau tahu soal urusan di luar gerbang gudang mereka.",
+                            'pertanyaan' => [
+                                1 => "Apa respon pertama yang akan Anda berikan kepada kelompok pemuda tersebut agar situasi tidak memanas?",
+                                2 => "Jika mereka tetap memaksa, langkah taktis apa yang akan Anda lakukan untuk menyelesaikan masalah tanpa harus merogoh uang pribadi?",
+                                3 => "Setelah kembali ke kantor, apa yang akan Anda sarankan kepada pihak manajemen terkait rute pengiriman ke daerah tersebut di masa depan?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "STUDI KASUS 4 — Kerusakan Barang Selama Perjalanan",
+                            'deskripsi' => "Setelah menempuh perjalanan jauh melewati jalan berbatu, Anda tiba di lokasi pengiriman. Saat pintu bak truk dibuka bersama penerima barang, ternyata ada 3 kaleng cat ukuran besar yang terguling, tumpah, dan merusak sebagian kardus produk lain di sebelahnya.\nPenerima barang marah dan menolak menerima seluruh barang yang terkena tumpahan cat tersebut.",
+                            'pertanyaan' => [
+                                1 => "Apa yang akan Anda katakan kepada penerima barang untuk menenangkan situasi?",
+                                2 => "Prosedur dokumentasi (foto/laporan) seperti apa yang akan Anda lakukan di lokasi kejadian?",
+                                3 => "Bagaimana Anda mengatur posisi dan mengikat barang (lashing) agar kejadian barang terguling tidak terjadi lagi?"
+                            ]
+                        ]
+                    ]
+                ];
+            case 'STAFF ACCOUNTING & TAX (SAT)':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "STUDI KASUS 1 — Selisih Kas Kecil (Petty Cash)",
+                            'deskripsi' => "Pada akhir bulan, Anda melakukan opname kas kecil (petty cash) dan menemukan selisih kurang sebesar Rp 750.000 antara catatan di buku kas dengan fisik uang yang ada.\nSetelah Anda ingat-ingat dan mengecek ulang, ternyata beberapa hari lalu ada pengeluaran mendadak untuk konsumsi lembur karyawan yang belum diberikan bon/kuitansi oleh bagian GA, dan uang tersebut diambil begitu saja dari laci kas kecil oleh staf lain saat Anda sedang istirahat.",
+                            'pertanyaan' => [
+                                1 => "Apa langkah prosedural pertama yang harus Anda lakukan untuk menyelesaikan selisih tersebut hari ini juga?",
+                                2 => "Bagaimana cara Anda berkomunikasi dengan staf GA atau karyawan yang mengambil uang tersebut agar mereka segera memberikan bukti pertanggungjawaban?",
+                                3 => "Rancang satu kebijakan (SOP) sederhana terkait pengelolaan fisik kas kecil agar kejadian uang diambil tanpa izin dan tanda terima tidak terulang kembali."
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "STUDI KASUS 2 — Faktur Pajak Ganda dan Kesalahan Input Masukan",
+                            'deskripsi' => "Saat melakukan rekonsiliasi PPN Masukan untuk masa pajak bulan lalu, Anda menemukan bahwa ada satu Faktur Pajak dari supplier senilai PPN Rp 5.000.000 yang sudah di-input dua kali (ganda) oleh staf akunting sebelumnya, dan SPT Masa PPN tersebut sudah dilaporkan.\nKini, Anda harus memperbaiki kesalahan tersebut sebelum dilakukan pemeriksaan.",
+                            'pertanyaan' => [
+                                1 => "Apa dampak dari kesalahan input ganda Faktur Pajak Masukan ini terhadap laporan keuangan perusahaan dan kewajiban pajak bulanan?",
+                                2 => "Langkah teknis apa yang harus Anda lakukan di aplikasi e-Faktur dan pelaporan pajak untuk mengoreksi kesalahan tersebut?",
+                                3 => "Check dan re-check seperti apa yang akan Anda terapkan sebelum melakukan submit SPT Masa PPN di bulan-bulan berikutnya?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "STUDI KASUS 3 — Menghadapi Klien yang Menolak Dipotong PPh 23",
+                            'deskripsi' => "Perusahaan Anda menyewa kendaraan operasional dari sebuah perusahaan rental (PT Rental Aman). Sesuai aturan, Anda harus memotong PPh Pasal 23 sebesar 2% dari nilai tagihan sewa.\nNamun, saat Anda menginformasikan hal tersebut dan mengirimkan bukti potong, pihak PT Rental Aman marah. Mereka berdalih bahwa nilai kontrak yang disepakati adalah \"Net\" dan mereka tidak mau tahu urusan pajak, sehingga mereka menuntut pembayaran penuh. Jika tidak dibayar penuh, mereka mengancam akan menarik mobil tersebut besok.",
+                            'pertanyaan' => [
+                                1 => "Secara aturan perpajakan, siapa yang sebenarnya menanggung beban PPh Pasal 23 tersebut dan apakah alasan klien bisa dibenarkan?",
+                                2 => "Bagaimana cara Anda menjelaskan aturan ini kepada PT Rental Aman dengan cara yang profesional namun tegas?",
+                                3 => "Jika pihak rental tetap menolak, solusi alternatif apa (terkait gross up) yang bisa Anda ajukan kepada atasan/manajemen agar mobil tidak ditarik namun aturan pajak tetap terpenuhi?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "STUDI KASUS 4 — Penyusutan Aset Tetap yang Belum Tercatat",
+                            'deskripsi' => "Saat menyiapkan laporan keuangan tahunan, Anda menyadari bahwa sebuah mesin produksi seharga Rp 500.000.000 yang dibeli pada bulan Maret tahun berjalan belum pernah dicatat beban penyusutannya sama sekali hingga bulan Desember.\nAtasan Anda meminta laporan keuangan segera diselesaikan dalam waktu 2 hari.",
+                            'pertanyaan' => [
+                                1 => "Jurnal penyesuaian (adjusting entry) seperti apa yang harus Anda buat pada akhir tahun untuk mencatat penyusutan tersebut secara rapel (Maret - Desember)? (Asumsikan umur ekonomis 5 tahun, metode garis lurus).",
+                                2 => "Bagaimana Anda menjelaskan kepada atasan mengenai keterlambatan pencatatan ini dan dampaknya terhadap laba rugi perusahaan tahun tersebut?",
+                                3 => "Sistem atau pengingat (reminder) seperti apa yang akan Anda bangun untuk mengelola daftar aset tetap (fixed asset register) agar setiap penambahan aset baru langsung masuk ke dalam perhitungan penyusutan otomatis tiap bulan?"
                             ]
                         ]
                     ]

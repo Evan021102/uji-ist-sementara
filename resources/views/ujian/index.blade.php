@@ -130,9 +130,31 @@
 
     <form action="{{ route('ujian.start') }}" method="POST" autocomplete="off">
         @csrf
+        <!-- Dropdown Perusahaan -->
+        <div class="dropdown mb-3">
+            <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" id="perusahaanDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 12px; height: 58px; font-size: 15px; border: 1px solid #dee2e6; color: #212529; background: white; padding: 0 16px; font-weight: 400; box-shadow: none;">
+                <span id="perusahaanSelectedText">{{ __('-- Pilih Perusahaan --') }}</span>
+            </button>
+            
+            <ul class="dropdown-menu w-100" aria-labelledby="perusahaanDropdown" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #dee2e6; padding: 6px 0;">
+                <li><button class="dropdown-item py-2 perusahaan-item" type="button" data-value="PT. GOSYEN POLINATOR INDONESIA">PT. GOSYEN POLINATOR INDONESIA</button></li>
+                <li><button class="dropdown-item py-2 perusahaan-item" type="button" data-value="PT. MAJU ANUGRAH JAYA UNGGUL">PT. MAJU ANUGRAH JAYA UNGGUL</button></li>
+                <li><button class="dropdown-item py-2 perusahaan-item" type="button" data-value="PT. PANEN ANUGERAH NUSINDO">PT. PANEN ANUGERAH NUSINDO</button></li>
+                <li><button class="dropdown-item py-2 perusahaan-item" type="button" data-value="PT DWI TUNGGAL MULIA KIMIA">PT DWI TUNGGAL MULIA KIMIA</button></li>
+                <li><button class="dropdown-item py-2 perusahaan-item fw-bold text-primary" type="button" data-value="Lainnya">{{ __('Lainnya (Sebutkan)') }}</button></li>
+            </ul>
+            <input type="hidden" name="perusahaan" id="perusahaan" value="{{ old('perusahaan') }}" required>
+        </div>
+
+        <div class="form-floating mb-3 hidden" id="perusahaan_lainnya_container">
+            <input type="text" class="form-control" id="perusahaan_lainnya" name="perusahaan_lainnya" placeholder="{{ __('Masukkan Perusahaan Lainnya') }}" value="{{ old('perusahaan_lainnya') }}">
+            <label for="perusahaan_lainnya">{{ __('Masukkan Perusahaan Lainnya') }}</label>
+        </div>
+
+        <!-- Dropdown Posisi -->
         <div class="dropdown mb-3">
             <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start d-flex justify-content-between align-items-center" type="button" id="posisiDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="border-radius: 12px; height: 58px; font-size: 15px; border: 1px solid #dee2e6; color: #212529; background: white; padding: 0 16px; font-weight: 400; box-shadow: none;">
-                <span id="posisiSelectedText">{{ __('-- Pilih Posisi --') }}</span>
+                <span id="posisiSelectedText">{{ __('-- Pilih Posisi Pekerjaan --') }}</span>
             </button>
             
             <ul class="dropdown-menu w-100" aria-labelledby="posisiDropdown" style="max-height: 260px; overflow-y: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #dee2e6; padding-top: 0;">
@@ -148,6 +170,7 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN PPIC (APP)">ADMIN PPIC (APP)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN QC (AQC)">ADMIN QC (AQC)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN SCM (ASCM)">ADMIN SCM (ASCM)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="DRIVER (DVR)">DRIVER (DVR)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="General Affair (GA)">General Affair (GA)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HRD Payroll (HRP)">HRD Payroll (HRP)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HRD Recruitment (HRR)">HRD Recruitment (HRR)</button></li>
@@ -162,6 +185,7 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Sales Distribusi (SAD)">Sales Distribusi (SAD)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Sales marketing (SMK)">Sales marketing (SMK)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="SCM-FG (SFG)">SCM-FG (SFG)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="STAFF ACCOUNTING & TAX (SAT)">STAFF ACCOUNTING & TAX (SAT)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Import (SIM)">Staff Import (SIM)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff legal (SLG)">Staff legal (SLG)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff purchasing (SPU)">Staff purchasing (SPU)</button></li>
@@ -206,6 +230,52 @@
 @section('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+        // Perusahaan handling
+        const perusahaanInput = document.getElementById('perusahaan');
+        const perusahaanList = document.querySelectorAll('.perusahaan-item');
+        const perusahaanText = document.getElementById('perusahaanSelectedText');
+        const pContainer = document.getElementById('perusahaan_lainnya_container');
+        const pInput = document.getElementById('perusahaan_lainnya');
+
+        function togglePerusahaanLainnya() {
+            if (perusahaanInput.value === 'Lainnya') {
+                pContainer.classList.remove('hidden');
+                pInput.setAttribute('required', 'required');
+            } else {
+                pContainer.classList.add('hidden');
+                pInput.removeAttribute('required');
+            }
+        }
+
+        perusahaanList.forEach(item => {
+            item.addEventListener('click', function() {
+                const val = this.getAttribute('data-value');
+                const text = this.innerText;
+                
+                perusahaanInput.value = val;
+                perusahaanText.innerText = text;
+                
+                togglePerusahaanLainnya();
+                
+                if (val === 'Lainnya') {
+                    setTimeout(() => pInput.focus(), 100);
+                } else {
+                    pInput.value = '';
+                }
+            });
+        });
+
+        if (perusahaanInput.value) {
+            const matchedP = Array.from(perusahaanList).find(item => item.getAttribute('data-value') === perusahaanInput.value);
+            if (matchedP) {
+                perusahaanText.innerText = matchedP.innerText;
+            } else {
+                perusahaanText.innerText = perusahaanInput.value;
+            }
+            togglePerusahaanLainnya();
+        }
+
+        // Posisi handling
         const posisiInput = document.getElementById('posisi');
         const positionsList = document.querySelectorAll('.posisi-item');
         const positionsText = document.getElementById('posisiSelectedText');
@@ -213,7 +283,6 @@
         const input = document.getElementById('posisi_lainnya');
         const searchInput = document.getElementById('searchPosisi');
 
-        // Fungsi Tampilkan/Sembunyikan Input "Lainnya"
         function togglePosisiLainnya() {
             if (posisiInput.value === 'Lainnya') {
                 container.classList.remove('hidden');
@@ -224,7 +293,6 @@
             }
         }
 
-        // Logika Klik Opsi Dropdown
         positionsList.forEach(item => {
             item.addEventListener('click', function() {
                 const val = this.getAttribute('data-value');
@@ -243,14 +311,11 @@
             });
         });
 
-        // Logika Fitur Pencarian Dinamis
         searchInput.addEventListener('input', function() {
             const filter = this.value.toLowerCase();
-            
             positionsList.forEach(item => {
                 const text = item.textContent.toLowerCase();
                 const parentLi = item.closest('li');
-                
                 if (text.includes(filter)) {
                     parentLi.style.display = "";
                 } else {
@@ -259,12 +324,10 @@
             });
         });
 
-        // Mencegah dropdown menutup otomatis saat kolom pencarian diklik/diketik
         searchInput.addEventListener('click', function(e) {
             e.stopPropagation();
         });
 
-        // Sinkronisasi ulang data jika form dikembalikan karena error (old value handler)
         if (posisiInput.value) {
             const matchedItem = Array.from(positionsList).find(item => item.getAttribute('data-value') === posisiInput.value);
             if (matchedItem) {

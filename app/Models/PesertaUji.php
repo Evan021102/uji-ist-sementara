@@ -13,6 +13,7 @@ class PesertaUji extends Model
     protected $fillable = [
         'nama',
         'posisi',
+        'perusahaan',
         'total_pelanggaran',
         'waktu_mulai'
     ];
