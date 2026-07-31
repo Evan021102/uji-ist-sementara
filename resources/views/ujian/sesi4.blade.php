@@ -114,6 +114,7 @@
                         </div>
                         @endforeach
                     </div>
+                </div>
                 @endforeach
 
                 <button type="submit" class="submit-btn">
