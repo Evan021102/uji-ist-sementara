@@ -114,7 +114,15 @@
                         </div>
                         @endforeach
                     </div>
-                </div>
+                @endforeach
+
+                <button type="submit" class="submit-btn">
+                    @if($isCustomPosisi)
+                        {{ __('Selesai Ujian & Simpan Jawaban') }} &check;
+                    @else
+                        {{ __('Lanjut ke Sesi 5') }} &rarr;
+                    @endif
+                </button>
             </form>
         </div>
     </div>
