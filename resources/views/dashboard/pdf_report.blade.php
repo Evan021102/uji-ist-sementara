@@ -235,13 +235,11 @@
             {{ number_format($data['total_sw'], 2, ',', '.') }} &times; 40%<br>
             = {{ number_format($data['skor_ist_weighted'], 2, ',', '.') }}
         </li>
-        @if($data['studi_kasus']['has_case'])
         <li style="margin-top: 4px;">
             Studi Kasus (60%) :<br>
             {{ number_format($data['studi_kasus']['total_skor'], 2, ',', '.') }} &times; 60%<br>
             = {{ number_format($data['skor_kasus_weighted'], 2, ',', '.') }}
         </li>
-        @endif
     </ul>
 
     <div style="font-size: 10pt; margin-top: 8px; margin-bottom: 6px;">

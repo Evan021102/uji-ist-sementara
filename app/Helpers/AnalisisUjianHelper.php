@@ -109,15 +109,9 @@ class AnalisisUjianHelper
         $studiKasusEval = self::evaluateStudiKasus($peserta, $posisiUpper, $ans6);
 
         // 8. Compute Final Weighted Score
-        if ($studiKasusEval['has_case']) {
-            $skor_ist_weighted = $total_sw * 0.40;
-            $skor_kasus_weighted = $studiKasusEval['total_skor'] * 0.60;
-            $skor_akhir = $skor_ist_weighted + $skor_kasus_weighted;
-        } else {
-            $skor_ist_weighted = $total_sw;
-            $skor_kasus_weighted = 0;
-            $skor_akhir = $total_sw;
-        }
+        $skor_ist_weighted = $total_sw * 0.40;
+        $skor_kasus_weighted = $studiKasusEval['total_skor'] * 0.60;
+        $skor_akhir = $skor_ist_weighted + $skor_kasus_weighted;
 
         // Final recommendation category
         $kategori_akhir = self::getKategoriAkhir($skor_akhir, $config['rekomendasi_ist'], $studiKasusEval['kategori']);
