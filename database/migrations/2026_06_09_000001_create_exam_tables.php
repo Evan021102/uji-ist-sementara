@@ -21,6 +21,7 @@ return new class extends Migration
             $table->id('id_peserta');
             $table->string('nama', 150);
             $table->string('posisi', 150);
+            $table->string('perusahaan', 150)->nullable();
             $table->integer('total_pelanggaran')->default(0);
             $table->timestamp('waktu_mulai')->useCurrent();
         });

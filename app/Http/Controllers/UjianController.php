@@ -345,7 +345,7 @@ class UjianController extends Controller
         }
     }
 
-    private function getSoalSesi5($posisi)
+    public function getSoalSesi5($posisi)
     {
         switch ($posisi) {
             case 'HRD Recruitment (HRR)':
@@ -2378,7 +2378,7 @@ class UjianController extends Controller
         }
     }
 
-    private function translateSesi5Array($data, $posisi)
+    public function translateSesi5Array($data, $posisi)
     {
         if (app()->getLocale() !== 'en') {
             return $data;

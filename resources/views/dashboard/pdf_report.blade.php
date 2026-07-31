@@ -296,95 +296,125 @@
     <!-- SECTION II: HASIL STUDI KASUS -->
     @if($data['studi_kasus']['has_case'])
     <div class="page-break"></div>
-    <h2 class="section-header">II. Hasil Asesmen Studi Kasus & Pemecahan Masalah</h2>
+    <h2 class="section-header">II. HASIL STUDI KASUS</h2>
     
-    <p>
-        Kandidat menyelesaikan lembar studi kasus teknis yang disesuaikan dengan posisi <strong>{{ $data['posisi'] }}</strong>. Penilaian mencakup kedalaman analisis, pemahaman SOP, ketegasan eksekusi, dan integritas kerja.
-    </p>
+    @foreach($data['studi_kasus']['aspek_evaluasi'] as $asp)
+    <div style="margin-bottom: 14px;">
+        <h3 class="subsection-header" style="margin-bottom: 4px; font-size: 10.5pt; color: #0f172a;">
+            {{ $asp['abjad'] }}. {{ $asp['nama'] }} ({{ $asp['max'] }})
+        </h3>
+        <p style="margin-top: 2px; margin-bottom: 4px; font-size: 9.5pt; text-align: justify; line-height: 1.45;">
+            {{ $asp['narasi'] }}
+        </p>
+        <div style="font-size: 9.5pt; margin-top: 2px;">
+            <strong>Level:</strong> {{ $asp['level'] }}<br>
+            <strong>Skor :</strong> <span style="font-weight: bold; color: #1e40af;">{{ $asp['skor'] }} / {{ $asp['max'] }}</span> ({{ $asp['kategori_teks'] }})
+        </div>
+    </div>
+    @endforeach
 
-    <table class="data-table">
+    <h3 class="subsection-header" style="margin-top: 18px; text-transform: uppercase;">TOTAL NILAI STUDI KASUS</h3>
+    <table class="data-table" style="max-width: 500px;">
         <thead>
             <tr>
-                <th style="width: 70%;">Dimensi Kompetensi Studi Kasus</th>
-                <th style="width: 30%; text-align: center;">Skor Diperoleh</th>
+                <th style="width: 70%;">Aspek</th>
+                <th style="width: 30%; text-align: center;">Skor</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($data['studi_kasus']['aspek'] as $asp)
+            @foreach($data['studi_kasus']['aspek_evaluasi'] as $asp)
             <tr>
                 <td>{{ $asp['nama'] }}</td>
                 <td style="text-align: center; font-weight: bold;">{{ $asp['skor'] }} / {{ $asp['max'] }}</td>
             </tr>
             @endforeach
-            <tr style="background-color: #f8fafc; font-weight: bold;">
-                <td>TOTAL SKOR STUDI KASUS</td>
-                <td style="text-align: center; color: #1e40af; font-size: 11pt;">{{ $data['studi_kasus']['total_skor'] }} / 100</td>
-            </tr>
-        </tbody>
-    </table>
-    <p><strong>Kualifikasi Studi Kasus:</strong> {{ $data['studi_kasus']['kategori'] }}</p>
-    @endif
-
-    <!-- SECTION III: HASIL AKHIR & REKOMENDASI -->
-    <h2 class="section-header">III. Integrasi Nilai & Kategori Akhir</h2>
-    
-    <table class="data-table" style="max-width: 450px;">
-        <thead>
-            <tr>
-                <th>Komponen Asesmen</th>
-                <th style="text-align: center;">Bobot</th>
-                <th style="text-align: center;">Nilai Komponen</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Hasil Tes IST</td>
-                <td style="text-align: center;">40%</td>
-                <td style="text-align: center; font-weight: bold;">{{ $data['total_sw'] }}</td>
-            </tr>
-            @if($data['studi_kasus']['has_case'])
-            <tr>
-                <td>Hasil Studi Kasus</td>
-                <td style="text-align: center;">60%</td>
-                <td style="text-align: center; font-weight: bold;">{{ $data['studi_kasus']['total_skor'] }}</td>
-            </tr>
-            @endif
-            <tr style="background-color: #f1f5f9; font-weight: bold;">
-                <td colspan="2">TOTAL SKOR AKHIR KOMBINASI</td>
-                <td style="text-align: center; font-size: 11pt; color: #0f172a;">{{ $data['skor_akhir'] }}</td>
-            </tr>
         </tbody>
     </table>
 
-    <h3 class="subsection-header">Rekomendasi Psikologis Akhir:</h3>
-    <div class="stamp-box">
-        {{ $data['kategori_akhir'] }}
+    <div style="margin-top: 8px; font-size: 10pt; line-height: 1.6;">
+        <strong>Total :</strong> {{ $data['studi_kasus']['total_skor'] }} / 100<br>
+        <strong>Kategori :</strong> <span style="font-weight: bold; color: #1e40af;">{{ $data['studi_kasus']['kategori'] }}</span>
     </div>
 
-    <!-- SECTION IV: KESIMPULAN & CATATAN PENUTUP -->
-    <h2 class="section-header">IV. Kesimpulan & Catatan Pembinaan</h2>
-    <p>
-        Berdasarkan seluruh hasil pemeriksaan psikologis dan asesmen kompetensi, kandidat <strong>{{ $data['nama'] }}</strong> untuk posisi <strong>{{ $data['posisi'] }}</strong> di <strong>{{ $data['perusahaan'] }}</strong> dinyatakan <strong>{{ $data['kategori_akhir'] }}</strong>.
+    <p style="margin-top: 8px; font-size: 9.5pt; text-align: justify; line-height: 1.45;">
+        {{ $data['studi_kasus']['ringkasan_narasi'] }}
     </p>
-    <p><strong>Catatan Rekomendasi:</strong></p>
-    <ul>
-        @foreach($data['config']['catatan_ist'] as $c)
-            <li>{{ $c }}</li>
-        @endforeach
+
+    <!-- Detail Pertanyaan & Jawaban Peserta -->
+    @if(isset($data['studi_kasus']['qa_list']) && count($data['studi_kasus']['qa_list']) > 0)
+    <h3 class="subsection-header" style="margin-top: 18px; border-top: 1px dashed #cbd5e1; padding-top: 10px;">Rincian Pertanyaan & Jawaban Studi Kasus Peserta:</h3>
+    @php $currentCase = ''; @endphp
+    @foreach($data['studi_kasus']['qa_list'] as $idx => $qa)
+        @if($qa['tipe'] === 'Kasus' && $currentCase !== $qa['judul'])
+            @php $currentCase = $qa['judul']; @endphp
+            <div style="margin-top: 10px; padding: 5px 8px; background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 4px;">
+                <strong style="font-size: 9pt; color: #1e293b;">{{ $qa['judul'] }}</strong>
+                @if(!empty($qa['deskripsi']))
+                    <div style="font-size: 8pt; color: #475569; margin-top: 2px; font-style: italic; line-height: 1.35;">
+                        {!! nl2br(e(strip_tags($qa['deskripsi']))) !!}
+                    </div>
+                @endif
+            </div>
+        @endif
+        <div style="margin-left: 8px; margin-top: 5px; margin-bottom: 5px; border-left: 2px solid #3b82f6; padding-left: 6px;">
+            <div style="font-size: 8.5pt; font-weight: bold; color: #334155;">Q: {{ $qa['pertanyaan'] }}</div>
+            <div style="font-size: 8.5pt; color: #1a1a1a; margin-top: 1px; text-align: justify; line-height: 1.4;">
+                <strong>A:</strong> {!! !empty($qa['jawaban']) ? nl2br(e($qa['jawaban'])) : '<span style="color: #94a3b8; font-style: italic;">(Tidak diisi oleh kandidat)</span>' !!}
+            </div>
+        </div>
+    @endforeach
+    @endif
+    @endif
+
+    <!-- SECTION III: HASIL AKHIR -->
+    <h2 class="section-header">III. HASIL AKHIR</h2>
+    <p style="font-weight: bold; margin-bottom: 4px;">Perhitungan Nilai</p>
+    <ul style="list-style-type: disc; padding-left: 20px; font-size: 9.5pt; margin-top: 2px; margin-bottom: 8px;">
+        <li>
+            <strong>IST (40%) :</strong><br>
+            {{ number_format($data['total_sw'], 2, ',', '.') }} × 40% = {{ number_format($data['skor_ist_weighted'], 2, ',', '.') }}
+        </li>
+        @if($data['studi_kasus']['has_case'])
+        <li style="margin-top: 4px;">
+            <strong>Studi Kasus (60%) :</strong><br>
+            {{ number_format($data['studi_kasus']['total_skor'], 2, ',', '.') }} × 60% = {{ number_format($data['skor_kasus_weighted'], 2, ',', '.') }}
+        </li>
+        @endif
     </ul>
 
-    <!-- Sign-Off Section -->
-    <table class="signature-table">
-        <tr>
-            <td style="width: 60%;"></td>
-            <td style="text-align: center;">
-                <p>Ditetapkan di Jakarta, {{ \Carbon\Carbon::parse($data['waktu_mulai'])->format('d F Y') }}</p>
-                <p style="margin-bottom: 50px;"><strong>Tim Evaluator & Asesor Psikologi</strong></p>
-                <p>_____________________________________<br>
-                <strong>Tim Assessment Center</strong></p>
-            </td>
-        </tr>
-    </table>
+    <div style="font-size: 10.5pt; margin-top: 10px; margin-bottom: 4px;">
+        <strong>TOTAL NILAI :</strong> <span style="font-weight: bold; color: #0f172a;">{{ number_format($data['skor_akhir'], 2, ',', '.') }} / 100</span><br>
+        <strong>Kategori :</strong> <span style="font-weight: bold; color: #1e40af;">{{ $data['kategori_akhir'] }}</span>
+    </div>
+
+    <p style="font-size: 9.5pt; text-align: justify; line-height: 1.45; margin-top: 6px;">
+        {{ $data['penjelasan_integrasi'] }}
+    </p>
+
+    <!-- SECTION IV: KESIMPULAN AKHIR -->
+    <h2 class="section-header">IV. KESIMPULAN AKHIR</h2>
+    <p style="font-size: 9.5pt; text-align: justify; line-height: 1.45; margin-bottom: 10px;">
+        {!! nl2br(e($data['kesimpulan_umum'])) !!}
+    </p>
+
+    <div style="margin-top: 8px;">
+        <p style="font-weight: bold; color: #0f172a; margin-bottom: 4px;">Kelebihan</p>
+        <ul style="list-style-type: disc; padding-left: 20px; font-size: 9.5pt; margin-top: 2px;">
+            @foreach($data['kelebihan_list'] as $k)
+                <li>{{ $k }}</li>
+            @endforeach
+        </ul>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <p style="font-weight: bold; color: #0f172a; margin-bottom: 4px;">Kelemahan</p>
+        <ul style="list-style-type: disc; padding-left: 20px; font-size: 9.5pt; margin-top: 2px;">
+            @foreach($data['kelemahan_list'] as $l)
+                <li>{{ $l }}</li>
+            @endforeach
+        </ul>
+    </div>
+
 
 </body>
 </html>
