@@ -166,4 +166,28 @@ class DashboardController extends Controller
 
         return $pdf->download($filename);
     }
+
+    public function generateWord($id)
+    {
+        if (!session()->has('role_akses') || session('role_akses') !== 'psikolog') {
+            abort(403, 'Akses Ditolak.');
+        }
+
+        $peserta = PesertaUji::with(['jawabanSesi2', 'jawabanSesi3', 'jawabanSesi4', 'jawabanSesi5', 'jawabanSesi6'])->findOrFail($id);
+
+        $data = AnalisisUjianHelper::generateAnalysis($peserta);
+
+        $cleanNama = str_replace(' ', '_', preg_replace('/[^A-Za-z0-9\- ]/', '', $peserta->nama));
+        $cleanPosisi = str_replace(' ', '_', preg_replace('/[^A-Za-z0-9\- ]/', '', $peserta->posisi));
+        $filename = "{$cleanNama}_{$cleanPosisi}.doc";
+
+        $content = view('dashboard.pdf_report', compact('data'))->render();
+
+        return response($content, 200, [
+            'Content-Type' => 'application/msword',
+            'Content-Disposition' => 'attachment; filename="' . $filename . '"',
+            'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+            'Pragma' => 'public',
+        ]);
+    }
 }

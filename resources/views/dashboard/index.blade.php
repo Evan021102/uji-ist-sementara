@@ -372,9 +372,14 @@
                                 <span class="badge-status {{ $badgeClass }}">{{ $a['kategori_akhir'] }}</span>
                             </td>
                             <td class="text-center">
-                                <a href="{{ route('dashboard.pdf', $p->id_peserta) }}" target="_blank" class="btn-pdf">
-                                    📄 Download PDF
-                                </a>
+                                <div class="d-flex gap-1 justify-content-center">
+                                    <a href="{{ route('dashboard.pdf', $p->id_peserta) }}" target="_blank" class="btn-pdf">
+                                        📄 PDF
+                                    </a>
+                                    <a href="{{ url('/dashboard/word/' . $p->id_peserta) }}" target="_blank" class="btn-pdf" style="background-color: #2563eb; box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);">
+                                        📝 Word
+                                    </a>
+                                </div>
                             </td>
                         </tr>
                         @empty
