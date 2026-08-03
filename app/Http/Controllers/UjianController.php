@@ -48,7 +48,7 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Import (SIM),Staff legal (SLG),Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
+                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Import (SIM),Staff legal (SLG),Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL),Khusus,Staff Gudang,Staff Penjualan dan Digital Marketing',
             ]);
         }
 
@@ -82,7 +82,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)', 'Khusus', 'Staff Gudang', 'Staff Penjualan dan Digital Marketing'];
             if (!in_array($posisi, $mainPositions)) {
                 return redirect()->route('ujian.simpan');
             }
@@ -172,7 +172,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Logistik (LGT)','MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Logistik (LGT)','MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)', 'Khusus', 'Staff Gudang', 'Staff Penjualan dan Digital Marketing'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -241,7 +241,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)', 'Khusus', 'Staff Gudang', 'Staff Penjualan dan Digital Marketing'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -2331,43 +2331,241 @@ class UjianController extends Controller
                     'bagian_a' => [],
                     'bagian_b' => [
                         1 => [
-                            'judul' => "STUDI KASUS 1 — Selisih Kas Kecil (Petty Cash)",
-                            'deskripsi' => "Pada akhir bulan, Anda melakukan opname kas kecil (petty cash) dan menemukan selisih kurang sebesar Rp 750.000 antara catatan di buku kas dengan fisik uang yang ada.\nSetelah Anda ingat-ingat dan mengecek ulang, ternyata beberapa hari lalu ada pengeluaran mendadak untuk konsumsi lembur karyawan yang belum diberikan bon/kuitansi oleh bagian GA, dan uang tersebut diambil begitu saja dari laci kas kecil oleh staf lain saat Anda sedang istirahat.",
+                            'judul' => "STUDI KASUS 1: Selisih Stok dan Nilai Persediaan",
+                            'deskripsi' => "Perusahaan melakukan stock opname akhir bulan. Hasilnya menunjukkan stok semen di gudang kurang 250 sak dibandingkan jumlah di sistem.
+Gudang mengatakan kemungkinan ada barang yang keluar tetapi belum dibuat surat jalan. Tim Sales mengatakan semua transaksi sudah ditagihkan kepada pelanggan. Nilai selisih persediaan mencapai Rp95.000.000.
+Laporan keuangan bulan tersebut harus diselesaikan hari itu juga.",
                             'pertanyaan' => [
-                                1 => "Apa langkah prosedural pertama yang harus Anda lakukan untuk menyelesaikan selisih tersebut hari ini juga?",
-                                2 => "Bagaimana cara Anda berkomunikasi dengan staf GA atau karyawan yang mengambil uang tersebut agar mereka segera memberikan bukti pertanggungjawaban?",
-                                3 => "Rancang satu kebijakan (SOP) sederhana terkait pengelolaan fisik kas kecil agar kejadian uang diambil tanpa izin dan tanda terima tidak terulang kembali."
+                                1 => "Apa langkah pertama yang akan Anda lakukan sebelum membuat jurnal penyesuaian?",
+                                2 => "Jika batas waktu pelaporan sudah sangat dekat tetapi penyebab selisih belum ditemukan, bagaimana keputusan yang akan Anda ambil? Jelaskan alasannya.",
+                                3 => "Bagaimana cara mencegah kejadian seperti ini terulang di masa mendatang?"
                             ]
                         ],
                         2 => [
-                            'judul' => "STUDI KASUS 2 — Faktur Pajak Ganda dan Kesalahan Input Masukan",
-                            'deskripsi' => "Saat melakukan rekonsiliasi PPN Masukan untuk masa pajak bulan lalu, Anda menemukan bahwa ada satu Faktur Pajak dari supplier senilai PPN Rp 5.000.000 yang sudah di-input dua kali (ganda) oleh staf akunting sebelumnya, dan SPT Masa PPN tersebut sudah dilaporkan.\nKini, Anda harus memperbaiki kesalahan tersebut sebelum dilakukan pemeriksaan.",
+                            'judul' => "STUDI KASUS 2: Faktur Pajak Tidak Sesuai",
+                            'deskripsi' => "Perusahaan telah menjual baja ringan kepada pelanggan senilai Rp850.000.000.
+Barang sudah dikirim dan pelanggan sudah menerima barang. Namun saat akan melaporkan pajak, Anda menemukan bahwa faktur pajak dibuat dengan nilai Rp805.000.000.
+Manager meminta laporan pajak tetap dikirim hari itu karena sudah mendekati batas pelaporan.",
                             'pertanyaan' => [
-                                1 => "Apa dampak dari kesalahan input ganda Faktur Pajak Masukan ini terhadap laporan keuangan perusahaan dan kewajiban pajak bulanan?",
-                                2 => "Langkah teknis apa yang harus Anda lakukan di aplikasi e-Faktur dan pelaporan pajak untuk mengoreksi kesalahan tersebut?",
-                                3 => "Check dan re-check seperti apa yang akan Anda terapkan sebelum melakukan submit SPT Masa PPN di bulan-bulan berikutnya?"
+                                1 => "Apa risiko yang dapat terjadi jika laporan tetap dikirim tanpa memperbaiki kesalahan tersebut?",
+                                2 => "Langkah apa yang akan Anda lakukan untuk menyelesaikan masalah ini?",
+                                3 => "Jika Manager tetap meminta Anda mengirim laporan tanpa koreksi, bagaimana sikap Anda?"
                             ]
                         ],
                         3 => [
-                            'judul' => "STUDI KASUS 3 — Menghadapi Klien yang Menolak Dipotong PPh 23",
-                            'deskripsi' => "Perusahaan Anda menyewa kendaraan operasional dari sebuah perusahaan rental (PT Rental Aman). Sesuai aturan, Anda harus memotong PPh Pasal 23 sebesar 2% dari nilai tagihan sewa.\nNamun, saat Anda menginformasikan hal tersebut dan mengirimkan bukti potong, pihak PT Rental Aman marah. Mereka berdalih bahwa nilai kontrak yang disepakati adalah \"Net\" dan mereka tidak mau tahu urusan pajak, sehingga mereka menuntut pembayaran penuh. Jika tidak dibayar penuh, mereka mengancam akan menarik mobil tersebut besok.",
+                            'judul' => "STUDI KASUS 3: Pengakuan Penjualan Akhir Bulan",
+                            'deskripsi' => "Tanggal 31 Desember, tim Sales meminta Anda mencatat penjualan senilai Rp2,5 miliar agar target penjualan tahun ini tercapai.
+Faktanya:
+• Barang masih berada di gudang.
+• Pengiriman baru dilakukan pada tanggal 3 Januari.
+• Invoice sudah dibuat pada tanggal 31 Desember.
+Direktur mengatakan pencatatan tersebut hanya untuk mengejar target perusahaan.",
                             'pertanyaan' => [
-                                1 => "Secara aturan perpajakan, siapa yang sebenarnya menanggung beban PPh Pasal 23 tersebut dan apakah alasan klien bisa dibenarkan?",
-                                2 => "Bagaimana cara Anda menjelaskan aturan ini kepada PT Rental Aman dengan cara yang profesional namun tegas?",
-                                3 => "Jika pihak rental tetap menolak, solusi alternatif apa (terkait gross up) yang bisa Anda ajukan kepada atasan/manajemen agar mobil tidak ditarik namun aturan pajak tetap terpenuhi?"
+                                1 => "Menurut Anda, kapan penjualan tersebut seharusnya diakui? Jelaskan alasannya.",
+                                2 => "Apa dampaknya terhadap laporan keuangan apabila penjualan tersebut dicatat pada tanggal 31 Desember?",
+                                3 => "Bagaimana Anda menyampaikan pendapat kepada atasan apabila diminta tetap mencatat transaksi tersebut?"
                             ]
                         ],
                         4 => [
-                            'judul' => "STUDI KASUS 4 — Penyusutan Aset Tetap yang Belum Tercatat",
-                            'deskripsi' => "Saat menyiapkan laporan keuangan tahunan, Anda menyadari bahwa sebuah mesin produksi seharga Rp 500.000.000 yang dibeli pada bulan Maret tahun berjalan belum pernah dicatat beban penyusutannya sama sekali hingga bulan Desember.\nAtasan Anda meminta laporan keuangan segera diselesaikan dalam waktu 2 hari.",
+                            'judul' => "STUDI KASUS 4: Pembelian Aset atau Beban?",
+                            'deskripsi' => "Perusahaan membeli:
+• Forklift senilai Rp320.000.000
+• Biaya servis awal sebelum digunakan sebesar Rp12.000.000
+• Pelatihan operator sebesar Rp8.000.000
+Supervisor meminta seluruh biaya tersebut langsung dibebankan sebagai biaya operasional agar laba perusahaan tahun ini lebih kecil.",
                             'pertanyaan' => [
-                                1 => "Jurnal penyesuaian (adjusting entry) seperti apa yang harus Anda buat pada akhir tahun untuk mencatat penyusutan tersebut secara rapel (Maret - Desember)? (Asumsikan umur ekonomis 5 tahun, metode garis lurus).",
-                                2 => "Bagaimana Anda menjelaskan kepada atasan mengenai keterlambatan pencatatan ini dan dampaknya terhadap laba rugi perusahaan tahun tersebut?",
-                                3 => "Sistem atau pengingat (reminder) seperti apa yang akan Anda bangun untuk mengelola daftar aset tetap (fixed asset register) agar setiap penambahan aset baru langsung masuk ke dalam perhitungan penyusutan otomatis tiap bulan?"
+                                1 => "Menurut Anda, biaya mana yang menjadi nilai aset dan mana yang menjadi beban? Jelaskan alasannya.",
+                                2 => "Apa dampaknya terhadap laporan keuangan apabila seluruh biaya langsung dibebankan?",
+                                3 => "Bagaimana Anda menjelaskan keputusan tersebut kepada Supervisor?"
+                            ]
+                        ],
+                        5 => [
+                            'judul' => "STUDI KASUS 5: Pemeriksaan Pajak",
+                            'deskripsi' => "Perusahaan menerima surat pemeriksaan pajak.
+Pemeriksa meminta dokumen transaksi selama satu tahun terakhir.
+Saat melakukan pengecekan, Anda menemukan beberapa transaksi pembelian yang:
+• Sudah dicatat di pembukuan.
+• Sudah dibayar.
+• Namun faktur pajaknya belum ditemukan.
+Atasan meminta Anda tetap menyerahkan dokumen yang ada dan berharap pemeriksa tidak mempermasalahkannya.",
+                            'pertanyaan' => [
+                                1 => "Apa yang akan Anda lakukan sebelum proses pemeriksaan dimulai?",
+                                2 => "Risiko apa yang dapat terjadi apabila dokumen tersebut tidak lengkap?",
+                                3 => "Bagaimana cara Anda menyampaikan kondisi ini kepada atasan sekaligus memberikan solusi?"
                             ]
                         ]
                     ]
                 ];
+            case 'Khusus':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "SCENARIO 1: MANUFACTURING & INTERNAL MANAGEMENT CRISIS",
+                            'deskripsi' => "PT Nusantara Industri faces a major crisis after a multi-billion rupiah shipment was rejected by its primary client due to inconsistent quality and delivery delays. The client froze all payments and threatened contract termination. Internal conflict erupted within the company:
+● Production blames Procurement for purchasing cheap, low-grade raw materials.
+● Procurement blames Production for negligence and failing to inspect raw materials upon arrival at the factory.",
+                            'pertanyaan' => [
+                                1 => "Following a major product rejection and conflict between departments, how would you handle the situation? Explain the actions you would take, the reasoning behind your decisions, and how you would restore effective collaboration across teams.",
+                                2 => "Disrupted cash inflows have begun affecting company operations. What priorities would you establish in managing the situation? Explain your considerations and the key risks you would anticipate.",
+                                3 => "The cancelled transaction creates tax implications for the company. How would you evaluate the situation and determine the appropriate actions to minimize future tax risks?",
+                                4 => "News regarding product quality issues has begun circulating in the market. How would you manage the company's communication strategy to maintain customer confidence?",
+                                5 => "The customer has submitted claims that could significantly impact the company's financial position. How would you approach the negotiation? Explain your strategy and considerations."
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "SCENARIO 2: DOLLAR FLUCTUATION & IMPORTED RAW MATERIALS",
+                            'deskripsi' => "PT Boga Utama imports nearly 70% of its core raw materials from abroad in US Dollars (USD) and sells finished goods domestically in Indonesian Rupiah (IDR). A sudden surge in the USD exchange rate drove raw material import costs up by 30%. Foreign suppliers refuse payment extensions. Meanwhile, the local market is highly price-sensitive, if selling prices are raised abruptly, consumers will switch to cheaper competitors. To survive, top management made the tough call to cut employee incentive/benefit budgets while demanding significantly higher operational efficiency across all departments.",
+                            'pertanyaan' => [
+                                1 => "The company has reduced employee benefits while increasing operational demands. How would you maintain employee motivation and performance under these conditions?",
+                                2 => "Rising raw material costs are putting pressure on company profitability. How would you evaluate the financial situation and determine the priorities going forward?",
+                                3 => "Changes in import values affect the company's tax obligations. How would you assess the impact and ensure continued tax compliance?",
+                                4 => "The company needs to adjust selling prices in a highly competitive market. How would you maintain the product's attractiveness to customers?",
+                                5 => "A key customer rejects the company's proposed price adjustment. How would you manage the situation while maintaining the business relationship?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "SCENARIO 3: AUTOMATION & CUSTOMS BOTTLENECKS",
+                            'deskripsi' => "Industrial equipment supplier PT Teknik Utama made a major capital investment by importing multi-billion rupiah high-tech factory machinery from Europe to automate production. However, a crisis arose at the port: shipment containers were held up by Customs authorities due to documentation discrepancies regarding import permits and Tariff Codes (HS Codes). This customs bottleneck pushed the factory setup timeline back by a full month. Meanwhile, foreign technicians hired to install the machinery had already arrived in Indonesia, accruing expensive daily consultation fees while sitting idle.",
+                            'pertanyaan' => [
+                                1 => "Operational changes have created uncertainty among employees. How would you manage internal communication and maintain a positive working environment?",
+                                2 => "Project delays have generated significant unexpected costs. How would you evaluate the financial impact and determine the appropriate budget allocation?",
+                                3 => "The company faces customs-related administrative issues that may result in financial consequences. How would you manage the situation?",
+                                4 => "A product launch delay may affect market confidence. How would you maintain customer interest until the product becomes available?",
+                                5 => "Production delays affect delivery commitments to customers. How would you manage communication and negotiations to preserve the business relationship?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "SCENARIO 4: PRICE WAR & OVERSTOCK CRISIS",
+                            'deskripsi' => "PT Moda Global imported a massive shipment of fabric from China anticipating a seasonal demand surge. However, market demand suddenly dropped, and local competitors engaged in aggressive price-slashing far below your import cost. Consequently, inventory is stuck in warehouses, company cash flow is completely frozen due to capital locked in unsold goods, and USD-denominated foreign supplier debts are maturing shortly.",
+                            'pertanyaan' => [
+                                1 => "Sales targets have become difficult to achieve, and team motivation is declining. How would you manage team performance under these circumstances?",
+                                2 => "Inventory continues to increase while company obligations are approaching maturity. How would you evaluate the financial situation and determine the appropriate course of action?",
+                                3 => "The company is considering several options to reduce inventory losses. How would you ensure that each decision remains compliant with applicable tax regulations?",
+                                4 => "The company needs to reduce excess inventory without damaging brand value. How would you develop a marketing strategy to achieve this objective?",
+                                5 => "The company faces simultaneous pressure from suppliers and customers. How would you prioritize and manage negotiations to keep business operations running effectively?"
+                            ]
+                        ]
+                    ]
+                ];
+            case 'Staff Gudang':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "Studi Kasus 1: Selisih Stok Semen & Barang Rusak",
+                            'deskripsi' => "Di sistem komputer gudang tercatat ada 500 sak semen. Namun saat dicek fisik, hanya ada 420 sak. Setelah diperiksa lebih lanjut, 50 sak semen di antaranya ternyata mengeras/rusak karena terkena rembesan air hujan akibat ditaruh di dekat jendela. Di saat yang sama, ada truk pelanggan yang sudah mengantre untuk mengambil pesanan sebanyak 450 sak semen yang harus dikirim hari ini juga.",
+                            'pertanyaan' => [
+                                1 => "Langkah pertama apa yang akan kamu lakukan dalam 15 menit pertama? Jelaskan urutan prioritas tindakanmu beserta alasannya!",
+                                2 => "Bagaimana solusi yang akan kamu tawarkan agar pesanan 450 sak semen pelanggan tetap bisa terpenuhi hari ini tanpa memberikan barang yang rusak?",
+                                3 => "Langkah pencegahan konkret apa yang akan kamu lakukan di gudang agar kasus semen mengeras terkena air dan selisih data stok tidak terulang lagi?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "Studi Kasus 2: Keterlambatan Pengiriman & Rotasi Barang (FIFO)",
+                            'deskripsi' => "Pelanggan komplain karena menerima 20 kaleng cat tembok yang sudah menggumpal/kedaluwarsa. Setelah diperiksa, ternyata staf gudang selama ini selalu mengambil cat yang posisinya paling depan/atas (yang baru datang) karena lebih mudah dijangkau, sehingga cat stok lama di bagian belakang menumpuk dan rusak. Selain itu, proses muat barang (loading) ke armada pengiriman memakan waktu hingga 2 jam (padahal target perusahaan maksimal 45 menit).",
+                            'pertanyaan' => [
+                                1 => "Jika Anda ditugaskan untuk menginvestigasi penyebab terjadinya produk kedaluwarsa di gudang, data dan informasi apa saja yang akan Anda periksa terlebih dahulu? Jelaskan alasannya.",
+                                2 => "Bagaimana cara/metode sederhana yang bisa kamu terapkan di area penyimpanan agar staf gudang otomatis mengambil stok lama terlebih dahulu (FIFO) tanpa perlu bingung?",
+                                3 => "Apa ide atau langkah praktis yang bisa kamu lakukan untuk memangkas waktu muat barang dari 2 jam menjadi 45 menit?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "Studi Kasus 3: Kerusakan Material dan Komplain Pelanggan",
+                            'deskripsi' => "Seorang pelanggan mengeluhkan bahwa 50 dus keramik yang diterimanya mengalami kerusakan pada sudut-sudut keramik sehingga tidak dapat digunakan untuk proyek. Berdasarkan data sistem, barang tersebut telah melewati pemeriksaan kualitas saat masuk gudang dan tidak ditemukan kerusakan. Pelanggan meminta penggantian dalam waktu 24 jam dan mengancam akan menghentikan kerja sama jika masalah tidak segera diselesaikan.",
+                            'pertanyaan' => [
+                                1 => "Informasi apa saja yang perlu Anda kumpulkan sebelum mengambil keputusan?",
+                                2 => "Bagaimana Anda menentukan apakah kerusakan terjadi di gudang, saat pengiriman, atau setelah diterima pelanggan?",
+                                3 => "Solusi apa yang Anda berikan untuk menyelesaikan masalah pelanggan sekaligus meminimalkan kerugian perusahaan?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "Studi Kasus 4: Kehilangan Material Bernilai Tinggi",
+                            'deskripsi' => "Pada saat stock opname bulanan, ditemukan selisih stok:
+• Kabel listrik premium : kurang 120 roll
+• Nilai kerugian sekitar Rp180 juta
+Data sistem menunjukkan tidak ada transaksi keluar yang tidak tercatat. CCTV hanya menyimpan rekaman 14 hari terakhir, sementara selisih baru diketahui saat stock opname akhir bulan. Direktur meminta hasil investigasi dalam waktu 2 hari karena material tersebut termasuk kategori barang dengan risiko kehilangan tinggi.",
+                            'pertanyaan' => [
+                                1 => "Sebagai Staff Gudang, langkah investigasi apa yang akan Anda lakukan terlebih dahulu?",
+                                2 => "Menurut Anda, kemungkinan penyebab kehilangan tersebut berasal dari faktor apa saja? Jelaskan alasannya.",
+                                3 => "Jika dalam 2 hari penyebab pasti belum ditemukan, laporan dan rekomendasi apa yang akan Anda berikan kepada manajemen?"
+                            ]
+                        ],
+                        5 => [
+                            'judul' => "Studi Kasus 5: Gudang Terkena Dampak Cuaca Ekstrem",
+                            'deskripsi' => "Hujan deras selama beberapa jam menyebabkan sebagian atap gudang bocor.
+Beberapa material yang terdampak:
+• 300 sak semen
+• 100 lembar gypsum
+• 50 karton produk finishing
+Di saat yang sama, gudang sedang kekurangan tenaga karena sebagian karyawan sedang cuti.
+Manager meminta Anda mengoordinasikan penanganan awal agar kerugian tidak semakin besar.",
+                            'pertanyaan' => [
+                                1 => "Apa prioritas tindakan yang harus dilakukan dalam 30 menit pertama?",
+                                2 => "Bagaimana cara Anda mengatur tenaga kerja yang terbatas untuk menangani situasi ini?",
+                                3 => "Setelah kondisi terkendali, tindakan pencegahan apa yang harus dilakukan agar kejadian serupa tidak terulang?"
+                            ]
+                        ]
+                    ]
+                ];
+            case 'Staff Penjualan dan Digital Marketing':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "STUDI KASUS 1: Penjualan Turun, Iklan Ramai tetapi Order Sedikit",
+                            'deskripsi' => "Perusahaan menjual berbagai bahan bangunan seperti semen, cat, besi, keramik, dan atap. Selama tiga bulan terakhir, tim digital marketing berhasil meningkatkan jumlah pengunjung website dan media sosial hingga 70%. Banyak orang bertanya melalui WhatsApp dan media sosial mengenai harga dan stok. Namun, jumlah penjualan justru turun sekitar 20%. Dari hasil pengecekan, banyak calon pelanggan hanya bertanya harga, lalu tidak melakukan pembelian. Beberapa pelanggan juga mengatakan harga kompetitor sedikit lebih murah, sedangkan sebagian lainnya mengaku bingung memilih produk yang sesuai dengan kebutuhan mereka.
+Sebagai Staff Penjualan & Digital Marketing, Anda diminta membantu meningkatkan penjualan.",
+                            'pertanyaan' => [
+                                1 => "Menurut Anda, apa penyebab utama banyak calon pelanggan tidak jadi membeli? Jelaskan alasan Anda.",
+                                2 => "Strategi apa yang akan Anda lakukan agar calon pelanggan yang sudah bertanya bisa berubah menjadi pembeli?",
+                                3 => "Bagaimana cara Anda bekerja sama dengan tim penjualan agar promosi digital benar-benar menghasilkan penjualan?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "STUDI KASUS 2: Anggaran Promosi Dipotong, Target Penjualan Tetap Tinggi",
+                            'deskripsi' => "Karena kondisi perusahaan, anggaran iklan digital dipotong hingga 50%. Meskipun begitu, target penjualan bulan depan tidak berubah bahkan harus meningkat 15%. Selama ini perusahaan hanya mengandalkan iklan berbayar di media sosial. Setelah anggaran dipotong, jumlah orang yang melihat promosi diperkirakan akan jauh berkurang.
+Pimpinan meminta Anda mencari solusi agar penjualan tetap meningkat meskipun dana promosi lebih sedikit.",
+                            'pertanyaan' => [
+                                1 => "Jika Anda berada di posisi tersebut, strategi pemasaran apa yang akan Anda prioritaskan? Jelaskan alasannya.",
+                                2 => "Bagaimana cara memanfaatkan media sosial tanpa harus mengeluarkan biaya iklan yang besar?",
+                                3 => "Indikator apa saja yang akan Anda gunakan untuk menilai apakah strategi tersebut berhasil?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "STUDI KASUS 3: Komplain Viral di Media Sosial",
+                            'deskripsi' => "Seorang pelanggan membeli keramik dari perusahaan. Setelah barang diterima, pelanggan mengunggah video di media sosial dan mengeluhkan bahwa sebagian keramik pecah saat dibuka. Video tersebut menjadi viral dan banyak orang mulai memberikan komentar negatif terhadap perusahaan. Padahal setelah dilakukan pengecekan, kerusakan terjadi karena proses pengiriman oleh ekspedisi, bukan karena kualitas produk.
+Pimpinan meminta Anda menangani situasi tersebut karena Anda bertanggung jawab pada penjualan dan media digital.",
+                            'pertanyaan' => [
+                                1 => "Langkah pertama apa yang akan Anda lakukan untuk menjaga kepercayaan pelanggan?",
+                                2 => "Bagaimana cara menjelaskan kondisi sebenarnya kepada masyarakat tanpa menyalahkan pelanggan maupun pihak ekspedisi?",
+                                3 => "Setelah masalah selesai, strategi apa yang akan Anda lakukan agar citra perusahaan kembali baik dan penjualan tidak terus menurun?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "STUDI KASUS 4: Produk Baru Sulit Terjual",
+                            'deskripsi' => "Perusahaan baru saja meluncurkan produk cat premium yang memiliki kualitas lebih baik dibanding produk lama. Namun harganya sekitar 20% lebih mahal. Meskipun sudah dipromosikan selama dua bulan, penjualan produk tersebut masih rendah. Sebagian besar pelanggan tetap memilih produk lama yang lebih murah. Tim penjualan juga mengaku kesulitan menjelaskan kelebihan produk baru kepada pelanggan.
+Manajemen meminta Anda mencari solusi agar produk baru lebih diterima pasar.",
+                            'pertanyaan' => [
+                                1 => "Menurut Anda, mengapa pelanggan masih memilih produk lama? Jelaskan analisis Anda.",
+                                2 => "Strategi pemasaran dan penjualan apa yang akan Anda lakukan agar pelanggan mau mencoba produk baru tersebut?",
+                                3 => "Bagaimana cara membantu tim penjualan agar mereka lebih percaya diri dalam menawarkan produk premium?"
+                            ]
+                        ],
+                        5 => [
+                            'judul' => "STUDI KASUS 5: Banyak Data, Sedikit Keputusan",
+                            'deskripsi' => "Perusahaan memiliki data penjualan selama satu tahun, data pelanggan, hasil promosi media sosial, serta laporan produk yang paling sering terjual.
+Namun setiap divisi membuat laporan sendiri-sendiri sehingga pimpinan kesulitan menentukan strategi. Akibatnya, promosi sering dilakukan pada produk yang sebenarnya stoknya sedikit, sedangkan produk dengan stok banyak justru jarang dipromosikan.
+Anda diminta membantu memberikan rekomendasi berdasarkan data yang ada.",
+                            'pertanyaan' => [
+                                1 => "Informasi apa saja yang menurut Anda paling penting untuk dianalisis sebelum menentukan strategi penjualan dan promosi?",
+                                2 => "Jika Anda menemukan bahwa produk yang paling banyak dipromosikan ternyata memiliki keuntungan kecil, sedangkan produk yang jarang dipromosikan memiliki keuntungan besar, keputusan apa yang akan Anda ambil? Jelaskan alasannya.",
+                                3 => "Bagaimana cara Anda menyampaikan hasil analisis kepada pimpinan agar mudah dipahami dan dapat langsung dijadikan dasar pengambilan keputusan?"
+                            ]
+                        ]
+                    ]
+                ];
+
             default:
                 // Fallback default untuk semua posisi (termasuk 26 posisi baru)
                 // Jika belum ada studi kasusnya, dikembalikan array kosong agar tidak error.

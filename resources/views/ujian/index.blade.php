@@ -193,6 +193,9 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff sekretaris (SS)">Staff Sekretaris (SS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Supervisor Sales (SPVS)">Supervisor Sales (SPVS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Utility (UTL)">Utility (UTL)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Khusus">Khusus</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Gudang">Staff Gudang</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Penjualan dan Digital Marketing">Staff Penjualan dan Digital Marketing</button></li>
                 <li><button class="dropdown-item py-2 posisi-item fw-bold text-primary" type="button" data-value="Lainnya">{{ __('Lainnya (Sebutkan)') }}</button></li>
             </ul>
             <input type="hidden" name="posisi" id="posisi" value="{{ old('posisi') }}" required>
