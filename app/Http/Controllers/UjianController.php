@@ -48,7 +48,7 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Import (SIM),Staff legal (SLG),Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL),Khusus,Staff Gudang,Staff Penjualan dan Digital Marketing',
+                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Khusus,Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Gudang,Staff Import (SIM),Staff legal (SLG),Staff Penjualan dan Digital Marketing,Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
             ]);
         }
 
@@ -82,7 +82,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)', 'Khusus', 'Staff Gudang', 'Staff Penjualan dan Digital Marketing'];
+            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
             if (!in_array($posisi, $mainPositions)) {
                 return redirect()->route('ujian.simpan');
             }
@@ -172,7 +172,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Logistik (LGT)','MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)','Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)', 'Khusus', 'Staff Gudang', 'Staff Penjualan dan Digital Marketing'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -241,7 +241,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)','Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)','Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)', 'Khusus', 'Staff Gudang', 'Staff Penjualan dan Digital Marketing'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }

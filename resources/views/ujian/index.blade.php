@@ -177,6 +177,7 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Job Planner (JPL)">Job Planner (JPL)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Kas kecil (KAS)">Kas kecil (KAS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Kepala Gudang (KG)">Kepala Gudang (KG)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Khusus">Khusus</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Logistik (LGT)">Logistik (LGT)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="MARKETING (M)">MARKETING (M)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="PIC Audit Team">PIC Audit Team (PAT)</button></li>
@@ -186,16 +187,15 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Sales marketing (SMK)">Sales marketing (SMK)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="SCM-FG (SFG)">SCM-FG (SFG)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="STAFF ACCOUNTING & TAX (SAT)">STAFF ACCOUNTING & TAX (SAT)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Gudang">Staff Gudang</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Import (SIM)">Staff Import (SIM)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff legal (SLG)">Staff legal (SLG)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Penjualan dan Digital Marketing">Staff Penjualan dan Digital Marketing</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff purchasing (SPU)">Staff purchasing (SPU)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Sales Executive (SSE)">Staff Sales Executive (SSE)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff sekretaris (SS)">Staff Sekretaris (SS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Supervisor Sales (SPVS)">Supervisor Sales (SPVS)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Utility (UTL)">Utility (UTL)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Khusus">Khusus</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Gudang">Staff Gudang</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Penjualan dan Digital Marketing">Staff Penjualan dan Digital Marketing</button></li>
                 <li><button class="dropdown-item py-2 posisi-item fw-bold text-primary" type="button" data-value="Lainnya">{{ __('Lainnya (Sebutkan)') }}</button></li>
             </ul>
             <input type="hidden" name="posisi" id="posisi" value="{{ old('posisi') }}" required>

@@ -118,9 +118,9 @@
                 <h4 class="fw-bold mb-4 mt-4 text-primary" style="font-size: 18px;">{{ __('B. Studi Kasus & Analisis Masalah') }}</h4>
                 @foreach($soalSesi5['bagian_b'] as $caseIdx => $case)
                 <div class="case-container">
-                    <div class="case-title">📌 {{ __('Studi Kasus') }} {{ $caseIdx + 1 }}: {{ __($case['judul']) }}</div>
+                    <div class="case-title">📌 {{ __($case['judul']) }}</div>
                     <div class="case-desc">
-                        {!! nl2br(e(__($case['deskripsi']))) !!}
+                        {!! __($case['deskripsi']) !!}
                     </div>
 
                     @foreach($case['pertanyaan'] as $subNum => $subQText)
