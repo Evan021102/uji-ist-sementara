@@ -481,7 +481,7 @@ class AnalisisUjianHelper
         $isQC = str_contains($posisiUpper, 'QC') || str_contains($posisiUpper, 'QUALITY');
         $isSales = str_contains($posisiUpper, 'SALES') || str_contains($posisiUpper, 'MARKETING') || str_contains($posisiUpper, 'SPV');
         $isLogistics = str_contains($posisiUpper, 'LOGISTIK') || str_contains($posisiUpper, 'PPIC') || str_contains($posisiUpper, 'GUDANG') || str_contains($posisiUpper, 'SCM') || str_contains($posisiUpper, 'PLANNER');
-        $isHRD = str_contains($posisiUpper, 'HRD') || str_contains($posisiUpper, 'RECRUITMENT') || str_contains($posisiUpper, 'PAYROLL');
+        $isHRD = str_contains($posisiUpper, 'HRD') || str_contains($posisiUpper, 'RECRUITMENT') || str_contains($posisiUpper, 'PAYROLL') || str_contains($posisiUpper, 'HCP');
 
         if ($isAccount) {
             $aspekConfigs = [

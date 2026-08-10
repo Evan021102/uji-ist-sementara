@@ -172,6 +172,7 @@
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN SCM (ASCM)">ADMIN SCM (ASCM)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="DRIVER (DVR)">DRIVER (DVR)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="General Affair (GA)">General Affair (GA)</button></li>
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HCP">HCP</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HRD Payroll (HRP)">HRD Payroll (HRP)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HRD Recruitment (HRR)">HRD Recruitment (HRR)</button></li>
                 <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Job Planner (JPL)">Job Planner (JPL)</button></li>

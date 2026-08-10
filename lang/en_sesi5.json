@@ -1,4 +1,54 @@
 {
+    "HCP": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "CASE STUDY 1: High Turnover of Production Employees",
+                "deskripsi": "In the last 6 months, the production employee turnover rate reached 28%, far above the company's target of a maximum of 10% per year. Most employees resigned during the 3–12 months of service. As a result, recruitment costs increased, productivity decreased, and the workload of supervisors increased.",
+                "pertanyaan": {
+                    "1": "In your opinion, what factors need to be analyzed to find the root cause of the high turnover?",
+                    "2": "What programs or strategies would you propose to reduce employee turnover?",
+                    "3": "What indicators or KPIs would you use to measure the success of the program?"
+                }
+            },
+            "2": {
+                "judul": "CASE STUDY 2: Performance Appraisal Results Cause Conflict",
+                "deskripsi": "The company has just completed the annual performance appraisal process. However, many employees feel that the scores given by their superiors are not objective. Several employees even submitted objections to HR and considered the appraisal system unfair.<br>Management requested Human Capital Performance to evaluate the running system.",
+                "pertanyaan": {
+                    "1": "What steps would you take to evaluate whether the appraisal system has been running objectively?",
+                    "2": "How would you handle employee complaints without causing greater conflict?",
+                    "3": "What improvements would you propose to make the performance appraisal system more transparent and acceptable to all parties?"
+                }
+            },
+            "3": {
+                "judul": "CASE STUDY 3: The Director Requests a Comprehensive Organization Review",
+                "deskripsi": "The company has been operating for 15 years and has never conducted a comprehensive Organization Review. The Board of Directors requested Human Capital Performance to perform a total evaluation of the organization's effectiveness.",
+                "pertanyaan": {
+                    "1": "What organizational aspects need to be evaluated in an organization review?",
+                    "2": "What data would you use to determine the priority areas for improvement?",
+                    "3": "If you were only given 6 months to perform organizational transformation, what program would be your main priority and why?"
+                }
+            },
+            "4": {
+                "judul": "CASE STUDY 4: Audit Results Show Many Positions Do Not Have a Clear Job Description",
+                "deskripsi": "The organization audit found that many employees do not understand the boundaries of their responsibilities. As a result, shifting blame, inter-departmental conflicts, and missed tasks frequently occur.<br>The Director requested Human Capital Performance to make improvements.",
+                "pertanyaan": {
+                    "1": "What risks can arise if job descriptions and job authority are not clear?",
+                    "2": "What process would you undertake to redesign effective job descriptions?",
+                    "3": "How would you ensure that those job descriptions are actually carried out by all employees?"
+                }
+            },
+            "5": {
+                "judul": "CASE STUDY 5: Too Many KPIs, But Performance Keeps Declining",
+                "deskripsi": "The company has implemented KPIs in all departments for 2 years. However, audit results show that most KPIs are only used as formalities. Many departments still fail to reach company targets despite relatively high employee KPI scores.<br>The Director requested Human Capital Performance to evaluate the current KPI system.",
+                "pertanyaan": {
+                    "1": "In your opinion, what are the possible causes of KPIs failing to drive company performance improvement?",
+                    "2": "How would you evaluate whether the KPIs used are aligned with the company's business targets?",
+                    "3": "If you were asked to make improvements, what changes would you propose to the KPI system?"
+                }
+            }
+        }
+    },
     "ACCOUNT PAYABLE (AP)": {
         "bagian_a": [],
         "bagian_b": {

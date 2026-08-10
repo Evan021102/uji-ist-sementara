@@ -48,7 +48,7 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Khusus,Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Gudang,Staff Import (SIM),Staff legal (SLG),Staff Penjualan dan Digital Marketing,Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
+                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HCP,HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Khusus,Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Gudang,Staff Import (SIM),Staff legal (SLG),Staff Penjualan dan Digital Marketing,Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
             ]);
         }
 
@@ -82,7 +82,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HCP', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
             if (!in_array($posisi, $mainPositions)) {
                 return redirect()->route('ujian.simpan');
             }
@@ -172,7 +172,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HCP', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -241,7 +241,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
+                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HCP', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
                 if (!in_array($posisi, $mainPositions)) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -2561,6 +2561,58 @@ Anda diminta membantu memberikan rekomendasi berdasarkan data yang ada.",
                                 1 => "Informasi apa saja yang menurut Anda paling penting untuk dianalisis sebelum menentukan strategi penjualan dan promosi?",
                                 2 => "Jika Anda menemukan bahwa produk yang paling banyak dipromosikan ternyata memiliki keuntungan kecil, sedangkan produk yang jarang dipromosikan memiliki keuntungan besar, keputusan apa yang akan Anda ambil? Jelaskan alasannya.",
                                 3 => "Bagaimana cara Anda menyampaikan hasil analisis kepada pimpinan agar mudah dipahami dan dapat langsung dijadikan dasar pengambilan keputusan?"
+                            ]
+                        ]
+                    ]
+                ];
+
+            case 'HCP':
+                return [
+                    'bagian_a' => [],
+                    'bagian_b' => [
+                        1 => [
+                            'judul' => "STUDI KASUS 1: Tingginya Turnover Karyawan Produksi",
+                            'deskripsi' => "Dalam 6 bulan terakhir, tingkat turnover karyawan produksi mencapai 28%, jauh di atas target perusahaan yaitu maksimal 10% per tahun. Sebagian besar karyawan mengundurkan diri pada masa kerja 3–12 bulan. Akibatnya biaya rekrutmen meningkat, produktivitas menurun, dan beban kerja supervisor bertambah.",
+                            'pertanyaan' => [
+                                1 => "Menurut Anda, faktor-faktor apa saja yang perlu dianalisis untuk menemukan akar penyebab tingginya turnover tersebut?",
+                                2 => "Program atau strategi apa yang akan Anda usulkan untuk menurunkan turnover karyawan?",
+                                3 => "Indikator atau KPI apa yang akan Anda gunakan untuk mengukur keberhasilan program tersebut?"
+                            ]
+                        ],
+                        2 => [
+                            'judul' => "STUDI KASUS 2: Hasil Performance Appraisal Menimbulkan Konflik",
+                            'deskripsi' => "Perusahaan baru saja menyelesaikan proses penilaian kinerja tahunan. Namun banyak karyawan merasa nilai yang diberikan atasan tidak objektif. Beberapa karyawan bahkan mengajukan keberatan kepada HR dan menganggap sistem appraisal tidak adil.<br>Manajemen meminta Human Capital Performance melakukan evaluasi terhadap sistem yang berjalan.",
+                            'pertanyaan' => [
+                                1 => "Langkah apa yang akan Anda lakukan untuk mengevaluasi apakah sistem appraisal sudah berjalan secara objektif?",
+                                2 => "Bagaimana cara Anda menangani keluhan karyawan tanpa menimbulkan konflik yang lebih besar?",
+                                3 => "Perbaikan apa yang akan Anda usulkan agar sistem performance appraisal lebih transparan dan dapat diterima seluruh pihak?"
+                            ]
+                        ],
+                        3 => [
+                            'judul' => "STUDI KASUS 3: Direktur Meminta Review Organisasi Secara Menyeluruh",
+                            'deskripsi' => "Perusahaan telah beroperasi selama 15 tahun dan belum pernah melakukan Organization Review secara menyeluruh. Direksi meminta Human Capital Performance melakukan evaluasi total terhadap efektivitas organisasi.",
+                            'pertanyaan' => [
+                                1 => "Aspek organisasi apa saja yang perlu dievaluasi dalam organization review?",
+                                2 => "Data apa yang akan Anda gunakan untuk menentukan area prioritas perbaikan?",
+                                3 => "Jika hanya diberikan waktu 6 bulan untuk melakukan transformasi organisasi, program apa yang akan menjadi prioritas utama Anda dan mengapa?"
+                            ]
+                        ],
+                        4 => [
+                            'judul' => "STUDI KASUS 4: Hasil Audit Menunjukkan Banyak Posisi Tidak Memiliki Job Description Yang Jelas",
+                            'deskripsi' => "Audit organisasi menemukan bahwa banyak karyawan tidak memahami batas tanggung jawabnya. Akibatnya sering terjadi saling lempar pekerjaan, konflik antar departemen, dan pekerjaan yang terlewat.<br>Direktur meminta Human Capital Performance melakukan perbaikan.",
+                            'pertanyaan' => [
+                                1 => "Risiko apa saja yang dapat muncul apabila job description dan job authority tidak jelas?",
+                                2 => "Bagaimana proses yang akan Anda lakukan untuk menyusun ulang job description yang efektif?",
+                                3 => "Bagaimana cara memastikan bahwa job description tersebut benar-benar dijalankan oleh seluruh karyawan?"
+                            ]
+                        ],
+                        5 => [
+                            'judul' => "STUDI KASUS 5: KPI Banyak, Kinerja Tetap Turun",
+                            'deskripsi' => "Perusahaan telah menerapkan KPI di seluruh departemen selama 2 tahun. Namun, hasil audit menunjukkan bahwa sebagian besar KPI hanya dijadikan formalitas. Banyak departemen tetap gagal mencapai target perusahaan meskipun nilai KPI karyawan relatif tinggi.<br>Direktur meminta Human Capital Performance melakukan evaluasi sistem KPI yang berjalan.",
+                            'pertanyaan' => [
+                                1 => "Menurut Anda, apa kemungkinan penyebab KPI tidak mampu mendorong peningkatan kinerja perusahaan?",
+                                2 => "Bagaimana cara Anda mengevaluasi apakah KPI yang digunakan sudah selaras dengan target bisnis perusahaan?",
+                                3 => "Jika Anda diminta melakukan perbaikan, perubahan apa yang akan Anda usulkan terhadap sistem KPI tersebut?"
                             ]
                         ]
                     ]

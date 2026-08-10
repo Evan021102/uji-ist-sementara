@@ -23,12 +23,15 @@
         'ADMIN PPIC (APP)',
         'ADMIN QC (AQC)',
         'ADMIN SCM (ASCM)',
+        'DRIVER (DVR)',
         'General Affair (GA)',
+        'HCP',
         'HRD Payroll (HRP)',
         'HRD Recruitment (HRR)',
         'Job Planner (JPL)',
         'Kas kecil (KAS)',
         'Kepala Gudang (KG)',
+        'Khusus',
         'Logistik (LGT)',
         'MARKETING (M)',
         'PIC Audit Team',
@@ -37,14 +40,16 @@
         'Sales Distribusi (SAD)',
         'Sales marketing (SMK)',
         'SCM-FG (SFG)',
+        'STAFF ACCOUNTING & TAX (SAT)',
+        'Staff Gudang',
         'Staff Import (SIM)',
         'Staff legal (SLG)',
+        'Staff Penjualan dan Digital Marketing',
         'Staff purchasing (SPU)',
         'Staff Sales Executive (SSE)',
         'Staff sekretaris (SS)',
         'Supervisor Sales (SPVS)',
         'Utility (UTL)'
-        
     ]);
 @endphp
 <div class="main-wrapper">
