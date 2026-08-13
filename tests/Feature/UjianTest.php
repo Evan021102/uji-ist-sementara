@@ -75,6 +75,7 @@ class UjianTest extends TestCase
         $response = $this->post('/ujian/start', [
             'nama' => 'John Doe',
             'posisi' => 'ACCOUNTING (A)',
+            'perusahaan' => 'PT Gosyen',
         ]);
         $response->assertRedirect(route('ujian.petunjuk', ['sesi' => 1]));
         $this->assertEquals('John Doe', session('nama'));
@@ -208,6 +209,7 @@ class UjianTest extends TestCase
             'nama' => 'Jane Smith',
             'posisi' => 'Lainnya',
             'posisi_lainnya' => 'Programmer',
+            'perusahaan' => 'PT Gosyen',
         ]);
         $response->assertRedirect(route('ujian.petunjuk', ['sesi' => 1]));
 
