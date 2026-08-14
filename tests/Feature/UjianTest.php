@@ -292,6 +292,7 @@ class UjianTest extends TestCase
     public function test_rubrik_management()
     {
         // Insert a dummy position
+        DB::table('posisi')->where('nama', 'TEST QUALITY ASSURANCE')->delete();
         $posisiId = DB::table('posisi')->insertGetId([
             'nama' => 'TEST QUALITY ASSURANCE'
         ]);

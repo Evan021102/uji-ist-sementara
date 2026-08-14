@@ -1,1 +1,1 @@
-a:5:{s:6:"_token";s:40:"WxaKl9Ua5Nz8zBELGDFhbOZleyGvvs1F7EmyXmS3";s:6:"locale";s:2:"id";s:9:"_previous";a:1:{s:3:"url";s:38:"http://127.0.0.1:8000/dashboard/rubrik";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}s:10:"role_akses";s:5:"admin";}
+a:5:{s:6:"_token";s:40:"WxaKl9Ua5Nz8zBELGDFhbOZleyGvvs1F7EmyXmS3";s:6:"locale";s:2:"id";s:9:"_previous";a:1:{s:3:"url";s:104:"http://127.0.0.1:8000/dashboard?nama=&perusahaan=&posisi=&status_ujian=sedang_ujian&tgl_akhir=&tgl_awal=";}s:6:"_flash";a:2:{s:3:"old";a:0:{}s:3:"new";a:0:{}}s:10:"role_akses";s:8:"psikolog";}
