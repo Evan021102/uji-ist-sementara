@@ -257,4 +257,71 @@ class UjianTest extends TestCase
         $this->assertNotNull($j6);
         $this->assertNull($j6->q1); // Should be empty/null because Sesi 5 was skipped
     }
+
+    /**
+     * Test admin time settings panel access and update.
+     */
+    public function test_admin_time_settings_management()
+    {
+        // 1. Unauthenticated post gets 403
+        $response = $this->post('/dashboard/durasi/sesi1/update', ['durasi' => 15]);
+        $response->assertStatus(403);
+
+        // 2. Psychologist post gets 403
+        $response = $this->withSession(['role_akses' => 'psikolog'])
+            ->post('/dashboard/durasi/sesi1/update', ['durasi' => 15]);
+        $response->assertStatus(403);
+
+        // 3. Admin can view pages with durasi compacted
+        $response = $this->withSession(['role_akses' => 'admin'])->get('/dashboard/sesi1');
+        $response->assertStatus(200);
+        $response->assertViewHas('durasi');
+
+        // 4. Admin can update Sesi 1 time duration
+        $response = $this->withSession(['role_akses' => 'admin'])
+            ->post('/dashboard/durasi/sesi1/update', ['durasi' => 15]);
+        $response->assertRedirect();
+        
+        // Assert updated values in DB
+        $this->assertEquals('15', DB::table('pengaturan')->where('key', 'durasi_sesi1')->value('value'));
+    }
+
+    /**
+     * Test assessment rubric panel access and update.
+     */
+    public function test_rubrik_management()
+    {
+        // Insert a dummy position
+        $posisiId = DB::table('posisi')->insertGetId([
+            'nama' => 'TEST QUALITY ASSURANCE'
+        ]);
+
+        // 1. Unauthenticated gets 403
+        $response = $this->get('/dashboard/rubrik');
+        $response->assertStatus(403);
+
+        $response = $this->post("/dashboard/rubrik/{$posisiId}/update", ['rubrik_penilaian' => 'Rubrik QA']);
+        $response->assertStatus(403);
+
+        // 2. Psychologist can view but not edit
+        $response = $this->withSession(['role_akses' => 'psikolog'])->get('/dashboard/rubrik');
+        $response->assertStatus(200);
+        $response->assertViewHas('posisiList');
+
+        $response = $this->withSession(['role_akses' => 'psikolog'])
+            ->post("/dashboard/rubrik/{$posisiId}/update", ['rubrik_penilaian' => 'Rubrik QA']);
+        $response->assertStatus(403);
+
+        // 3. Admin can view and edit
+        $response = $this->withSession(['role_akses' => 'admin'])->get('/dashboard/rubrik');
+        $response->assertStatus(200);
+        $response->assertViewHas('posisiList');
+
+        $response = $this->withSession(['role_akses' => 'admin'])
+            ->post("/dashboard/rubrik/{$posisiId}/update", ['rubrik_penilaian' => 'Rubrik QA']);
+        $response->assertRedirect();
+
+        // Assert updated rubric in DB
+        $this->assertEquals('Rubrik QA', DB::table('posisi')->where('id', $posisiId)->value('rubrik_penilaian'));
+    }
 }

@@ -169,8 +169,8 @@
         document.getElementById('progressText').innerText = answered + '/' + totalSoal;
     }
 
-    // Timer countdown (45 menit = 2700 detik)
-    let totalWaktu = 2700;
+    // Timer countdown
+    let totalWaktu = {{ $durasi }};
     let timerInterval;
     function mulaiTimer() {
         timerInterval = setInterval(function() {

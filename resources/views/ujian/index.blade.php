@@ -162,41 +162,9 @@
                     <input type="text" id="searchPosisi" class="form-control form-control-sm" placeholder="{{ __('Cari posisi pekerjaan...') }}" autocomplete="off" style="border-radius: 8px;">
                 </li>
                 
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ACCOUNT PAYABLE (AP)">ACCOUNT PAYABLE (AP)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ACCOUNT RECEIVABLE (AR)">ACCOUNT RECEIVABLE (AR)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ACCOUNTING (A)">ACCOUNTING (ACC)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN GUDANG (AG)">ADMIN GUDANG (AG)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Admin penjualan (SA)">Admin penjualan (SA)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN PPIC (APP)">ADMIN PPIC (APP)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN QC (AQC)">ADMIN QC (AQC)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="ADMIN SCM (ASCM)">ADMIN SCM (ASCM)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="DRIVER (DVR)">DRIVER (DVR)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="General Affair (GA)">General Affair (GA)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HCP">HCP</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HRD Payroll (HRP)">HRD Payroll (HRP)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="HRD Recruitment (HRR)">HRD Recruitment (HRR)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Job Planner (JPL)">Job Planner (JPL)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Kas kecil (KAS)">Kas kecil (KAS)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Kepala Gudang (KG)">Kepala Gudang (KG)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Khusus">Khusus</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Logistik (LGT)">Logistik (LGT)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="MARKETING (M)">MARKETING (M)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="PIC Audit Team">PIC Audit Team (PAT)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="QUALITY CONTROL ANALIS (QCA)">QUALITY CONTROL ANALIS (QCA)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Sales (SLS)">Sales (SLS)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Sales Distribusi (SAD)">Sales Distribusi (SAD)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Sales marketing (SMK)">Sales marketing (SMK)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="SCM-FG (SFG)">SCM-FG (SFG)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="STAFF ACCOUNTING & TAX (SAT)">STAFF ACCOUNTING & TAX (SAT)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Gudang">Staff Gudang</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Import (SIM)">Staff Import (SIM)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff legal (SLG)">Staff legal (SLG)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Penjualan dan Digital Marketing">Staff Penjualan dan Digital Marketing</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff purchasing (SPU)">Staff purchasing (SPU)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff Sales Executive (SSE)">Staff Sales Executive (SSE)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Staff sekretaris (SS)">Staff Sekretaris (SS)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Supervisor Sales (SPVS)">Supervisor Sales (SPVS)</button></li>
-                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="Utility (UTL)">Utility (UTL)</button></li>
+                @foreach($posisiList as $p)
+                <li><button class="dropdown-item py-2 posisi-item" type="button" data-value="{{ $p->nama }}">{{ $p->nama }}</button></li>
+                @endforeach
                 <li><button class="dropdown-item py-2 posisi-item fw-bold text-primary" type="button" data-value="Lainnya">{{ __('Lainnya (Sebutkan)') }}</button></li>
             </ul>
             <input type="hidden" name="posisi" id="posisi" value="{{ old('posisi') }}" required>

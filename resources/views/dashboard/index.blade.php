@@ -25,6 +25,11 @@
             color: var(--text-main);
             min-height: 100vh;
         }
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+        .text-slate-300 { color: #cbd5e1 !important; }
+        .text-slate-400 { color: #94a3b8 !important; }
         .navbar {
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             background-color: #0b1329 !important;
@@ -197,10 +202,26 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark mb-4">
         <div class="container-fluid px-4">
-            <a class="navbar-brand text-white d-flex align-items-center gap-2" href="#">
+            <a class="navbar-brand text-white d-flex align-items-center gap-2" href="{{ route('dashboard.index') }}">
                 <img src="https://gosyenpolinator.com/images/gosyen_logo.png" width="32" height="32" class="d-inline-block align-top" alt="Logo">
                 <span>Dashboard Psikologi IST</span>
             </a>
+            
+            @if ($role == 'admin')
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar" aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-3 gap-1">
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3 py-1.5" href="{{ route('dashboard.posisi') }}">Kelola Posisi</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3 py-1.5" href="{{ route('dashboard.sesi1') }}">Sesi 1 (WA)</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3 py-1.5" href="{{ route('dashboard.sesi2') }}">Sesi 2 (AN)</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3 py-1.5" href="{{ route('dashboard.sesi3') }}">Sesi 3 (ZR)</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3 py-1.5" href="{{ route('dashboard.sesi4') }}">Sesi 4 (FA)</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-semibold px-3 py-1.5" href="{{ route('dashboard.sesi5') }}">Sesi 5 (Essay)</a></li>
+                </ul>
+            </div>
+            @endif
             
             <!-- Navbar Role Visibility Fix -->
             <div class="d-flex align-items-center gap-3">
@@ -373,6 +394,9 @@
                             </td>
                             <td class="text-center">
                                 <div class="d-flex gap-1 justify-content-center">
+                                    <a href="{{ route('dashboard.peserta.edit', $p->id_peserta) }}" class="btn-pdf" style="background-color: #f59e0b; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.3);">
+                                        ✏️ Edit
+                                    </a>
                                     <a href="{{ route('dashboard.pdf', $p->id_peserta) }}" target="_blank" class="btn-pdf">
                                         📄 PDF
                                     </a>
@@ -395,16 +419,97 @@
         </div>
 
         @elseif ($role == 'admin')
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="card-custom">
-                    <h5 class="text-white mb-3 fw-bold">🔐 Pengaturan Keamanan</h5>
-                    <p class="text-muted small">Anda dapat mengganti PIN akses yang digunakan oleh Tim Psikolog di sini.</p>
+        <div class="row g-4">
+            <!-- Left Side: CRUD Menu Grid -->
+            <div class="col-md-8">
+                <div class="card-custom h-100">
+                    <h5 class="text-white mb-4 fw-bold border-bottom pb-2" style="border-color: rgba(255,255,255,0.08) !important;">🛠️ Panel Pengelolaan Portal Psikotes</h5>
+                    <p class="text-muted small mb-4">Silakan pilih sub-modul yang ingin Anda kelola:</p>
+                    
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.posisi') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">💼</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Kelola Posisi</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Tambah/edit posisi pelamar</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.sesi1') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">📝</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Sesi 1 (WA)</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Wortauswahl (Pilihan Kata)</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.sesi2') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">🤝</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Sesi 2 (AN)</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Analogi (Hubungan Kata)</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.sesi3') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">🔢</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Sesi 3 (ZR)</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Zahlenreihen (Deret Angka)</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.sesi4') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(139, 92, 246, 0.1); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">🎨</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Sesi 4 (FA)</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Figurenauswahl (Kunci Gambar)</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.sesi5') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(236, 72, 153, 0.1); border: 1px solid rgba(236, 72, 153, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">📄</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Sesi 5 (Essay)</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Esai & Studi Kasus Posisi</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <a href="{{ route('dashboard.rubrik') }}" class="btn w-100 p-4 text-start d-flex align-items-center gap-3" style="background-color: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 16px; transition: all 0.2s ease; text-decoration: none;">
+                                <div class="fs-1">📋</div>
+                                <div>
+                                    <h6 class="text-white fw-bold mb-1">Rubrik Penilaian</h6>
+                                    <span class="text-muted" style="font-size: 12px;">Panduan Penilaian Sesi 5</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Security & Configuration -->
+            <div class="col-md-4">
+                <div class="card-custom h-100">
+                    <h5 class="text-white mb-3 fw-bold border-bottom pb-2" style="border-color: rgba(255,255,255,0.08) !important;">🔐 Keamanan & PIN</h5>
+                    <p class="text-muted small mb-4">Anda dapat mengganti PIN akses yang digunakan oleh Tim Psikolog di sini.</p>
                     
                     <form action="{{ route('dashboard.pin') }}" method="POST">
                         @csrf
                         <div class="mb-4">
-                            <label class="form-label text-muted fw-semibold" style="font-size: 14px;">Masukkan PIN Psikolog Baru</label>
+                            <label class="form-label text-muted fw-semibold" style="font-size: 13px;">Masukkan PIN Psikolog Baru</label>
                             <input type="text" name="pin_baru" class="form-control form-control-custom text-center" required placeholder="123456" autofocus style="letter-spacing: 2px;">
                         </div>
                         <button type="submit" class="btn btn-filter w-100 fw-bold">Simpan PIN Baru</button>

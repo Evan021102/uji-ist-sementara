@@ -29,7 +29,8 @@ class UjianController extends Controller
             session()->forget('jawab_sesi6_q' . $i);
         }
 
-        return view('ujian.index');
+        $posisiList = \App\Models\Posisi::orderBy('nama', 'asc')->get();
+        return view('ujian.index', compact('posisiList'));
     }
 
     public function start(Request $request)
@@ -48,7 +49,7 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                 'posisi' => 'required|string|in:ACCOUNT PAYABLE (AP),ACCOUNT RECEIVABLE (AR),ACCOUNTING (A),ADMIN GUDANG (AG),Admin penjualan (SA),ADMIN PPIC (APP),ADMIN QC (AQC),ADMIN SCM (ASCM),DRIVER (DVR),General Affair (GA),HCP,HRD Payroll (HRP),HRD Recruitment (HRR),Job Planner (JPL),Kas kecil (KAS),Kepala Gudang (KG),Khusus,Logistik (LGT),MARKETING (M),PIC Audit Team,QUALITY CONTROL ANALIS (QCA),Sales (SLS),Sales Distribusi (SAD),Sales marketing (SMK),SCM-FG (SFG),STAFF ACCOUNTING & TAX (SAT),Staff Gudang,Staff Import (SIM),Staff legal (SLG),Staff Penjualan dan Digital Marketing,Staff purchasing (SPU),Staff Sales Executive (SSE),Staff sekretaris (SS),Supervisor Sales (SPVS),Utility (UTL)',
+                 'posisi' => 'required|string|exists:posisi,nama',
             ]);
         }
 
@@ -82,8 +83,8 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HCP', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
-            if (!in_array($posisi, $mainPositions)) {
+            $hasSesi5 = DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+            if (!$hasSesi5) {
                 return redirect()->route('ujian.simpan');
             }
         }
@@ -96,6 +97,17 @@ class UjianController extends Controller
         if (!session()->has('nama')) {
             return redirect()->route('ujian.index');
         }
+
+        if ($sesi < 1 || $sesi > 5) {
+            return redirect()->route('ujian.index');
+        }
+
+        // Fetch dynamic duration from database, fallback to standard values
+        $defaultDurations = [1 => 6, 2 => 7, 3 => 10, 4 => 7, 5 => 45];
+        $durasiMenit = DB::table('pengaturan')
+            ->where('key', "durasi_sesi{$sesi}")
+            ->value('value') ?? $defaultDurations[$sesi];
+        $durasi = (int)$durasiMenit * 60; // convert to seconds
 
         switch ($sesi) {
             case 1:
@@ -145,15 +157,15 @@ class UjianController extends Controller
                 }
 
                 $soal = session('soal_sesi2');
-                return view('ujian.sesi1', compact('soal'));
+                return view('ujian.sesi1', compact('soal', 'durasi'));
 
             case 2:
                 $soal = DB::table('bank_soal_sesi3')->orderBy('id_soal', 'asc')->get();
-                return view('ujian.sesi2', compact('soal'));
+                return view('ujian.sesi2', compact('soal', 'durasi'));
 
             case 3:
                 $soal = DB::table('bank_soal_sesi4')->orderBy('id_soal', 'asc')->get();
-                return view('ujian.sesi3', compact('soal'));
+                return view('ujian.sesi3', compact('soal', 'durasi'));
 
             case 4:
                 $soalSesi4 = [
@@ -168,16 +180,16 @@ class UjianController extends Controller
                     17 => "gambar/visual_reasoning/17.png", 18 => "gambar/visual_reasoning/18.png",
                     19 => "gambar/visual_reasoning/19.png", 20 => "gambar/visual_reasoning/20.png",
                 ];
-                return view('ujian.sesi4', compact('soalSesi4'));
+                return view('ujian.sesi4', compact('soalSesi4', 'durasi'));
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HCP', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
-                if (!in_array($posisi, $mainPositions)) {
+                $hasSesi5 = DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+                if (!$hasSesi5) {
                     return redirect()->route('ujian.simpan');
                 }
                 $soalSesi5 = $this->translateSesi5Array($this->getSoalSesi5($posisi), $posisi);
-                return view('ujian.sesi5', compact('soalSesi5', 'posisi'));
+                return view('ujian.sesi5', compact('soalSesi5', 'posisi', 'durasi'));
 
             default:
                 return redirect()->route('ujian.index');
@@ -241,8 +253,8 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['ACCOUNT PAYABLE (AP)', 'ACCOUNT RECEIVABLE (AR)', 'ACCOUNTING (A)', 'ADMIN GUDANG (AG)', 'Admin penjualan (SA)', 'ADMIN PPIC (APP)', 'ADMIN QC (AQC)', 'ADMIN SCM (ASCM)', 'DRIVER (DVR)', 'General Affair (GA)', 'HCP', 'HRD Payroll (HRP)', 'HRD Recruitment (HRR)', 'Job Planner (JPL)', 'Kas kecil (KAS)', 'Kepala Gudang (KG)', 'Khusus', 'Logistik (LGT)', 'MARKETING (M)', 'PIC Audit Team', 'QUALITY CONTROL ANALIS (QCA)', 'Sales (SLS)', 'Sales Distribusi (SAD)', 'Sales marketing (SMK)', 'SCM-FG (SFG)', 'STAFF ACCOUNTING & TAX (SAT)', 'Staff Gudang', 'Staff Import (SIM)', 'Staff legal (SLG)', 'Staff Penjualan dan Digital Marketing', 'Staff purchasing (SPU)', 'Staff Sales Executive (SSE)', 'Staff sekretaris (SS)', 'Supervisor Sales (SPVS)', 'Utility (UTL)'];
-                if (!in_array($posisi, $mainPositions)) {
+                $hasSesi5 = DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+                if (!$hasSesi5) {
                     return redirect()->route('ujian.simpan');
                 }
                 

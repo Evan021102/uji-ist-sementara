@@ -105,8 +105,8 @@
         document.getElementById('progressText').innerText = answered + '/' + totalSoal;
     }
 
-    // Timer countdown (6 menit)
-    let totalWaktu = 360;
+    // Timer countdown
+    let totalWaktu = {{ $durasi }};
     let timerInterval;
     function mulaiTimer() {
         timerInterval = setInterval(function() {

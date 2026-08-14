@@ -110,8 +110,8 @@
         document.getElementById('progressText').innerText = answered + '/' + totalSoal;
     }
 
-    // Timer countdown (10 menit = 600 detik)
-    let totalWaktu = 600;
+    // Timer countdown
+    let totalWaktu = {{ $durasi }};
     let timerInterval;
     function mulaiTimer() {
         timerInterval = setInterval(function() {
