@@ -83,7 +83,7 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $hasSesi5 = DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+            $hasSesi5 = \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5') && DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
             if (!$hasSesi5) {
                 return redirect()->route('ujian.simpan');
             }
@@ -184,7 +184,7 @@ class UjianController extends Controller
 
             case 5:
                 $posisi = session('posisi');
-                $hasSesi5 = DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+                $hasSesi5 = \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5') && DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
                 if (!$hasSesi5) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -253,7 +253,7 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $hasSesi5 = DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+                $hasSesi5 = \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5') && DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
                 if (!$hasSesi5) {
                     return redirect()->route('ujian.simpan');
                 }
@@ -359,6 +359,13 @@ class UjianController extends Controller
 
     public function getSoalSesi5($posisi)
     {
+        if (!\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            return [
+                'bagian_a' => [],
+                'bagian_b' => []
+            ];
+        }
+
         $rows = DB::table('bank_soal_sesi5')
             ->where('posisi', $posisi)
             ->orderBy('id', 'asc')

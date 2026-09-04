@@ -47,7 +47,11 @@
 @section('content')
 @php
     $posisi = session('posisi');
-    $isCustomPosisi = !\DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+    if (\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+        $isCustomPosisi = !\DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+    } else {
+        $isCustomPosisi = true;
+    }
 @endphp
 <div class="petunjuk-container">
     <h2 class="text-center fw-bold mb-4" style="color: #2b3452;">

@@ -14,7 +14,11 @@
 @section('content')
 @php
     $posisi = session('posisi');
-    $isCustomPosisi = !\DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+    if (\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+        $isCustomPosisi = !\DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+    } else {
+        $isCustomPosisi = true;
+    }
 @endphp
 <div class="main-wrapper">
     <div class="hero">

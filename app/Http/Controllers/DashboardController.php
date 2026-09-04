@@ -239,7 +239,9 @@ class DashboardController extends Controller
         $posisi->update(['nama' => $newNama]);
         
         // Cascade update in bank_soal_sesi5
-        DB::table('bank_soal_sesi5')->where('posisi', $oldNama)->update(['posisi' => $newNama]);
+        if (\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            DB::table('bank_soal_sesi5')->where('posisi', $oldNama)->update(['posisi' => $newNama]);
+        }
 
         return redirect()->back()->with('success', 'Nama posisi berhasil diperbarui!');
     }
@@ -553,7 +555,7 @@ class DashboardController extends Controller
         $posisiList = \App\Models\Posisi::orderBy('nama', 'asc')->get();
         
         $soalList = collect();
-        if (!empty($selectedPosisi)) {
+        if (!empty($selectedPosisi) && \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
             $soalList = DB::table('bank_soal_sesi5')
                 ->where('posisi', $selectedPosisi)
                 ->get();
@@ -574,6 +576,10 @@ class DashboardController extends Controller
         ]);
 
         $pertanyaanJson = json_encode(array_values(array_filter($request->pertanyaan)));
+
+        if (!\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            return redirect()->back()->with('error', 'Tabel bank_soal_sesi5 tidak ditemukan di database.');
+        }
 
         if ($request->tipe === 'essay') {
             if ($request->filled('id')) {
@@ -626,6 +632,10 @@ class DashboardController extends Controller
             'pertanyaan' => 'required|array',
         ]);
 
+        if (!\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            return redirect()->back()->with('error', 'Tabel bank_soal_sesi5 tidak ditemukan di database.');
+        }
+
         $pertanyaanJson = json_encode(array_values(array_filter($request->pertanyaan)));
         
         $data = [
@@ -649,7 +659,9 @@ class DashboardController extends Controller
         $this->checkAdmin();
         $posisi = $request->input('posisi', '');
         
-        DB::table('bank_soal_sesi5')->where('id', $id)->delete();
+        if (\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            DB::table('bank_soal_sesi5')->where('id', $id)->delete();
+        }
 
         return redirect()->back()->with('success', 'Soal berhasil dihapus!');
     }
@@ -670,21 +682,23 @@ class DashboardController extends Controller
             'bagian_b' => []
         ];
         
-        $rowsSesi5 = DB::table('bank_soal_sesi5')
-            ->where('posisi', $peserta->posisi)
-            ->orderBy('id', 'asc')
-            ->get();
-            
-        foreach ($rowsSesi5 as $row) {
-            $pertanyaan = json_decode($row->pertanyaan, true) ?: [];
-            if ($row->tipe === 'essay') {
-                $soalSesi5['bagian_a'] = array_merge($soalSesi5['bagian_a'], $pertanyaan);
-            } else {
-                $soalSesi5['bagian_b'][] = [
-                    'judul' => $row->judul,
-                    'deskripsi' => $row->deskripsi,
-                    'pertanyaan' => $pertanyaan
-                ];
+        if (\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            $rowsSesi5 = DB::table('bank_soal_sesi5')
+                ->where('posisi', $peserta->posisi)
+                ->orderBy('id', 'asc')
+                ->get();
+                
+            foreach ($rowsSesi5 as $row) {
+                $pertanyaan = json_decode($row->pertanyaan, true) ?: [];
+                if ($row->tipe === 'essay') {
+                    $soalSesi5['bagian_a'] = array_merge($soalSesi5['bagian_a'], $pertanyaan);
+                } else {
+                    $soalSesi5['bagian_b'][] = [
+                        'judul' => $row->judul,
+                        'deskripsi' => $row->deskripsi,
+                        'pertanyaan' => $pertanyaan
+                    ];
+                }
             }
         }
 
