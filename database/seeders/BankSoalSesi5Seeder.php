@@ -83,7 +83,7 @@ class BankSoalSesi5Seeder extends Seeder
         $adminMarketingSosmed = [
             [
                 'judul' => 'Studi Kasus 1: Konten Banyak, Engagement Menurun (Fokus: Analisis Sosial Media & Riset Audiens)',
-                'deskripsi' => "Dalam 3 bulan terakhir, akun sosial media perusahaan rutin mengunggah konten sebanyak 4–5 kali dalam seminggu (total ~50 konten/bulan). Meskipun konsisten, performa akun mengalami penurunan signifikan:\n● Engagement Rate (ER): Anjlok dari 3,8% menjadi 0,9%.\n● Keterlibatan Audiens: Rata-rata likes turun 60%, comments turun 75%, dan shares/saves merosot hingga 80%.\n● Pertumbuhan Audiens: Penambahan followers baru minus (net gain -150 followers/bulan akibat unfollow).\n● Jangkauan vs Interaksi: Reach harian relatif stabil (rata-rata 15.000–20.000 impressions per konten viral/Reels), namun conversion rate ke interaksi maupun leads hampir 0% (kurang dari 5 DMs atau klik link bio per bulan).",
+                'deskripsi' => "Dalam 3 bulan terakhir, akun sosial media perusahaan rutin mengunggah konten sebanyak 4–5 kali dalam seminggu (total ~50 konten/bulan). Meskipun konsisten, performa akun mengalami penurunan signifikan:<br>• <strong>Engagement Rate (ER):</strong> Anjlok dari 3,8% menjadi 0,9%.<br>• <strong>Keterlibatan Audiens:</strong> Rata-rata likes turun 60%, comments turun 75%, dan shares/saves merosot hingga 80%.<br>• <strong>Pertumbuhan Audiens:</strong> Penambahan followers baru minus (net gain -150 followers/bulan akibat unfollow).<br>• <strong>Jangkauan vs Interaksi:</strong> Reach harian relatif stabil (rata-rata 15.000–20.000 impressions per konten viral/Reels), namun conversion rate ke interaksi maupun leads hampir 0% (kurang dari 5 DMs atau klik link bio per bulan).",
                 'pertanyaan' => [
                     '1. Berdasarkan kondisi tersebut, menurut Anda apa kemungkinan penyebab engagement sosial media menurun meskipun perusahaan tetap rutin membuat konten?',
                     '2. Data apa saja yang harus Anda kumpulkan dan analisis untuk mengetahui jenis konten, waktu posting, serta karakteristik audiens yang paling efektif?',
@@ -213,6 +213,14 @@ class BankSoalSesi5Seeder extends Seeder
                         'pertanyaan' => json_encode($pertanyaanArr)
                     ];
                 }
+            }
+        }
+
+        // Ensure all unique positions exist in `posisi` table so they appear in Admin Dashboard dropdown
+        $uniquePosisi = array_unique(array_column($dataToInsert, 'posisi'));
+        foreach ($uniquePosisi as $pNama) {
+            if ($pNama) {
+                DB::table('posisi')->updateOrInsert(['nama' => $pNama], ['nama' => $pNama]);
             }
         }
 
