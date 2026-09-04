@@ -22,6 +22,7 @@ return new class extends Migration
             'ACCOUNT RECEIVABLE (AR)',
             'ACCOUNTING (A)',
             'ADMIN GUDANG (AG)',
+            'ADMIN MARKETING & SOSMED',
             'Admin penjualan (SA)',
             'ADMIN PPIC (APP)',
             'ADMIN QC (AQC)',

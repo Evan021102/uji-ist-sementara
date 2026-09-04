@@ -109,5 +109,8 @@ class DatabaseSeeder extends Seeder
             ['min_skor' => 105, 'max_skor' => 119, 'deskripsi' => 'Tinggi / Rata-rata Atas'],
             ['min_skor' => 120, 'max_skor' => 200, 'deskripsi' => 'Sangat Tinggi / Superior'],
         ]);
+
+        // 8. Seed Bank Soal Sesi 5 (Studi Kasus & Esai untuk seluruh posisi)
+        $this->call(BankSoalSesi5Seeder::class);
     }
 }
