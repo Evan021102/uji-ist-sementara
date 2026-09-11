@@ -12,20 +12,12 @@ class BankSoalSesi5Seeder extends Seeder
      */
     public function run(): void
     {
-        if (DB::getDriverName() === 'mysql') {
-            DB::statement('SET FOREIGN_KEY_CHECKS=0;');
-            DB::table('bank_soal_sesi5')->truncate();
-            DB::statement('SET FOREIGN_KEY_CHECKS=1;');
-        } else {
-            DB::table('bank_soal_sesi5')->delete();
-        }
-
-        $enPath = base_path('lang/en.json');
+        $idSesi5Path = base_path('lang/id_sesi5.json');
         $enSesi5Path = base_path('lang/en_sesi5.json');
 
-        $en = file_exists($enPath) ? json_decode(file_get_contents($enPath), true) : [];
-        $enSesi5 = file_exists($enSesi5Path) ? json_decode(file_get_contents($enSesi5Path), true) : [];
-        $keys = array_keys($en);
+        $sesi5Data = file_exists($idSesi5Path) 
+            ? json_decode(file_get_contents($idSesi5Path), true) 
+            : (file_exists($enSesi5Path) ? json_decode(file_get_contents($enSesi5Path), true) : []);
 
         $dataToInsert = [];
 
@@ -138,49 +130,10 @@ class BankSoalSesi5Seeder extends Seeder
             ];
         }
 
-        // Helper to parse 25-item blocks from en.json
-        $parseBlock = function ($keysArray, $startIndex, $posisi) {
-            $rows = [];
-            for ($i = 0; $i < 5; $i++) {
-                $baseIdx = $startIndex + ($i * 5);
-                $judul = $keysArray[$baseIdx] ?? '';
-                $deskripsi = $keysArray[$baseIdx + 1] ?? '';
-                $q1 = $keysArray[$baseIdx + 2] ?? '';
-                $q2 = $keysArray[$baseIdx + 3] ?? '';
-                $q3 = $keysArray[$baseIdx + 4] ?? '';
+        // 3. Process positions from lang/id_sesi5.json
+        $alreadyAdded = ['IT STAFF', 'ADMIN MARKETING & SOSMED'];
 
-                $rows[] = [
-                    'posisi' => $posisi,
-                    'tipe' => 'studi_kasus',
-                    'judul' => $judul,
-                    'deskripsi' => $deskripsi,
-                    'pertanyaan' => json_encode([$q1, $q2, $q3])
-                ];
-            }
-            return $rows;
-        };
-
-        // 3. Original Indonesian Case Studies from lang/en.json
-        $indoPosisiMap = [
-            'ACCOUNTING (A)' => 341,
-            'ACCOUNT PAYABLE (AP)' => 366,
-            'ACCOUNT RECEIVABLE (AR)' => 391,
-            'Admin penjualan (SA)' => 416
-        ];
-
-        foreach ($indoPosisiMap as $pos => $startIdx) {
-            if (count($keys) >= $startIdx + 25) {
-                $parsed = $parseBlock($keys, $startIdx, $pos);
-                foreach ($parsed as $pRow) {
-                    $dataToInsert[] = $pRow;
-                }
-            }
-        }
-
-        // 4. All remaining positions from lang/en_sesi5.json
-        $alreadyAdded = array_merge(['IT STAFF', 'ADMIN MARKETING & SOSMED'], array_keys($indoPosisiMap));
-
-        foreach ($enSesi5 as $posisi => $content) {
+        foreach ($sesi5Data as $posisi => $content) {
             if (in_array($posisi, $alreadyAdded)) {
                 continue;
             }
@@ -216,7 +169,7 @@ class BankSoalSesi5Seeder extends Seeder
             }
         }
 
-        // Ensure all unique positions exist in `posisi` table so they appear in Admin Dashboard dropdown
+        // Ensure all unique positions exist in `posisi` table without deleting custom positions created in production
         $uniquePosisi = array_unique(array_column($dataToInsert, 'posisi'));
         foreach ($uniquePosisi as $pNama) {
             if ($pNama) {
@@ -224,9 +177,21 @@ class BankSoalSesi5Seeder extends Seeder
             }
         }
 
-        // Insert into database in chunks to prevent packet size / parameter limit issues
-        foreach (array_chunk($dataToInsert, 50) as $chunk) {
-            DB::table('bank_soal_sesi5')->insert($chunk);
-        }
+        // Safely update or insert into bank_soal_sesi5 so custom positions/questions on production are NOT deleted
+        DB::transaction(function() use ($dataToInsert) {
+            foreach ($dataToInsert as $row) {
+                DB::table('bank_soal_sesi5')->updateOrInsert(
+                    [
+                        'posisi' => $row['posisi'],
+                        'tipe' => $row['tipe'],
+                        'judul' => $row['judul']
+                    ],
+                    [
+                        'deskripsi' => $row['deskripsi'],
+                        'pertanyaan' => $row['pertanyaan']
+                    ]
+                );
+            }
+        });
     }
 }
