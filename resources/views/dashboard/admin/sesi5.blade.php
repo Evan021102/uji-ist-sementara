@@ -152,51 +152,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Modal Edit Case Study -->
-                <div class="modal fade" id="editCaseModal{{ $case->id }}" tabindex="-1" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                        <div class="modal-content text-start" style="background-color: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px;">
-                            <div class="modal-header border-bottom border-secondary">
-                                <h5 class="modal-title text-white fw-bold">✏️ Edit Studi Kasus</h5>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <form action="{{ route('dashboard.sesi5.update', $case->id) }}" method="POST">
-                                @csrf
-                                <input type="hidden" name="posisi" value="{{ $selectedPosisi }}">
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label class="form-label text-muted fw-semibold">Judul Studi Kasus</label>
-                                        <input type="text" name="judul" class="form-control form-control-custom" required value="{{ $case->judul }}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label text-muted fw-semibold">Deskripsi / Konteks Kasus</label>
-                                        <textarea name="deskripsi" class="form-control form-control-custom" required rows="5">{{ $case->deskripsi }}</textarea>
-                                    </div>
-                                    
-                                    <div class="border-top pt-3 border-secondary">
-                                        <h6 class="text-white fw-bold mb-3">❓ Sub-Pertanyaan Analisis</h6>
-                                        <div id="edit-case-inputs{{ $case->id }}">
-                                            @foreach($subQ as $subIdx => $subText)
-                                            <div class="mb-2 d-flex gap-2 align-items-center sub-q-row">
-                                                <span class="text-white fw-bold text-center" style="width: 25px;">Q{{ $subIdx + 1 }}.</span>
-                                                <input type="text" name="pertanyaan[]" class="form-control form-control-custom" required value="{{ $subText }}">
-                                                <button type="button" class="btn btn-custom btn-custom-danger py-2 px-3" onclick="this.parentElement.remove(); renumberSubQ({{ $case->id }});">Hapus</button>
-                                            </div>
-                                            @endforeach
-                                        </div>
-                                        <button type="button" class="btn btn-sm btn-custom btn-custom-secondary mt-2 fw-bold" onclick="addEditSubQ({{ $case->id }})">➕ Tambah Sub-Pertanyaan</button>
-                                    </div>
-                                </div>
-                                <div class="modal-footer border-top border-secondary">
-                                    <button type="button" class="btn btn-custom btn-custom-secondary" data-bs-dismiss="modal">Batal</button>
-                                    <button type="submit" class="btn btn-custom btn-custom-blue">Simpan Perubahan</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
                 @empty
                 <div class="col-12">
                     <div class="alert alert-secondary py-4 text-center text-muted">
@@ -209,26 +164,75 @@
     </div>
 </div>
 
-<!-- Modal Tambah Case Study -->
-<div class="modal fade" id="addCaseModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content text-start" style="background-color: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px;">
-            <div class="modal-header border-bottom border-secondary">
-                <h5 class="modal-title text-white fw-bold">➕ Tambah Studi Kasus Baru</h5>
+<!-- Modal Edit Case Study Loop (Ditempatkan di luar card-custom agar tidak terpengaruh stacking context / backdrop-filter) -->
+@foreach($caseSoal as $idx => $case)
+@php
+    $subQ = json_decode($case->pertanyaan, true) ?: [];
+@endphp
+<div class="modal fade" id="editCaseModal{{ $case->id }}" tabindex="-1" aria-labelledby="editCaseModalLabel{{ $case->id }}" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg my-3" style="max-width: min(720px, calc(100vw - 32px));">
+        <div class="modal-content text-start" style="background-color: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; max-height: calc(100dvh - 32px); box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+            <div class="modal-header border-bottom border-secondary py-3 px-4 flex-shrink-0">
+                <h5 class="modal-title text-white fw-bold" id="editCaseModalLabel{{ $case->id }}">✏️ Edit Studi Kasus</h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ route('dashboard.sesi5.store') }}" method="POST">
+            <form action="{{ route('dashboard.sesi5.update', $case->id) }}" method="POST" class="d-flex flex-column flex-grow-1 overflow-hidden m-0">
+                @csrf
+                <input type="hidden" name="posisi" value="{{ $selectedPosisi }}">
+                <div class="modal-body p-4 overflow-y-auto" style="scrollbar-width: thin; scrollbar-color: #475569 #1e293b;">
+                    <div class="mb-3">
+                        <label class="form-label text-muted fw-semibold">Judul Studi Kasus</label>
+                        <input type="text" name="judul" class="form-control form-control-custom" required value="{{ $case->judul }}">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-muted fw-semibold">Deskripsi / Konteks Kasus</label>
+                        <textarea name="deskripsi" class="form-control form-control-custom" required rows="5" style="resize: vertical; min-height: 120px;">{{ $case->deskripsi }}</textarea>
+                    </div>
+                    
+                    <div class="border-top pt-3 border-secondary">
+                        <h6 class="text-white fw-bold mb-3">❓ Sub-Pertanyaan Analisis</h6>
+                        <div id="edit-case-inputs{{ $case->id }}">
+                            @foreach($subQ as $subIdx => $subText)
+                            <div class="mb-2 d-flex gap-2 align-items-center sub-q-row">
+                                <span class="text-white fw-bold text-center" style="width: 25px;">Q{{ $subIdx + 1 }}.</span>
+                                <input type="text" name="pertanyaan[]" class="form-control form-control-custom" required value="{{ $subText }}">
+                                <button type="button" class="btn btn-custom btn-custom-danger py-2 px-3 flex-shrink-0" onclick="this.parentElement.remove(); renumberSubQ({{ $case->id }});">Hapus</button>
+                            </div>
+                            @endforeach
+                        </div>
+                        <button type="button" class="btn btn-sm btn-custom btn-custom-secondary mt-2 fw-bold" onclick="addEditSubQ({{ $case->id }})">➕ Tambah Sub-Pertanyaan</button>
+                    </div>
+                </div>
+                <div class="modal-footer border-top border-secondary py-3 px-4 flex-shrink-0">
+                    <button type="button" class="btn btn-custom btn-custom-secondary" data-bs-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-custom btn-custom-blue">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endforeach
+
+<!-- Modal Tambah Case Study (Ditempatkan di luar card-custom) -->
+<div class="modal fade" id="addCaseModal" tabindex="-1" aria-labelledby="addCaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg my-3" style="max-width: min(720px, calc(100vw - 32px));">
+        <div class="modal-content text-start" style="background-color: #0f172a; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; max-height: calc(100dvh - 32px); box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+            <div class="modal-header border-bottom border-secondary py-3 px-4 flex-shrink-0">
+                <h5 class="modal-title text-white fw-bold" id="addCaseModalLabel">➕ Tambah Studi Kasus Baru</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="{{ route('dashboard.sesi5.store') }}" method="POST" class="d-flex flex-column flex-grow-1 overflow-hidden m-0">
                 @csrf
                 <input type="hidden" name="posisi" value="{{ $selectedPosisi }}">
                 <input type="hidden" name="tipe" value="studi_kasus">
-                <div class="modal-body">
+                <div class="modal-body p-4 overflow-y-auto" style="scrollbar-width: thin; scrollbar-color: #475569 #1e293b;">
                     <div class="mb-3">
                         <label class="form-label text-muted fw-semibold">Judul Studi Kasus</label>
                         <input type="text" name="judul" class="form-control form-control-custom" required placeholder="Contoh: Studi Kasus 1 — Kebocoran AC Ruang Server">
                     </div>
                     <div class="mb-3">
                         <label class="form-label text-muted fw-semibold">Deskripsi / Konteks Kasus</label>
-                        <textarea name="deskripsi" class="form-control form-control-custom" required rows="5" placeholder="Tuliskan cerita kasus/kejadian yang harus dianalisis oleh kandidat..."></textarea>
+                        <textarea name="deskripsi" class="form-control form-control-custom" required rows="5" placeholder="Tuliskan cerita kasus/kejadian yang harus dianalisis oleh kandidat..." style="resize: vertical; min-height: 120px;"></textarea>
                     </div>
                     
                     <div class="border-top pt-3 border-secondary">
@@ -237,13 +241,13 @@
                             <div class="mb-2 d-flex gap-2 align-items-center add-sub-q-row">
                                 <span class="text-white fw-bold text-center" style="width: 25px;">Q1.</span>
                                 <input type="text" name="pertanyaan[]" class="form-control form-control-custom" required placeholder="Masukkan pertanyaan analisis ke-1...">
-                                <button type="button" class="btn btn-custom btn-custom-danger py-2 px-3" onclick="this.parentElement.remove(); renumberAddSubQ();">Hapus</button>
+                                <button type="button" class="btn btn-custom btn-custom-danger py-2 px-3 flex-shrink-0" onclick="this.parentElement.remove(); renumberAddSubQ();">Hapus</button>
                             </div>
                         </div>
                         <button type="button" class="btn btn-sm btn-custom btn-custom-secondary mt-2 fw-bold" onclick="addAddSubQ()">➕ Tambah Sub-Pertanyaan</button>
                     </div>
                 </div>
-                <div class="modal-footer border-top border-secondary">
+                <div class="modal-footer border-top border-secondary py-3 px-4 flex-shrink-0">
                     <button type="button" class="btn btn-custom btn-custom-secondary" data-bs-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-custom btn-custom-emerald">Simpan Studi Kasus</button>
                 </div>
