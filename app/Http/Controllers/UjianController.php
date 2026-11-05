@@ -16,7 +16,7 @@ class UjianController extends Controller
     public function index()
     {
         // Clear old sessions when starting fresh
-        session()->forget(['nama', 'posisi', 'total_pelanggaran', 'soal_sesi2']);
+        session()->forget(['nama', 'posisi', 'perusahaan', 'total_pelanggaran', 'soal_sesi2']);
         for ($i = 1; $i <= 20; $i++) {
             session()->forget([
                 'jawab_sesi2_q' . $i,
@@ -29,7 +29,8 @@ class UjianController extends Controller
             session()->forget('jawab_sesi6_q' . $i);
         }
 
-        return view('ujian.index');
+        $posisiList = \App\Models\Posisi::orderBy('nama', 'asc')->get();
+        return view('ujian.index', compact('posisiList'));
     }
 
     public function start(Request $request)
@@ -37,6 +38,7 @@ class UjianController extends Controller
         $request->validate([
             'nama' => 'required|string|max:150',
             'posisi' => 'required|string',
+            'perusahaan' => 'required|string',
         ]);
 
         $posisiVal = $request->posisi;
@@ -47,13 +49,22 @@ class UjianController extends Controller
             $posisiVal = $request->posisi_lainnya;
         } else {
             $request->validate([
-                'posisi' => 'required|string|in:Admin penjualan (SA),ACCOUNTING (A),ACCOUNT RECEIVABLE [AR],ACCOUNT PAYABLE [AP]',
+                 'posisi' => 'required|string|exists:posisi,nama',
             ]);
+        }
+
+        $perusahaanVal = $request->perusahaan;
+        if ($perusahaanVal === 'Lainnya') {
+            $request->validate([
+                'perusahaan_lainnya' => 'required|string|max:150',
+            ]);
+            $perusahaanVal = $request->perusahaan_lainnya;
         }
 
         session([
             'nama' => $request->nama,
             'posisi' => $posisiVal,
+            'perusahaan' => $perusahaanVal,
             'total_pelanggaran' => 0
         ]);
 
@@ -72,8 +83,8 @@ class UjianController extends Controller
 
         if ($sesi == 5) {
             $posisi = session('posisi');
-            $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
-            if (!in_array($posisi, $mainPositions)) {
+            $hasSesi5 = \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5') && DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+            if (!$hasSesi5) {
                 return redirect()->route('ujian.simpan');
             }
         }
@@ -86,6 +97,17 @@ class UjianController extends Controller
         if (!session()->has('nama')) {
             return redirect()->route('ujian.index');
         }
+
+        if ($sesi < 1 || $sesi > 5) {
+            return redirect()->route('ujian.index');
+        }
+
+        // Fetch dynamic duration from database, fallback to standard values
+        $defaultDurations = [1 => 6, 2 => 7, 3 => 10, 4 => 7, 5 => 45];
+        $durasiMenit = DB::table('pengaturan')
+            ->where('key', "durasi_sesi{$sesi}")
+            ->value('value') ?? $defaultDurations[$sesi];
+        $durasi = (int)$durasiMenit * 60; // convert to seconds
 
         switch ($sesi) {
             case 1:
@@ -135,15 +157,15 @@ class UjianController extends Controller
                 }
 
                 $soal = session('soal_sesi2');
-                return view('ujian.sesi1', compact('soal'));
+                return view('ujian.sesi1', compact('soal', 'durasi'));
 
             case 2:
                 $soal = DB::table('bank_soal_sesi3')->orderBy('id_soal', 'asc')->get();
-                return view('ujian.sesi2', compact('soal'));
+                return view('ujian.sesi2', compact('soal', 'durasi'));
 
             case 3:
                 $soal = DB::table('bank_soal_sesi4')->orderBy('id_soal', 'asc')->get();
-                return view('ujian.sesi3', compact('soal'));
+                return view('ujian.sesi3', compact('soal', 'durasi'));
 
             case 4:
                 $soalSesi4 = [
@@ -158,16 +180,16 @@ class UjianController extends Controller
                     17 => "gambar/visual_reasoning/17.png", 18 => "gambar/visual_reasoning/18.png",
                     19 => "gambar/visual_reasoning/19.png", 20 => "gambar/visual_reasoning/20.png",
                 ];
-                return view('ujian.sesi4', compact('soalSesi4'));
+                return view('ujian.sesi4', compact('soalSesi4', 'durasi'));
 
             case 5:
                 $posisi = session('posisi');
-                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
-                if (!in_array($posisi, $mainPositions)) {
+                $hasSesi5 = \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5') && DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+                if (!$hasSesi5) {
                     return redirect()->route('ujian.simpan');
                 }
-                $soalSesi5 = $this->getSoalSesi5($posisi);
-                return view('ujian.sesi5', compact('soalSesi5', 'posisi'));
+                $soalSesi5 = $this->translateSesi5Array($this->getSoalSesi5($posisi), $posisi);
+                return view('ujian.sesi5', compact('soalSesi5', 'posisi', 'durasi'));
 
             default:
                 return redirect()->route('ujian.index');
@@ -183,6 +205,20 @@ class UjianController extends Controller
         // Add violations
         $pelanggaran = (int)$request->input('pelanggaran_sesi', 0);
         session(['total_pelanggaran' => session('total_pelanggaran', 0) + $pelanggaran]);
+
+        // Immediate submission with 0 score upon 3 violations
+        if (session('total_pelanggaran') >= 3) {
+            for ($i = 1; $i <= 20; $i++) {
+                session(['jawab_sesi2_q' . $i => '']);
+                session(['jawab_sesi3_q' . $i => '']);
+                session(['jawab_sesi4_q' . $i => '']);
+                session(['jawab_sesi5_q' . $i => '']);
+            }
+            for ($i = 1; $i <= 30; $i++) {
+                session(['jawab_sesi6_q' . $i => '']);
+            }
+            return redirect()->route('ujian.simpan');
+        }
 
         switch ($sesi) {
             case 1:
@@ -217,8 +253,8 @@ class UjianController extends Controller
                 }
                 
                 $posisi = session('posisi');
-                $mainPositions = ['Admin penjualan (SA)', 'ACCOUNTING (A)', 'ACCOUNT RECEIVABLE [AR]', 'ACCOUNT PAYABLE [AP]'];
-                if (!in_array($posisi, $mainPositions)) {
+                $hasSesi5 = \Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5') && DB::table('bank_soal_sesi5')->where('posisi', $posisi)->exists();
+                if (!$hasSesi5) {
                     return redirect()->route('ujian.simpan');
                 }
                 
@@ -247,6 +283,7 @@ class UjianController extends Controller
             $peserta = PesertaUji::create([
                 'nama' => session('nama'),
                 'posisi' => session('posisi'),
+                'perusahaan' => session('perusahaan', '-'),
                 'total_pelanggaran' => session('total_pelanggaran', 0),
             ]);
 
@@ -292,7 +329,7 @@ class UjianController extends Controller
             $nama = session('nama');
             // Flush session
             session()->forget([
-                'nama', 'posisi', 'total_pelanggaran', 'soal_sesi2'
+                'nama', 'posisi', 'perusahaan', 'total_pelanggaran', 'soal_sesi2'
             ]);
             for ($i = 1; $i <= 20; $i++) {
                 session()->forget([
@@ -320,225 +357,67 @@ class UjianController extends Controller
         }
     }
 
-    private function getSoalSesi5($posisi)
+    public function getSoalSesi5($posisi)
     {
-        switch ($posisi) {
-            case 'ACCOUNT PAYABLE [AP]':
-                return [
-                    'bagian_a' => [
-                        1 => "Apa perbedaan pencatatan pembelian tunai dan pembelian kredit dari sisi akuntansi? Jelaskan alur proses transaksi pembelian kredit hingga menjadi pembayaran kas dan muncul dalam laporan keuangan.",
-                        2 => "Apa yang dimaksud dengan accrued expense? Mengapa akun ini penting pada saat closing akhir bulan?",
-                        3 => "Jelaskan apa yang dimaksud dengan cut-off expense. Mengapa cut-off sangat krusial dalam proses AP dan audit?",
-                        4 => "Apa itu 3-way matching dalam proses AP? Mengapa prosedur ini penting dalam sistem pengendalian internal?",
-                        5 => "Jelaskan perbedaan antara utang usaha (account payable) dan accrued expense. Bagaimana dampaknya jika salah klasifikasi?"
-                    ],
-                    'bagian_b' => [
-                        1 => [
-                            'judul' => "Studi Kasus 1 — Invoice Datang Setelah Tutup Buku",
-                            'deskripsi' => "Pada tanggal 28 Desember, perusahaan menerima barang dari vendor senilai Rp 900.000.000. Barang sudah diterima dan digunakan. Invoice baru diterima tanggal 10 Januari tahun berikutnya. Saat closing 31 Desember, belum ada pencatatan atas transaksi tersebut.",
-                            'pertanyaan' => [
-                                1 => "Apa isu akuntansi dalam kasus ini?",
-                                2 => "Apa dampaknya terhadap laporan keuangan jika tidak dicatat?",
-                                3 => "Jurnal apa yang harus dibuat pada 31 Desember?",
-                                4 => "Apa prosedur kontrol yang seharusnya dilakukan untuk mencegah hal ini terlewat?"
-                            ]
-                        ],
-                        2 => [
-                            'judul' => "Studi Kasus 2 — Pembayaran Ganda ke Vendor",
-                            'deskripsi' => "Perusahaan secara tidak sengaja membayar satu invoice sebesar Rp 350.000.000 sebanyak dua kali. Kesalahan baru diketahui satu bulan kemudian.",
-                            'pertanyaan' => [
-                                1 => "Apa dampaknya terhadap laporan keuangan?",
-                                2 => "Langkah investigasi yang harus dilakukan?",
-                                3 => "Bagaimana perlakuan akuntansinya?",
-                                4 => "Apa kontrol internal yang perlu diperkuat?"
-                            ]
-                        ],
-                        3 => [
-                            'judul' => "Studi Kasus 3 — Selisih antara PO, GRN, dan Invoice",
-                            'deskripsi' => "Purchase Order menunjukkan harga Rp 120.000 per unit untuk 5.000 unit. GRN mencatat penerimaan 5.000 unit. Namun invoice vendor mencantumkan harga Rp 135.000 per unit.",
-                            'pertanyaan' => [
-                                1 => "Apa risiko jika invoice langsung diproses dan dibayar?",
-                                2 => "Apa langkah yang harus dilakukan AP?",
-                                3 => "Apakah boleh tetap mencatat utang sebesar nilai invoice? Jelaskan alasannya.",
-                                4 => "Bagaimana dampaknya terhadap laporan laba rugi?"
-                            ]
-                        ],
-                        4 => [
-                            'judul' => "Studi Kasus 4 — Utang Lama Tidak Diklaim Vendor",
-                            'deskripsi' => "Terdapat saldo utang usaha Rp 780.000.000 yang sudah berumur lebih dari 2 tahun. Vendor tidak pernah menagih kembali dan tidak ada komunikasi lanjutan.",
-                            'pertanyaan' => [
-                                1 => "Apa analisa Anda terhadap saldo ini?",
-                                2 => "Apakah utang boleh dihapus? Dalam kondisi apa?",
-                                3 => "Apa risiko salah saji jika tetap dibiarkan?",
-                                4 => "Apa langkah yang harus dilakukan sebelum mengambil keputusan?"
-                            ]
-                        ]
-                    ]
-                ];
-
-            case 'ACCOUNT RECEIVABLE [AR]':
-                return [
-                    'bagian_a' => [
-                        1 => "Apa perbedaan antara penjualan kredit dan penjualan tunai dari sisi pencatatan akuntansi? Jelaskan alur proses transaksi penjualan kredit hingga menjadi penerimaan kas dan muncul dalam laporan keuangan.",
-                        2 => "Jelaskan apa yang dimaksud dengan aging schedule piutang. Berapa lama aging piutang di tentukan? Apa yang terjadi ketikang aging piutang melebihi waktu yang ditentukan?",
-                        3 => "Mengapa aging penting bagi manajemen dan apa dampaknya terhadap pencadangan piutang tak tertagih?",
-                        4 => "Apa yang dimaksud dengan cut-off revenue? Mengapa cut-off sangat krusial dalam proses AR dan audit?",
-                        5 => "Jelaskan perbedaan antara write-off piutang and pencadangan piutang. Apakah write-off mempengaruhi laba pada saat dilakukan? Jelaskan."
-                    ],
-                    'bagian_b' => [
-                        1 => [
-                            'judul' => "Studi Kasus 1 — Aging Piutang Memburuk",
-                            'deskripsi' => "Per 31 Desember, total piutang perusahaan Rp 12.000.000.000. Hasil aging menunjukkan:<br>• 0–30 hari: 55%<br>• 31–60 hari: 20%<br>• 61–90 hari: 10%<br>• 90 hari: 15%<br>Tahun sebelumnya, piutang >90 hari hanya 5%.",
-                            'pertanyaan' => [
-                                1 => "Apa analisa Anda terhadap kondisi ini?",
-                                2 => "Risiko apa yang muncul terhadap laporan keuangan?",
-                                3 => "Apakah perlu penyesuaian allowance? Jelaskan logikanya.",
-                                4 => "Tindakan apa yang harus dilakukan dari sisi AR & internal control?"
-                            ]
-                        ],
-                        2 => [
-                            'judul' => "Studi Kasus 2 — Selisih Konfirmasi Piutang Saat Audit",
-                            'deskripsi' => "Saat audit eksternal, salah satu customer besar mengonfirmasi saldo Rp 2.150.000.000. Namun saldo di buku perusahaan tercatat Rp 2.450.000.000. Selisih Rp 300.000.000 belum dapat dijelaskan.",
-                            'pertanyaan' => [
-                                1 => "Kemungkinan penyebab selisih tersebut?",
-                                2 => "Langkah investigasi yang Anda lakukan secara sistematis?",
-                                3 => "Jika ternyata ada salah pencatatan invoice, bagaimana jurnal koreksinya?",
-                                4 => "Apa dampaknya jika tidak ditemukan sebelum laporan audit terbit?"
-                            ]
-                        ],
-                        3 => [
-                            'judul' => "Studi Kasus 3 — Penjualan Dicatat, Customer Komplain Barang Rusak",
-                            'deskripsi' => "Divisi sales mencatat penjualan Rp 850.000.000 pada tanggal 28 Juni. Pada 3 Juli, customer mengajukan komplain karena 40% barang rusak dan meminta retur. AR belum melakukan penyesuaian hingga tutup buku Juni.",
-                            'pertanyaan' => [
-                                1 => "Apakah ini termasuk isu cut-off atau estimasi? Jelaskan.",
-                                2 => "Apa dampaknya terhadap revenue dan piutang per 30 Juni?",
-                                3 => "Jurnal penyesuaian apa yang seharusnya dibuat?",
-                                4 => "Bagaimana koordinasi yang tepat antara AR, Sales, dan Warehouse?"
-                            ]
-                        ],
-                        4 => [
-                            'judul' => "Studi Kasus 4 — Piutang Lama Tidak Tertagih 2 Tahun",
-                            'deskripsi' => "Terdapat saldo piutang Rp 1.200.000.000 dari customer lama sejak 2 tahun lalu. Belum pernah dilakukan write-off karena masih “diharapkan bayar”. Allowance yang tersedia hanya Rp 150.000.000.",
-                            'pertanyaan' => [
-                                1 => "Apakah ini melanggar prinsip akuntansi tertentu? Jelaskan.",
-                                2 => "Apa risiko salah saji pada laporan keuangan?",
-                                3 => "Apa adjustment yang seharusnya dilakukan?",
-                                4 => "Apakah ini termasuk prior period error jika material? Jelaskan analisis Anda."
-                            ]
-                        ]
-                    ]
-                ];
-
-            case 'ACCOUNTING (A)':
-                return [
-                    'bagian_a' => [
-                        1 => "Apa perbedaan antara jurnal umum, buku besar, dan neraca saldo? Jelaskan alur proses dari transaksi hingga menjadi laporan keuangan.",
-                        2 => "Jelaskan apa yang dimaksud dengan penyusutan (depreciation). Sebutkan minimal 2 metode penyusutan yang umum digunakan dan kapan masing-masing lebih tepat diterapkan.",
-                        3 => "Apa itu cut-off transaksi? Mengapa cut-off sangat penting untuk menghasilkan laporan keuangan yang akurat?",
-                        4 => "Jelaskan perbedaan antara akun aset lancar dan aset tidak lancar. Berikan contoh masing-masing.",
-                        5 => "Apa fungsi dari akun accrual dan prepaid (biaya dibayar dimuka)? Jelaskan cara pencatatannya."
-                    ],
-                    'bagian_b' => [
-                        1 => [
-                            'judul' => "Studi Kasus 1 — Selisih pada Rekonsiliasi Bank",
-                            'deskripsi' => "Pada saat rekonsiliasi bank bulan berjalan, terdapat selisih Rp 7.500.000 antara saldo buku perusahaan dan laporan bank.",
-                            'pertanyaan' => [
-                                1 => "Kemungkinan penyebab selisih tersebut?",
-                                2 => "Langkah yang Anda lakukan untuk menemukan sumber kesalahan?",
-                                3 => "Apa dampaknya jika selisih ini tidak ditemukan hingga akhir bulan?"
-                            ]
-                        ],
-                        2 => [
-                            'judul' => "Studi Kasus 2 — Kesalahan Pencatatan Aset Tetap",
-                            'deskripsi' => "Sebuah mesin dicatat sebagai inventaris kantor, padahal nilainya Rp 280 juta dan usia ekonomis 8 tahun.",
-                            'pertanyaan' => [
-                                1 => "Identifikasi kesalahan pencatatan.",
-                                2 => "Apa dampaknya pada laporan keuangan?",
-                                3 => "Apa penyesuaian (adjustment) yang harus dilakukan?"
-                            ]
-                        ],
-                        3 => [
-                            'judul' => "Studi Kasus 3 — Penjualan Sudah Dicatat, Barang Belum Dikirim",
-                            'deskripsi' => "Di bulan Maret, divisi sales mencatat penjualan, namun barang baru dikirim di bulan April.",
-                            'pertanyaan' => [
-                                1 => "Apa kesalahan ini disebut dalam akuntansi?",
-                                2 => "Bagaimana Anda memperbaikinya?",
-                                3 => "Apa efeknya terhadap laporan laba rugi dan neraca?"
-                            ]
-                        ],
-                        4 => [
-                            'judul' => "Studi Kasus 4 — Terjadi Perbedaan Stok Saat Stock Opname",
-                            'deskripsi' => "Hasil stock opname menunjukkan selisih negatif 3% dibanding catatan sistem. Warehouse mengatakan barang tidak hilang, hanya “tidak tercatat”.",
-                            'pertanyaan' => [
-                                1 => "Kemungkinan penyebab selisih ini dari sisi accounting?",
-                                2 => "Bagaimana prosedur investigasinya?",
-                                3 => "Apakah perlu dibuat jurnal penyesuaian? Jelaskan alasannya."
-                            ]
-                        ]
-                    ]
-                ];
-
-            case 'Admin penjualan (SA)':
-                return [
-                    'bagian_a' => [
-                        1 => "Apa perbedaan antara Sales Order (SO), Delivery Order (DO), dan Invoice? Jelaskan alur proses dari order customer hingga penagihan ke customer.",
-                        2 => "Apa yang dimaksud dengan cut-off penjualan? Mengapa cut-off penting dalam proses administrasi penjualan?",
-                        3 => "Apa fungsi dari dokumen administrasi penjualan (SO, DO, Invoice)? Mengapa kelengkapan dokumen sangat penting dalam proses penjualan?",
-                        4 => "Jelaskan perbedaan antara penjualan yang sudah diorder dengan penjualan yang sudah dikirim. Apa risiko jika keduanya tidak dibedakan dengan baik?",
-                        5 => "Apa yang dimaksud dengan retur penjualan? Bagaimana proses administrasi yang harus dilakukan ketika terjadi retur?"
-                    ],
-                    'bagian_b' => [
-                        1 => [
-                            'judul' => "Studi Kasus 1 — Order Sudah Dicatat, Barang Belum Dikirim",
-                            'deskripsi' => "Divisi sales menerima order dari customer senilai Rp 450.000.000 pada tanggal 29 Mei. Sales admin langsung membuat invoice pada hari yang sama. Namun barang baru dikirim tanggal 3 Juni.",
-                            'pertanyaan' => [
-                                1 => "Apa kesalahan dalam proses ini?",
-                                2 => "Apa dampaknya terhadap administrasi penjualan dan laporan?",
-                                3 => "Apa yang seharusnya dilakukan oleh admin penjualan?"
-                            ]
-                        ],
-                        2 => [
-                            'judul' => "Studi Kasus 2 — Selisih Data antara SO dan DO",
-                            'deskripsi' => "Sales Order mencatat pesanan 1.000 unit. Namun Delivery Order hanya mencatat pengiriman 920 unit. Invoice sudah dibuat berdasarkan 1.000 unit.",
-                            'pertanyaan' => [
-                                1 => "Apa potensi masalah dalam kasus ini?",
-                                2 => "Apa langkah yang harus dilakukan oleh admin penjualan?",
-                                3 => "Apa dampaknya jika tidak segera diperbaiki?"
-                            ]
-                        ],
-                        3 => [
-                            'judul' => "Studi Kasus 3 — Customer Komplain Barang Rusak",
-                            'deskripsi' => "Customer menerima barang senilai Rp 300.000.000. Setelah diterima, customer mengajukan komplain karena 25% barang rusak dan meminta retur. Namun admin belum memproses dokumen retur hingga akhir bulan.",
-                            'pertanyaan' => [
-                                1 => "Apa kesalahan dalam proses administrasi ini?",
-                                2 => "Apa dampaknya terhadap penagihan ke customer?",
-                                3 => "Dokumen apa saja yang harus dibuat untuk menangani kasus ini?"
-                            ]
-                        ],
-                        4 => [
-                            'judul' => "Studi Kasus 4 — Invoice Belum Dibayar Melebihi Jatuh Tempo",
-                            'deskripsi' => "Terdapat invoice customer sebesar Rp 620.000.000 yang sudah lewat jatuh tempo 45 hari. Tidak ada follow-up dari admin penjualan.",
-                            'pertanyaan' => [
-                                1 => "Apa risiko dari kondisi ini?",
-                                2 => "Apa tindakan yang seharusnya dilakukan oleh admin penjualan?",
-                                3 => "Bagaimana peran admin dalam membantu proses penagihan (collection)?"
-                            ]
-                        ],
-                        5 => [
-                            'judul' => "Studi Kasus 5 — Data Penjualan Tidak Sinkron dengan Gudang",
-                            'deskripsi' => "Data penjualan menunjukkan barang sudah terjual 2.000 unit. Namun data gudang menunjukkan pengeluaran hanya 1.850 unit.",
-                            'pertanyaan' => [
-                                1 => "Apa kemungkinan penyebab selisih ini?",
-                                2 => "Bagaimana langkah investigasi yang harus dilakukan?",
-                                3 => "Apa peran admin penjualan dalam memastikan data akurat?"
-                            ]
-                        ]
-                    ]
-                ];
-
-            default:
-                // Fallback for custom positions (Lainnya)
-                return $this->getSoalSesi5('ACCOUNTING (A)');
+        if (!\Illuminate\Support\Facades\Schema::hasTable('bank_soal_sesi5')) {
+            return [
+                'bagian_a' => [],
+                'bagian_b' => []
+            ];
         }
+
+        $rows = DB::table('bank_soal_sesi5')
+            ->where('posisi', $posisi)
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $soalSesi5 = [
+            'bagian_a' => [],
+            'bagian_b' => []
+        ];
+
+        $qCount = 1;
+        foreach ($rows as $row) {
+            $pertanyaan = json_decode($row->pertanyaan, true) ?: [];
+            if ($row->tipe === 'essay') {
+                foreach ($pertanyaan as $qText) {
+                    $soalSesi5['bagian_a'][$qCount] = $qText;
+                    $qCount++;
+                }
+            } elseif ($row->tipe === 'studi_kasus') {
+                // Ensure sub-questions maintain 1-indexed key numbering
+                $pertanyaanIndexed = [];
+                $subCount = 1;
+                foreach ($pertanyaan as $subQText) {
+                    $pertanyaanIndexed[$subCount] = $subQText;
+                    $subCount++;
+                }
+
+                $soalSesi5['bagian_b'][] = [
+                    'judul' => $row->judul,
+                    'deskripsi' => $row->deskripsi,
+                    'pertanyaan' => $pertanyaanIndexed
+                ];
+            }
+        }
+
+        return $soalSesi5;
+    }
+
+    public function translateSesi5Array($data, $posisi)
+    {
+        if (app()->getLocale() !== 'en') {
+            return $data;
+        }
+
+        $jsonPath = base_path('lang/en_sesi5.json');
+        if (file_exists($jsonPath)) {
+            $enData = json_decode(file_get_contents($jsonPath), true);
+            if (isset($enData[$posisi])) {
+                return $enData[$posisi];
+            }
+        }
+
+        return $data;
     }
 }

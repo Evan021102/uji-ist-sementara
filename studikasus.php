@@ -1,5 +1,112 @@
 <?php
-// PHP Header configuration (if needed, but mainly served as HTML page)
+// Function to read .env values
+function getEnvVal($key, $default = '') {
+    static $env = null;
+    if ($env === null) {
+        $env = [];
+        $envFile = __DIR__ . '/.env';
+        if (file_exists($envFile)) {
+            $lines = file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            foreach ($lines as $line) {
+                if (strpos(trim($line), '#') === 0) continue;
+                $parts = explode('=', $line, 2);
+                if (count($parts) === 2) {
+                    $name = trim($parts[0]);
+                    $value = trim($parts[1]);
+                    // Remove quotes if present
+                    if (preg_match('/^"?(.*?)"?$/', $value, $matches)) {
+                        $value = $matches[1];
+                    }
+                    $env[$name] = $value;
+                }
+            }
+        }
+    }
+    return isset($env[$key]) ? $env[$key] : $default;
+}
+
+$dbHost = getEnvVal('DB_HOST', '127.0.0.1');
+$dbPort = getEnvVal('DB_PORT', '3306');
+$dbName = getEnvVal('DB_DATABASE', 'ujian_gosyen');
+$dbUser = getEnvVal('DB_USERNAME', 'root');
+$dbPass = getEnvVal('DB_PASSWORD', '');
+
+$cases = [];
+try {
+    $pdo = new PDO("mysql:host=$dbHost;port=$dbPort;dbname=$dbName;charset=utf8mb4", $dbUser, $dbPass, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+    
+    // Create table if not exists
+    $pdo->exec("CREATE TABLE IF NOT EXISTS studi_kasus_v2 (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        judul VARCHAR(255) NOT NULL,
+        deskripsi TEXT NOT NULL,
+        pertanyaan_a TEXT NOT NULL,
+        pertanyaan_b TEXT NOT NULL,
+        pertanyaan_c TEXT NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+    
+    // Check if empty
+    $stmt = $pdo->query("SELECT COUNT(*) FROM studi_kasus_v2");
+    if ($stmt->fetchColumn() == 0) {
+        // Insert initial SQL questions
+        $initial = [
+            [
+                'Studi Kasus 1 — Perancangan Skema Database E-Commerce',
+                'Merancang skema database relasional untuk sistem e-commerce sederhana yang terdiri dari tabel pengguna (users), produk (products), pesanan (orders), dan detail pesanan (order_details).',
+                'A. Tentukan primary key, foreign key, serta tipe data yang paling tepat untuk masing-masing kolom pada relasi tabel tersebut.',
+                'B. Tuliskan perintah SQL DDL untuk membuat tabel-tabel tersebut beserta dengan relational integrity constraint-nya.',
+                'C. Bagaimana strategi Anda dalam menangani integritas data jika sebuah baris di tabel products atau users dihapus? Jelaskan perbedaan implementasi antara ON DELETE CASCADE dengan ON DELETE RESTRICT dalam kasus ini.'
+            ],
+            [
+                'Studi Kasus 2 — Optimasi Query & Indexing (Performance Tuning)',
+                'Sebuah query SELECT JOIN yang melibatkan jutaan baris data pada tabel histori transaksi mendadak menjadi sangat lambat dan membebani resource server secara signifikan.',
+                'A. Bagaimana cara Anda menganalisis dan mendeteksi bagian query yang lambat tersebut? (Sebutkan perintah/tool bantu SQL seperti EXPLAIN).',
+                'B. Rancang strategi pembuatan Index (Single-column vs Composite/Compound Index) yang tepat untuk mempercepat query pencarian berdasarkan filter rentang tanggal dan kategori produk.',
+                'C. Tuliskan contoh query SQL sebelum dan sesudah dioptimalkan beserta penjelasannya mengapa versi setelah optimasi berjalan lebih cepat.'
+            ],
+            [
+                'Studi Kasus 3 — Query Agregasi & Analitik Komprehensif (Reporting)',
+                'Departemen Business Intelligence membutuhkan laporan bulanan yang menyajikan total penjualan per kategori produk, rata-rata nilai transaksi bulanan, dan daftar produk terlaris di setiap kategori.',
+                'A. Tuliskan query SQL menggunakan GROUP BY, HAVING, dan fungsi agregasi untuk menampilkan total penjualan serta jumlah transaksi per kategori produk yang total penjualannya di atas Rp 50.000.000.',
+                'B. Tuliskan query SQL menggunakan Window Function (seperti DENSE_RANK atau ROW_NUMBER) untuk mengidentifikasi 3 produk dengan penjualan tertinggi di setiap kategori.',
+                'C. Bagaimana cara Anda membatasi jalannya query analitik yang berat ini agar tidak mengganggu performa transaksi database utama (OLTP) secara real-time?'
+            ],
+            [
+                'Studi Kasus 4 — Manajemen Transaksi & Concurrency Control',
+                'Terjadi insiden race condition (double selling / pengurangan stok di bawah nol) pada database saat event Flash Sale karena ribuan pengguna melakukan checkout produk secara bersamaan.',
+                'A. Jelaskan konsep ACID transaksi yang terlanggar dalam kasus ini dan jelaskan secara teknis mengapa race condition tersebut bisa terjadi.',
+                'B. Tuliskan implementasi blok transaksi SQL (BEGIN TRANSACTION s.d. COMMIT) menggunakan teknik locking (Pessimistic Locking / SELECT FOR UPDATE) untuk mencegah race condition pengurangan stok.',
+                'C. Bagaimana langkah pemulihan data (rollback) yang aman jika di tengah-tengah proses pengurangan stok terjadi kegagalan jaringan atau server crash?'
+            ]
+        ];
+        
+        $insertStmt = $pdo->prepare("INSERT INTO studi_kasus_v2 (judul, deskripsi, pertanyaan_a, pertanyaan_b, pertanyaan_c) VALUES (?, ?, ?, ?, ?)");
+        foreach ($initial as $row) {
+            $insertStmt->execute($row);
+        }
+    }
+    
+    // Fetch cases
+    $stmt = $pdo->query("SELECT * FROM studi_kasus_v2 ORDER BY id ASC");
+    while ($row = $stmt->fetch()) {
+        $cases[] = [
+            'id' => (int)$row['id'],
+            'title' => $row['judul'],
+            'desc' => $row['deskripsi'],
+            'subs' => [
+                ['key' => 'subA', 'question' => $row['pertanyaan_a']],
+                ['key' => 'subB', 'question' => $row['pertanyaan_b']],
+                ['key' => 'subC', 'question' => $row['pertanyaan_c']]
+            ]
+        ];
+    }
+} catch (Exception $e) {
+    // If connection fails, fall back to empty array
+    $cases = [];
+}
 ?>
 <!DOCTYPE html>
 <html lang="id" class="dark">
@@ -278,50 +385,8 @@
   </div>
 
   <script>
-    // Case Study Templates (SMK Accounting / Office Administration - Archive Focus)
-    const CASE_STUDIES = [
-      {
-    id: 1,
-    title: "Studi Kasus 1 — Selisih pada Rekonsiliasi Bank",
-    desc: "Pada saat rekonsiliasi bank bulan berjalan, terdapat selisih Rp 7.500.000 antara saldo buku perusahaan dan laporan bank.",
-    subs: [
-      { key: "subA", question: "A. Kemungkinan penyebab selisih tersebut?" },
-      { key: "subB", question: "B. Langkah yang Anda lakukan untuk menemukan sumber kesalahan?" },
-      { key: "subC", question: "C. Apa dampaknya jika selisih ini tidak ditemukan hingga akhir bulan?" }
-    ]
-  },
-  {
-    id: 2,
-    title: "Studi Kasus 2 — Kesalahan Pencatatan Aset Tetap",
-    desc: "Sebuah mesin dicatat sebagai inventaris kantor, padahal nilainya Rp 280 juta dan usia ekonomis 8 tahun.",
-    subs: [
-      { key: "subA", question: "A. Identifikasi kesalahan pencatatan." },
-      { key: "subB", question: "B. Apa dampaknya pada laporan keuangan?" },
-      { key: "subC", question: "C. Apa penyesuaian (adjustment) yang harus dilakukan?" }
-    ]
-  },
-  {
-    id: 3,
-    title: "Studi Kasus 3 — Penjualan Sudah Dicatat, Barang Belum Dikirim",
-    desc: "Di bulan Maret, divisi sales mencatat penjualan, namun barang baru dikirim di bulan April.",
-    subs: [
-      { key: "subA", question: "A. Apa kesalahan ini disebut dalam akuntansi?" },
-      { key: "subB", question: "B. Bagaimana Anda memperbaikinya?" },
-      { key: "subC", question: "C. Apa efeknya terhadap laporan laba rugi dan neraca?" }
-    ]
-  },
-  {
-    id: 4,
-    title: "Studi Kasus 4 — Terjadi Perbedaan Stok Saat Stock Opname",
-    desc: "Hasil stock opname menunjukkan selisih negatif 3% dibanding catatan sistem. Warehouse mengatakan barang tidak hilang, hanya 'tidak tercatat'.",
-    subs: [
-      { key: "subA", question: "A. Kemungkinan penyebab selisih ini dari sisi accounting?" },
-      { key: "subB", question: "B. Bagaimana prosedur investigasinya?" },
-      { key: "subC", question: "C. Apakah perlu dibuat jurnal penyesuaian? Jelaskan alasannya." }
-    ]
-  }
-
-    ];
+    // Case Study Templates loaded dynamically from SQL Database Table (studi_kasus_v2)
+    const CASE_STUDIES = <?php echo json_encode($cases, JSON_PRETTY_PRINT); ?>;
 
     // Global States
     let currentMode = 'peserta';

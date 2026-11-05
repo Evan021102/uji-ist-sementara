@@ -1,3 +1,41 @@
+@php
+    // Inisialisasi daftar soal per posisi untuk memetakan header Excel
+    // Kita panggil controller untuk mendapatkan mapping soal secara terpusat
+    $controller = new \App\Http\Controllers\UjianController();
+    
+    // Fungsi pembantu untuk memetakan teks soal ke dalam baris header
+    $mapHeaderSoal = function($posisi) use ($controller) {
+        // Panggil metode getSoalSesi5 via Reflection karena bertipe private
+        $reflector = new \ReflectionClass(get_class($controller));
+        $method = $reflector->getMethod('getSoalSesi5');
+        $method->setAccessible(true);
+        $soalRaw = $method->invokeArgs($controller, [$posisi]);
+        
+        $flatQuestions = [];
+        
+        // 1. Ekstrak Bagian A (Pertanyaan Umum) JIKA ADA
+        if (isset($soalRaw['bagian_a']) && is_array($soalRaw['bagian_a'])) {
+            foreach ($soalRaw['bagian_a'] as $qText) {
+                $flatQuestions[] = '[Pertanyaan Umum] ' . strip_tags($qText);
+            }
+        }
+
+        // 2. Ekstrak Bagian B (Studi Kasus) JIKA ADA
+        if (isset($soalRaw['bagian_b']) && is_array($soalRaw['bagian_b'])) {
+            foreach ($soalRaw['bagian_b'] as $case) {
+                $judulKasus = strip_tags($case['judul'] ?? 'Studi Kasus');
+                if (isset($case['pertanyaan']) && is_array($case['pertanyaan'])) {
+                    foreach ($case['pertanyaan'] as $qText) {
+                        $flatQuestions[] = '[' . $judulKasus . '] ' . strip_tags($qText);
+                    }
+                }
+            }
+        }
+        
+        return $flatQuestions;
+    };
+@endphp
+
 <table border="1">
     <thead>
         <tr>
@@ -21,7 +59,8 @@
             <th style="background-color: #f2dede;">N. Norma Sesi 2</th>
             <th style="background-color: #f2dede;">O. Norma Sesi 3</th>
             <th style="background-color: #f2dede;">P. Norma Sesi 4</th>
-            @for ($i = 1; $i <= 25; $i++)
+            
+            @for ($i = 1; $i <= 30; $i++)
             <th style="background-color: #e8daef;">Sesi 5 - Soal {{ $i }}</th>
             @endfor
         </tr>
@@ -45,20 +84,22 @@
                 if ($ans_s5 && isset($ans_s5->$q) && strtoupper(trim($ans_s5->$q)) == ($kunci['sesi5'][$i] ?? '')) $rw5++;
             }
 
-            // Convert raw scores to standard scores (SW)
+            // Konversi nilai mentah ke Standar Skor (SW)
             $sw2 = $norma_sw['sesi2'][$rw2] ?? 0;
             $sw3 = $norma_sw['sesi3'][$rw3] ?? 0;
             $sw4 = $norma_sw['sesi4'][$rw4] ?? 0;
             $sw5 = $norma_sw['sesi5'][$rw5] ?? 0;
 
-            // Calculate SW Average
+            // Rata-rata SW
             $rata_rata_sw = ($sw2 + $sw3 + $sw4 + $sw5) / 4;
 
-            // Fetch categorization descriptions
-            $desc2 = $getDeskripsiNorma($sw2);
-            $desc3 = $getDeskripsiNorma($sw3);
-            $desc4 = $getDeskripsiNorma($sw4);
-            $desc5 = $getDeskripsiNorma($sw5);
+            $desc2 = isset($getDeskripsiNorma) ? $getDeskripsiNorma($sw2) : '';
+            $desc3 = isset($getDeskripsiNorma) ? $getDeskripsiNorma($sw3) : '';
+            $desc4 = isset($getDeskripsiNorma) ? $getDeskripsiNorma($sw4) : '';
+            $desc5 = isset($getDeskripsiNorma) ? $getDeskripsiNorma($sw5) : '';
+
+            // Dapatkan list teks pertanyaan berdasarkan posisi kandidat saat ini
+            $daftarPertanyaanPosisi = $mapHeaderSoal($p->posisi);
         @endphp
         <tr>
             <td>{{ $p->posisi }}</td>
@@ -81,9 +122,22 @@
             <td>{{ $desc3 }}</td>
             <td>{{ $desc4 }}</td>
             <td>{{ $desc5 }}</td>
-            @for ($i = 1; $i <= 25; $i++)
-            @php $q = 'q' . $i; @endphp
-            <td>{{ $ans_s6 && isset($ans_s6->$q) ? $ans_s6->$q : '' }}</td>
+            
+            @for ($i = 1; $i <= 30; $i++)
+                @php 
+                    $q = 'q' . $i; 
+                    // Mengambil soal yang berkorespondensi, jika di luar index gunakan label 'Soal Ekstra'
+                    $infoSoal = isset($daftarPertanyaanPosisi[$i - 1]) ? $daftarPertanyaanPosisi[$i - 1] : 'Teks Pertanyaan Tidak Ditemukan/Ekstra';
+                    $jawabanPeserta = ($ans_s6 && isset($ans_s6->$q)) ? $ans_s6->$q : '';
+                @endphp
+                <td>
+                    @if(!empty($jawabanPeserta))
+                        <strong>Pertanyaan:</strong> {{ $infoSoal }}<br>
+                        <strong>Jawaban:</strong> {{ $jawabanPeserta }}
+                    @else
+                        -
+                    @endif
+                </td>
             @endfor
         </tr>
         @endforeach

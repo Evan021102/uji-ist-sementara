@@ -1,0 +1,1493 @@
+{
+    "HCP": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1: Tingginya Turnover Karyawan Produksi",
+                "deskripsi": "Dalam 6 bulan terakhir, tingkat perputaran produksi karyawan mencapai 28%, jauh diatas target perusahaan yang maksimal 10% per tahun. Sebagian besar karyawan mengundurkan diri pada masa kerja 3–12 bulan. Akibatnya, biaya rekrutmen meningkat, produktivitas menurun, dan beban kerja supervisor meningkat.",
+                "pertanyaan": {
+                    "1": "Menurut Anda, faktor-faktor apa saja yang perlu dianalisis untuk menemukan akar penyebab dari tingginya perputaran karyawan (turnover)?",
+                    "2": "Program atau strategi apa yang akan Anda usulkan untuk menekan turnover karyawan?",
+                    "3": "Indikator atau KPI apa yang akan Anda gunakan untuk mengukur keberhasilan program tersebut?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2: Hasil Penilaian Kinerja Memicu Konflik",
+                "deskripsi": "Perusahaan baru saja menyelesaikan proses penilaian kinerja tahunan. Namun banyak pegawai yang merasa penilaian yang diberikan atasannya tidak obyektif. Bahkan beberapa karyawan mengajukan keberatan kepada HR dan menilai sistem penilaian tidak adil.<br>Manajemen meminta Human Capital Performance untuk mengevaluasi sistem yang berjalan.",
+                "pertanyaan": {
+                    "1": "Langkah-langkah apa yang akan Anda ambil untuk bertanya-tanya apakah sistem penilaian kinerja berjalan secara objektif?",
+                    "2": "Bagaimana cara Anda menangani keluhan karyawan tanpa menimbulkan konflik yang lebih besar?",
+                    "3": "Perbaikan apa yang akan Anda usulkan agar sistem penilaian kinerja lebih transparan dan dapat diterima oleh seluruh pihak?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3: Direktur Meminta Organization Review Komprehensif",
+                "deskripsi": "Perusahaan telah beroperasi selama 15 tahun dan belum pernah melakukan Tinjauan Organisasi secara menyeluruh. Direksi meminta Kinerja Human Capital melakukan evaluasi menyeluruh terhadap efektivitas organisasi.",
+                "pertanyaan": {
+                    "1": "Aspek organisasi apa saja yang perlu dievaluasi dalam sebuah tinjauan organisasi?",
+                    "2": "Data apa saja yang akan Anda gunakan untuk menentukan prioritas perbaikan area?",
+                    "3": "Jika Anda hanya diberi waktu 6 bulan untuk melakukan transformasi organisasi, program apa yang menjadi prioritas utama Anda dan mengapa?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4: Hasil Audit Menunjukkan Banyak Posisi Tidak Memiliki Deskripsi Pekerjaan yang Jelas",
+                "deskripsi": "Audit organisasi menemukan bahwa banyak karyawan tidak memahami batasan tanggung jawab mereka. Akibatnya, sering terjadi saling menyalahkan, konflik antar departemen, dan kelalaian tugas.<br>Direktur meminta Kinerja Human Capital untuk melakukan perbaikan.",
+                "pertanyaan": {
+                    "1": "Risiko apa saja yang dapat timbul jika deskripsi pekerjaan dan otoritas pekerjaan tidak jelas?",
+                    "2": "Proses apa yang akan Anda jalankan untuk merancang ulang deskripsi pekerjaan (deskripsi pekerjaan) yang efektif?",
+                    "3": "Bagaimana cara Anda memastikan bahwa deskripsi pekerjaan tersebut benar-benar dijalankan oleh seluruh karyawan?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5: KPI Terlalu Banyak, Namun Kinerja Tetap Menurun",
+                "deskripsi": "Perusahaan telah menerapkan KPI di semua departemen selama 2 tahun. Namun hasil audit menunjukkan sebagian besar KPI hanya digunakan sebagai formalitas. Banyak departemen yang masih gagal mencapai target perusahaan meskipun skor KPI pegawainya relatif tinggi.<br>Direktur meminta Kinerja Human Capital untuk mengevaluasi sistem KPI yang ada saat ini.",
+                "pertanyaan": {
+                    "1": "Menurut Anda, apa kemungkinan penyebab KPI gagal mendorong peningkatan kinerja perusahaan?",
+                    "2": "Bagaimana cara Anda bertanya apakah KPI yang digunakan sudah selaras dengan target bisnis perusahaan?",
+                    "3": "Jika Anda diminta melakukan perbaikan, perubahan apa saja yang akan Anda usulkan pada sistem KPI tersebut?"
+                }
+            }
+        }
+    },
+    "ACCOUNT PAYABLE (AP)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Selisih Dokumen (Tagihan vs Barang yang Diterima)",
+                "deskripsi": "Sebuah vendor mengirimkan tagihan (Invoice) untuk 100 unit laptop.<br>\n                             • Namun, saat Anda mengecek Surat Jalan/Bukti Penerimaan Barang dari gudang, ternyata gudang hanya menerima 90 unit laptop (10 unit cacat dan diretur).<br>\n                             • Vendor ngotot minta dibayar penuh 100 unit sesuai Invoice yang mereka cetak.",
+                "pertanyaan": {
+                    "1": "Mengapa staf AP dilarang keras memproses pembayaran hanya dengan melihat selembar Invoice dari vendor tanpa mengecek dokumen penerimaan dari gudang?",
+                    "2": "Apa tindakan yang harus Anda lakukan untuk menengahi perbedaan data antara pihak Vendor dan pihak Gudang perusahaan Anda?",
+                    "3": "Tuliskan 1 kalimat balasan taktis kepada vendor untuk menjelaskan alasan Anda hanya akan mentransfer uang untuk 90 unit, tanpa membuat mereka tersinggung."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Ancaman Vendor & Krisis Arus Kas (Cash Flow)",
+                "deskripsi": "Vendor bahan baku marah besar karena tagihannya sudah telat dibayar 2 minggu. Mereka mengancam akan menyetop pengiriman barang besok pagi.<br>\n                             • Manajer Keuangan Anda menginstruksikan untuk menahan semua pembayaran karena kas perusahaan sedang kosong dan uang baru masuk minggu depan.",
+                "pertanyaan": {
+                    "1": "Jika Anda takut dimarahi lalu mengabaikan telepon dari vendor (ghosting), apa dampak terburuknya bagi operasional pabrik perusahaan Anda besok pagi?",
+                    "2": "Anda terjepit antara instruksi bos (kas kosong) dan ancaman vendor. Bagaimana cara Anda bersikap secara profesional di telepon saat menghadapi amarah vendor tersebut?",
+                    "3": "Tuliskan 1 kalimat negosiasi untuk menenangkan vendor, meyakinkan mereka bahwa uangnya pasti dibayar minggu depan agar pengiriman barang besok tidak distop."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Bahaya Tagihan Ganda (Double Payment)",
+                "deskripsi": "Anda menerima Invoice tagihan service AC senilai Rp 10.000.000. Saat Anda akan memasukkannya ke sistem, Anda merasa familiar dan menemukan bahwa tagihan dengan nomor PO (Purchase Order) dan nominal yang sama persis sudah pernah dibayar bulan lalu.<br>\n                             • Vendor beralasan itu hanya \"salah cetak dari sistem mereka\" dan mendesak Anda tetap membayarnya.",
+                "pertanyaan": {
+                    "1": "Apa kerugian fatal bagi perusahaan dan karir Anda jika Anda sampai ceroboh melakukan transfer dua kali (double payment) untuk satu pekerjaan yang sama?",
+                    "2": "Sebutkan 2 bukti dokumen/data yang wajib Anda tangkap layar (screenshot) atau tunjukkan kepada vendor untuk membuktikan bahwa tagihan tersebut memang sudah lunas bulan lalu.",
+                    "3": "Buat 1 SOP (Aturan Pengecekan) sederhana di meja kerja AP agar kasus kecolongan bayar ganda tidak pernah terjadi."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Protes Potongan Pajak (PPh)",
+                "deskripsi": "Seorang konsultan freelance mengirimkan tagihan jasa sebesar Rp 10.000.000.<br>\n                             • Sebagai AP, aturan mewajibkan Anda memotong Pajak Penghasilan (PPh 21), sehingga uang yang ditransfer ke rekeningnya menjadi kurang dari 10 juta.<br>\n                             • Konsultan itu protes keras: \"Saya tidak mau tahu soal pajak, pokoknya di rekening saya harus masuk pas 10 juta!\"",
+                "pertanyaan": {
+                    "1": "Mengapa perusahaan (melalui staf AP) wajib memotong pajak tersebut secara langsung, bukannya membiarkan konsultan itu mengurus pajaknya sendiri?",
+                    "2": "Tuliskan 1 kalimat penjelasan sederhana (bahasa awam) kepada konsultan tersebut agar ia paham bahwa potongan itu adalah aturan mutlak dari Negara, bukan karena perusahaan pelit!",
+                    "3": "Jika atasan dari divisi lain menyuruh Anda: \"Sudah, bayar saja 10 juta penuh, pajaknya kita sembunyikan saja biar dia tidak marah.\" Apa respons tegas Anda sebagai orang AP?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Pembayaran Darurat Tanpa Tanda Tangan",
+                "deskripsi": "Direktur sedang di luar negeri dan tidak bisa dihubungi. Tiba-tiba, Manajer Marketing mendatangi meja AP dan mendesak Anda segera mentransfer DP (Uang Muka) sewa gedung Rp 50.000.000 untuk acara besok pagi.<br>\n                             • Belum ada dokumen resmi (PO) maupun tanda tangan persetujuan Direktur.<br>\n                             • Manajer itu berkata: \"Transfer saja dulu sekarang, kalau ada masalah, saya yang pasang badan tanggung jawab!\"",
+                "pertanyaan": {
+                    "1": "Secara audit keuangan, mengapa alasan \"Saya yang pasang badan\" dari Manajer Marketing sama sekali tidak bisa melindungi Anda jika terjadi masalah di kemudian hari?",
+                    "2": "Apa resiko terburuk jika AP membiasakan diri mentransfer puluhan juta hanya bermodalkan omongan atau perintah lisan tanpa dokumen tertulis?",
+                    "3": "Anda dilarang mentransfer tanpa persetujuan, tapi acara besok tetap harus berjalan. Usulkan 1 jalan keluar/solusi alternatif agar Manajer Marketing tersebut tetap bisa membayar DP gedung hari ini secara sah."
+                }
+            }
+        }
+    },
+    "ACCOUNT RECEIVABLE (AR)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Menghadapi Klien Ghosting (Kabur dari Tagihan)",
+                "deskripsi": "Sebuah klien besar belum membayar tagihan yang sudah telat 30 hari dari jatuh tempo.<br>\n                             • Saat Anda telepon tidak diangkat, dan email tidak dibalas (ghosting).<br>\n                             • Tim Sales di kantor menyuruh Anda: \"Tunggu saja, jangan ditagih terlalu keras, dia klien penting, nanti dia marah dan kabur ke kompetitor.\"",
+                "pertanyaan": {
+                    "1": "Mengapa menuruti kata-kata tim Sales untuk \"diam saja menunggu\" sangat membahayakan arus kas (cash flow) perusahaan kita?",
+                    "2": "Karena klien ini suka ghosting, apa 1 tindakan tegas namun profesional yang akan Anda lakukan selain terus-terusan menelepon/WhatsApp?",
+                    "3": "Tuliskan 1 draf pesan singkat ke klien tersebut yang isinya mendesak pembayaran, tanpa terdengar seperti ancaman debt collector."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Konflik Batas Kredit (AR vs Tim Sales)",
+                "deskripsi": "Seorang klien sudah mencapai batas maksimal utang (Credit Limit) dan masih menunggak pembayaran bulan lalu.<br>\n                             • Tiba-tiba, Manajer Sales memaksa Anda untuk membuka blokir sistem hari ini juga agar pesanan baru klien tersebut bisa dikirim.<br>\n                             • Manajer Sales berjanji: \"Buka saja sistemnya, saya jamin besok tagihan lamanya pasti ditransfer!\"",
+                "pertanyaan": {
+                    "1": "Secara audit keuangan, mengapa jaminan lisan \"pasti dibayar besok\" dari Manajer Sales sama sekali tidak boleh dijadikan dasar untuk membuka blokir sistem?",
+                    "2": "Jika Anda nekat menuruti Manajer Sales lalu klien tersebut ternyata gagal bayar/bangkrut, siapa pihak yang paling disalahkan oleh auditor/perusahaan: Anda (AR) atau Manajer Sales? Jelaskan alasannya.",
+                    "3": "Tuliskan 1 kalimat balasan tegas kepada Manajer Sales untuk menolak permintaannya, tapi berikan 1 syarat solusi jika barang itu memang harus dikirim hari ini juga."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Potongan Pembayaran Sepihak (Partial Payment)",
+                "deskripsi": "Klien mentransfer uang tagihan, tapi jumlahnya kurang 20% dari total Invoice.<br>\n                             • Saat dikonfirmasi, klien beralasan: \"Kemarin ada barang yang sedikit cacat, jadi pembayarannya saya potong sendiri saja 20% sebagai kompensasi.\"<br>\n                             • Padahal, klien tidak pernah melapor ke kantor Anda soal barang cacat tersebut sebelumnya.",
+                "pertanyaan": {
+                    "1": "Mengapa tindakan klien memotong pembayaran secara sepihak sangat menyalahi aturan administrasi piutang (AR)?",
+                    "2": "Siapa departemen internal yang wajib Anda hubungi pertama kali untuk memvalidasi kebenaran omongan klien soal barang yang cacat tersebut?",
+                    "3": "Tuliskan 1 kalimat penjelasan kepada klien bahwa mereka tetap harus melunasi sisa 20% tersebut hari ini, dan jelaskan prosedur yang benar jika memang ada retur/barang cacat."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Misteri Transfer Tanpa Nama (Unidentified Transfer)",
+                "deskripsi": "Ada uang masuk ke rekening perusahaan sebesar Rp 25.000.000.<br>\n                             • Namun, di mutasi bank tidak ada nama pengirim, tidak ada berita transfer, dan tidak ada nomor Invoice.<br>\n                             • Di saat yang sama, ada 3 klien berbeda yang nominal utangnya mirip-mirip di angka tersebut.",
+                "pertanyaan": {
+                    "1": "Apa bahayanya jika Anda asal menebak dan langsung memasukkan pembayaran tersebut untuk memotong utang klien A (klien yang paling lama menunggak)?",
+                    "2": "Daripada bertanya ke semua klien satu per satu, sebutkan 2 cara/data pendukung yang bisa Anda periksa untuk memastikan siapa pengirim asli uang tersebut!",
+                    "3": "Buat 1 SOP (Aturan Pengecekan) sederhana yang wajib disampaikan oleh tim Sales kepada seluruh klien agar masalah \"transfer tanpa nama\" ini tidak terulang lagi."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Bukti Transfer Palsu (Modus Penipuan Cepat)",
+                "deskripsi": "Seorang klien baru mengirimkan foto/screenshot bukti transfer m-Banking via WhatsApp di sore hari.<br>\n                             • Ia mendesak Anda segera mengeluarkan Surat Jalan agar barangnya bisa diambil kurir detik itu juga.<br>\n                             • Namun, saat Anda mengecek mutasi Internet Banking perusahaan, uang tersebut belum masuk sama sekali.<br>\n                             • Klien beralasan: \"Itu beda bank, wajar masuknya lama. Kirim saja dulu barangnya, kan bukti transfernya sudah saya kirim!\"",
+                "pertanyaan": {
+                    "1": "Sebagai AR, mengapa screenshot bukti transfer dari klien tidak akan pernah dianggap sebagai bukti pembayaran yang sah?",
+                    "2": "Menghadapi desakan klien yang marah-marah minta barang cepat dikirim, apa keputusan mutlak Anda sore itu: Kirim barangnya ATAU Tahan barangnya?",
+                    "3": "Tuliskan 1 kalimat balasan standar kepada klien tersebut untuk menjelaskan aturan rilis barang perusahaan, tanpa langsung menuduh bahwa bukti transfernya palsu."
+                }
+            }
+        }
+    },
+    "ACCOUNTING (A)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Kesalahan Pencatatan Laba Masa Lalu",
+                "deskripsi": "Pada laporan pembukuan PT Alpha tahun 2026, terdapat penambahan \"Saldo Laba Awal\" sebesar Rp 800.000.000.<br>\n                             • Tambahan ini muncul karena bagian akuntansi baru menyadari adanya kesalahan dalam menghitung biaya penyusutan aset (seperti mesin/gedung) pada dua tahun sebelumnya (2024 dan 2025).<br>\n                             • Akibat perbaikan yang menambah laba ini, perusahaan juga harus menghitung efek potongan pajaknya sebesar Rp 176.000.000.",
+                "pertanyaan": {
+                    "1": "Karena perbaikan (koreksi) dari masa lalu ini hasilnya menambah saldo laba saat ini, kesalahan perhitungan seperti apa yang sebenarnya dilakukan oleh tim akuntansi pada laporan biaya aset tahun 2024 dan 2025?",
+                    "2": "Mengapa angka perbaikan Rp800.000.000 ini tidak boleh dicatat begitu saja sebagai \"Pendapatan Lain-lain\" di laporan laba-rugi tahun 2026, melainkan harus langsung dimasukkan ke Saldo Laba?",
+                    "3": "Saat Anda menyusun laporan kekayaan perusahaan (Neraca) di akhir tahun 2026, Anda juga diwajibkan menampilkan tabel perbandingan dengan angka tahun 2025. Penyesuaian apa yang harus Anda ubah secara diam-diam pada catatan nilai aset dan catatan utang pajak di kolom tahun 2025 agar laporannya masuk akal?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Transaksi Internal Induk dan Anak Perusahaan",
+                "deskripsi": "Pada akhir tahun, saat menyusun laporan keuangan gabungan (konsolidasi) antara Induk dan Anak Perusahaan, akuntan harus \"menghapus\" catatan transaksi jual-beli di antara mereka sendiri.<br>\n                             • Jurnal penghapusan (eliminasi) yang dibuat adalah: Menghapus Pendapatan Penjualan Rp 1.000.000.000 (Debit), mengurangi Harga Pokok Penjualan/HPP Rp 800.000.000 (Kredit), dan memotong nilai Persediaan Rp 200.000.000 (Kredit).",
+                "pertanyaan": {
+                    "1": "Berapa modal awal dan harga jual antar-perusahaan tersebut? Lalu, mengapa nilai persediaan harus dipotong Rp 200.000.000 di akhir tahun?",
+                    "2": "Jika Anak Perusahaan yang menjual ke Induk, mengapa pemotongan Rp 200.000.000 ini membuat jatah laba pemegang saham minoritas ikut berkurang?",
+                    "3": "Jika sisa barang tersebut akhirnya laku dijual ke pihak luar di tahun depan, bagaimana cara mengakui keuntungan yang sempat tertunda ini di laporan tahun depan?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Pajak Tangguhan atas Penilaian Ulang Aset",
+                "deskripsi": "Jurnal Penyesuaian Akhir Tahun (Penilaian Kembali Aset Tetap - Model Revaluasi):<br>\n                             <table class='table table-bordered table-sm mt-2' style='max-width: 600px; background: white;'>\n                                 <thead class='table-light'>\n                                     <tr><th>Nama Akun</th><th>Debit</th><th>Kredit</th></tr>\n                                 </thead>\n                                 <tbody>\n                                     <tr><td>Aset Tetap - Bangunan</td><td>Rp 10.000.000.000</td><td>-</td></tr>\n                                     <tr><td>Liabilitas Pajak Tangguhan (DTL)</td><td>-</td><td>Rp 2.200.000.000</td></tr>\n                                     <tr><td>Surplus Revaluasi Aset (OCI)</td><td>-</td><td>Rp 7.800.000.000</td></tr>\n                                 </tbody>\n                             </table>",
+                "pertanyaan": {
+                    "1": "Mengapa kenaikan nilai bangunan ini memaksa perusahaan mencatat utang pajak masa depan (Rp2,2 Miliar), padahal bangunannya belum dijual dan belum ada tagihan asli dari kantor pajak?",
+                    "2": "Apa dampak langsung dari munculnya utang pajak tangguhan dan surplus Rp7,8 Miliar ini terhadap rasio utang perusahaan (DER) dan rasio keuntungan modal (ROE)?",
+                    "3": "Pada tahun-tahun berikutnya saat bangunan ini mulai disusutkan dengan nilai baru yang lebih tinggi, bagaimana cara mencicil atau menghapus akun Utang Pajak Tangguhan tersebut di dalam pembukuan?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Modifikasi Sewa (PSAK 73 / IFRS 16)",
+                "deskripsi": "Jurnal Penyesuaian pada Tanggal Modifikasi Kontrak Sewa:<br>\n                             <table class='table table-bordered table-sm mt-2' style='max-width: 600px; background: white;'>\n                                 <thead class='table-light'>\n                                     <tr><th>Nama Akun</th><th>Debit</th><th>Kredit</th></tr>\n                                 </thead>\n                                 <tbody>\n                                     <tr><td>Liabilitas Sewa</td><td>Rp 5.000.000.000</td><td>-</td></tr>\n                                     <tr><td>Aset Hak Guna</td><td>-</td><td>Rp 4.200.000.000</td></tr>\n                                     <tr><td>Keuntungan dari Modifikasi Sewa</td><td>-</td><td>Rp 800.000.000</td></tr>\n                                 </tbody>\n                             </table>",
+                "pertanyaan": {
+                    "1": "Melihat angka Utang Sewa dan Hak Pakai Aset yang sama-sama berkurang, kejadian nyata apa yang sebenarnya terjadi di lapangan? Apakah masa sewa diperpanjang, atau ada pengurangan luas ruangan yang disewa?",
+                    "2": "Keuntungan Rp800 juta masuk ke laporan laba-rugi. Bagaimana cara mencatat keuntungan non-kas ini di Laporan Arus Kas (Metode Tidak Langsung) agar uang kas tidak salah hitung?",
+                    "3": "Untuk menghitung sisa Utang Sewa yang baru, perusahaan harus memakai suku bunga yang mana: suku bunga lama saat awal kontrak, atau suku bunga pinjaman terbaru saat terjadi perubahan kontrak? Berikan alasannya."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Pemindahan Laba Investasi (Reklasifikasi OCI)",
+                "deskripsi": "Jurnal Akhir Tahun terkait Investasi Surat Berharga Obligasi:<br>\n                             <table class='table table-bordered table-sm mt-2' style='max-width: 600px; background: white;'>\n                                 <thead class='table-light'>\n                                     <tr><th>Nama Akun</th><th>Debit</th><th>Kredit</th></tr>\n                                 </thead>\n                                 <tbody>\n                                     <tr><td>Pendapatan Komprehensif Lain (OCI) - Keuntungan Belum Terealisasi</td><td>Rp 3.000.000.000</td><td>-</td></tr>\n                                     <tr><td>Keuntungan Penjualan Investasi (Laba Rugi)</td><td>-</td><td>Rp 3.000.000.000</td></tr>\n                                 </tbody>\n                             </table>",
+                "pertanyaan": {
+                    "1": "Berdasarkan jenis pemindahan laba di atas, masuk kelompok kategori investasi manakah obligasi yang dijual ini? Berikan alasannya.",
+                    "2": "Mengapa jurnal pemindahan ini sama sekali tidak mengubah total nilai Modal (Ekuitas) di Neraca akhir tahun, padahal perusahaan baru saja menambah keuntungan Rp3 Miliar di Laporan Laba-Rugi?",
+                    "3": "Akun OCI sering disebut \"tempat parkir\" laba yang belum sah (belum dijual). Celah atau trik apa yang bisa dimanfaatkan manajemen dari sistem \"parkir laba\" ini untuk memanipulasi persepsi pemegang saham agar Laba Bersih tahunan terlihat selalu bagus?"
+                }
+            }
+        }
+    },
+    "ADMIN GUDANG (AG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Sengketa Penerimaan Barang & Pengesahan Waybill (SJ)",
+                "deskripsi": "Truk dari Supplier tiba di loading dock (area bongkar). Anda membongkar barang dan melakukan pengecekan fisik (kualitas dan kuantitas). Berikut hasil perbandingan antara dokumen Order Pembelian (PO) dari sistem Anda, Dokumen Perjalanan (SJ) bawaan Supplier, dengan fisik sebenarnya yang Anda hitung:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Nama Barang</th><th>Jumlah dalam PO (Sistem Kami)</th><th>Jumlah dalam SJ (Barang Pengemudi)</th><th>Jumlah Fisik Aktual (Dihitung)</th><th>Deskripsi Kondisi</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Item A</td><td>500 pcs</td><td>500 pcs</td><td>490 pcs</td><td>10 pcs lebih sedikit (tidak untuk truk)</td></tr>\r\n<tr><td>Barang B</td><td>200 pcs</td><td>250 pcs</td><td>250 pcs</td><td>SJ dan fisik 50 pcs lebih dari PO</td></tr>\r\n<tr><td>Barang C</td><td>100 pcs</td><td>100 pcs</td><td>100 pcs</td><td>20 pcs basah fisik/kemasan rusak</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Catatan atau coretan perbaikan resmi apa yang harus Anda tulis pada Waybill asli Pengemudi untuk Barang A, B dan C sebelum Anda menandatanganinya?",
+                    "2": "Untuk kelebihan Barang B, berapa jumlah yang akan Anda masukkan ke dalam sistem komputer gudang (200 atau 250 pcs)? Apa resiko fatal bagi keuangan pabrik jika Anda hanya menerima kelebihan barang tanpa memberi tahu bagian Pembelian?",
+                    "3": "Jika supplier memaksa pabrik untuk menerima dan membayar kelebihan Barang B, alur komunikasi cepat seperti apa yang harus Anda lakukan dengan bagian Pembelian dan Legal agar dapat membuat Surat Penolakan Barang secara resmi, tanpa membuat truk mengantri terlalu lama?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Perbedaan Stock Count (Stock Opname) & Unit Error",
+                "deskripsi": "Di akhir bulan, Anda melakukan Stock Take (penghitungan fisik). Anda menemukan perbedaan ekstrim pada produk Minuman Kaleng. (Catatan: 1 Karton = 24 Kaleng).<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Kode Item</th><th>Unit Dasar dalam Sistem</th><th>Saldo Sistem (Di Tangan)</th><th>Hasil Penghitungan Gudang Fisik</th><th>Perbedaan</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>MNM-01</td><td>Kaleng (Buah)</td><td>2.400 Kaleng</td><td>100 Karton</td><td>???</td></tr>\r\n<tr><td>MNM-02</td><td>Karton (Kotak)</td><td>50 Karton</td><td>1.200 Kaleng</td><td>???</td></tr>\r\n<tr><td>MNM-03</td><td>Kaleng (Buah)</td><td>500 Kaleng</td><td>18 Karton + 6 Kaleng</td><td>Minus 62 Kaleng</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Hitung selisih aslinya (kurang/lebih/pas) untuk kode MNM-01 dan MNM-02. Mengapa petugas gudang sering salah mencatat antara \"Karton\" dan \"Kaleng\" pada saat barang masuk dan keluar, dan bagaimana cara mencegahnya secara fisik di area pengambilan?",
+                    "2": "Pada kasus MNM-03 dimana 62 kaleng hilang, ternyata sistem komputer anda membiarkan stoknya masuk ke dalam minus. Apa bahayanya jika fitur minus stok dibiarkan aktif pada sistem pemesanan barang otomatis pabrik?",
+                    "3": "Bagaimana cara membedakan dengan jelas apakah hilangnya 62 kaleng MNM-03 disebabkan oleh salah pengambilan barang, salah pencatatan laporan, atau karena dicuri? Sebutkan 1 alat bukti khusus yang dapat membedakannya, dan tentukan kasus mana yang harus dilaporkan kepada Satpam."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Kegagalan Sistem FIFO dan Tata Letak Rak Berantakan",
+                "deskripsi": "Gudang Anda harus menggunakan sistem FIFO (First In, First Out), artinya barang yang masuk terlebih dahulu harus keluar terlebih dahulu. Komputer sudah menyuruh petugas untuk mengambil barang Batch Lama (kadaluarsa bulan depan).<br>\r\n• Namun staf lapangan malah mengambil Batch Baru (masa berlakunya tahun depan).<br>\r\n• Penyebabnya adalah barang Batch Lama tersangkut di rak belakang dan terhalang tumpukan barang Batch Baru yang baru datang kemarin.<br>\r\n• Petugas malas membongkar tumpukan, sehingga barang Old Batch malah membusuk/kadaluarsa di gudang.",
+                "pertanyaan": {
+                    "1": "Kesalahan fatal apa yang dilakukan petugas saat menaruh barang yang baru tiba, sehingga barang kiriman lama menjadi terhambat dan sulit diambil oleh tim packing?",
+                    "2": "Dari segi keselamatan dan kenyamanan kerja, posisi mana yang lebih baik untuk meletakkan barang New Batch yang berat dan berukuran besar: di lantai paling bawah di bagian depan rak, atau di bagian atas belakang? Berikan alasan logis Anda agar pekerja tidak malas membongkar barang.",
+                    "3": "Untuk membuang dan memusnahkan barang yang sudah kadaluwarsa dari sistem komputer gudang, dokumen resmi apa saja yang harus disiapkan oleh tim gudang dan harus ditandatangani oleh Manajer Gudang bersama dengan Manajer Keuangan sebelum barang diangkut keluar pabrik?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Barang Rusak Saat Pemuatan dan Perubahan Mendadak pada Waybill",
+                "deskripsi": "Anda sedang memuat 100 unit lampu gantung ke dalam truk untuk pelanggan VIP.<br>\r\n• Saat barang diangkat, 2 unit lampu tidak sengaja terjatuh dan pecah, sedangkan stok di gudang sudah benar-benar habis.<br>\r\n• Truk harus segera berangkat karena waktu hampir habis, sehingga hanya mampu mengangkut 98 lampu lengkap.",
+                "pertanyaan": {
+                    "1": "Barang fisiknya hanya 98 unit, tapi Dokumen Jalan (SJ) menyebutkan 100 unit. Tindakan darurat apa yang harus dilakukan pada kertas SJ agar pabrik tidak dituduh melakukan kecurangan?",
+                    "2": "Jika harga 1 lampu Rp 1.000.000 dan pabrik dikenakan denda 5% dari total pesanan (100 unit) karena pengiriman tidak mencukupi, hitunglah nilai dendanya! Bagaimana cara menjelaskan kecelakaan ini kepada pelanggan agar denda dapat dihapuskan?",
+                    "3": "Pada sistem komputer gudang, 2 unit lampu yang pecah tersebut masih dicatat sebagai barang siap dikirim. Bagaimana alur atau langkah-langkah pada komputer untuk membatalkan pengiriman 2 unit tersebut dan mengubah status menjadi barang rusak?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Pengembalian Barang (Reverse Logistics) & Dokumen Tidak Resmi",
+                "deskripsi": "Sebuah truk kurir tiba di gudang untuk mengembalikan 50 kotak barang rusak dari pelanggan.<br>\r\n• Pengemudi kurir hanya menyerahkan selembar kertas tulisan tangan bertuliskan “Barang Rusak, Minta Penggantian” tanpa nomor dokumen pengembalian resmi (RMA) dan tanpa info apa pun di komputer gudang Anda.",
+                "pertanyaan": {
+                    "1": "Pengemudi memaksa Anda untuk menandatangani tanda terima. Apa bahaya hukum dan finansial jika Anda hanya menandatangani sebelum barang diperiksa dan tanpa nomor pengembalian resmi di sistem?",
+                    "2": "Jika ternyata isi dus tersebut ditukar oleh pelanggan dengan produk palsu demi mendapatkan keuntungan, bagaimana cara mengamankan barang bukti tersebut agar tidak tertukar dengan stok yang bagus, dan divisi mana (Sales atau Legal) yang harus dihubungi?",
+                    "3": "Jika retur ternyata sah (cacat pabrik), bagaimana alur sistem untuk memproses kedua pilihan tersebut: (A) Mengembalikan uang pelanggan (Refund), atau (B) Mengirim barang baru tanpa menggandakan biaya operasional?"
+                }
+            }
+        }
+    },
+    "Admin penjualan (SA)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Pemalsuan Tagihan demi Target Akhir Tahun",
+                "deskripsi": "Menjelang tutup buku akhir tahun (29 Desember), Manajer Sales memaksa Anda menerbitkan Invoice dan Faktur Pajak senilai Rp 450.000.000 kepada Pelanggan A agar target penjualan tahunan divisi sales tercapai.<br>\n                             • Namun secara fisik, barang tersebut belum siap dan baru dikirimkan oleh gudang beserta Surat Jalan (DO) pada tanggal 3 Januari tahun berikutnya.",
+                "pertanyaan": {
+                    "1": "Jika tagihan itu tetap dicatat sebagai penjualan di bulan Desember padahal barang belum dikirim, apa dampak buruknya bagi kebenaran laporan keuangan dan pelaporan pajak perusahaan di akhir tahun?",
+                    "2": "Pelanggan akhirnya menolak membayar karena merasa belum menerima barang. Jika pemeriksa keuangan (auditor) menemukan praktik manipulasi target ini, apa kerugian terbesar bagi perusahaan?",
+                    "3": "Karena data tagihan bulan Desember sudah terlanjur \"dikunci\" di sistem komputer dan tidak boleh sekadar dihapus, dokumen perbaikan apa yang harus Anda buat secara resmi untuk membatalkan tagihan tersebut?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Pengiriman Barang Sebagian dan Kesalahan Tagihan",
+                "deskripsi": "Pelanggan menerbitkan Purchase Order (PO) untuk 1.000 unit barang. Di sistem, Anda membuat Sales Order (SO) sejumlah 1.000 unit. Karena stok kurang, gudang hanya mengirimkan 920 unit (Delivery Order / DO).<br>\n                             • Namun, saat memproses tagihan, Anda langsung menarik data dari SO dan menerbitkan Invoice untuk 1.000 unit. Pelanggan marah dan menahan seluruh pembayaran.",
+                "pertanyaan": {
+                    "1": "Mengapa mencetak tagihan berdasarkan jumlah pesanan awal (bukan berdasarkan jumlah barang yang benar-benar dikirim) adalah kesalahan fatal? Dokumen apa saja yang seharusnya dicocokkan sebelum sebuah tagihan dicetak?",
+                    "2": "Karena pelanggan menahan seluruh pembayarannya akibat kesalahan dokumen ini, apa dampak buruk/kerugian finansial yang akan langsung dirasakan oleh perusahaan?",
+                    "3": "Jika pelanggan sebelumnya mendapat harga diskon karena membeli 1.000 unit, dokumen perbaikan apa yang harus Anda buat sekarang agar pelanggan mau membayar yang 920 unit, namun tidak kehilangan hak diskonnya untuk sisa 80 unit nanti?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Barang Retur dan Masalah Batas Utang (Credit Limit)",
+                "deskripsi": "Pelanggan mengembalikan barang cacat senilai Rp 75.000.000.<br>\n                             • Barang tersebut sudah diterima oleh bagian gudang pada akhir bulan, tetapi Anda menunda mencatat dokumen retur tersebut di sistem komputer sampai bulan depan.<br>\n                             • Akibatnya, saat pelanggan ingin memesan barang baru di awal bulan, sistem menolak pesanan tersebut secara otomatis karena pelanggan dianggap \"Batas Utang/Kreditnya Penuh\" (belum membayar yang Rp 75.000.000).",
+                "pertanyaan": {
+                    "1": "Mengapa menunda mencatat dokumen barang kembali (retur) di sistem komputer bisa berakibat fatal dan langsung merugikan target penjualan perusahaan di bulan berikutnya?",
+                    "2": "Menurut alur kerja yang benar, sebutkan 3 urutan proses yang seharusnya langsung diselesaikan sejak barang fisik dari pelanggan tiba kembali di pintu gudang kita.",
+                    "3": "Karena pelanggan sudah marah pesanannya ditolak dan dokumen retur Anda butuh waktu untuk diurus, tindakan darurat apa yang bisa Anda komunikasikan kepada atasan (Manajer Keuangan) agar pesanan baru pelanggan tersebut tetap bisa diproses hari ini?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Tagihan Macet Karena Kesalahan Administrasi",
+                "deskripsi": "Sebuah Invoice senilai Rp 620.000.000 sudah lewat jatuh tempo 45 hari.<br>\n                             • Saat ditagih oleh bagian Keuangan, pelanggan menolak membayar dengan alasan: \"Kami belum pernah menerima fisik surat tagihannya, dan nomor pesanan (PO) yang tertulis di tagihan itu salah.\"<br>\n                             • Usut punya usut, Admin Penjualan salah mengetik nomor karena hanya menerima pesanan lewat WhatsApp tanpa mengecek email resmi.<br>\n                             • Parahnya lagi, surat bukti tanda terima barang (surat jalan yang sudah ditandatangani pelanggan) dihilangkan oleh kurir pengiriman.",
+                "pertanyaan": {
+                    "1": "Mengapa kehilangan surat tanda terima barang dan salah mengetik nomor pesanan membuat pelanggan berada di posisi yang sangat kuat untuk menolak bayar? Apa akibatnya jika perusahaan nekat menuntut pelanggan tersebut ke jalur hukum?",
+                    "2": "Sebagai Admin Penjualan, sebutkan dokumen-dokumen pendukung apa saja yang wajib dilampirkan bersama surat tagihan utama (Invoice), agar pelanggan tidak bisa mencari-cari alasan untuk menolak tagihan tersebut.",
+                    "3": "Meskipun tugas menagih uang ada di bagian Keuangan, tindakan pencegahan sederhana apa yang seharusnya dilakukan oleh Admin Penjualan beberapa hari setelah barang dikirim, agar alasan \"surat tagihan belum sampai\" tidak pernah terjadi?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Selisih Data Penjualan dan Gudang",
+                "deskripsi": "Pada laporan akhir bulan, catatan di sistem bagian Penjualan menunjukkan ada 2.000 unit barang yang terjual dan ditagihkan.<br>\n                             • Namun, catatan di sistem Gudang menunjukkan hanya 1.850 unit barang yang benar-benar keluar dari pintu gudang. Ada selisih misterius sebanyak 150 unit antara data penjualan dan data fisik gudang.",
+                "pertanyaan": {
+                    "1": "Selain kemungkinan barangnya hilang secara fisik, bagaimana sebuah program promo Marketing (misalnya promo \"Beli 10 Gratis 1\") bisa menyebabkan selisih angka ini jika Admin Penjualan salah memasukkan kode promo di sistem komputer?",
+                    "2": "Jika ternyata 150 unit tersebut adalah barang \"titip jual\" ke toko lain, mengapa mencetak tagihan penjualannya secara penuh (Invoice) saat ini adalah sebuah kesalahan besar bagi keuangan perusahaan? Kapan seharusnya barang titipan tersebut baru boleh diakui sebagai penjualan?",
+                    "3": "Langkah pemeriksaan dokumen (pencocokan data) apa saja yang akan Anda lakukan bersama tim Gudang untuk membuktikan secara pasti di mana letak kesalahan selisih 150 unit tersebut?"
+                }
+            }
+        }
+    },
+    "ADMIN PPIC (APP)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Menetapkan Prioritas Jadwal Produksi (Production Scheduling)",
+                "deskripsi": "Pada hari Senin pagi, Anda menerima 3 pesanan penjualan dari bagian penjualan, yang semuanya diminta untuk diproduksi minggu ini. Namun kapasitas mesin cetak di pabrik sangat terbatas.<br>\r\n• <strong>Pesanan 1 (Pelanggan A):</strong> Jumlah besar, keuntungan kecil, batas waktu pengiriman adalah hari Kamis.(Pelanggan lama sering kali terlambat).<br>\r\n• <strong>Pesanan 2 (Pelanggan B):</strong> Jumlah sedang, untung besar, batas waktu pengiriman Rabu.(Pelanggan VIP baru, jika terlambat pabrik akan dikenakan denda kontrak).<br>\r\n• <strong>Pesanan 3 (Pelanggan C):</strong> Jumlah kecil, keuntungan sedang, batas waktu pengiriman hari Jumat.(Produknya mudah dibuat, bahan bakunya melimpah).",
+                "pertanyaan": {
+                    "1": "Sebagai Admin PPIC, nomor pesanan berapa yang akan Anda masukkan ke dalam jadwal pesanan pertama (prioritas tertinggi) agar mesin dapat bekerja?Berikan alasan yang logis.",
+                    "2": "Apa risiko operasional di lantai produksi jika salah mengatur urutan pemrosesan ketiga pesanan terkait kesiapan tim pengiriman?",
+                    "3": "Jika pada hari Selasa mesin tiba-tiba rusak selama 5 jam, langkah darurat apa yang harus Anda ambil dalam sistem penjadwalan untuk menyimpan pesanan paling kritis?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Jebakan Waktu Pengiriman Pemasok dan Batas Minimum Order",
+                "deskripsi": "Permintaan mendadak (Urgent Order) dari Sales untuk memproduksi 500 unit Produk Y yang harus dikirim dalam waktu 20 hari. Berikut data Item Master komponen penyusun Produk Y:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Komponen</th><th>Stok Tersedia di Gudang</th><th>Persyaratan (Permintaan)</th><th>Waktu Pengiriman Pemasok Pembelian</th><th>Batas Pesanan Minimum</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Komponen A</td><td>100 unit</td><td>500 unit</td><td>14 Hari</td><td>500 unit</td></tr>\r\n<tr><td>Komponen B</td><td>500 unit</td><td>500 unit</td><td>7 Hari</td><td>1.000 unit</td></tr>\r\n<tr><td>Komponen C</td><td>0 unit</td><td>500 unit</td><td>25 Hari</td><td>100 unit</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Berdasarkan data di atas, komponen manakah yang menjadi hambatan utama yang menyebabkan pesanan 20 hari ini berisiko gagal pengiriman?Berikan alasan matematis Anda!",
+                    "2": "Untuk Komponen A, pabrik hanya kekurangan 400 unit, namun harus membeli 500 unit karena aturan Batas Minimum Pemesanan. Kerugian finansial apa yang harus ditanggung jika PPIC hanya menyetujui pembelian sesuai Batas Minimum Pemesanan ini?",
+                    "3": "Sebagai analis PPIC, sebutkan 2 langkah darurat yang dapat Anda lakukan bersama tim Purchasing untuk mengatasi keterlambatan Komponen C agar pesanan tetap diselesaikan dalam waktu 20 hari."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Bentrokan Perencanaan Kebutuhan Kapasitas (CRP).",
+                "deskripsi": "Rencana Jadwal Produksi Utama Mesin Pengemas pada minggu ke 3. Mesin beroperasi 1 shift (8 jam kerja efektif) selama 5 hari kerja per minggu (Total kapasitas waktu : 40 jam / 2.400 menit).<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Kode Perintah Kerja</th><th>Target Output</th><th>Kecepatan Alat Berat Standar (Waktu Siklus)</th><th>Total Waktu yang Dibutuhkan</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>WO-001</td><td>1.000 karton</td><td>2 menit / karton</td><td>2.000 menit</td></tr>\r\n<tr><td>WO-002</td><td>400 karton</td><td>2 menit / karton</td><td>800 menit</td></tr>\r\n<tr class='table-secondary'><td><strong>Total Muatan (Beban)</strong></td><td>-</td><td>-</td><td><strong>2.800 menit</strong></td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Hitung berapa jam kekurangan kapasitas waktu mesin (defisit) yang akan terjadi pada minggu tersebut jika semua pesanan dipaksa masuk?",
+                    "2": "Jika PPIC bertekad untuk memasukkan kedua pesanan ini ke dalam sistem komputer dan berjanji akan menyelesaikannya pada hari Jumat, kekacauan operasional apa yang akan terjadi di lantai pabrik dan departemen pengiriman?",
+                    "3": "Memberikan 2 solusi operasional yang realistis kepada Manajer Produksi agar kekurangan jam kerja mesin dapat teratasi dan kedua pesanan tetap dapat diselesaikan tepat waktu."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Analisis Stok Mati dan Umur Simpan",
+                "deskripsi": "Laporan Umur Persediaan beberapa bahan baku kimia di Gudang Penyimpanan Suhu Ruangan.Hari ini tanggal 1 Juli 2026.<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Kode Bahan</th><th>Jumlah Stok</th><th>Tanggal Masuk (Penerimaan Barang)</th><th>Tanggal Kedaluwarsa (Expiry Date)</th><th>Frekuensi Penggunaan (6 Bulan Terakhir)</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Mat-P</td><td>2.000 kg</td><td>10 Jan 2026</td><td>10 Des 2026</td><td>Sering (Setiap minggu)</td></tr>\r\n<tr><td>Mat-Q</td><td>800 kg</td><td>15 Agustus 2025</td><td>15 Agustus 2026</td><td>Sangat Jarang (Bergerak Lambat)</td></tr>\r\n<tr><td>Mat-R</td><td>500 kg</td><td>02 Feb 2026</td><td>02 Jul 2026</td><td>Sering</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Dari ketiga bahan kimia di atas, bahan manakah yang kondisinya paling darurat dan harus segera digunakan atau disimpan hari ini? Berikan alasan Anda berdasarkan sisa umur simpan barang tersebut.",
+                    "2": "Material Q sudah hampir setahun menumpuk dan akan segera habis masa berlakunya meskipun jarang digunakan. Kesalahan apa yang dilakukan bagian perencanaan saat pertama kali membeli barang ini?",
+                    "3": "Mengapa penggunaan aturan FIFO (First In = First Out) berbahaya bagi barang yang mungkin kadaluwarsanya? Bagaimana cara kerja sistem FEFO (First Expiry = First Out) pada komputer gudang?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Dampak Barang Cacat (Reject Rate) terhadap Kekurangan Pengiriman",
+                "deskripsi": "Laporan Penyelesaian Produksi untuk produk pelanggan VVIP. Pelanggan memesan tepat 5.000 unit. Parameter MRP pada sistem sebelumnya ditetapkan dengan tingkat kerusakan yang diharapkan (Scrap/Reject Rate) sebesar 2%.<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Parameter Produksi</th><th>Data Aktual di Lantai Pabrik</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Bahan Baku yang Ditarik (Material Issued)</td><td>Untuk 5.100 unit (buffer 2% telah ditambahkan)</td></tr>\r\n<tr><td>Output Barang Bagus (Good Receipt)</td><td>4.600 unit</td></tr>\r\n<tr><td>Produk Cacat Kualitas (QC Reject)</td><td>500 unit</td></tr>\r\n<tr><td>Status Mesin/Bahan</td><td>Bahan habis, mesin berhenti</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Hitung sebenarnya persentase barang cacat yang terjadi di lapangan berdasarkan data di atas. Mengapa target 5.000 unit masih belum tercapai meski bahan baku sudah terlampaui?",
+                    "2": "Karena kekurangan 400 unit, maka harus membuat pesanan produksi lanjutan. Apa tantangan atau kendala terbesar PPIC untuk bisa segera memproduksi kekurangan tersebut di hari yang sama?",
+                    "3": "Agar komputer pabrik tidak salah menghitung kebutuhan bahan baku lagi di bulan depan, data atau parameter apa yang harus diubah (dikalibrasi ulang) pada sistem komputer mengenai produk ini?"
+                }
+            }
+        }
+    },
+    "ADMIN QC (AQC)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Typo Disaster pada Data Hasil Tes",
+                "deskripsi": "QC Analyst di lapangan menyerahkan kertas laporan. Di kertas tersebut tertulis angka Pressure Drop (daya isap) untuk filter adalah 350 (Normal).",
+                "pertanyaan": {
+                    "1": "Mengapa Anda dilarang keras untuk langsung mengedit/mengubah angka 530 kembali menjadi 350 di sistem secara diam-diam tanpa melapor ke atasan atau QC lapangan?",
+                    "2": "Apa dampak kekacauan operasional pada tim Gudang dan Sales jika barang yang sebenarnya “Bagus” malah terkunci status “Tolak” di sistem karena salah ketik?",
+                    "3": "Rancang 1 aturan sederhana yang wajib (Periksa Ulang SOP) di meja kerja Anda sebelum Anda menekan tombol Simpan/Kirim di komputer, agar kesalahan pengetikan nomor ini tidak terjadi lagi."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Pemaksaan Pemalsuan Dokumen (CoA)",
+                "deskripsi": "Truk ekspedisi sudah jalan dan siap berangkat ke pabrik rokok klien. Tim Gudang meminta anda untuk segera mencetak Sertifikat Mutu (CoA). Soalnya, nomor Batch (Kode Produksi) yang ada di waybill adalah Batch A, sedangkan data hasil uji lab yang anda pegang adalah untuk Batch B. Petugas gudang menghimbau: \"Sudah, edit saja nomor Batch di kertas CoA menjadi Batch A agar truk bisa berjalan, kualitasnya sama-sama bagus!\"",
+                "pertanyaan": {
+                    "1": "Apa risiko hukum dan bisnis terbesar terhadap nama baik perusahaan jika menuruti permintaan pemalsuan nomor Batch pada dokumen resmi CoA?",
+                    "2": "Ketika ada tekanan dari lini operasional lain (Gudang/Logistik) untuk mengubah data secara ilegal demi kelancaran pengiriman, bagaimana prosedur eskalasi resmi yang harus Anda lakukan kepada Manajemen/Supervisor QC? Parameter batasan apa yang menentukan bahwa Anda harus benar-benar menolak untuk mencetak CoA sebelum ada persetujuan tertulis (Formulir Konsesi/Penyimpangan)?",
+                    "3": "Sambil menahan cetakan CoA, langkah pelacakan data apa yang langsung Anda lakukan di komputer untuk mengetahui hilangnya data asli Batch A di mana?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Status Hold Fisik vs Sistem Hilang",
+                "deskripsi": "Pukul 10.00 QC lapangan menemukan filter yang lemnya rusak dan secara fisik menempel Stiker Merah (HOLD) pada kotak. Namun kertas laporan menumpuk di meja Anda dan Anda lupa mengklik tombol Hold di sistem komputer.",
+                "pertanyaan": {
+                    "1": "Menurut SOP Pabrik, kesalahan manakah yang lebih fatal : Admin QC yang lupa mengunci sistem ATAU Petugas Gudang yang tidak memeriksa fisik karton (ada stiker berwarna merah)?Berikan alasan anda.",
+                    "2": "Ketika Anda menyadari adanya kesenjangan antara status fisik dan sistem yang menyebabkan produk cacat dimuat ke truk, langkah administratif cepat apa yang harus Anda lakukan dalam sistem ERP/WMS untuk melacak koordinat truk dan memblokir dokumen resi di sisi klien secara digital sebelum truk tiba di lokasi tujuan?",
+                    "3": "Menciptakan alur komunikasi yang cepat antara Field QC dan QC Admin sehingga setiap ada status fisik Hold, barang dapat langsung terkunci di sistem dalam waktu kurang dari 5 menit."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Hilangnya \"Bukti\" (Simpan Sampel)",
+                "deskripsi": "Klien (Pabrik Rokok X) menelepon dan mengeluh bahwa filter yang mereka terima dari produksi 3 bulan yang lalu sangat keras. Manajer QC menyuruh Anda mencari \"Simpan Sampel\" dari tanggal produksi tersebut di rak penyimpanan untuk diperiksa ulang. Sayangnya, rak sampel sangat berantakan dan sampel dari 3 bulan yang lalu hilang atau Anda lupa menyimpannya.",
+                "pertanyaan": {
+                    "1": "Mengapa hilangnya fisik Sampel Retain sangat merugikan posisi pabrik kita saat memperdebatkan klaim kompensasi dengan klien?",
+                    "2": "Karena sampel fisiknya hilang, dokumen arsip (kertas/digital) apa dari 3 bulan yang lalu yang dapat Anda keluarkan dan tunjukkan kepada Pengelola sebagai bukti pengganti bahwa saat itu hasil tesnya normal?",
+                    "3": "Rancang sistem pelabelan dan penyimpanan agar Sampel Retain bulanan selalu rapi dan dapat ditemukan dalam waktu kurang dari 3 menit."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Jadwal Kalibrasi & Audit Eksternal Hilang",
+                "deskripsi": "Besok pagi akan ada Auditor Eksternal (supervisor klien) yang datang ke pabrik. Saat Anda sedang merapikan dokumen (SOP dan Kalibrasi) malam ini, Anda baru menyadari bahwa masa berlaku Sertifikat Kalibrasi alat ukur utama di lab sudah \"Mati/Kedaluwarsa\" 2 minggu yang lalu. Anda lupa mengingatkan Manajer.",
+                "pertanyaan": {
+                    "1": "Jika Auditor mengetahui bahwa alat ukur tersebut telah keluar dari kalibrasi selama 2 minggu, apa dampaknya terhadap status mutu seluruh filter rokok yang diproduksi dan dikirim selama 2 minggu tersebut di mata hukum?",
+                    "2": "Mengapa kelalaian dalam jadwal kalibrasi alat ukur ini dianggap sebagai temuan besar (sangat serius) yang dapat membatalkan sertifikasi ISO perusahaan?",
+                    "3": "Rancanglah sistem kalender digital (alert/notifikasi) pada komputer Admin QC yang dapat memberikan peringatan otomatis kepada Manajer Mutu 30 hari, 15 hari, dan 7 hari sebelum masa berlaku kalibrasi alat berakhir."
+                }
+            }
+        }
+    },
+    "ADMIN SCM (ASCM)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Pemasok Impor Perangkap Harga Rendah",
+                "deskripsi": "Anda bertugas memilih supplier bahan pengemas. Kebutuhan bulanannya adalah 10.000 unit. Anda mendapatkan dua penawaran dengan rincian sebagai berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Parameter</th><th>Vendor A (Lokal)</th><th>Vendor B (Impor - Tiongkok)</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td><strong>Harga Satuan</strong></td><td>Rp 15.000 / unit</td><td>Rp 11.000 / unit</td></tr>\r\n<tr><td><strong>Incoterms</strong></td><td>Terima Pengaturannya di Gudang Kami</td><td>Ambil Sendiri di Pelabuhan China</td></tr>\r\n<tr><td><strong>Waktu Pengiriman</strong></td><td>5 Hari</td><td>45 Hari</td></tr>\r\n<tr><td><strong>Pemesanan Minimum</strong></td><td>10.000 unit</td><td>50.000 unit</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Vendor B terlihat lebih murah Rp 4.000. Namun karena barang harus diambil sendiri di pelabuhan luar negeri, sebutkan 3 biaya tambahan tersembunyi yang harus kita tanggung hingga barang sampai di gudang.",
+                    "2": "Jika kita memilih Vendor B, kita diharuskan membeli stok selama 5 bulan sekaligus. Apa dampak buruknya terhadap arus kas pabrik (Cash Flow) dan resiko penyimpanan di gudang?",
+                    "3": "Melihat kondisi biaya pengiriman dan nilai tukar dollar yang fluktuatif memberikan alasan kuat mengapa memilih Vendor A (Lokal) sebenarnya lebih aman bagi pihak pabrik."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Menata Cara Penyimpanan Barang (Pusat vs Daerah)",
+                "deskripsi": "Anda mengelola inventaris 4 kategori produk di ritel elektronik. Data permintaan dan biaya adalah sebagai berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Kode SKU</th><th>Nilai Permintaan Bulanan (unit)</th><th>Koefisien Variasi Permintaan (CV)</th><th>Margin Kontribusi per Unit</th><th>Biaya Penyimpanan per Unit/Bulan</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>SKU-A</td><td>5.000 unit</td><td>0,2 (Sangat Stabil)</td><td>Rp 50.000</td><td>Rp 2.000</td></tr>\r\n<tr><td>SKU-B</td><td>500 unit</td><td>0,9 (Atas-Bawah)</td><td>Rp 200.000</td><td>Rp 5.000</td></tr>\r\n<tr><td>SKU-C</td><td>10.000 unit</td><td>0,3 (Cukup Stabil)</td><td>Rp 10.000</td><td>Rp 500</td></tr>\r\n<tr><td>SKU-D</td><td>200 unit</td><td>1,5 (Jarang Terjual/Musiman)</td><td>Rp 50.000</td><td>Rp 10.000</td></tr>\r\n</tbody>\r\n</tabel><br>\r\n<strong>Target Strategis:</strong> Mengurangi total nilai inventaris sebesar 30% namun tetap mempertahankan OTIF (On Time In Full) di atas 95%.",
+                "pertanyaan": {
+                    "1": "Barang apa yang sebaiknya disimpan di gudang regional (dekat konsumen), dan barang mana yang hanya boleh disimpan di gudang pusat untuk menghemat biaya?",
+                    "2": "Jika kita ingin mengirim barang polos dari pusat lalu mengemas/mereknya di gudang daerah, SKU mana yang paling cocok? Sebutkan 2 syarat sistem komputer gudang agar cara ini tidak semrawut.",
+                    "3": "Karena stok terpotong 30%, sebutkan 3 indikator (KPI) yang harus dimonitor oleh Admin SCM setiap minggunya agar toko tidak kehabisan barang dan konsumen tidak kecewa."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Pengaruh Swollen Order pada Supply Chain",
+                "deskripsi": "Laporkan pergerakan pesanan Produk Z karena promosi akhir pekan di tingkat toko retail (pelanggan akhir).<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 650px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Poin Rantai Pasokan</th><th>Realitas Penjualan / Permintaan Aktual</th><th>Jumlah Permintaan (Pesanan) yang Diteruskan ke Pihak Atas</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td><strong>Data Kasir Toko (POS)</strong></td><td>Terjual 150 unit (naik 50 unit dari biasanya)</td><td>Toko memesan 200 unit ke Distributor</td></tr>\r\n<tr><td><strong>Distributor Regional</strong></td><td>Menerima pesanan 200 unit dari Toko</td><td>Distributor memesan 400 unit ke Pabrik</td></tr>\r\n<tr><td><strong>Admin SCM Pabrik</strong></td><td>Menerima pesanan 400 unit dari Distributor</td><td>Pesanan SCM untuk produksi 800 unit ke Manufaktur</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Mengapa penjualan yang semula hanya meningkat 50 unit di kasir toko balon menjadi pesanan produksi 800 unit di pabrik? Jelaskan penyebab kepanikan operasional ini.",
+                    "2": "Ketika masa promo berakhir dan pembelian konsumen kembali normal, beban atau kerugian berat apa yang akan dialami gudang distributor dan gudang pabrik akibat sudah memproduksi 800 unit tersebut?",
+                    "3": "Sebagai Admin SCM, apa yang harus dilakukan agar komputer pabrik bisa langsung melihat data penjualan asli di kasir toko secara langsung, agar pabrik tidak lagi “dibohongi” dengan pesanan distributor yang digelembungkan?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Pengiriman Truk Macet dan Gudang Penuh",
+                "deskripsi": "Jelang lebaran, pengiriman barang melonjak 300%.Perusahaan menggunakan jasa ekspedisi luar (vendor truk/3PL). Sayangnya, truk mereka kerap terlambat sampai di gudang. Akibatnya, barang menumpuk dan menyumbat area dermaga bongkar gudang.",
+                "pertanyaan": {
+                    "1": "Pintu gudang ramai karena truk terlambat. Apa akibat buruknya bagi pekerja di gudang yang ingin mengambil barang atau menata barang di rak?",
+                    "2": "Bagaimana menerapkan sistem Cross-Docking (barang baru dari pabrik langsung dipindahkan ke truk kurir tanpa disimpan di rak) untuk mengatasi kemacetan ini?",
+                    "3": "Mengandalkan satu vendor ekspedisi terbukti berisiko. Sebagai Admin SCM, apa rencana Anda mengelola vendor truk untuk peak season tahun depan agar masalah ini tidak terulang kembali?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Penarikan Barang Rusak dari Pasar (Reverse Logistics)",
+                "deskripsi": "BPOM memerintahkan penarikan produk untuk satu nomor kode produksi makanan ringan (batch) karena terkontaminasi. Sebagai Admin SCM harus menarik 10.000 dus produk yang sudah didistribusikan ke 50 agen di seluruh Indonesia untuk dikembalikan ke gudang pusat.",
+                "pertanyaan": {
+                    "1": "Apa langkah pertama yang harus Anda masukkan ke dalam komputer agar produk dengan nomor kode (batch) yang terkontaminasi otomatis terkunci dan tidak dapat dijual lagi ke konsumen?",
+                    "2": "Saat truk pulang tiba di gudang pusat, bagaimana cara mengatur area karantina agar barang rusak tidak tercampur secara tidak sengaja dengan barang bagus siap dijual?",
+                    "3": "Penarikan barang ini tidak menghasilkan uang, malah menghabiskan banyak uang. Sebutkan 3 komponen biaya logistik utama yang harus dibayar perusahaan akibat proses penarikan barang berskala nasional ini."
+                }
+            }
+        }
+    },
+    "General Affair (GA)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — ATK & Pantry Stock Control (Inventaris Harian)",
+                "deskripsi": "Setiap bulannya, anggaran Alat Tulis Kantor (ATK) dan Pantry selalu overbudged dan stok habis di pertengahan bulan. Selama ini, barang-barang ditaruh di lemari terbuka dan bebas diambil siapa saja. Manajer GA menugaskan Anda untuk menghentikan pemborosan ini dan mengubahnya menjadi sistem yang dapat dilacak secara finansial.",
+                "pertanyaan": {
+                    "1": "Buatlah alur singkat (maksimal 3 tahap) mengenai cara baru karyawan untuk meminta alat tulis ke GA, agar barang keluar tercatat dengan rapi namun tidak membuat karyawan merasa ribet.",
+                    "2": "Bagaimana cara paling logis dan sederhana untuk menentukan “Batas Minimal Stok” di rak, sehingga Anda tahu kapan waktu yang tepat untuk memesan barang ke vendor sebelum stok benar-benar kosong?",
+                    "3": "Banyak pegawai yang protes dan menilai GA sekarang \"pelit\". Tulis 1 kalimat dengan balasan yang sopan dan taktis untuk menjelaskan bahwa aturan baru ini murni tentang kerapian sistem, bukan karena pelit."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Dilema Penjadwalan (Pencucian AC vs Pertemuan VVIP)",
+                "deskripsi": "Jadwal rutin pembersihan AC ruang rapat jatuh hari ini pukul 09.00. Soalnya, tadi siang pukul 13.00 ada rapat dadakan antara Direktur VVIP dan Klien di ruangan itu. Tiba-tiba teknisi vendor mengabarkan bahwa mereka terlambat 1,5 jam (baru tiba pukul 10.30).",
+                "pertanyaan": {
+                    "1": "Menghadapi vendor yang terlambat 1,5 jam, apa keputusan cepat Anda: Batalkan pencucian AC hari ini ATAU Paksa mereka tetap mencuci AC? Berikan alasan operasional Anda mengingat pertemuan VVIP pukul 13.00.",
+                    "2": "Selain meminta foto sebelum dan sesudah pekerjaan, data/bukti teknis spesifik apa yang harus Anda minta agar tidak dibohongi oleh vendor?",
+                    "3": "Buat 1 klausul “SLA Kebersihan” yang mengikat vendor. Hukuman (penalti) khusus apa yang akan diberikan jika setelah mencuci AC, mereka membiarkan karpet ruang rapat dalam keadaan basah dan kotor?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Manajemen Vendor & Kepatuhan Hukum (Outsourcing)",
+                "deskripsi": "Karyawan mengeluhkan toilet kotor dan parkir tidak aman. Pelayanan vendor Cleaning Service dan Security menurun drastis. Kontrak mereka masih tersisa 8 bulan, dan ada penalti 30% bagi perusahaan jika GA memutuskan kontrak secara sepihak.",
+                "pertanyaan": {
+                    "1": "Untuk memastikan keluhan karyawan merupakan opini yang valid dan bukan opini subjektif, rancang 2 parameter objektif untuk melakukan Audit Incidental (inspeksi mendadak) terhadap toilet dan area parkir.",
+                    "2": "Anda berencana mengakhiri kontrak vendor bulan depan tanpa harus membayar denda 30%. 2 dokumen operasional/hukum apa yang mutlak harus Anda kumpulkan mulai hari ini sebagai \"senjata/bukti\" kelalaian mereka?",
+                    "3": "Mengusulkan sistem pelaporan sederhana yang melibatkan partisipasi karyawan setiap hari, sehingga GA dapat memantau kebersihan toilet tanpa harus patroli lapangan setiap jam."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Pemeliharaan Aset TI (Investigasi Kerusakan Printer)",
+                "deskripsi": "Mesin printer besar di lantai 2 sering rusak (kertas tersangkut), padahal baru diservis minggu lalu. Anda menduga ini bukan kesalahan vendor, namun justru pegawai di lantai 2 yang sering mencabut paksa kertas yang macet dan menggunakan kertas bekas yang masih ada staplesnya.",
+                "pertanyaan": {
+                    "1": "Bagaimana cara Anda menyelidiki secara taktis dan mencari bukti atas kecurigaan Anda, tanpa terlihat langsung menuduh orang-orang di lantai 2?",
+                    "2": "Jika mesin harus dibawa ke bengkel vendor selama 3 hari, aturlah protokol transfer pencetakan ke mesin lantai 1 agar dokumen rahasia (seperti slip gaji HRD atau tagihan keuangan) tidak bocor dan terbaca oleh karyawan lain.",
+                    "3": "Rancang 1 pesan peringatan visual (poster kecil di dekat mesin) untuk mencegah kebiasaan menstaples kertas, tanpa menggunakan kata-kata kasar/tidak menceramahi."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Pengawasan Eksekusi (BAST) & Ketegasan K3 (HSE)",
+                "deskripsi": "Vendor bangunan tersebut melaporkan melalui WhatsApp bahwa perbaikan engsel pintu dan pipa pantry yang bocor sudah selesai 100%. Mereka menghimbau agar segera menandatangani Berita Acara Serah Terima (BAST) agar gaji pekerjanya bisa dicairkan sore ini juga.",
+                "pertanyaan": {
+                    "1": "Apa risiko finansial dan profesional bagi karir Anda sendiri jika langsung menandatangani BAST hanya dengan menggunakan laporan foto dari vendor, tanpa melakukan pemeriksaan fisik di lapangan?",
+                    "2": "Saat dicek secara fisik, ternyata pipa pantry masih menetes sedikit. Rancang kalimat penolakan BAST yang diplomatis, namun tegas memaksa vendor untuk bekerja lembur agar dapat diselesaikan di hari yang sama.",
+                    "3": "Saat bekerja, teknisi vendor tersebut bersikeras tidak mau memakai perlengkapan K3 (seperti sabuk pengaman/kacamata pelindung) karena dirasa “rumit”. Susun 1 tindakan instan di detik itu untuk memaksa mereka patuh tanpa harus membuat keributan di kantor."
+                }
+            }
+        }
+    },
+    "HRD Payroll (HRP)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Kesalahan Fatal (Kelebihan Pembayaran Gaji)",
+                "deskripsi": "Anda salah ketik saat memproses gaji. Akibatnya, ada karyawan yang menerima kelebihan transfer Rp 5.000.000 pada bulan lalu. Saat dikonfirmasi hari ini, karyawan tersebut berdalih uang tersebut telah digunakan untuk membayar utang pribadi.",
+                "pertanyaan": {
+                    "1": "Dari segi peraturan ketenagakerjaan dan empati, mengapa Anda dilarang memotong gaji penuh sebesar Rp 5.000.000 bulan depan, dan siapa saja 2 pihak internal yang wajib Anda laporkan terlebih dahulu terkait kecerobohan tersebut?",
+                    "2": "Tuliskan 1 kalimat tawaran taktis kepada karyawan tersebut untuk mencari jalan tengah mengembalikan uang tersebut tanpa membuat gajinya bulan depan benar-benar kosong/minus!",
+                    "3": "Rancang alur persetujuan secara manual (Approval Workflow) sebelum berkas transfer gaji dikirim ke bank, sehingga jumlah yang tidak masuk akal dapat terdeteksi oleh pihak lain!"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Manipulasi Klaim Lembur (Kebocoran Dana)",
+                "deskripsi": "Tagihan lembur divisi Gudang naik tiga kali lipat. Formulir lembur memang sudah disetujui oleh Manajer Gudang, namun secara fisik tidak masuk akal (beberapa staf mengklaim lembur 60 jam/minggu). Manajer gudang marah dan menyuruh Anda langsung membayar karena sudah ada tanda tangannya.",
+                "pertanyaan": {
+                    "1": "Selain melihat kertas formulir lembur, sebutkan 2 lembar bukti data nyata dari departemen lain yang akan Anda tarik untuk membuktikan bahwa lembur ini fiktif!",
+                    "2": "Tuliskan 1 argumen tandingan kepada Manajer Gudang yang menghubungkan ketidakteraturan lembur ini dengan potensi kerugian finansial dan audit keuangan perusahaan!",
+                    "3": "Jika bukti manipulasinya kuat, putuskan apakah tagihan lembur akan ditahan atau tetap dicairkan, lalu buat aturan pembatasan jam lembur agar anggaran perusahaan tidak lepas kendali!"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Dilema Pajak (Karyawan yang Marah Membawa Pulang Bayaran)",
+                "deskripsi": "Karena peraturan perpajakan pemerintah berubah, pemotongan PPh 21 bulan ini lebih besar. Seorang karyawan senior datang ke meja Anda dengan marah, menuduh tim Payroll diam-diam memotong gajinya, dan mengancam akan mengundurkan diri jika pajaknya tidak ditanggung oleh perusahaan (Gross-up).",
+                "pertanyaan": {
+                    "1": "Mengapa menanggapi kemarahan karyawan dengan menyuruhnya \"Baca sendiri peraturan perpajakan di Google\" merupakan kesalahan komunikasi yang fatal bagi staf HR?",
+                    "2": "Tulislah penjelasan singkat (maksimal 3 kalimat) dalam bahasa awam yang menegaskan bahwa uang potongan tersebut murni disetor ke kas Negara, disertai dengan 1 dokumen fisik yang akan Anda tunjukkan di atas meja!",
+                    "3": "Usulkan 1 langkah proaktif dari divisi Payroll bulan depan agar kepanikan massal mengenai pemotongan pajak dapat dicegah sebelum slip gaji dibagikan!"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Sengketa Gaji Karyawan yang Mengundurkan Diri Mendadak",
+                "deskripsi": "Seorang karyawan hari ini mengundurkan diri tanpa pamit (padahal aturan pengunduran dirinya adalah One Month Notice / 30 hari sebelumnya). Ia menuntut agar gajinya selama 15 hari kerja terakhir segera ditransfer hari ini dan takut melaporkannya ke polisi/Dinas Tenaga Kerja karena dianggap perusahaan “menahan hak gajinya”.",
+                "pertanyaan": {
+                    "1": "Sebagai Payroll, apa alasan terkuat Anda berani menahan gaji untuk sementara, dan apa 2 kewajiban/fasilitas yang harus dipastikan selesai sebelum gaji dilepas?",
+                    "2": "Tuliskan draf pesan singkat (WhatsApp/Email) yang tegas menolak transfer gajinya hari ini, namun mencantumkan syarat mutlak yang harus ia penuhi jika ingin uangnya cair!",
+                    "3": "Agar kasus karyawan yang tiba-tiba keluar ini tidak menimbulkan masalah lagi bagi perusahaan, klausul peringatan khusus (penalti) apa yang harus ditambahkan pada lembar Perjanjian Kerja bagi karyawan baru di kemudian hari?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Manajemen Krisis (Sistem Bank/Payroll Down di Hari H)",
+                "deskripsi": "Hari ini tanggal 25 (Payday) pukul 14.00 siang. Tiba-tiba sistem Internet Banking pusat mengalami error dan tidak dapat diakses hingga waktu yang tidak ditentukan. Ratusan karyawan merasa was-was dan mulai menyebarkan rumor bahwa perusahaan tersebut bangkrut.",
+                "pertanyaan": {
+                    "1": "Tindakan pertama Anda adalah menghentikan gosip liar. Tulislah 1 kalimat pengumuman resmi (Siaran) yang jujur, menenteramkan hati, tanpa menjanjikan waktu tertentu kapan sistem perbankan akan kembali normal.",
+                    "2": "Jika bank baru pulih keesokan harinya dan seorang karyawan didenda karena keterlambatan pembayaran hipotek karena gaji yang terlambat, apakah perusahaan wajib mengganti denda bank kepada karyawan tersebut?Berikan alasannya.",
+                    "3": "Menyusun Rencana Darurat (Contingency Plan) bersama tim Keuangan untuk mencairkan gaji di hari yang sama, terutama bagi pegawai level bawah (seperti Office Boy dan Security) yang uangnya habis untuk makan."
+                }
+            }
+        }
+    },
+    "HRD Recruitment (HRR)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Menetapkan Ekspektasi Pengguna (Kriteria Tidak Masuk Akal)",
+                "deskripsi": "Manajer TI (Pengguna) meminta Anda untuk mencari Programmer dengan pengalaman 8 tahun dan penguasaan 5 bahasa pemrograman yang sulit, namun anggaran gajinya hanya setara dengan staf junior.<br>\r\n• Sebulan berlalu, belum ada kandidat yang melamar.<br>\r\n• Pengguna marah dan menuduh departemen HRD bekerja lambat.",
+                "pertanyaan": {
+                    "1": "Tulis 1 kalimat tegas beserta bukti data riil (kondisi pasar) yang akan Anda sampaikan kepada pengguna untuk mematahkan tudingan “HRD lambat” sekaligus menyadarkan mereka bahwa kriteria mereka tidak masuk akal.",
+                    "2": "Jika anggaran gaji absolut tidak dapat ditingkatkan, opsi mana yang akan Anda dorong untuk disetujui Pengguna: Menurunkan persyaratan pengalaman ATAU Memberikan manfaat non-finansial? Berikan 1 alasan taktis.",
+                    "3": "Rancang 1 aturan wajib (SOP/Service Level Agreement) yang harus disepakati antara HRD dan Pengguna sebelum lowongan apapun dipublikasikan, agar kejadian serupa tidak terulang kembali."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Kandidat Juara yang Terkena Counter-Offer",
+                "deskripsi": "Anda menemukan kandidat impian Anda.Dia telah menandatangani Surat Penawaran dan dijadwalkan masuk pada hari Senin.<br>\r\n• Tiba-tiba pada hari Jumat, dia mengundurkan diri karena ditahan oleh perusahaan lamanya.<br>\r\n• Kandidat ditawari kenaikan gaji dan promosi kejutan di tempat lama mereka.",
+                "pertanyaan": {
+                    "1": "Haruskah perusahaan kita juga menaikkan tawaran gaji?Jika tidak, tulis 1 pertanyaan psikologis di telepon untuk mempengaruhi keputusannya untuk tetap di tempat lama.",
+                    "2": "Jika dia tetap tidak bergabung, tuliskan draf kalimat taktis untuk menelepon dan menawarkannya calon Juara 2 (Juara Dua), padahal minggu lalu Anda sudah mengiriminya email penolakan!",
+                    "3": "Taktik \"Penguncian Komitmen\" apa yang harus Anda terapkan pada tahap akhir Wawancara (sebelum tawaran gaji) sehingga risiko kandidat menerima tawaran balasan dari perusahaan lamanya dapat dicegah?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Kasus Ghosting Massal (Hari Pertama Kerja Kosong)",
+                "deskripsi": "Terdapat 3 calon Customer Service (CS) yang lolos seleksi dan bersedia masuk kantor pada pukul 8 pagi ini.<br>\r\n• Pada jam 9 pagi, tidak ada satu pun kandidat yang muncul di kantor.<br>\r\n• Panggilan tidak diangkat, dan saat WhatsApp hanya terbaca (ghosting).<br>\r\n• Pengguna sangat membutuhkan tambahan orang saat ini.",
+                "pertanyaan": {
+                    "1": "Apa penjelasan paling rasional dan non-defensif yang akan Anda berikan kepada Pengguna (Manajer CS) hari itu terkait 3 orang yang kabur tersebut?",
+                    "2": "Jeda waktu antara penandatanganan kontrak dan hari pertama kerja seringkali menjadi peluang bagi kandidat untuk melarikan diri/berubah pikiran. Rencanakan 1 aktivitas Pra-Boarding sederhana selama istirahat tersebut untuk mengikat mereka secara emosional!",
+                    "3": "Untuk posisi dengan tingkat turnover yang tinggi seperti CS, sebutkan 1 strategi membangun sistem \"Talent Pool (Reserve)\" agar Anda dapat segera memanggil penggantinya dalam waktu 1x24 jam!"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Dilema Pemeriksaan Referensi (Masa Lalu Kelam)",
+                "deskripsi": "Anda memiliki kandidat Pengawas Keuangan yang cerdas dan Pengguna sangat menyukainya.<br>\r\n• Saat Anda diam-diam menelepon HR di perusahaan lamanya (Pemeriksaan Referensi), Anda mendapat informasi bahwa kandidat tersebut digunakan untuk menggelapkan uang kantor.<br>\r\n• Kasus ini akhirnya ditutup-tutupi oleh pihak internal perusahaan lama.",
+                "pertanyaan": {
+                    "1": "Jangan langsung percaya pada 1 sumber. Selain mencari referensi dari pihak lain, tulislah 1 pertanyaan jebakan (Behavioral Question) saat wawancara lanjutan untuk memancing kejujuran kandidat tentang selisih uang.",
+                    "2": "Jika user membentak dan berkata: \"Terima saja! Dia pintar, tinggalkan saja masa lalunya,\" tuliskan 1 argumen bantahan dari HRD yang berfokus pada risiko fatal di masa depan!",
+                    "3": "Jika Direktur Utama akhirnya bersikeras agar kandidat tersebut tetap diterima, dokumen perlindungan hukum/persyaratan administratif apa yang harus ditambahkan oleh HRD ke dalam Perjanjian Kerja untuk melindungi perusahaan?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Konflik Kandidat Internal vs. Eksternal",
+                "deskripsi": "Ada lowongan untuk Kepala Cabang. Anda memiliki kandidat internal (karyawan lama, loyal selama 5 tahun, namun kurang agresif).<br>\r\n• Di sisi lain, ada kandidat eksternal (orang luar, sangat agresif, ambisius, namun meminta gaji tinggi).<br>\r\n• Pengguna ingin merekrut pihak luar, sementara tim internal mulai berpendapat bahwa jalur karier mereka tidak dihargai.",
+                "pertanyaan": {
+                    "1": "Data nyata apa (selain ketidakhadiran dan lama kerja) yang harus Anda tarik untuk membuktikan secara obyektif kepada Pengguna apakah Kandidat Internal layak dipertimbangkan atau tidak?",
+                    "2": "Jika pada akhirnya yang direkrut adalah Kandidat Eksternal (pihak luar), bagaimana cara HRD dan User menyampaikan kabar penolakan tersebut kepada Kandidat Internal tanpa merusak motivasi kerjanya lalu mengundurkan diri?",
+                    "3": "Jika pihak luar tetap direkrut namun permintaan gaji melebihi standar (anggaran) Kepala Cabang, bagaimana taktik Anda dalam mengatur komponen gaji (misalnya: Gaji Pokok vs rasio Insentif/Bonus) agar total beban biaya tetap perusahaan tidak turun?"
+                }
+            }
+        }
+    },
+    "Job Planner (JPL)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Jadwal Mesin Push-Pull (Fokus: Penjadwalan & Koordinasi PPIC)",
+                "deskripsi": "Anda telah menjadwalkan Pemeliharaan Preventif (PM) untuk Mesin Utama pada hari Rabu selama 6 jam.<br>\r\n• Pada Selasa sore, tim PPIC menolak mematikan mesin karena ada perintah mendesak yang harus dikirimkan pada hari Kamis.<br>\r\n• Mekanik memperingatkan Anda: \"Jika Anda tidak menyervis mesin besok, keesokan harinya mesin pasti akan rusak total.\"",
+                "pertanyaan": {
+                    "1": "Sebagai Job Planner yang berada di tengah-tengah, data atau fakta teknis apa yang harus Anda tunjukkan kepada PPIC agar mereka menyadari bahwa menunda maintenance justru akan menghancurkan target mereka sendiri?",
+                    "2": "Rancang skema jalan tengah (jadwal kompromi) antara mekanik dan PPIC agar pesanan mendesak tetap diselesaikan, namun mesin tetap mendapat perawatan dalam batas waktu aman.",
+                    "3": "Buatlah perjanjian tertulis (SLA) antara bagian Maintenance dan PPIC mengenai batas maksimal keterlambatan jadwal PM, agar jadwal yang Anda buat tidak selalu dikorbankan."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Darurat Suku Cadang & Keterlambatan Sentral (Fokus: Pengadaan & Logistik)",
+                "deskripsi": "Jadwal perbaikan mesin dijadwalkan pada hari Jumat. Anda telah membuat Permintaan Pembelian (PR) sejak minggu lalu kepada tim Pembelian di Surabaya.<br>\r\n• Kamis ini barang belum sampai.<br>\r\n• Saat ditelepon, Purchasing Surabaya menjawab: \"Vendor masih mencari barangnya, tunggu saja.\"<br>\r\n• Jika barang tidak sampai besok, perbaikan dibatalkan dan mekanik menganggur.",
+                "pertanyaan": {
+                    "1": "Langkah darurat teknis apa yang akan Anda ambil dengan vendor lokal untuk menghemat jadwal kerja mekanik yang dialokasikan?",
+                    "2": "Jika barang akhirnya tiba di hari Jumat namun jumlahnya kurang (pesanan 5, sampai 3), apa dampak fatal terhadap data Penilaian Persediaan, perhitungan Safety Stock, dan otomatisasi Reorder Point (ROP) pada sistem jika terpaksa menginput Good Receipt Note (GRN) secara lengkap?",
+                    "3": "Berdasarkan kasus keterlambatan ini, bagaimana cara menghitung ulang Lead Time pengadaan komponen tersebut untuk memperbarui parameter Max-Min Stock di gudang agar kerusakan serupa tidak terjadi lagi di kemudian hari?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Cut-Off Disaster Akhir Bulan (Fokus: Manajemen Sistem Ganda - Excel vs Accurate)",
+                "deskripsi": "Hari ini adalah jadwal Cut-Off (penutupan buku) bulanan. Anda harus menyesuaikan datanya.<br>\r\n• Dalam catatan manual Excel Anda, sisa oli pelumas adalah 5 drum.<br>\r\n• Namun saat dicek dengan sistem Akurat, stok tercatat hanya tersisa 3 drum.<br>\r\n• Ada selisih 2 drum yang hilang antar sistem.",
+                "pertanyaan": {
+                    "1": "Dari sisi sistem Audit Trail, sebutkan 2 kesenjangan administratif yang paling sering menyebabkan terjadinya varians stok bahan habis pakai (seperti oli/gemuk) antara sistem Accurate dan pencatatan Excel di lapangan.",
+                    "2": "Tindakan pelacakan fisik dan investigasi dokumen jangka pendek apa yang harus Anda lakukan pada hari itu juga sebelum mengambil keputusan untuk menyesuaikan angka-angka dalam sistem?",
+                    "3": "Apabila setelah dilakukan pengecekan fisik ternyata sisa oli memang 3 drum (catatan excel anda salah), dokumen pendukung teknis apa yang harus anda lampirkan pada bagian Keuangan agar selisih 2 drum tersebut disetujui sebagai biaya operasional, bukan kerugian karena kelalaian."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Kanibal Suku Cadang Mesin (Fokus: Manajemen Aset & Administrasi Humas)",
+                "deskripsi": "Mesin B tiba-tiba rusak parah (Breakdown). Mekanik memerlukan sensor mesin secepatnya.<br>\r\n• Karena stok di gudang kosong, Kepala Mekanik memutuskan untuk melepas sensor dari Mesin C yang idle.<br>\r\n• Sensor dipasang pada Mesin B agar aktivitas pabrik tetap berjalan.",
+                "pertanyaan": {
+                    "1": "Untuk merapikan administrasi pasca kejadian kanibal ini, bagaimana cara membuat Permintaan Pembelian (PR) baru: Apakah Anda memesan sensor untuk \"Perbaikan Mesin B\" atau \"Ganti Sensor Mesin C\"?Beri alasannya.",
+                    "2": "Rancang protokol intervensi darurat atau SOP yang harus dipenuhi mekanik sebelum melakukan kanibalisasi, sehingga riwayat kerusakan mesin dan struktur Bill of Material (BOM) kedua mesin pada sistem Akurat tetap dapat terlacak secara akurat.",
+                    "3": "Apa risiko jangka panjang terhadap nilai penyusutan dan keandalan Mesin C jika praktik kanibalisasi terselubung ini terus berlanjut tanpa diawasi oleh Perencana Pekerjaan?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Kesenjangan Pengawasan Setelah Jam 11 Malam (Fokus: Pengendalian & Serah Terima Stok)",
+                "deskripsi": "Jam kerja Anda sebagai Job Planner hanya sampai jam 11 malam. Kunci lemari suku cadang Anda serahkan kepada Kepala Mekanik (Supervisor) agar timnya tetap dapat mengambil barang jika mesin rusak pada malam hari.<br>\r\n• Tiga kali Anda mendapati stok barang di pagi hari berkurang, namun tidak ada mekanik yang melaporkannya di grup WhatsApp.<br>\r\n• Saat ditanya, Kepala Mekanik beralasan: “Wah, tadi malam saya berkeliling pabrik, saya tidak tahu bawahan mana yang membuka lemari dan mengambil barang.”",
+                "pertanyaan": {
+                    "1": "Sebagai pemilik otorisasi inventaris, mengapa sistem \"kunci kunci\" tanpa peraturan ketat ini berbahaya bagi posisi Anda selama audit stock opname oleh Finance? Bagaimana Anda memetakan tanggung jawab hukum atas perbedaan material ini?",
+                    "2": "Buatlah mekanisme penyerahan kunci gudang dan verifikasi stok yang ketat pada pukul 23.00 sebelum Anda pulang, sehingga pengawas shift malam bertanggung jawab penuh atas pergerakan barang.",
+                    "3": "Bagaimana Anda merancang skema tata letak fisik gudang darurat (Night Shift Kitting Buffer) untuk memisahkan komponen-komponen penting yang dapat diambil secara mandiri oleh mekanik malam, tanpa harus memberikan akses penuh ke area utama gudang yang terkunci?"
+                }
+            }
+        }
+    },
+    "Kas kecil (KAS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Perbedaan Perhitungan Kas Kecil dan Permasalahan Closed Book",
+                "deskripsi": "Anda mengelola kas kecil dengan metode saldo tetap (dana ditetapkan sebesar Rp 10.000.000). Pada tanggal 31 Oktober, ketika pembukuan bulan Oktober dikunci (ditutup), Anda menghitung isi brankas dan menemukan data sebagai berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 500px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Komponen dalam Brankas</th><th>Nominal</th><th>Deskripsi</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Uang Tunai</td><td>Rp 2.000.000</td><td>Pembayaran uang kertas & koin</td></tr>\r\n<tr><td>Bon/Nota Pengeluaran</td><td>Rp 7.000.000</td><td>Tanggal 25 - 30 Oktober</td></tr>\r\n<tr><td>Obligasi Tunai (IOU)</td><td>Rp 500.000</td><td>Karyawan A (Belum ada catatan)</td></tr>\r\n</tbody>\r\n</tabel>\r\n<br>Total Fisik & Dokumen : Rp. 9.500.000 (Ada selisih kurang dari Rp 500.000)",
+                "pertanyaan": {
+                    "1": "Menurut Anda, apa alasan operasional paling logis mengapa uang di brankas bisa kurang dari Rp 500.000? Sebagai pemegang uang tunai, apa tindakan pertama yang Anda lakukan untuk melacaknya?",
+                    "2": "Karena pembukuan bulan Oktober sudah dikunci sedangkan Rp. Uang pecahan 7.000.000 belum terinput ke komputer, apa dampak buruknya terhadap keakuratan laporan laba rugi perusahaan bulan Oktober?",
+                    "3": "Di bulan November, Anda harus mengisi ulang kas kecil agar saldo kembali menjadi Rp 10.000.000. Bagaimana cara menginput nota bulan Oktober ke sistem di bulan November agar pembukuan Anda tetap rapi dan benar?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Pemeriksaan Bukti Pengeluaran dan Indikasi Fraud",
+                "deskripsi": "Daftar permohonan penggantian Petty Cash dari Divisi Pemasaran minggu ini:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 500px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Tanggal</th><th>Uraian Pengeluaran</th><th>Nominal</th><th>Bukti Pendukung</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Sabtu, 14 Nov</td><td>Hiburan Klien (Makan Malam)</td><td>Rp 1.900.000</td><td>Kwitansi EDC (Tanpa detail menu)</td></tr>\r\n<tr><td>Senin, 16 Nov</td><td>Pembelian Tinta Printer (Toko A)</td><td>Rp 900.000</td><td>Catatan Tulisan Tangan</td></tr>\r\n<tr><td>Senin, 16 Nov</td><td>Pembelian Kertas HVS (Toko A)</td><td>Rp 800.000</td><td>Catatan Tulisan Tangan</td></tr>\r\n</tbody>\r\n</tabel>\r\n<br>(Catatan SOP: Batas maksimum 1x transaksi kas kecil adalah Rp 1.000.000)",
+                "pertanyaan": {
+                    "1": "Berdasarkan data di atas, ditemukan 2 kejanggalan atau penipuan yang melanggar aturan batas maksimal transaksi perusahaan.",
+                    "2": "Mengapa pembelian di Toko A pada tanggal 16 November dianggap mengelak dari aturan? Apa risiko buruk bagi Anda sebagai kasir jika lolos transaksi?",
+                    "3": "Sebelum Anda menyetujui klaim makan malam tanggal 14 November, bukti pendukung tambahan apa yang perlu Anda minta dari karyawan tersebut untuk membuktikan bahwa klaim tersebut untuk urusan kantor, bukan pribadi?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Petty Cash Mata Uang Asing (Dolar) dan Selisih Kursnya",
+                "deskripsi": "Anda mengelola kas kecil menggunakan Dolar AS dengan saldo tetap sebesar $500. Catatan mutasi selama bulan Desember:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 500px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Tanggal</th><th>Aktivitas</th><th>USD Fisik</th><th>Tarif Sistem (BI)</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>1 Des</td><td>Saldo Awal Bulan</td><td>$ 500</td><td>Rp 15.000 / USD</td></tr>\r\n<tr><td>15 Des</td><td>Bayar Taksi untuk Tamu Asing</td><td>($ 100)</td><td>Rp 15,300 / USD</td></tr>\r\n<tr><td>31 Des</td><td>Saldo Akhir (Belum terisi)</td><td>$400</td><td>Rp 15.500 / USD</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Saat Anda memasukkan biaya taksi sebesar $100 pada tanggal 15 Desember, mengapa sistem komputer mengharuskan Anda memasukkan tarif hari itu (Rp. 15.300) dan bukan tarif di awal bulan (Rp. 15.000)?",
+                    "2": "Pada tanggal 31 Desember, sisa uang fisik di laci Anda adalah $400. Berdasarkan logika pembukuan, mengapa nilai Rupiah sisa $400 tersebut harus disesuaikan kembali dengan kurs terkini akhir tahun (Rp 15.500)?",
+                    "3": "Akibat perubahan nilai tukar pada tanggal 1 Desember sampai dengan tanggal 15 Desember pada saat membayar taksi, apakah perusahaan mengalami keuntungan/kerugian nilai tukar secara nyata (Realisasi) atau hanya sekedar catatan di atas kertas (Belum Realisasi)?Berikan alasan singkatnya."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Jurnal Transisi dan Pembalikan Perubahan Tahun",
+                "deskripsi": "Rincian Brankas Kas Kecil pada saat penutupan kantor tanggal 31 Desember 2025 (Dana Tetap Rp 5.000.000). Pengisian ulang baru akan dilakukan oleh kasir pada tanggal 3 Januari 2026.<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 550px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Isi Brankas (31 Des 2025)</th><th>Nominal</th><th>Status di Sistem</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Uang Tunai</td><td>Rp 1.500.000</td><td>-</td></tr>\r\n<tr><td>Nota Bensin & Tol</td><td>Rp 1.000.000</td><td>Belum masuk</td></tr>\r\n<tr><td>Catatan Konsumsi Rapat</td><td>Rp 2.500.000</td><td>Belum dimasukkan</td></tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Jika menunda dan hanya memasukkan uang kertas Rp 3.500.000 pada tahun baru (3 Januari 2026), apa dampak yang salah terhadap laporan Laba Bersih perusahaan di tahun 2025?",
+                    "2": "Untuk menyimpan laporan keuangan tahun 2025, langkah pencatatan darurat apa yang harus dilakukan di komputer pada tanggal 31 Desember sebesar Rp. 3.500.000 uang kertas?",
+                    "3": "Mengapa nota darurat tanggal 31 Desember harus \"dibalik/dibatalkan\" di sistem pada tanggal 1 Januari 2026 sebelum uang fisik sebenarnya diisi ulang pada tanggal 3 Januari?Jelaskan tujuannya untuk menghindari pencatatan ganda."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Permasalahan Kas Karyawan di Laci Kas Kecil",
+                "deskripsi": "Selama audit mendadak, ditemukan dua lembar obligasi tunai (pinjaman sementara) yang tersimpan di kotak kas kecil berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width: 600px;background: white;'>\r\n<thead class='lampu meja'>\r\n<tr><th>Nama Karyawan</th><th>Nominal</th><th>Tanggal Cashbond</th><th>Informasi Tambahan</th></tr>\r\n</kepala>\r\n<tubuh>\r\n<tr><td>Pak Andi</td><td>Rp 1.000.000</td><td>10 Oktober (90 Hari Lalu)</td><td>Karyawan mengundurkan diri pada bulan November</td></tr>\r\n<tr><td>Bu Budi</td><td>Rp 4.500.000</td><td>2 Januari (Hari Ini)</td><td>Dipinjam untuk DP dari vendor proyek</td></tr>\r\n</tbody>\r\n</tabel>\r\n<br>(Batas Maksimum Petty Cash perusahaan: Rp 2.000.000)",
+                "pertanyaan": {
+                    "1": "Mengapa penumpukan uang tunai di dalam laci (sebagai pengganti uang tunai) membuat saldo kas pada laporan keuangan menjadi tidak nyata atau palsu?",
+                    "2": "Pak Andi sudah keluar kantor dan uangnya tertahan. Tindakan administratif dan pencatatan pembukuan apa yang harus dilakukan agar kotak kas kecil dapat diganti dan dikembalikan ke saldo?",
+                    "3": "Sebutkan 2 aturan yang langsung dilanggar di mesin kasir Bu Budi. Mengapa penggunaan kas kecil untuk membayar vendor proyek dianggap merusak sistem pembelian barang kantor?"
+                }
+            }
+        }
+    },
+    "Kepala Gudang (KG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 – Perbedaan Stock Opname",
+                "deskripsi": "Pada saat stock opname bulanan, ditemukan perbedaan stok yang cukup besar pada beberapa bahan.<br>\r\n• Diketahui masih terdapat transaksi yang belum terinput ke dalam sistem.<br>\r\n• Beberapa bahan diambil oleh bagian produksi tanpa dokumen resmi.<br>\r\n• Proses pengecekan stok tidak dilakukan secara rutin sehingga data sistem berbeda dengan data fisik dan mengganggu perencanaan pembelian dan produksi.",
+                "pertanyaan": {
+                    "1": "Apa tindakan darurat pertama Anda untuk 'mengamankan' sistem data agar tidak terjadi kesalahan pemesanan atau produksi yang lebih serius selama proses investigasi?",
+                    "2": "Bagaimana sebenarnya cara membuktikan perbedaan tersebut murni karena 'kelalaian admin' atau 'kebiasaan produksi yang buruk yaitu mengambil barang tanpa izin' agar tidak salah mengambil tindakan?",
+                    "3": "Prosedur konkrit apa yang akan Anda buat agar pengambilan barang harus segera tercatat di sistem, dan bagaimana Anda akan memaksa bagian produksi untuk mengikuti aturan tersebut?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 – Ketidaksesuaian Data Stok dan Penghentian Produksi",
+                "deskripsi": "Proses produksi terhenti karena bahan utama habis, padahal sistem ERP masih menunjukkan stok tersedia (on-hand). Saat dicek, gudang kosong.<br>\r\n• Investigasi awal menemukan dua kesenjangan utama: adanya barang ditolak yang belum diproses keluar dari sistem.<br>\r\n• Seringnya pengumpulan material untuk kebutuhan mendadak sehingga staf tidak sempat memasukkannya ke dalam sistem ERP.<br>\r\n• Manajemen menuntut evaluasi mendalam agar integritas data antara sistem dan fisika kembali sinkron.",
+                "pertanyaan": {
+                    "1": "Bagaimana cara melakukan audit untuk membedah apakah ketidaksesuaian ini disebabkan oleh human error (keterlambatan input administratif) atau kegagalan alur kerja (penerbitan barang tanpa dokumen resmi), sehingga dapat menentukan langkah perbaikan yang tepat?",
+                    "2": "Ketika manajemen menuntut kepastian stok di tengah kekacauan, apa langkah taktis pertama yang Anda lakukan untuk memberikan data terupdate yang akurat kepada tim Produksi dan Pembelian tanpa harus menghentikan operasional gudang sepenuhnya untuk melakukan stock take secara menyeluruh?",
+                    "3": "Bagaimana merancang sistem pemisahan status barang di ERP agar sistem tidak lagi menampilkan barang yang rusak atau dipesan sebagai ready stock, untuk memastikan data ERP selalu mencerminkan kondisi fisik nyata secara real-time?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 – Penurunan Kinerja Gudang",
+                "deskripsi": "Dalam tiga bulan terakhir, kinerja gudang menurun. Pencarian barang memakan waktu lama, pengiriman sering terlambat, dan pengambilan barang yang salah semakin sering terjadi.<br>\r\n• Kondisi ini diperparah dengan banyaknya staf baru yang belum memahami tugasnya.<br>\r\n• Beban kerja yang semakin meningkat mengakibatkan lembur terus menerus.<br>\r\n• Direktur meminta Anda untuk memperbaiki metode kerja Anda agar gudang menjadi efektif kembali.",
+                "pertanyaan": {
+                    "1": "Bagaimana Anda bisa menggunakan data pelacakan kesalahan untuk membuktikan secara obyektif apakah masalah utamanya adalah tata letak gudang, kesenjangan kompetensi staf, atau inefisiensi alur kerja?",
+                    "2": "Langkah konkrit apa yang bisa Anda lakukan dalam waktu 30 hari untuk menata ulang atau menyempurnakan SOP agar gudang lebih agile tanpa memerlukan anggaran tambahan?",
+                    "3": "KPI apa yang Anda tetapkan untuk mengukur efektivitas operasional sehingga Direktur dapat melihat korelasi antara perbaikan sistem dan pengurangan biaya lembur?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 – Dugaan Kehilangan Materi",
+                "deskripsi": "Selama enam bulan terakhir perusahaan mengalami kerugian materil dengan nilai yang cukup besar.<br>\r\n• Hasil audit menunjukkan bahwa beberapa material keluar dari gudang hanya berdasarkan instruksi lisan.<br>\r\n• Pemeriksaan kendaraan tidak dilakukan secara konsisten dan pengawasan di area gudang masih lemah.<br>\r\n• Direksi meminta Kepala Gudang melakukan investigasi dan mengembangkan sistem pengendalian yang lebih baik.",
+                "pertanyaan": {
+                    "1": "Bagaimana Anda memverifikasi hasil audit antara catatan pengeluaran sistem dan data fisik untuk memetakan pola kerugian (jam berapa, materi apa, siapa yang bertugas) tanpa merusak moral tim?",
+                    "2": "Antara instruksi lisan, exit control yang lemah, atau dokumentasi yang tidak lengkap, manakah yang menurut Anda menjadi faktor pemicu utama dan mengapa kontrol ini menjadi prioritas mutlak untuk ditingkatkan?",
+                    "3": "Bagaimana merancang alur Double Check atau pemisahan tugas pada 30 hari pertama agar setiap gram barang keluar harus memiliki jejak fisik/digital yang tidak dapat diganggu oleh pihak pribadi?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 – Konflik antara Gudang dan Produksi",
+                "deskripsi": "Hubungan antara gudang dan produksi mulai memburuk karena seringnya terjadi keterlambatan pengiriman material.<br>\r\n• Tim produksi menilai gudang bekerja terlalu lambat.<br>\r\n• Tim gudang beralasan bahwa permintaan material seringkali tiba-tiba, pengambilan dokumen tidak lengkap, dan jumlah pekerja yang tersedia terbatas.<br>\r\n• Kondisi ini mempengaruhi target produksi dan menimbulkan sikap saling menyalahkan.",
+                "pertanyaan": {
+                    "1": "Bagaimana cara menggunakan catatan (data) keterlambatan dan banyaknya permintaan yang tiba-tiba agar kedua tim sadar bahwa masalahnya ada pada sistem kerja, bukan karena saling benci atau saling menyalahkan antar manusia?",
+                    "2": "Bagaimana Anda membuat aturan yang adil: di satu sisi, produksi dapat menjamin pengiriman tepat waktu, namun di sisi lain, gudang tidak kewalahan oleh permintaan yang tiba-tiba dan terus menerus?",
+                    "3": "Bagaimana cara membuat aturan bahwa barang tidak boleh keluar tanpa dokumen resmi, namun tetap memiliki jalan keluar jika memang ada keadaan yang benar-benar darurat atau mendesak?"
+                }
+            }
+        }
+    },
+    "Logistik (LGT)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Selisih Stok Gudang",
+                "deskripsi": "Pada saat melakukan <strong>Stock Take</strong> bulanan, ditemukan perbedaan persediaan sebagai berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width:650px;background:white;'>\r\n<thead class='lampu meja'>\r\n<tr>\r\n<th>Nama Barang</th>\r\n<th>Stok Sistem</th>\r\n<th>Stok Fisik</th>\r\n</tr>\r\n</kepala>\r\n<tubuh>\r\n<tr>\r\n<td>Produk A</td>\r\n<td>1.250 buah</td>\r\n<td>1.180 buah</td>\r\n</tr>\r\n<tr>\r\n<td>Produk B</td>\r\n<td>850 buah</td>\r\n<td>860 buah</td>\r\n</tr>\r\n<tr>\r\n<td>Produk C</td>\r\n<td>500 buah</td>\r\n<td>500 buah</td>\r\n</tr>\r\n</tbody>\r\n</tabel>\r\nTim gudang memastikan tidak terjadi pencurian atau kerusakan barang. Seluruh transaksi keluar masuk barang dilakukan dengan menggunakan sistem ERP.",
+                "pertanyaan": {
+                    "1": "Apa kemungkinan penyebab selisih stok ini padahal semua transaksi menggunakan sistem ERP?",
+                    "2": "Langkah apa yang akan Anda ambil untuk secara sistematis menemukan akar penyebab perbedaan stok?",
+                    "3": "Jika dari hasil investigasi terdapat kesalahan proses kerja, SOP apa yang perlu diperbaiki agar kejadian serupa tidak terulang kembali?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Keterlambatan Pengiriman Barang",
+                "deskripsi": "Perusahaan menerima keluhan dari pelanggan karena pengiriman bahan baku terlambat <strong>5 hari</strong>. Akibatnya, proses produksi pelanggan terhenti sementara.<br><br>\r\n<strong>Hasil investigasi:</strong>\r\n<ul>\r\n<li>Barang dikemas tepat waktu.</li>\r\n<li>Truk baru tersedia dua hari kemudian.</li>\r\n<li>Dokumen pengiriman baru diselesaikan sehari setelah truk tiba.</li>\r\n<li>Terjadi antrian bongkar muat di gudang pusat.</li>\r\n</ul>",
+                "pertanyaan": {
+                    "1": "Berdasarkan kasus ini, pada proses manakah hambatan terbesar terjadi? Jelaskan alasan Anda.",
+                    "2": "Jika Anda seorang Supervisor Logistik, tindakan perbaikan jangka pendek dan jangka panjang apa yang akan diambil?",
+                    "3": "KPI apa saja yang perlu dipantau agar keterlambatan pengiriman bisa diminimalisir?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Stok Lebih Banyak dan Barang Slow Moving",
+                "deskripsi": "Pada akhir triwulan ditemukan kondisi sebagai berikut:<br>\r\n<ul>\r\n<li>Nilai inventaris meningkat <strong>35%</strong>.</li>\r\n<li>Permintaan pelanggan turun <strong>20%</strong>.</li>\r\n<li>Kapasitas gudang telah terisi <strong>95%</strong>.</li>\r\n<li>Banyak item yang belum dipindahkan selama lebih dari <strong>180 hari</strong>.</li>\r\n</ul>",
+                "pertanyaan": {
+                    "1": "Risiko operasional dan keuangan apa yang dapat timbul akibat kondisi persediaan yang terlalu banyak menimbun dan perputarannya lambat?",
+                    "2": "Langkah apa yang akan Anda ambil untuk mengurangi persediaan yang slow moving tanpa mengganggu kebutuhan operasional perusahaan?",
+                    "3": "Data apa yang perlu dianalisis sebelum perusahaan memutuskan untuk membeli barang berikutnya?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Evaluasi Vendor Transportasi",
+                "deskripsi": "Perusahaan menggunakan dua vendor ekspedisi dengan kinerja sebagai berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width:700px;background:white;'>\r\n<thead class='lampu meja'>\r\n<tr>\r\n<th>Penjual</th>\r\n<th>Ketepatan waktu</th>\r\n<th>Biaya</th>\r\n<th>Barang Rusak</th>\r\n</tr>\r\n</kepala>\r\n<tubuh>\r\n<tr>\r\n<td>Penjual A</td>\r\n<td>97%</td>\r\n<td>Rp. 18.000.000/bulan</td>\r\n<td>3 kasus</td>\r\n</tr>\r\n<tr>\r\n<td>Penjual B</td>\r\n<td>89%</td>\r\n<td>Rp. 14.000.000/bulan</td>\r\n<td>1 kasus</td>\r\n</tr>\r\n</tbody>\r\n</tabel>\r\nManajemen meminta rekomendasi vendor untuk dipertahankan untuk kontrak tahun berikutnya.",
+                "pertanyaan": {
+                    "1": "Vendor mana yang akan Anda rekomendasikan? Jelaskan alasan Anda berdasarkan data yang tersedia.",
+                    "2": "Informasi tambahan apa yang masih diperlukan sebelum mengambil keputusan akhir mengenai vendor?",
+                    "3": "Bagaimana cara menyusun sistem evaluasi vendor agar penilaian tidak hanya berdasarkan biaya pengiriman?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Perencanaan Persediaan",
+                "deskripsi": "Suatu produk memiliki data berikut:<br>\r\n<tabel class='tabel berbatas tabel-sm mt-2' style='max-width:650px;background:white;'>\r\n<tubuh>\r\n<tr>\r\n<td><strong>Penjualan Rata-Rata</strong></td>\r\n<td>150 unit/hari</td>\r\n</tr>\r\n<tr>\r\n<td><strong>Waktu Tunggu Pemasok</strong></td>\r\n<td>8 hari</td>\r\n</tr>\r\n<tr>\r\n<td><strong>Stok Pengaman</strong></td>\r\n<td>400 unit</td>\r\n</tr>\r\n<tr>\r\n<td><strong>Stok Saat Ini</strong></td>\r\n<td>1.700 unit</td>\r\n</tr>\r\n</tbody>\r\n</tabel>",
+                "pertanyaan": {
+                    "1": "Hitung nilai <em>Titik Pemesanan Ulang (ROP)</em> berdasarkan data ini.",
+                    "2": "Dengan stok saat ini sebanyak 1.700 unit, apakah perusahaan harus melakukan pemesanan ulang? Jelaskan alasan Anda.",
+                    "3": "Jika waktu tunggu pemasok meningkat menjadi 12 hari, bagaimana dampaknya terhadap perencanaan inventaris dan tindakan apa yang harus diambil perusahaan?"
+                }
+            }
+        }
+    },
+    "MARKETING (M)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Trafik Tinggi, Pembelian Rendah",
+                "deskripsi": "Lalu lintas situs web perusahaan meningkat 40%, namun pembelian tidak meningkat.",
+                "pertanyaan": {
+                    "1": "Analisis awal apa yang Anda lakukan?",
+                    "2": "Data apa yang diperiksa?",
+                    "3": "Langkah perbaikan apa yang Anda usulkan dalam 30 hari pertama?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Produk Baru Tidak Laku",
+                "deskripsi": "Produk baru telah dipromosikan, tetapi penjualan rendah dalam 3 bulan pertama.",
+                "pertanyaan": {
+                    "1": "Kemungkinan penyebabnya?",
+                    "2": "Bagaimana cara mengidentifikasi masalahnya?",
+                    "3": "Langkah-langkah untuk meningkatkan minat pasar?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Banyak Prospek, Penjualan Menyebut Tidak Berkualitas",
+                "deskripsi": "Pemasaran mengirimkan banyak prospek, namun Penjualan merasa kualitas prospeknya buruk.",
+                "pertanyaan": {
+                    "1": "Kemungkinan akar permasalahannya?",
+                    "2": "Bagaimana menyelaraskan proses Pemasaran → Penjualan?",
+                    "3": "KPI bersama apa yang dapat digunakan?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Permintaan Tambahan Anggaran Kampanye",
+                "deskripsi": "Marketing menginginkan tambahan anggaran, namun Finance menolak.",
+                "pertanyaan": {
+                    "1": "Data apa saja yang perlu dipersiapkan sebelum mengajukan revisi?",
+                    "2": "Bagaimana cara menunjukkan bahwa kampanye tambahan layak mendapatkan ROI?",
+                    "3": "Alternatif tanpa tambahan anggaran?"
+                }
+            }
+        }
+    },
+    "PIC Audit Team": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1: Penemuan Kesalahan Pemotongan Pajak Selama Satu Tahun Pajak",
+                "deskripsi": "Dalam proses audit internal diketahui bahwa perusahaan melakukan kesalahan pemotongan dan pemungutan pajak pada beberapa transaksi dalam satu tahun pajak.<br>\r\n• Transaksi jasa yang seharusnya dikenakan Pajak Penghasilan Pasal 23 tidak dipotong.<br>\r\n• Ada transaksi yang dipotong dengan tarif yang salah dan ada pula yang dikenakan jenis pajak yang salah.<br>\r\n• Akibatnya terdapat perbedaan antara transaksi dalam laporan keuangan, pemotongan kwitansi, dan pelaporan pajak perusahaan.<br>\r\n• Tidak teridentifikasinya kesalahan pada pemeriksaan periode sebelumnya sehingga berpotensi menimbulkan koreksi dan sanksi pada pemeriksaan DJP.",
+                "pertanyaan": {
+                    "1": "Analisa kemungkinan penyebab terjadinya kesalahan pemotongan pajak selama satu tahun. Menurut Anda, apakah permasalahan tersebut lebih disebabkan oleh lemahnya pemahaman perpajakan, lemahnya pengendalian internal, atau ketidakpatuhan terhadap prosedur perusahaan? Jelaskan alasan anda.",
+                    "2": "Jika Anda diterima menjadi Tim Audit PIC, prosedur audit apa yang akan Anda lakukan untuk mengidentifikasi seluruh transaksi yang mengalami kesalahan pemotongan pajak dan memastikan kepatuhan perusahaan terhadap ketentuan perpajakan?",
+                    "3": "Jika hasil pemeriksaan menunjukkan kesalahan pemotongan pajak masih terjadi selama setahun penuh, rekomendasi apa yang akan Anda sampaikan kepada manajemen mengenai langkah perbaikan, mitigasi risiko, dan peningkatan pengendalian internal agar kesalahan serupa tidak terulang kembali?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2: Evaluasi Akuntansi SPI & Waktu Audit Terbatas",
+                "deskripsi": "Perusahaan memiliki 5 Kantor Wilayah yang mengelola proses Akuntansi dengan total transaksi sebesar Rp 100 miliar. Batas materialitas yang ditetapkan Komite Audit adalah Rp 2 miliar.<br>\r\n• Tim Audit Internal terdiri dari 3 auditor dan hanya mempunyai waktu 3 hari kerja untuk mengevaluasi efektivitas Akuntansi SPI.<br>\r\n• Pada pengujian di Regional A, ditemukan 8% transaksi yang diuji mempunyai kelemahan pengendalian (tidak ada persetujuan, keterlambatan rekonsiliasi, dan jurnal tanpa dokumen pendukung).",
+                "pertanyaan": {
+                    "1": "Jika tingkat kelemahan pengendalian sebesar 8% diasumsikan terjadi di seluruh wilayah, hitung perkiraan nilai transaksi yang terkena dampak dan analisis apakah potensi risiko melebihi ambang batas materialitas sebesar Rp 2 miliar.",
+                    "2": "Dengan sisa waktu 2 hari untuk audit, metode sampling apa yang Anda pilih untuk mengevaluasi SPI Akuntansi? Jelaskan alasan dan strategi penerapannya.",
+                    "3": "Jika hasil estimasi menunjukkan adanya risiko material namun manajemen menolak hasil tersebut karena audit dilakukan dengan teknik sampling dan waktu yang terbatas, bagaimana penyusunan laporan audit dan langkah apa yang akan dilakukan untuk menjaga objektivitas, akuntabilitas, dan perlindungan hukum tim audit?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3: Kelalaian Tim Audit Pada Saat Stock Opname Pada Klien PT",
+                "deskripsi": "Anda membawa tim audit ke PT Klien untuk Stock Opname (SO) dan rekonsiliasi sistem yang akurat. Setelah selesai, data menjadi berantakan karena kelalaian tim junior Anda:<br>\r\n• Mereka lupa memastikan bahwa operasional gudang dibekukan, sehingga barang tetap keluar masuk saat dihitung.<br>\r\n• Mereka salah memasukkan satuan barang (PCS vs Box) di Accurate.<br>\r\n• Sedangkan besok pagi adalah jadwal Closing Meeting dengan Direksi Klien.",
+                "pertanyaan": {
+                    "1": "Bagaimana kelalaian tim Anda merusak keandalan seluruh laporan audit? Bagaimana Anda menilai apakah data yang berantakan ini masih bisa diperbaiki atau benar-benar tidak valid?",
+                    "2": "Mengingat Rapat Penutupan dijadwalkan besok pagi, keputusan taktis apa yang Anda ambil? Apakah Anda menghitung ulang, melakukan back-tracing, atau menunda rapat? Jelaskan risikonya!",
+                    "3": "Bagaimana cara Anda menjelaskan kesalahan prosedur tim Anda kepada Direktur Klien secara profesional tanpa menyalahkan bawahan Anda? Langkah pengendalian apa yang akan Anda terapkan pada tim Anda kedepannya agar kesalahan fatal tersebut tidak terulang kembali?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4: Perbedaan Tanggal Pencatatan Barang antara Cortax dan Accurate",
+                "deskripsi": "Ditemukan adanya perbedaan tanggal penerimaan barang antara sistem Coretax dan Accurate. Pada Accurate, barang dicatat diterima pada satu masa pajak, sedangkan pada Coretax transaksi baru dicatat pada masa pajak berikutnya.<br>\r\n• Hal ini menyebabkan PPN Masukan dikreditkan pada masa pajak yang salah (terjadi perbedaan data pajak vs laporan keuangan).<br>\r\n• Kondisi ini sudah terjadi sejak pemeriksaan triwulan sebelumnya, namun tim pemeriksa pada saat itu tidak melakukan rekonsiliasi data, tidak memeriksa dokumen pendukung, dan tidak melakukan review log perubahan sistem sehingga berpotensi menimbulkan koreksi pemeriksaan pajak.",
+                "pertanyaan": {
+                    "1": "Berdasarkan kasus di atas, analisislah kemungkinan besar penyebab perbedaan tanggal pencatatan antara Coretax dan Accurate. Menurut Anda, apakah permasalahan tersebut lebih disebabkan oleh kelemahan sistem, kesalahan prosedur operasional, atau lemahnya pengendalian internal?Jelaskan alasan Anda.",
+                    "2": "Jika Anda diterima menjadi Tim Audit PIC, prosedur audit apa yang akan Anda terapkan untuk memastikan kesesuaian data antara Coretax dan Accurate sehingga perbedaan tanggal pencatatan dapat dideteksi lebih awal?",
+                    "3": "Jika temuan tersebut baru diketahui setelah perusahaan selesai melaporkan SPT Masa PPN, bagaimana Anda menilai tingkat risiko audit, dampaknya terhadap perusahaan, dan prioritas tindakan yang harus segera diambil oleh manajemen? Jelaskan alasan Anda."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5: Aspek Kelalaian Tim Audit (Audit Adjusting Journal Error)",
+                "deskripsi": "Dalam proses finalisasi Audit Senior PT menginstruksikan Audit Junior untuk menyusun Jurnal Penyesuaian Audit.<br>\r\n• Karena capek mengejar tenggat waktu, Audit Junior salah menyusun logika jurnal:<br>\r\n    <i>(Debit) Beban Gaji & Upah: Rp 2,5 Miliar</i><br>\r\n    <i>(Kredit) Kas dan Setara Kas: Rp 2,5 Miliar</i><br>\r\n• Draf ini langsung dimasukkan ke dalam Kertas Kerja Audit (KKP) utama tanpa direview oleh Senior Audit, dan segera diserahkan kepada manajemen klien.",
+                "pertanyaan": {
+                    "1": "Berdasarkan standar akuntansi berbasis akrual, menganalisis mengapa rancangan jurnal yang dibuat oleh tim audit pada prinsipnya salah. Tunjukkan apa dampak (efek domino) kesalahan pengkreditan akun Kas terhadap Laporan Arus Kas dan Neraca (Laporan Posisi Keuangan) perusahaan pada tahun berjalan.",
+                    "2": "Mengapa kesalahan junior bisa lolos hingga draft laporan akhir? Jelaskan konsep multilevel review dalam standar audit yang dilanggar oleh Tim Audit dan apa rekomendasi Anda agar KAP (Kantor Akuntan Publik) tidak mengulangi kelalaian serupa.",
+                    "3": "Jika manajemen perusahaan (klien) yang pertama kali mengetahui kesalahan tim audit, apa dampaknya terhadap reputasi KAP? Tindakan profesional apa yang harus dilakukan Rekan Audit untuk meredakan situasi ini tanpa kehilangan kredibilitas?"
+                }
+            }
+        }
+    },
+    "QUALITY CONTROL ANALIS (QCA)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Output Rentang Waktu 30 Menit (Lingkaran/Panjang Filter Menyimpang)",
+                "deskripsi": "Anda melakukan pengecekan rutin pada Mesin A. Pada pukul 10.00 hasil pengukuran keliling dan panjang filter sangat baik (normal).<br>\r\n• Namun saat pemeriksaan dijadwalkan pada pukul 10.30, tiba-tiba ukuran filter menjadi lebih kecil dan berstatus Out of Spec (OOS/Reject).<br>\r\n• Operator mesin berkata: \"Buang saja filter 10.30, filter 10.00 hingga 10.29 pasti masih bagus ukurannya.\"",
+                "pertanyaan": {
+                    "1": "Mengapa menurut peraturan Quality Control Anda dilarang keras mempercayai pernyataan operator bahwa \"produksi dari pukul 10.00 hingga 10.29 harus baik\"?",
+                    "2": "Keputusan mutlak apa yang harus Anda ambil mengenai semua filter rokok yang diproduksi dalam keranjang/kardus dari pukul 10.00 hingga 10.30?",
+                    "3": "Untuk menentukan secara pasti kapan mesin mulai menghasilkan ukuran yang salah, tindakan penelusuran (investigasi) seperti apa yang akan Anda lakukan pada tumpukan filter di keranjang tersebut?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Penemuan Cacat Penglihatan Kritis (Lem Kertas Terkena)",
+                "deskripsi": "Saat mengambil 20 sampel filter rutin per 30 menit, ditemukan 2 batang yang mengalami cacat Open Seam (lem pada kertas pembungkus filter terbuka/tidak menempel).<br>\r\n• Operator mesin marah ketika Anda meminta mesin dimatikan.<br>\r\n• Dia beralasan: \"Itu hanya 2 batang patah dari ribuan filter yang keluar setiap menitnya! Jalankan saja mesinnya!\"",
+                "pertanyaan": {
+                    "1": "Mengapa menemukan “hanya 2 batang” filter dengan lem terbuka dalam sampel kecil (20 batang) merupakan tanda bahaya besar bagi keseluruhan produksi jam tangan tersebut?",
+                    "2": "Tuliskan 1 kalimat tegas namun profesional untuk memaksa operator mematikan mesin agar memperbaiki garis lem terlebih dahulu.",
+                    "3": "Selain menahan produksi selama 30 menit terakhir, instruksi khusus apa yang akan Anda berikan kepada tim Sortir (inspeksi manual) untuk menangani karton filter yang bermasalah?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Fluktuasi Penurunan Tekanan (Daya Hisap Tidak Stabil)",
+                "deskripsi": "Selama pemeriksaan 30 menit, Anda menguji Penurunan Tekanan (PD/kepadatan filter) menggunakan alat ukur.<br>\r\n• Hasilnya sangat tidak stabil: terdapat 5 filter sangat padat, 5 filter sangat terang, dan sisanya normal.<br>\r\n• Biasanya hasil tes selalu seragam.",
+                "pertanyaan": {
+                    "1": "Jika hasil dalam sekali tarikan sampel saja sangat tidak stabil (berfluktuasi), apa 2 kemungkinan masalah teknis yang terjadi pada bahan baku (tow) atau berjalannya mesin produksi?",
+                    "2": "Mengapa filter dengan Pressure Drop yang naik turun (tidak seragam) bisa sangat merugikan konsumen rokok saat menghisapnya?",
+                    "3": "Data spesifik apa (dari hasil pengujian Anda) yang wajib Anda tunjukkan kepada Mekanik/Teknisi Mekanik agar mereka yakin bahwa mesin tidak stabil dan perlu segera diperbaiki?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Insiden Pemeriksaan Terlambat (Missed Machine Sampling)",
+                "deskripsi": "Karena Anda sibuk menangani filter yang ditolak di Mesin A, Anda terlambat mengikuti jadwal pengumpulan sampel di Mesin B.<br>\r\n• Anda baru saja mengambil sampel dari Mesin B pada menit ke-60 (1 siklus terlewat).<br>\r\n• Hasil pengujian sampel pada menit ke 60 menunjukkan filter lunak (kurang hardener/Triacetin).",
+                "pertanyaan": {
+                    "1": "Kerugian/risiko apa yang paling fatal bagi pabrik akibat keterlambatan Anda dalam pengecekan Mesin B selama 30 menit?",
+                    "2": "Karena status \"Ikut\" selama 1 jam tanpa pengecekan, maka status apa (Lepas, Tahan, atau Tolak) yang akan langsung anda berikan pada semua kotak filter dari Mesin B selama 1 jam terakhir?Berikan alasannya.",
+                    "3": "Rancanglah manajemen waktu/prosedur komunikasi jika Anda sendirian menjaga beberapa mesin, sehingga jadwal pengambilan sampel setiap 30 menit tidak lagi terlewatkan meskipun Anda sibuk pada satu mesin."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Konflik Debu vs Cacat Hitam (Kotoran pada Filter)",
+                "deskripsi": "Selama pemeriksaan visual rutin selama 30 menit, Anda melihat bintik/bintik hitam pada bagian putih batang filter.<br>\r\n• Operator mesin menggosoknya dengan tangannya dan berkata: \"Ini hanya debu mesin biasa, gosok dan akan hilang. Apakah sudah waktunya untuk menolaknya?\"<br>\r\n• Secara visual noda tampak seperti noda minyak kering.",
+                "pertanyaan": {
+                    "1": "Sebagai Analis QC, mengapa Anda dilarang menoleransi filter kotor meskipun kotoran tersebut \"dapat dihilangkan jika digosok\"?",
+                    "2": "Untuk membuktikan kepada operator bahwa itu adalah cacat noda oli, metode pengujian fisik sederhana apa yang Anda lakukan pada filter di depan matanya?",
+                    "3": "Mesin harus dibersihkan, namun operator menolak karena mengejar target produksi. Bagaimana alur eskalasi pelaporan (siapa bos yang Anda hubungi) untuk mengeksekusi penghentian mesin pada saat itu juga?"
+                }
+            }
+        }
+    },
+    "Sales (SLS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Perang Harga dan Ketentuan Pembayaran (Fokus: Presentasi & Penawaran)",
+                "deskripsi": "Anda sedang melakukan presentasi di pabrik rokok skala menengah. Pemilik tertarik untuk memesan filter dalam jumlah banyak.<br>\r\n• Tapi dia meminta harga diskon \"gila\" yang mendekati modal pabrik Anda.<br>\r\n• Klien juga meminta relaksasi syarat pembayaran menjadi 60 hari kredit (biasanya maksimal 30 hari).",
+                "pertanyaan": {
+                    "1": "Apa risiko finansial terbesar bagi pabrik kami jika Anda sebagai Tenaga Penjualan hanya menerima pesanan dalam jumlah besar dari klien baru dengan jangka waktu pembayaran kredit 60 hari?",
+                    "2": "Aturlah taktik counter-offer agar Anda tetap bisa mendapatkan pesanan dalam jumlah besar tersebut, namun syarat pembayarannya jauh lebih aman untuk kas perusahaan kita.",
+                    "3": "Kapan saat yang tepat bagi seorang Sales untuk berani mengatakan “Tidak” (pergi) dan melepaskan calon klien besar itu?Berikan 1 alasan obyektif."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Konflik Waktu Pembuatan Sampel (Fokus: Mengawasi Proses Sampling & R&D)",
+                "deskripsi": "Klien menguji sampel filter Anda dan ternyata sampelnya kurang tepat (daya isapnya terlalu padat).<br>\r\n• Klien meminta Anda membawa sampel korek api baru dalam waktu 3 hari.<br>\r\n• Secara internal di pabrik, tim R&D/Produksi mengatakan jadwal uji coba mesin sudah penuh dan sampel baru dapat diselesaikan paling cepat dalam 7 hari.",
+                "pertanyaan": {
+                    "1": "Mengapa kebiasaan Sales yang selalu menyetujui permintaan klien (“Siap, 3 hari pak!”) sebelum mengecek kapasitas tim R&D internal merupakan kesalahan yang fatal?",
+                    "2": "Jika klien mengancam akan memindahkan pesaing karena tidak mau menunggu 7 hari, strategi kompromi teknis apa yang dapat Anda tawarkan kepada tim R&D internal atau klien?",
+                    "3": "Rancanglah perjanjian alur komunikasi (SLA) antara tim Sales dan tim R&D agar kedepannya contoh konflik jadwal produksi seperti ini dapat diantisipasi sejak dini."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Janji Pengiriman vs Kapasitas Pabrik (Fokus: Order Management & PPIC)",
+                "deskripsi": "Di akhir bulan, Anda mendapatkan Pesanan Pembelian (PO) dadakan dari klien VIP.<br>\r\n• Untuk membahagiakan klien, Anda segera berjanji bahwa barang akan dikirim pada hari Jumat minggu ini.<br>\r\n• PPIC menolak pesanan karena mesin sedang memproduksi antrian klien lain.<br>\r\n• Barang klien VIP baru bisa selesai pada hari Selasa minggu depan.",
+                "pertanyaan": {
+                    "1": "Jika Anda memaksa PPIC untuk memeras pesanan klien VIP ini dan mengorbankan jadwal klien lain, efek domino apa yang akan terjadi pada Gudang Good Finish dan pabrik secara keseluruhan?",
+                    "2": "Karena kesalahan dalam janji ada pada Anda, strategi Pengiriman Sebagian seperti apa yang akan Anda usulkan kepada PPIC dan klien VIP? Bagaimana cara menghitung stok berjalan minimum?",
+                    "3": "Sebelum menerima PO sheet/PDF fisik dari klien, 2 hal operasional apa yang harus selalu ditanyakan oleh Salesperson kepada tim PPIC dan Gudang?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Menghadapi Klien Marah Karena Barang Cacat (Fokus: Penanganan Pengaduan & QC)",
+                "deskripsi": "Seorang klien VIP menelepon Anda dengan marah. Mesin rokok mereka sering macet karena banyak lem pada filter buatan pabrik Anda yang lepas (jahitan terbuka).<br>\r\n• Klien mengklaim 20 kotak rusak dan segera meminta uang kembali 100%.<br>\r\n• Tim QC pabrik menyelidiki dan menemukan bahwa hanya 2 kotak yang rusak, sedangkan 18 kotak lainnya murni kesalahan pada pengaturan mesin rokok milik klien.",
+                "pertanyaan": {
+                    "1": "Ketika klien sedang marah-marah di telepon, mengapa seorang Salesperson dilarang keras untuk langsung mengucapkan kata-kata: “Baiklah Pak, kami akui kami salah dan kami akan segera memberikan kompensasi kepada Anda”?",
+                    "2": "Klien bersikeras bahwa pabrik Anda 100% bersalah. Jelaskan bagaimana Anda mengkomunikasikan temuan QC (bahwa hanya 2 kotak yang rusak) kepada klien, tanpa menyinggung perasaan mereka atau membuat mereka merasa dituduh berbohong.",
+                    "3": "Jika akhirnya disepakati barang akan dikembalikan, mengapa Sales harus memastikan bahwa filter fisik yang ditarik dari pabrik klien benar-benar nomor Batch (kode produksi) pabrik Anda?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Target Pribadi vs Hubungan Jangka Panjang (Fokus: Mempertahankan Klien & Mengejar Tujuan)",
+                "deskripsi": "Ini hari ke-28 (akhir bulan), dan Anda masih kurang 15% untuk mencapai target penjualan bulanan.<br>\r\n• Ada salah satu pabrik rokok yang sangat Anda setiai, namun stok filter di gudangnya sebenarnya masih cukup untuk satu bulan ke depan.<br>\r\n• Kalau mereka mau pesan sekarang, target Anda pasti tercapai.",
+                "pertanyaan": {
+                    "1": "Apa risiko jangka panjang terhadap hubungan bisnis (kepercayaan) jika Anda “memaksa” atau memohon klien setia tersebut untuk membeli barang yang belum mereka butuhkan, hanya untuk tujuan pribadi Anda?",
+                    "2": "Rancang penawaran taktis yang saling menguntungkan (win-win solution), sehingga klien tergiur untuk mengeluarkan PO hari ini meskipun barang baru dikirim/digunakan bulan depan.",
+                    "3": "If the client still refuses to order this month and your target ultimately fails to be achieved, what kind of data/defense report will you present to your Sales Manager?"
+                }
+            }
+        }
+    },
+    "Sales Distribusi (SAD)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Toko Aktif Mulai Mengirimkan Pesanan",
+                "deskripsi": "Anda menangani area distribusi bahan bangunan dengan jaringan toko yang aktif. Dalam <strong>2 bulan</strong> terakhir, 6 toko besar di wilayah Anda mulai mengurangi pembelian. Mereka tetap membeli, namun volumenya turun cukup signifikan. Setelah dievaluasi, ditemukan beberapa penyebab:<br><br>\r\n<ul>\r\n<li>Harga pesaing lebih murah.</li>\r\n<li>Perputaran produk perusahaan dianggap lebih lambat.</li>\r\n<li>Kunjungan penjualan dianggap kurang rutin.</li>\r\n</ul>\r\nJika kondisi ini dibiarkan, target penjualan bulanan akan sulit dicapai dan coverage area pun bisa melemah.",
+                "pertanyaan": {
+                    "1": "Bagaimana cara menganalisis penyebab menurunnya pesanan dari toko-toko tersebut?",
+                    "2": "Langkah apa yang akan Anda ambil di minggu pertama untuk memulihkan penjualan di area tersebut?",
+                    "3": "Jika diskon perusahaan terbatas, bagaimana Anda tetap mendorong peningkatan pesanan dari pelanggan?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Distributor Meminta Jangka Waktu yang Lebih Panjang dan Program Tambahan",
+                "deskripsi": "Salah satu distributor terbesar di wilayah Anda ingin meningkatkan pembelian, namun mengusulkan beberapa ketentuan tambahan sebagai berikut:<br>\r\n<ul>\r\n<li>Persyaratan pembayaran diperpanjang.</li>\r\n<li>Program rabat tambahan.</li>\r\n<li>Dukungan promosi yang lebih besar.</li>\r\n</ul>\r\nJika seluruh permintaan disetujui, margin perusahaan bisa menurun. Namun, jika ditolak semuanya, distributor berpotensi mengalihkan fokus ke produk pesaing. Distributor ini juga mempunyai pengaruh besar dalam distribusi ke toko-toko di wilayah tersebut.",
+                "pertanyaan": {
+                    "1": "Bagaimana Anda menilai apakah permintaan distributor masih masuk akal secara bisnis atau terlalu berisiko bagi perusahaan?",
+                    "2": "Bagaimana cara menyusun proposal yang tetap menarik bagi distributor namun tetap mempertahankan keuntungan perusahaan?",
+                    "3": "Jika manajemen hanya menyetujui sebagian permintaan distributor, bagaimana Anda mengkomunikasikan dan menegosiasikannya?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Konflik Saham, Kenaikan Target, dan Keluhan Toko",
+                "deskripsi": "Memasuki kuartal baru, perusahaan menaikkan target penjualannya untuk wilayah Anda. Namun di saat yang sama, beberapa SKU dengan perputaran tercepat sering kali mengalami kehabisan stok di gudang. Toko-toko mulai mengeluh karena permintaan pasar meningkat namun pasokan produk tidak stabil. Beberapa toko bahkan mulai memberikan ruang display kepada produk pesaing yang memiliki ketersediaan stok lebih baik.",
+                "pertanyaan": {
+                    "1": "Apa tindakan prioritas Anda dalam 3 hari pertama setelah mengetahui gangguan ketersediaan stok?",
+                    "2": "Bagaimana Anda mengatur komunikasi dengan toko agar mereka tetap menjaga kepercayaan terhadap perusahaan?",
+                    "3": "Jika stok sangat terbatas, bagaimana Anda memprioritaskan alokasi produk ke pelanggan yang berbeda?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Area yang Diserang Pesaing dengan Harga, Program, dan Tenaga Penjualan yang Lebih Agresif",
+                "deskripsi": "Over the last <strong>4 months</strong>, competitors have entered your area aggressively by offering:<br>\r\n<ul>\r\n<li>Lower prices.</li>\r\n<li>Larger store incentive programs.</li>\r\n<li>Interesting display program.</li>\r\n<li>Higher frequency of sales visits.</li>\r\n</ul>\r\nSeveral large stores are starting to try competitors' products and small stores are starting to follow the trend.Management asks you to maintain market share without carrying out excessive price wars.",
+                "pertanyaan": {
+                    "1": "Bagaimana Anda memetakan ancaman pesaing di suatu area secara sistematis sebelum menentukan strategi?",
+                    "2": "Strategi lapangan apa yang akan Anda gunakan untuk mempertahankan pangsa pasar tanpa bergantung sepenuhnya pada diskon harga?",
+                    "3": "Jika setelah 2 bulan strategi belum berhasil, evaluasi apa yang perlu dilakukan dan keputusan apa yang mungkin perlu diambil?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Restrukturisasi Kawasan: Target Tinggi, Piutang Meningkat, dan Saluran Tidak Sehat",
+                "deskripsi": "Anda ditugaskan untuk mengambil alih suatu kawasan yang sebelumnya dikelola oleh tenaga penjualan lain. Meski nilai penjualannya besar, namun kondisi kawasan tersebut kurang sehat dengan permasalahan sebagai berikut:<br>\r\n<ul>\r\n<li>Banyak toko yang memberikan kelonggaran untuk pembayaran berlebihan.</li>\r\n<li>Piutang dari beberapa pelanggan mulai menumpuk.</li>\r\n<li>Terdapat indikasi konflik harga antar pelanggan.</li>\r\n<li>Distributor mengeluh karena toko memberikan harga yang terlalu murah.</li>\r\n<li>Pesaing mulai memanfaatkan kondisi ini untuk menyerang reputasi perusahaan.</li>\r\n</ul>\r\nTugas Anda adalah meningkatkan penjualan sekaligus memperbaiki saluran distribusi tanpa menyebabkan omzet turun drastis.",
+                "pertanyaan": {
+                    "1": "Bagaimana cara melakukan diagnosis awal terhadap kondisi area yang tidak sehat tersebut?",
+                    "2": "Bagaimana Anda menyeimbangkan kebutuhan untuk mengejar target penjualan dengan kebutuhan menjaga saluran distribusi yang sehat?",
+                    "3": "Jika diminta untuk menyajikan rencana pemulihan kepada manajemen, indikator keberhasilan apa yang akan Anda gunakan selama 3 bulan ke depan?"
+                }
+            }
+        }
+    },
+    "Sales marketing (SMK)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Pergeseran Tren Rokok Kretek ke Mild (Fokus: Research & Market Intelligence)",
+                "deskripsi": "Hasil pantauan Anda di pasar menunjukkan adanya penurunan penjualan sigaret kretek tangan (SKT) reguler.<br>\r\n• Di sisi lain, rokok Mild dan Slim (diameter kecil) sedang booming di pasaran.<br>\r\n• Pabrik filter rokok tempat Anda bekerja selama ini 80% mesinnya disetel untuk memproduksi filter rokok biasa berukuran besar.",
+                "pertanyaan": {
+                    "1": "Berdasarkan temuan penelitian, risiko bisnis apa yang akan dihadapi pabrik Anda dalam 6 bulan ke depan jika Anda lambat memberikan rekomendasi perubahan arah produksi kepada manajemen?",
+                    "2": "Data pendukung apa saja yang perlu Anda kumpulkan agar direksi pabrik Anda bersedia mendanai pembelian/modifikasi mesin menuju filter ukuran Mild?",
+                    "3": "Sambil menunggu mesin dimodifikasi, ide strategi pemasaran kreatif apa yang bisa Anda susun untuk menghabiskan sisa stok filter reguler yang menumpuk di gudang?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Perang Harga dengan Pesaing “Price Slashing” (Fokus: Analisis Pesaing)",
+                "deskripsi": "Tim Sales mengeluh di lapangan karena gagal memenangkan kontrak dengan Pabrik Rokok di Malang.<br>\r\n• Produsen filter pesaing menawarkan produk dengan harga 15% lebih murah dari harga standar pabrik Anda.<br>\r\n• Tim Penjualan mendesak Anda untuk meneliti pesaing-pesaing ini untuk mencari tahu mengapa mereka dapat menjual dengan harga sangat murah.",
+                "pertanyaan": {
+                    "1": "Secara teknis pembuatan filter rokok, analisa 2 kemungkinan mengapa kompetitor bisa menurunkan harga hingga 15% lebih murah?",
+                    "2": "Jika setelah dianalisa ternyata kualitas filter pesaing Anda memang di bawah pabrik Anda (mudah lembek), data perbandingan (perbandingan teknis) seperti apa yang akan Anda jadikan di katalog sebagai “senjata” agar tim Sales bisa meyakinkan klien bahwa harga mahal kami sepadan dengan kualitasnya?",
+                    "3": "Sebagai Sales Marketing Officer, mengapa Anda dilarang keras merekomendasikan opsi “Ajukan harga lebih rendah dari kompetitor” tanpa melakukan analisis margin keuntungan terlebih dahulu?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Membuka Gerbang Klien yang Keras Kepala (Fokus: Finding Leads & Cold Calls)",
+                "deskripsi": "You are assigned to look for leads for new cigarette factories in the Kudus area.<br>\r\n• You have successfully compiled a list of 10 small-medium scale cigarette factories.<br>\r\n• This local factory is very closed, has no website, and the gate is heavily guarded by a security guard who refuses to give the owner/Purchasing telephone number.",
+                "pertanyaan": {
+                    "1": "Facing strict security guards blocking (gatekeeping), what non-formal tactical strategies can you use in the field to get the name of the owner or contact person in the factory?",
+                    "2": "Jika akhirnya Anda berhasil mendapatkan nomor telepon pemiliknya, kalimat pembuka (Cold Calling Script) seperti apa yang akan Anda ucapkan di 3 kalimat pertama agar pemilik tertarik dan tidak langsung menutup telepon Anda?",
+                    "3": "Of the 10 leads you collected, what objective parameters do you use to determine which leads should be prioritized for submission to the Sales team?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Mengubah Brosur yang Kaku Menjadi “Penarik Bisnis” (Fokus: Branding & Katalog)",
+                "deskripsi": "Perusahaan Anda akan mengikuti Pameran Industri Tembakau nasional yang akan dihadiri oleh ratusan direktur pabrik rokok.<br>\r\n• Desain Profil Perusahaan dan katalog produk lama perusahaan Anda sangat kaku.<br>\r\n• Brosur lama hanya berisi sejarah pabrik dan tabel membosankan berisi angka diameter filter.",
+                "pertanyaan": {
+                    "1": "Why isn't showing a table of technical numbers enough to interest a new cigarette factory owner when reading your brochure at an exhibition?",
+                    "2": "Rancang 3 poin informasi penting yang harus disertakan di halaman depan katalog baru, dengan fokus pada manfaat bisnis yang diperoleh klien dari penyediaan filter dari pabrik Anda.",
+                    "3": "Bagaimana cara menyiasati keterbatasan katalog fisik agar tetap dapat menampilkan seluruh portfolio variasi produk filter terbaru pabrik Anda tanpa menambah biaya cetak brosur? (Usulkan 1 solusi digital)."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Misi Menyelamatkan Citra Perusahaan Setelah Isu Cacat (Fokus: Membangun Citra/PR)",
+                "deskripsi": "Last month there was an incident where a batch of filters made by your factory experienced a strong chemical odor at one of the large cigarette factories.<br>\r\n• Even though the problem has been resolved internally, this issue is starting to spread to other cigarette factories.<br>\r\n• Your factory's quality image in the market is starting to be doubted.",
+                "pertanyaan": {
+                    "1": "Why is it that letting rumors/negative quality rumors spread in the market without any action from the Sales Marketing team can destroy your target of finding new leads?",
+                    "2": "Langkah komunikasi pemasaran (Public Relations) seperti apa yang bisa Anda rancang untuk mengembalikan kepercayaan pasar?",
+                    "3": "Saat Anda melakukan kunjungan penjangkauan citra baru ke calon klien, bagaimana Anda menjawab pertanyaan jebakan mereka jika mereka mengemukakan masalah kegagalan produk bulan lalu, tanpa terlihat menutupi kesalahan masa lalu perusahaan Anda?"
+                }
+            }
+        }
+    },
+    "SCM-FG (SFG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — FIFO Violation because it's \"Easier to Take\"",
+                "deskripsi": "A warehouse helper picks up a pallet of cigarette filters produced today to be sent immediately to the client because it is located right in front of the door (easier to pick up).<br>\r\n• The stock of the same type of filter left over from last week's production was left to settle in the back corner of the warehouse.",
+                "pertanyaan": {
+                    "1": "Cigarette filter rods are very sensitive.What are the dangers to filter quality (glue/moisture related) if old stock sits in the back of the warehouse for too long due to this FIFO violation?",
+                    "2": "Rancang 1 aturan tata letak yang sederhana pada gudang sehingga para pembantu gudang dengan sendirinya terpaksa mengambil barang stok lama terlebih dahulu, tanpa harus diawasi selama 24 jam.",
+                    "3": "If next week a client complains that the filter they received was moldy or too hard, what specific data/documents in the system would you examine to prove whether it was the result of a FIFO violation?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Sudden Stock Difference (System vs Physical Data)",
+                "deskripsi": "The system says there are 100 boxes of \"Mild Filter\" stock.The Sales Team asked to send 100 boxes this afternoon because the expedition truck was waiting.<br>\r\n• However, when you physically checked, it turned out that 10 boxes were taped with red tape/retained by the QC team due to production defects.<br>\r\n• QC has not reported the hold status to the computer system.There are only 90 boxes ready to send in stock.",
+                "pertanyaan": {
+                    "1": "Apakah Anda akan merekomendasikan (A) Mengirimkan 90 kotak terlebih dahulu atau (B) Menahan truk pengiriman hingga diproduksi ulang? Berikan alasan logis dengan menimbang biaya demurrage vs waktu henti pabrik klien.",
+                    "2": "How do you coordinate quickly with the QC and Sales teams to request a Concession (conditional release permit) from the client, if it turns out that the 10 boxes only have (minor) outer packaging defects?",
+                    "3": "SOP audit internal apa yang harus diperbaiki antara departemen QC dan SCM-FG agar data stok yang disimpan terupdate otomatis secara Akurat?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Bencana Gudang Penuh dan Batas Tumpukan Karton",
+                "deskripsi": "Produksi saat ini sangat tinggi (overload) sehingga Finish Good Warehouse penuh total.<br>\r\n• Kepala Shift Produksi mendesak Anda untuk menumpuk kotak filter hingga 8 tingkat agar pas.<br>\r\n• Padahal SOP pabriknya melarang keras penumpukan lebih dari 5 tingkat agar karton bagian bawah tidak penyok/remas.",
+                "pertanyaan": {
+                    "1": "If you are determined to stack 8 levels and the bottom cardboard becomes flat, what will be the physically fatal impact on the density/suction power of the cigarette filter rods inside?",
+                    "2": "Compare these two loss options: Renting an extra room/tent outside the warehouse OR Desperately stacking 8 levels.What quality factors differentiate which option is safer?",
+                    "3": "What kind of emergency room allocation strategy will you implement so that the volume of goods is accommodated without violating the 5 stack SOP limit?How do you guarantee that FIFO continues to work?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Emergency Delivery in the Middle of Heavy Rain",
+                "deskripsi": "The client (Cigarette Factory X) called angrily because they had 1 hour left in filter stock.<br>\r\n• The truck from your factory has just arrived at the loading dock, but it's raining outside.<br>\r\n• The roof of your warehouse Loading Dock happens to be a little rough.",
+                "pertanyaan": {
+                    "1": "Why are cardboard cigarette filters so resistant to splashes of rainwater or high humidity during the loading process into trucks?",
+                    "2": "Between delaying loading until the rain stops (risk of the client getting angry because the machine stops) OR being reckless with loading right now (risk of wet goods), what is the middle ground emergency solution that you immediately implement at that very second?",
+                    "3": "Design 1 \"Fleet Check\" rule that must be adhered to before the filter box is put into the back of the expedition truck in the rainy season."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Interchanged Batch Number Dispute (DO Administration)",
+                "deskripsi": "Anda mengirim 500 kotak filter ke pabrik klien.<br>\r\n• Saat truk sampai disana, gudang klien menolak menerima barang karena nomor Batch yang tertera di karton berbeda dengan nomor Batch yang tertulis di Delivery Order.<br>\r\n• Meskipun tipe itemnya benar, keduanya adalah \"Filter Reguler\".",
+                "pertanyaan": {
+                    "1": "Mengapa pabrik klien begitu kaku dan menolak mentah-mentah barang dengan nomor batch yang berbeda antara surat dan fisik, padahal jenis filternya sama?",
+                    "2": "Your truck is still stuck at the client's factory.Instead of sending the truck home (waste of gas and time), what administrative tactics/systems can you employ from the SCM office to \"certify\" the item that day?",
+                    "3": "Make 1 Double Check procedure in the Loading Dock area between the Warehouse Admin and the Truck Driver before the truck door is sealed, so that the waybill and physical goods are never different again."
+                }
+            }
+        }
+    },
+    "Staff Import (SIM)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — HS Code Dispute & Affected by the Red Line (Correction Note)",
+                "deskripsi": "Barang bahan baku impor tiba di pelabuhan. Saat menyerahkan PIB, Bea dan Cukai menetapkan Jalur Merah karena menganggap Kode HS Anda salah. Bea Cukai menerbitkan SPTNP (Catatan Koreksi) yang mengharuskan perusahaan membayar bea masuk yang jauh lebih mahal.Di sisi lain, arus kas perusahaan ketat dan biaya port overnight terus meningkat.",
+                "pertanyaan": {
+                    "1": "Compare the financial loss from paying the fine directly (Notul) versus filing an Appeal with Customs.What determining factors do you use to choose the best decision when the company's cash flow is tight?",
+                    "2": "Write a 1 sentence tactical message to overseas Suppliers to immediately request technical documents (such as Mill Test Certificate or Product Data Sheet) to support the validity of your HS Code.",
+                    "3": "Rancang 1 langkah preventif yang harus Anda lakukan kepada otoritas pabean sebelum barang dikirim dari negara asal Anda di kemudian hari, agar perselisihan Kode HS ini tidak terulang kembali."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Document Discrepancy (Form E Rejected)",
+                "deskripsi": "You import machines from China using Form E for the 0% Import Duty facility.Unfortunately, the goods weight figures (Weight) in Form E are different from the figures in the Bill of Lading (B/L) and Packing List due to a typo (typo) from the Supplier.Customs rejected the Form E and charged normal rates which were very expensive.",
+                "pertanyaan": {
+                    "1": "Revision of Form E to the Chinese authorities took 2 weeks.What cost data will you compare (calculate) logically to decide: wait for the revised documents to arrive OR be willing to pay the normal Import Duty rate today?",
+                    "2": "Write 1 sentence of professional warning to the Supplier to demand their responsibility/compensation for port fines arising from their careless typo.",
+                    "3": "Create 1 mandatory rule (SOP Drafting Document) between you and the Supplier before the original document is printed and sent via international courier so that this discrepancy does not happen again."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Freight Forwarder Hidden Cost Trap",
+                "deskripsi": "The company tried the new Freight Forwarder because the initial offer was very cheap.However, when the goods arrive at the local port, the Forwarder holds the Delivery Order (DO) and charges very unreasonable Local Charges.The factory needs the goods today for production.",
+                "pertanyaan": {
+                    "1": "The factory has stopped production today.Faced with the DO \"hostage\", what is your emergency decision today: Directly force payment for the road factory OR Withhold payment to argue the law?Give reasons.",
+                    "2": "Write a draft of a protest email to the Forwarder's management using their initial offer (quotation) as the basis of your weapon.",
+                    "3": "Mention 2 key suggestions that you will require when selecting price offers (quotations) from Forwarders in the future so that you no longer fall into the Local Charges trap."
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Licensing & Lartas Disaster (Prohibition of Restrictions)",
+                "deskripsi": "The Purchasing team just purchased a new type of chemical, paid for it, and the goods are on board.As Import Staff, you have just checked that the material is in the Lartas category which requires Import Approval (PI) and Surveyor's Report (LS) with a processing time of 1 month.The ship arrives in 5 days.",
+                "pertanyaan": {
+                    "1": "The ship arrived in 5 days and processing permits took 1 month.What emergency measures can you coordinate with the Shipping Line or Supplier to prevent goods from entering the Indonesian customs area in the first place?",
+                    "2": "Write a 1 sentence tactical report to the Purchasing Manager regarding the Lartas permit crisis, with a focus on solving the problem without seeming to blame the team.",
+                    "3": "Design 1 mandatory check flow (Latas Approval SOP) between the Purchasing and Import teams which must be completed before the Purchase Order (PO) letter is issued."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Demurrage & Detention Nightmare (Full Warehouse)",
+                "deskripsi": "Your 10 containers have successfully passed Customs (SPPB published).Suddenly the Warehouse Manager reported that the factory warehouse was completely full and would only be able to unload the 10 containers next week.Shipping Line only provides free time for returning containers (Free Time) for 5 days.",
+                "pertanyaan": {
+                    "1": "Compare these two loss options: Allowing 10 containers to stay overnight at the port (subject to Demurrage) OR Renting a truck and temporary warehouse outside the port.Based on cost-control logic, what factors differentiate which option is cheaper?",
+                    "2": "Write an urgent message to the Warehouse Manager so that they prioritize vacating the space today, using the shock effect of the threat of a fine (Detention/Demurrage).",
+                    "3": "Create a reporting procedure (ETA Communication SOP) from Import staff to the Warehouse Manager long before the ship docks, so that a sudden full warehouse crisis does not happen again in the future."
+                }
+            }
+        }
+    },
+    "Staff legal (SLG)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Collaboration Contract Review (Conflict of Interest)",
+                "deskripsi": "The Marketing Team is in a hurry to sign a contract with the Influencer Agency today.When you read the draft, there are clauses: \"If a dispute arises, it will be resolved in the Singapore Court,\" and \"The agency is not responsible if the Influencer damages the good name of the brand.\"",
+                "pertanyaan": {
+                    "1": "What is the biggest financial and legal risk to our company if you turn a blind eye and agree to those \"Singapore Courts\" and \"Hands-off Agency\" clauses?",
+                    "2": "Write 1 revised sentence for the dispute resolution clause so that the legal process is much cheaper, faster and safer for our company.",
+                    "3": "The Marketing team is angry because you are seen as \"slowing down\" their work.Write 1 tactical sentence to explain that you are holding off on signing to save them a big deal."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Employment Law (Unilateral Layoff Dilemma)",
+                "deskripsi": "The HRD team wants to immediately fire (PHK) an employee today without severance pay because he was caught sleeping during working hours.HRD considers it a \"serious violation\".The employee refused and threatened to report it to the Manpower Office.",
+                "pertanyaan": {
+                    "1": "Based on the Employment Cluster Job Creation Law and related Government Regulations (PP 35/2021), why can't employees who are caught sleeping at their desks be immediately laid off unilaterally without severance pay that day?",
+                    "2": "If HRD insists on processing layoffs and employees report to the Manpower Office, what 2 administrative pieces of evidence must you ensure are in place so that the company wins at the mediation stage?",
+                    "3": "Propose 1 specific proposal to be included in the Company Regulations (PP) or Employment Agreement next year, so that cases of \"sleeping during working hours\" have a clear basis for sanctions withholding rights."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Dispute Resolution (Facing a Customer Subpoena)",
+                "deskripsi": "The company received a Somasi (Legal Warning Letter) from a customer who admitted he was poisoned after using the company's products.He demanded IDR 1 billion in compensation within 3 days, or he would make this case viral on social media and report it to the police.",
+                "pertanyaan": {
+                    "1": "From the options: \"Pay Immediately\", \"Just Ignore\", or \"Invite to Meet (Mediation)\", which is the safest legal step to respond to the subpoena, and what internal data should you confirm with the Production/QC team first?",
+                    "2": "Prepare a draft opening sentence for the subpoena response letter that shows the company's sympathy, WITHOUT being used as evidence of an admission of guilt in court.",
+                    "3": "If the company finally agrees to provide compensation for hospital costs through peaceful means, why is the \"Peace Agreement & Non-Disclosure Agreement (NDA)\" document required to be signed by the customer right then and there?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Compliance & Licensing (Illegal Operations)",
+                "deskripsi": "The Operations Manager opened a new branch in another city and has started selling.In fact, you check in the OSS (Business Licensing) system that the branch permit has not been processed yet.The manager reasoned: \"Just go first to reach the target, permission will follow.\"",
+                "pertanyaan": {
+                    "1": "If the branch is finally sealed by Satpol PP because it operates without a complete permit, who is legally most responsible and can be punished: the Operations Manager or the President Director?Give me the reasons!",
+                    "2": "Write 1 sentence of strict legal warning for the Operations Manager so that he immediately stops his operational activities today.",
+                    "3": "Create a short approval flow (Approval Workflow) so that in the future the opening of a new branch in any city cannot be executed before the Legal team gives the green light."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Risk Management (Signature Forgery by Target)",
+                "deskripsi": "You discover that the Sales Manager forged the President Director's signature on a multi-billion rupiah contract with a client.The reason: The director was abroad, and the client threatened to cancel if the contract was not signed that day.The contract is currently running and is profitable for the company.",
+                "pertanyaan": {
+                    "1": "Legally (Criminal/Civil), what crime did the Sales Manager commit, and what is the legal status of the billion-rupiah contract currently in the eyes of the law?",
+                    "2": "Without telling the client that the signature was fake all along (so as not to be invalidated), what legal tactics would you use to secretly \"validate\" the contract?",
+                    "3": "Propose a legal system/technology that is legally valid in Indonesia so that in the future the President Director can still sign important documents instantly even when he is abroad."
+                }
+            }
+        }
+    },
+    "Staff purchasing (SPU)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Surprise Request Dilemma (Rules vs Emergency)",
+                "deskripsi": "The Production Manager calls you angry because the factory machine is down.He needs spare parts to be purchased today.The problem is, the low-priced subscription supplier can only send it the day after tomorrow.There is another shop that has ready stock today, but the price is 30% more expensive and is not yet registered as an official company vendor.",
+                "pertanyaan": {
+                    "1": "Compare the financial loss from buying goods that are 30% more expensive versus the operational loss of waiting 2 days from a regular supplier.What logic/parameters do you use to choose the best decision?",
+                    "2": "Write a 1-sentence tactical reply to the Production Manager to agree to his request, but at the same time emphasize boundaries so that this impromptu habit does not happen again.",
+                    "3": "Even if you really need the item today, write a quick negotiation sentence to the expensive shop to negotiate the price or ask for easy payment."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — The Art of Selecting Vendors (Price vs Quality vs Pay Terms)",
+                "deskripsi": "You have to buy 500 employee uniforms and select 3 vendors:<br><ul><li><strong>Vendor A:</strong> The price is very cheap, but has a reputation for often delivering late.</li><li><strong>Vendor B:</strong> The price fits the budget, but asks for a Down Payment (DP) of 50% (even though the office rule is a maximum of 20%).</li><li><strong>Vendor C:</strong> Very good quality and fast, but the price exceeds the budget (overbudget).</li></ul>",
+                "pertanyaan": {
+                    "1": "Why does choosing Vendor A just because it is \"cheapest\" be a deadly trap for the Purchasing team's reputation?",
+                    "2": "Write 1 precise negotiation sentence to Vendor B so that they will reduce the down payment requirement to 20% without losing your order.",
+                    "3": "If you decide Vendor C is the safest choice, what is the strongest business argument you would present to the Finance Manager to get them to disburse additional funds?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Integrity & the Temptation of Gratification (Bribery)",
+                "deskripsi": "Towards the end of the year, a regular vendor secretly sends a parcel containing luxury food and the latest smartphone to your house as a \"Thank You\".So far, the prices and quality of these vendors have always been good and profitable for the company.",
+                "pertanyaan": {
+                    "1": "Even though the vendor has never harmed the company in business, why is accepting the smartphone still considered a serious violation that could result in dismissal?",
+                    "2": "Write 1 draft message (WhatsApp/Email) to politely refuse and return the gift, without damaging business relationships.",
+                    "3": "Apart from returning the goods, what internal administrative steps must you take that day to avoid slander in the future?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Reject Goods Conflict (Throwing Blame at Each Other)",
+                "deskripsi": "The company ordered 1,000 packaging boxes.When it arrived, it turned out that the 200 printed cardboard boxes were blurry.The vendor defended himself: \"The design files from your Marketing team were blurry from the start!\"Meanwhile, the internal Marketing team insists that their files are high resolution.",
+                "pertanyaan": {
+                    "1": "The factory also needs the boxes for tomorrow's delivery.What is your emergency decision regarding the 800 good boxes and the 200 damaged boxes this afternoon?",
+                    "2": "To stop blame-blaming, what specific physical/digital evidence will you request from the Vendor AND from the Marketing team?",
+                    "3": "Design 1 mandatory procedure (SOP Proofing) that must be agreed upon before the Vendor mass prints the next order, so that this case of different colors/blurry does not happen again."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Unilateral Price Increase (Contract Management)",
+                "deskripsi": "You have a 1 year contract agreement with a raw material supplier at a price of IDR 10,000/kg.It's only been 6 months, they suddenly sent an email that next week the price will increase by 20% because of the fuel increase.If you do not agree, supply will be stopped.If the supply stops, your plant shuts down.",
+                "pertanyaan": {
+                    "1": "Even if you panic that the factory will stop, why is immediately replying to an email with the words \"I agree to the new price\" a fatal mistake for a Purchasing person?",
+                    "2": "Write a 1 sentence diplomatic reply in response to the email, to \"buy time\" while preventing next week's delivery from being stopped.",
+                    "3": "While continuing to argue and negotiate hard with the supplier, what action is Plan B (Plan B) that must be secretly executed by the Purchasing team that very day?"
+                }
+            }
+        }
+    },
+    "Staff Sales Executive (SSE)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Price War (Client Asks for Crazy Discounts)",
+                "deskripsi": "The client is interested in your product, but demands a 30% discount due to comparison with competitors.Your office rule is that the maximum discount is only 10%.The client threatened: \"If I can't get 30%, I'll buy it somewhere else!\"",
+                "pertanyaan": {
+                    "1": "Why is giving up immediately and asking your boss for permission to agree to a 30% discount a sign of a weak sales mentality?",
+                    "2": "Write 1 sentence tactical reply to politely decline the 30% discount request, but still make the client feel appreciated.",
+                    "3": "Because the price cannot fall any further than 10%, mention 2 additional benefits (value/benefit) beyond the price that you will offer so that clients will still want to buy from you."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Client Disappears (Ghosting) After Being Sent Price",
+                "deskripsi": "Prospective clients are very enthusiastic during the first meeting.However, after you send a price quote (Proposal), it disappears.The phone is not picked up and WhatsApp is only read.",
+                "pertanyaan": {
+                    "1": "In terms of business logic, name 2 possible reasons why an initially enthusiastic client suddenly ghosts after seeing the price.",
+                    "2": "Why keep sending \"Hello sir, how is the proposal going?\"every day actually makes clients more distant?",
+                    "3": "Create a draft WhatsApp message that contains useful information (not just collecting promises) so that the client will reply to your message."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Crisis Management (Damaged Goods Complaints)",
+                "deskripsi": "You have successfully closed with a new client.But during the first delivery, the goods were late and the cardboard was dented due to the negligence of your office courier.The client calls you very angry and threatens to change supplier.",
+                "pertanyaan": {
+                    "1": "When a client is angry on the phone, why are you strictly prohibited from blaming your own courier/office logistics team in front of him?",
+                    "2": "What are the first 2 actions you immediately say or do on the phone to calm his emotions right away?",
+                    "3": "After the damaged item is replaced, what 1 extra service strategy do you use to turn this disappointed client into a loyal client?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Competitor Threats & Integrity",
+                "deskripsi": "Your big pharmacy client threatens to stop ordering.The reason was that the competitor's sales team dared to give a personal smartphone as a gift to the pharmacy manager.Your office strictly prohibits bribery/gratifications, but your products are proven to be of much higher quality and the guarantee is clear.",
+                "pertanyaan": {
+                    "1": "Why does giving personal gifts/bribes for smooth orders endanger your career and the company's good name in the future?",
+                    "2": "Write a 1 sentence pitch (sales) to make the client aware that the quality and guarantee of your medicine is much more important to the pharmacy than a personal Smartphone gift.",
+                    "3": "You cannot give him a personal gift.Propose 1 legitimate discount/promo program from your office that can benefit the pharmacy institution, as a weapon to compete with competitors."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Internal Conflict (One Team's Fight Over Clients)",
+                "deskripsi": "You have been prospecting (PDKT) a company for 2 months.Suddenly your fellow sales co-worker manages to close first with the company through his \"insider\" acquaintance.He claimed that the sales commission was his.",
+                "pertanyaan": {
+                    "1": "To prove to the Sales Manager that you were the first to prospect the client, what 2 proofs of work history must you show?",
+                    "2": "Why is yelling at and scolding your colleagues in the middle of the office a very detrimental action to yourself?",
+                    "3": "Write 1 professional sentence to the Sales Manager asking for justice, without using emotion or anger."
+                }
+            }
+        }
+    },
+    "Staff sekretaris (SS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Maintaining the Boss Image (Client Comes Early)",
+                "deskripsi": "VVIP clients arrive 45 minutes earlier than the scheduled meeting.The problem is, your boss is stuck in serious traffic jam and won't be able to arrive at the office for another hour.The client is already sitting in the waiting room and asks you, \"Is your boss in his office yet?\"",
+                "pertanyaan": {
+                    "1": "Why answer honestly that the boss is \"stuck in traffic\" is strictly prohibited, and write 1 diplomatic sentence to explain the boss's lateness without damaging his disciplined image!",
+                    "2": "The client begins to look at his watch frequently and appears restless.Mention 2 acts of excellent service (hospitality) or initiatives that you immediately provide so that he doesn't get bored of waiting for a long time!",
+                    "3": "Write a draft of a short message (WhatsApp) to the boss who is driving, so he knows the VVIP client has arrived but your message doesn't make him panic and speed on the road."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Maintaining Confidentiality & Office Ethics",
+                "deskripsi": "You are sorting out confidential printed documents regarding Merger & Acquisition (M&A) plans that could affect the company's share price.Suddenly, a Director from Another Division (whose position is equivalent to your Boss, but has no authority over this project) comes into your room.He looked at the title of the document and in an urgent/commanding tone said, \"Wow, there's M&A, right? Which company do we want to buy? Let me take a look.\"",
+                "pertanyaan": {
+                    "1": "As a high-level secret holder, what is the first physical action you should take with the document within 1 second of the Director approaching your desk?",
+                    "2": "Write 1 sentence of verbal rejection to a Director at the level of your Boss who is very polite but procedurally locks access.",
+                    "3": "Design a personal \"Clean Desk\" rule that you will implement starting tomorrow so that your boss's confidential documents are never accidentally snooped on by passersby."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Dealing with Difficult Guests (Gatekeeping)",
+                "deskripsi": "A former business partner came into the office in a fit of rage and was screaming in the lobby.He forced his way into your boss's room without an appointment (walk-in).Your boss is currently holding a Virtual Board Meeting with global shareholders and says: \"Lock the door, I must not be disturbed by anyone or anything!\"",
+                "pertanyaan": {
+                    "1": "Mention 2 non-verbal actions (body language/positioning) and 1 verbal action that you would use to prevent the person from breaking down the door to the Boss's room, without having to immediately call Security which could make things worse.",
+                    "2": "Tuliskan 1 kalimat negosiasi untuk menenangkan the angry guest so that he will sit down first and not force his will to barge in.",
+                    "3": "In what kind of emergency situation (mention 1 absolute criteria/reason) would you dare to take the risk of disobeying your boss and still barging into his room to report?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Meeting Preparation Crisis (Problem Solving Agility)",
+                "deskripsi": "You are in charge of preparing the board of directors' meeting room.Only 10 minutes before the meeting starts, the projector in the room suddenly turns off completely and the main presentation file on your boss's spare flash disk cannot be opened (corrupt).Your boss is on the road and will arrive just as the meeting starts.",
+                "pertanyaan": {
+                    "1": "Of the two problems (projector dead vs presentation file damaged), which one should you save/find a solution for in the first minute, and why?",
+                    "2": "If the projector is completely turned off and the director has entered the room, mention 1 quick technical alternative so that the meeting material can still be read by the participants, along with 1 sentence of welcome from you to politely buy time.",
+                    "3": "How do you contact your boss who is driving down the road to ask him to resend the presentation file without triggering his panic?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Written Communication (Translating a Boss's Message)",
+                "deskripsi": "Your boss reads cooperation offer proposals from other vendors.He really doesn't like it, then says verbally to you: \"Reply to the email now! Just refuse, saying their prices are unreasonable, expensive, and the company is not well-known. Don't waste my time!\"",
+                "pertanyaan": {
+                    "1": "Why is it strictly forbidden for a secretary to type an exact reply email using the harsh words (\"expensive/not famous\") as emotionally spoken by her boss?",
+                    "2": "Translate your boss's anger into a draft rejection email (maximum 3 sentences) whose language is very professional, diplomatic, but still gets the message across.",
+                    "3": "After you have typed the draft email neatly, will you immediately press the Send button or confirm it again with the boss who is emotional?Give reasons."
+                }
+            }
+        }
+    },
+    "Supervisor Sales (SPVS)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1: Team Management and Sales Conflict",
+                "deskripsi": "Two salespeople on your team are in conflict because of their opposite personalities:<br>\r\n• <b>Budi (Senior, 10 years of work):</b> Very good at maintaining relationships with old customers face to face, but clueless and reluctant to use new sales reporting applications.The sales target is down 20%.<br>\r\n• <b>Rian (New):</b> Very good at social media and technology.His sales target reached 150%, but many of his new customers left after a few months because he was not good at maintaining relationships.<br>\r\nBudi accuses Rian of taking over his work area, while Rian considers Budi to be a burden on the team who is out of date.This conflict triggers factions between other team members, so that the work atmosphere becomes unconducive.",
+                "pertanyaan": {
+                    "1": "In terms of long-term business impact, which is more detrimental to the company, the reduction in Budi's target by 20% or the loss of new customers due to Rian's negligence?Explain your analysis along with the main reasons why your team started to split into two camps.",
+                    "2": "What is your strategy for dividing work areas or types of consumers fairly so that Budi's face-to-face method and Rian's online method can complement each other, not compete with each other?",
+                    "3": "What concrete steps will you take in the first 7 days to reconcile the office atmosphere, as well as make Budi and Rian aware that they want to change their respective weaknesses?"
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2: Integrity vs Sales Targets (Work Ethics)",
+                "deskripsi": "Your team is chasing a year-end target that is 10% less.Your sales mainstay, who contributes 30% of the team's total turnover, was caught stealing prospect data belonging to junior sales in order to cover his personal targets.<br>\r\n• The sales junior threatened to leave (resign) if this act of data theft was not severely punished.<br>\r\n• If you fire or severely punish this top sales person now, your team's targets will certainly fail to be achieved and your reputation in the eyes of management will suffer.",
+                "pertanyaan": {
+                    "1": "Which is more detrimental to your long-term leadership: putting up with a reliable sales cheat to secure the team's target this month, or punishing it at the risk of destroying your team's target?Explain your logical reasoning.",
+                    "2": "If you choose to uphold integrity by severely punishing top salespeople so that the team's targets are guaranteed to fail, how will you account for this to management?",
+                    "3": "What preventative steps will you implement in your customer data management system so that this case of inter-sales lead theft does not happen again in the future?"
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3: High Sales Turnover Rate",
+                "deskripsi": "In one semester (6 months), 4 of the 6 best sales team members in your area suddenly resign.As a result, many visiting routes were abandoned and regional turnover fell by 40%.<br>\r\n• Exit investigations (exit interviews) show that they feel frustrated because of the unfair distribution of work areas.<br>\r\n• There was preferential treatment (favouritism) from the previous supervisor towards certain sales regarding the distribution of the wet account portion.",
+                "pertanyaan": {
+                    "1": "Analyze the short-term psychological and operational impact on the remaining team as a result of this crisis.How would you assess the previous supervisor's leadership style based on this case?",
+                    "2": "What emergency procedures will you implement in the first 14 days as the new SPV to secure abandoned routes so that customers do not switch to competitors?",
+                    "3": "What internal policy recommendations will you formulate to improve the regional division structure and performance appraisal system to create fairness and reduce sales turnover?"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4: Decreased Visit Effectiveness Due to Changes in Field Routes (Routing Shift)",
+                "deskripsi": "The company has just implemented a new daily visit route distribution system based on geographic area zoning.However, after 3 months, the data shows that the number of effective visits by the sales team dropped by 30%, and sales travel time became longer.<br>\r\n• The sales team protested because the new route created by the system in the office was deemed to be inconsistent with traffic conditions, shop opening and closing times, and the shopping habits of shop owners in the field.",
+                "pertanyaan": {
+                    "1": "Menurut Anda, why does the implementation of this new route system actually reduce productivity?Does the problem lie in the rigidity of the digital system or the sales team's weakness in adapting to changing work patterns?Explain.",
+                    "2": "As a new SPV, what field evaluation procedures will you carry out to remap the gap between the route in the system and the reality of the route in the field?",
+                    "3": "What kind of modification recommendations or policy adjustments would you convey to management so that sales travel time efficiency is achieved without sacrificing potential turnover on that route?"
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5: Shop Digs Holes to Cover Holes to Pursue Sales Targets",
+                "deskripsi": "Shop owners in your area are running out of cash because there are few customers.In order to pursue the monthly target bonus, your sales team makes a dangerous secret deal: they collect the store's old debt using an order receipt for new goods that was not actually purchased (only on paper).<br>\r\n• As a result, your monthly sales report to head office looks safe and reaches targets.<br>\r\n• However, in real terms, the deposit money coming into the office was completely blocked and the store's outstanding debt period swelled from 30 days to 110 days.<br>\r\n• Your branch office is now threatened with running out of operational capital.",
+                "pertanyaan": {
+                    "1": "Analyze this problem.Menurut Anda, why is the sales team determined to use this instant method?Is it because they only think about personal bonuses or because the office targets are unreasonable given market conditions?Explain your reasons.",
+                    "2": "As a new Supervisor, how do you comb through and sort out which shops must immediately stop sending goods because they are no longer healthy, and which shops can still be helped in installments?What benchmarks do you use?",
+                    "3": "What new recommendations or rules will you apply to the sales team so that they can no longer manipulate end-of-month receipts to chase bonuses?"
+                }
+            }
+        }
+    },
+    "Utility (UTL)": {
+        "bagian_a": [],
+        "bagian_b": {
+            "1": {
+                "judul": "Studi Kasus 1 — Overdue Routine Maintenance (Compressor and Generator)",
+                "deskripsi": "The factory is very busy because it is pursuing year-end targets.Mas Tito and his team focused on repairing the office AC that had been damaged all day.As a result, the routine schedule for checking compressor oil and cleaning the generator was missed for two weeks.Suddenly, the PLN electricity went out, and when the generator was turned on, the engine stalled and then completely stopped because the oil turned out to be dry and dirty.Factory production also stopped completely.",
+                "pertanyaan": {
+                    "1": "Why can a generator that lacks maintenance be damaged immediately when it is forced to turn on?In the future, which should you prioritize: repairing comfort facilities (office AC) or maintaining factory spare machines (generators)?",
+                    "2": "If your boss forces you to have your room AC repaired today even though it is a mandatory schedule to maintain the generator, what logical reasons (losses) will you give so that your boss understands that the generator is more important?",
+                    "3": "Create a simple schedule system idea so that vital machine maintenance is never missed, and superiors can immediately know if there is a schedule that is delayed."
+                }
+            },
+            "2": {
+                "judul": "Studi Kasus 2 — Complaint of AC Leaking in Data Generator Server Room",
+                "deskripsi": "Administrative officials complained that the air conditioner in the main server room (where all important factory data was stored) was leaking and water was dripping near the electrical cables.At that time, Mas Tito was in the workshop doing welding (fabrication) to make a production table which also had to be finished that afternoon on the manager's orders.",
+                "pertanyaan": {
+                    "1": "Of the two tasks facing Mas Tito (repairing a leaking AC in the server room or completing the production table), which one has the greatest risk of danger if postponed?Explain the impact.",
+                    "2": "How would you judge a technician's actions if he chose to finish the table first before repairing the AC, citing \"the manager's orders must come first\"?",
+                    "3": "Write down the emergency steps (short SOP) that Mas Tito must take from the first minute he receives the report of a leaking AC in the server room to prevent an electrical short circuit."
+                }
+            },
+            "3": {
+                "judul": "Studi Kasus 3 — Forklift Operator's Dilemma in Shift 2",
+                "deskripsi": "In Shift 2, the number of Utility personnel was only 1 person, namely Mas Tito himself.That night, no special forklift personnel came in.At the same time, there is a compressor that experiences a drop in electrical voltage and in the warehouse area there is a raw material truck that must be immediately unloaded using a forklift so as not to be fined in line.Mas Tito was confused about which one to do first.",
+                "pertanyaan": {
+                    "1": "If you choose to drive a forklift and leave the compressor running with a lack of electricity, what is the worst damage that can occur to the compressor and the impact on the production machine?",
+                    "2": "Driving a forklift requires an official permit (SIO).If you dare to drive without a permit to avoid truck fines, what are the legal risks for you and the company if an accident occurs?",
+                    "3": "Provide 1 solution to your boss so that this \"double duty\" problem doesn't happen again in the afternoon shift, without having to tell the factory to recruit new employees!"
+                }
+            },
+            "4": {
+                "judul": "Studi Kasus 4 — Inter-Shift Handover Miscommunication",
+                "deskripsi": "Shift 1 technicians discovered that the filter in the production building's HVAC was very dirty and needed to be replaced.Because his working hours were over, he just left a message via WhatsApp to the Shift 2 technician, \"Sir, please check the HVAC.\"Shift 2 technician thought the HVAC only needed to be cleaned on the outside.The next morning, the production room became hot because the HVAC filter was completely blocked and the food products inside were damaged.",
+                "pertanyaan": {
+                    "1": "Why is it so dangerous to leave a message for a machine repair job via a short chat, and what important information is actually missing from the morning shift technician's message?",
+                    "2": "Who is most responsible for damaged products in the production room?Is it the Shift 1 technician, the Shift 2 technician, or the communications system?Explain your assessment.",
+                    "3": "Prepare a simple handover note format that must be filled in every shift change so that damage information is conveyed in detail and clearly."
+                }
+            },
+            "5": {
+                "judul": "Studi Kasus 5 — Proposed Team Division (Civil vs Active Component)",
+                "deskripsi": "Factory management saw that the Utility team's performance was less effective.Sometimes there are cracked walls or peeling paint (building/civil duties) that have not been repaired for a long time because technicians are busy repairing generators and AC engines (active components).Mas Tito suggested that the Utility team be divided into two focuses: one focus on the physical building (like Mr. Abdul Manaf), and one focus on active machines.However, management hesitated due to cost constraints.",
+                "pertanyaan": {
+                    "1": "Why does juggling building and machining tasks often mess up repair schedules, and what are the dangers to machine durability?",
+                    "2": "How do you logically convince management that paying one additional staff member is much cheaper than risking billions of machines breaking down?",
+                    "3": "If you can't add employees at all, come up with an idea for dividing the schedule for the 3 existing staff so that machine and building matters remain balanced!"
+                }
+            }
+        }
+    }
+}
